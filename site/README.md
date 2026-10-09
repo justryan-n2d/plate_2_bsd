@@ -26,3 +26,11 @@ The written site analysis covers lot orientation, north direction, road frontage
 Regional weather context is referenced to PAGASA's Tacloban City 1991-2020 climatological normals. HazardHunterPH is listed as a verification tool, not as a completed property-specific hazard assessment.
 
 These are preliminary academic site-base materials, not cadastral survey or construction documents.
+
+## Repository status and verification (2026-10-10)
+
+The Phase 1 site-base work was merged into `main` through [Pull Request #1](https://github.com/justryan-n2d/plate_2_bsd/pull/1). The project plan records the merge and the verification scope.
+
+Checks covered the original and adjusted P5-1 records, closure components, perimeter/area values, the 300.00 m² comparison, CSV formatting, the 5.0 m road versus 8.00 m ROW distinction, and consistency across the project notes. These checks do not certify the property survey or resolve the 34.74 m² area difference. Confirm the original survey plan, parcel/road geometry, actual site conditions, and setbacks before relying on the plot for a final site-development plan.
+
+No house layout has been started.

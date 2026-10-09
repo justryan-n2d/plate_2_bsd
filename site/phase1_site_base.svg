@@ -46,7 +46,7 @@
 <text x="85" y="154" font-size="16" font-weight="700">N</text>
 <line x1="78" y1="785" x2="203" y2="785" stroke="#0f172a" stroke-width="4"/><path d="M78 779 V791 M203 779 V791" stroke="#0f172a" stroke-width="2"/>
 <text class="tiny" x="78" y="807">0</text><text class="tiny" x="183" y="807">5 m</text>
-<text class="tiny" x="76" y="840" style="fill:#64748b">* Road widths / side names copied from the brief; confirm ROW inconsistency.</text>
+<text class="tiny" x="76" y="840" style="fill:#64748b">Road width = 5.0 m; total right-of-way = 8.00 m.</text>
 
 <text class="heading" x="740" y="167">LOT / SOURCE DATA</text>
 <rect x="740" y="180" width="532" height="105" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
@@ -63,19 +63,20 @@
 <text class="small" x="756" y="451">Approximate closure ratio: 1 : 16.13</text>
 <text class="alert" x="756" y="473" style="fill:#9a3412">Status: NOT CLOSED; do not verify area from these courses.</text>
 
-<text class="heading" x="740" y="520">SOURCE-DATA ISSUES TO CONFIRM</text>
-<rect x="740" y="533" width="532" height="132" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
-<text class="alert" x="756" y="560">1. The five listed courses miss P1 by about 4.01 m.</text>
-<text class="small" x="756" y="584" style="fill:#7f1d1d">2. Project information lists an 8.00 m road ROW.</text>
-<text class="small" x="756" y="607" style="fill:#7f1d1d">   Lot description separately states an existing 5.0 m road.</text>
-<text class="alert" x="756" y="635">No bearings, distances, or road widths have been corrected.</text>
+<text class="heading" x="740" y="520">ROAD WIDTH + RIGHT-OF-WAY</text>
+<rect x="740" y="533" width="532" height="132" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+<text class="small" x="756" y="558">Road width: 5.0 m | Total road right-of-way: 8.00 m.</text>
+<text class="small" x="756" y="580">The two values serve different purposes.</text>
+<text class="small" x="756" y="602">Remaining 3.0 m may allow shoulders, drainage, or other</text>
+<text class="small" x="756" y="622">road-related spaces, depending on the actual plan.</text>
+<text class="alert" x="756" y="645" style="fill:#9a3412">Traverse still has a calculated 4.0120 m closure gap.</text>
 
 <text class="heading" x="740" y="700">PHASE 1 STATUS</text>
 <rect x="740" y="713" width="532" height="134" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
 <text class="small" x="756" y="741">DONE: input course schedule, perimeter, coordinate plot,</text>
 <text class="small" x="756" y="761">and closure check documented in the CSV and drawing.</text>
-<text x="756" y="790" font-size="12" font-weight="700" fill="#9a3412">PENDING: instructor confirmation, verified area, and final</text>
-<text x="756" y="810" font-size="12" font-weight="700" fill="#9a3412">site plan / dimensions after source data is clarified.</text>
+<text x="756" y="790" font-size="12" font-weight="700" fill="#9a3412">PENDING: verified lot area and survey-based dimensions.</text>
+<text x="756" y="810" font-size="12" font-weight="700" fill="#9a3412">All given bearings and distances remain unchanged.</text>
 <text class="tiny" x="756" y="831" style="fill:#64748b">Not for construction, permitting, or setting out boundaries.</text>
 <line x1="48" y1="880" x2="1272" y2="880" stroke="#e2e8f0"/>
 <text class="tiny" x="48" y="902" style="fill:#64748b">Basis: Plate No. 2 assignment technical description. Coordinates use P1 = (0,0); eastings +E, northings +N.</text>

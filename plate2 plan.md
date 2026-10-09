@@ -419,7 +419,36 @@ Each sheet must contain:
 
 ---
 
-## 10. Final completion checklist
+## 10. Calculation and drawing accuracy checks
+
+Use these checks throughout the activity. They are review steps for the required work, not additional plate deliverables.
+
+### A. Calculation checking
+
+- [ ] Copy given values carefully from the assignment and keep their units.
+- [ ] Label each calculation and separate **Given Data**, **Formula**, **Substitution**, **Working**, **Final Answer**, and **Check / Status**.
+- [ ] Show the formula before substituting values.
+- [ ] Recheck arithmetic independently before recording a final answer.
+- [ ] Check angle conversion, quadrant/sign conventions, units, and rounding where relevant.
+- [ ] Keep intermediate values at sufficient precision; round the reported result clearly and consistently.
+- [ ] Compare related results. For example, the total floor area must equal the ground-floor area plus the second-floor area, and the stair rise must agree with the stated floor-level difference.
+- [ ] Do not silently change a stated bearing, distance, dimension, or other value to make results agree. Mark discrepancies for checking against the assignment or instructor's direction.
+- [ ] Mark a calculation **PENDING** when the needed dimensions or requirements have not yet been established.
+
+Detailed working is kept in [calculations/plate2_calculations.md](calculations/plate2_calculations.md).
+
+### B. Drawing checking
+
+- [ ] Check that the plotted lot courses use the assignment's bearings and distances as transcribed, and document any source-data discrepancy before treating the site base as final.
+- [ ] Check dimensions, room names, door/window locations, furniture, stairs, circulation, and reference/grid lines against the corresponding drawing requirements.
+- [ ] Compare the ground-floor plan, second-floor plan, roof plan, four elevations, and sections so that related dimensions and features agree.
+- [ ] Check that the stair shown in the plans is consistent with the stair calculation and at least one section passes through the stairway.
+- [ ] Check that roof form, floor levels, building heights, openings, and exterior finishes are consistent among the roof plan, elevations, sections, and specifications.
+- [ ] Check that door/window schedules and room/finish schedules correspond to what is shown on the drawings.
+- [ ] Check all dimensions, scale labels, north arrows where applicable, and legends/symbols where necessary.
+- [ ] Inspect the final printed/exported sheets at the required A3 size, and inspect calculation pages on long bond paper for legibility and missing/cropped content.
+
+### C. Final completion checklist
 
 Before considering the activity ready for submission, verify that:
 
@@ -430,7 +459,8 @@ Before considering the activity ready for submission, verify that:
 - [ ] The site plan includes the site information listed for A-01.
 - [ ] The roof plan, four elevations, sections, details, and schedules contain the items listed in the assignment.
 - [ ] The preliminary specifications cover the listed categories.
-- [ ] The calculations include the items specified in the brief.
+- [ ] The calculations include the items specified in the brief and have been checked.
+- [ ] Related drawings, calculations, schedules, and specifications agree with one another.
 - [ ] Each sheet meets the presentation requirements.
 - [ ] The drawing scales follow the instructor's direction.
 - [ ] The submission is printed on the required paper sizes.

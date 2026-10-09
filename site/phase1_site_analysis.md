@@ -8,7 +8,7 @@
 
 | Item | Source-stated information | Status / note |
 |---|---|---|
-| Approximate lot area | 300.00 m² | Given as approximate; not independently verified |
+| Approximate lot area | 300.00 m² | Given approximate figure; closed plot calculates 265.26 m² for comparison |
 | Site condition | Generally level / grass land | Preliminary existing-condition description |
 | Existing building | None | No existing-building footprint is provided |
 | North boundary | Lot 245-A | Adjoining property named in the technical description |

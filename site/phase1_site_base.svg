@@ -13,7 +13,7 @@
 <text class="title" x="48" y="45">PLATE NO. 2 | PHASE 1 SITE BASE</text>
 <text class="subtitle" x="48" y="73">Lot 245-B | Barangay San Isidro, Palo, Leyte</text>
 <rect x="48" y="91" width="1224" height="42" rx="7" fill="#fff7ed" stroke="#fb923c"/>
-<text class="warning" x="64" y="118">PRELIMINARY ONLY: listed traverse does not close; this is not a verified final site plan.</text>
+<text class="warning" x="64" y="118">PRELIMINARY: P5-1 adjusted to close; calculated area 265.26 m² vs. approx. 300.00 m² stated.</text>
 <line x1="704" y1="150" x2="704" y2="865" stroke="#e2e8f0" stroke-width="1.5"/>
 <text class="neighbor" x="300" y="177">LOT 245-A | NORTH</text>
 <text class="neighbor" x="616" y="399">LOT 246</text>

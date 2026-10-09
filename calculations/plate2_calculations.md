@@ -14,9 +14,9 @@
 
 | No. | Required calculation | Status |
 |---|---|---|
-| C-01 | Lot area | **PENDING verification** |
-| C-02 | Lot dimensions / boundary lengths | Given boundary distances listed below; plot/check pending |
-| C-03 | Traverse closure | **Calculated from the given values; closure gap shown without adjustment** |
+| C-01 | Lot area | **265.26 m² from adjusted closed traverse; compare with approximate 300.00 m² stated area** |
+| C-02 | Lot dimensions / boundary lengths | **Original courses recorded; adjusted perimeter = 64.1454 m** |
+| C-03 | Traverse closure | **Closed by adjusting P5-1 only; original misclosure = 4.0120 m** |
 | C-04 | Required setbacks | **PENDING** |
 | C-05 | Buildable area | **PENDING** |
 | C-06 | Building footprint | **PENDING** |
@@ -224,11 +224,13 @@ The adjustment is limited to P5-1. The source value **N 08°10′ W, 16.35 m** i
 
 ---
 
-### Phase 1 coordinate plot and source-data status
+### Phase 1 coordinate plot and closure adjustment
 
-The preliminary graphic is in [site/phase1_site_base.svg](../site/phase1_site_base.svg), and the course coordinate schedule is in [site/phase1_traverse_coordinates.csv](../site/phase1_traverse_coordinates.csv). The related site notes are in [site/phase1_site_analysis.md](../site/phase1_site_analysis.md).
+The closed preliminary graphic is in [site/phase1_site_base.svg](../site/phase1_site_base.svg), the course coordinate schedule including original and adjusted P5-1 records is in [site/phase1_traverse_coordinates.csv](../site/phase1_traverse_coordinates.csv), and the site analysis is in [site/phase1_site_analysis.md](../site/phase1_site_analysis.md).
 
-These outputs use a local coordinate frame with P1 = (0, 0). They are not georeferenced. The fifth course ends at P1*, approximately 4.0120 m from P1; the gap is shown as a closure diagnostic only, not as an added parcel boundary. The source bearings and distances remain unchanged. Keep C-01 lot-area verification pending because the stated 300.00 m² area is approximate and the courses do not close.
+These outputs use a local coordinate frame with P1 = (0, 0). They are not georeferenced. The instructor directed that the traverse be closed, so courses 1-2 through 4-5 remain unchanged and P5-1 is adjusted to N 06°02′11″ E, 15.7954 m. The original P5-1 value (N 08°10′ W, 16.35 m) is retained for transparency; the original unadjusted traverse misclosure is approximately 4.0120 m.
+
+The adjusted perimeter is 64.1454 m and the closed-polygon area is 265.26 m². The assignment's approximate 300.00 m² area is 34.74 m² higher than this calculated result. Both values are documented without modifying courses 1-2 through 4-5 or forcing the calculated area to match the approximate area.
 
 # C-04. Required Setbacks
 
@@ -240,7 +242,7 @@ Determine applicable setbacks based on the relevant codes and regulations.
 
 - Approximate lot area: 300.00 m².
 - Road right-of-way in the project-information table: 8.00 m.
-- The lot description states an existing 5.0 m barangay road width; the project information separately gives an 8.00 m right-of-way.
+- The lot description states an existing 5.0 m barangay road width; the project information separately gives an 8.00 m right-of-way. The remaining 3.0 m could accommodate shoulders, drainage, or other road-related spaces depending on the plan.
 
 ## Calculation worksheet
 
@@ -526,7 +528,8 @@ For each additional calculation, use this labeled format:
 - [ ] Lot area determined and checked.
 - [ ] Lot dimensions/boundary lengths recorded.
 - [ ] Traverse closure shown, including latitude and departure sums and linear misclosure.
-- [ ] Any discrepancy in the source data checked before finalizing lot geometry.
+- [x] P5-1 adjustment to close the traverse is documented, and its original value is retained for reference.
+- [ ] Compare the calculated 265.26 m² polygon area against the approximate 300.00 m² area stated in the assignment.
 - [ ] Required setbacks determined and their basis recorded.
 - [ ] Buildable area calculated from the plotted setback envelope.
 - [ ] Building footprint calculated from the proposed ground-floor plan.

@@ -161,6 +161,8 @@ The order below is a practical way to track the stated requirements. The require
 - [ ] **T-45 / A-06** Prepare at least two building sections, with at least one passing through the stairway.
 - [ ] **T-46 / A-07** Prepare architectural details and schedules.
 - [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information shown across the drawings.
+- [ ] **T-48 / D-01** Establish a code-driven, shared drawing-data source where practical so the SVG inspection previews and DXF drawing exports are generated from matching geometry and dimensions.
+- [ ] **T-49 / D-02** Generate and review an SVG preview as each major 2D drawing is developed; use the preview to find layout, label, dimension, and coordination errors before final export.
 
 ### Phase 6: Preliminary specifications
 
@@ -194,6 +196,11 @@ The order below is a practical way to track the stated requirements. The require
 - [ ] **T-76** Prepare A3 drawing sheets.
 - [ ] **T-77** Prepare calculations on long bond paper.
 - [ ] **T-78** Inspect the sheets and calculations before printing the plate.
+- [ ] **T-79** Keep the SVG preview files updated after meaningful drawing revisions and confirm that each preview reflects the current drawing data.
+- [ ] **T-80** Inspect the SVG previews in GitHub/browser view and compare them against the drawing requirements, calculated dimensions, and related plans.
+- [ ] **T-81** Export compatible DXF files for CAD editing and PDF sheets for review/printing; verify that the exported geometry and labels agree with the SVG previews.
+- [ ] **T-82** Add a README.md preview section that embeds the committed SVG preview files once usable previews exist, and link the relevant drawing/export files.
+- [ ] **T-83** Keep CSV files for supporting coordinate data, calculation values, area summaries, and schedules where tabular data is useful; check their units and values against the calculations and drawings.
 
 ---
 
@@ -470,3 +477,98 @@ Before considering the activity ready for submission, verify that:
 The project description says detailed utility systems are excluded from this plate and describes the preliminary building plan as the base for succeeding structural and utility systems. However, the required-submission list includes structural drawings: column, footing, and beam details/schedules, a foundation plan, and a second-floor framing plan.
 
 This plan keeps those structural items in the required-submission checklist because they are listed in the document. Follow the instructor's direction on their expected scope for Plate No. 2.
+
+
+---
+
+## 12. Agreed digital drawing and preview workflow
+
+This section records the workflow agreed during project planning. It is intended to make inspection and revision easier; it does not change the instructor's required deliverables or override the assignment.
+
+### 12.1 Working approach
+
+- **ChatGPT + code** will be used to help prepare repeatable calculations, drawing geometry, dimensions, schedules, and exports. All calculated values and drawing outputs must still be checked against the assignment and applicable requirements.
+- **SVG** will be a project output from the beginning, not an afterthought. It will act as a quick visual preview for checking the 2D drawings inside GitHub or a browser.
+- **DXF** will be used for editable drawing geometry in compatible CAD software.
+- **PDF** will be used for review, sheet arrangement, and printing/submission after dimensions, scales, labels, and page setup have been checked.
+- **CSV** will store supporting tabular data where useful, such as lot coordinates, calculation results, area summaries, and schedules. CSV is supporting data, not the final architectural drawing format.
+- **WalkMyPlan** will be used as a supplementary 3D visualization/inspection tool to review room arrangement, circulation, stairs, and the general spatial layout. It is a preview aid, not the source of truth for surveyed lot geometry, dimensions, code compliance, structural adequacy, or final 2D documentation.
+
+### 12.2 Planned repository organization
+
+Create folders as the project outputs are produced. This is a planned organization, not a claim that every folder or file already exists.
+
+```text
+plate_2_bsd/
+├── README.md
+├── plate2 plan.md
+├── calculations/
+│   └── plate2_calculations.md
+├── data/
+│   ├── lot-coordinates.csv
+│   ├── area-calculations.csv
+│   └── schedules.csv
+├── scripts/
+│   └── drawing-generation scripts
+├── previews/
+│   ├── site-development-plan.svg
+│   ├── ground-floor-plan.svg
+│   ├── second-floor-plan.svg
+│   └── other drawing previews as they become available
+├── drawings/
+│   └── editable CAD files (.dxf)
+└── exports/
+    └── print/review sheets (.pdf)
+```
+
+Actual filenames may be adjusted to match the generator and final sheet organization. Do not commit placeholder drawings as if they were verified outputs.
+
+### 12.3 GitHub SVG preview requirements
+
+- [ ] Store committed preview files in `previews/`.
+- [ ] Generate each preview from the current drawing data; avoid separately hand-editing the SVG in a way that makes it disagree with the DXF.
+- [ ] Use descriptive titles, drawing names, dimensions, scale notes, and units when appropriate.
+- [ ] Keep lines, labels, and dimensions readable when viewed on a phone as well as on a desktop.
+- [ ] Use a clear visual hierarchy for property lines, walls, openings, dimensions, annotations, and furniture where applicable.
+- [ ] Add or update a `README.md` section that embeds the available SVG previews using repository-relative image paths, for example:
+
+```markdown
+## Drawing Previews
+
+### Ground Floor Plan
+![Ground Floor Plan Preview](previews/ground-floor-plan.svg)
+```
+
+- [ ] Verify the SVG actually renders in GitHub; do not assume a file is viewable only because it was committed successfully.
+- [ ] Treat the SVG as an inspection preview. Do not use on-screen appearance alone to certify dimensions or print scale.
+
+### 12.4 Revision and inspection loop
+
+1. **Read and confirm inputs.** Use the assignment's stated lot bearings, distances, requirements, and verified calculations. Record any discrepancy instead of silently altering source data.
+2. **Calculate and structure.** Maintain named variables/data for coordinates, dimensions, room geometry, levels, openings, and schedules where practical.
+3. **Generate previews and exports.** Produce SVG previews from the current drawing data. Generate corresponding DXF files from the same or consistently coordinated geometry where practical, and create CSV tables for supporting numeric data.
+4. **Inspect the previews.** Review the SVGs in GitHub/browser view for missing or overlapping labels, incorrect layout, unclear dimensions, incomplete views, and cross-drawing inconsistencies.
+5. **Inspect the spatial layout in 3D.** Recreate or inspect the arrangement in WalkMyPlan as a supplementary check. Record any layout concerns and revise the underlying drawing data, rather than treating a 3D image as the authoritative plan.
+6. **Revise and regenerate.** Correct the source data or generation code, then regenerate affected SVG/DXF/CSV outputs. Recheck all drawings affected by the change.
+7. **Prepare final sheets.** Arrange and export PDF sheets, confirm drawing scale and page size, inspect PDF output, and print using the assignment's A3 drawing-sheet and long-bond calculation-paper requirements.
+
+### 12.5 What each format can and cannot prove
+
+| Format/tool | Intended use | Important limitation |
+|---|---|---|
+| SVG | Quick 2D visual inspection inside GitHub/browser | Screen rendering does not prove real-world dimensions, CAD compatibility, or print scale |
+| DXF | Editable 2D drawing geometry in compatible CAD software | Must be opened/checked in the intended CAD application and coordinated with the calculations |
+| PDF | Review and print sheets | Must be checked for page size, scaling, missing/cropped content, and legibility |
+| CSV | Supporting coordinates, numeric calculations, summaries, and schedules | Does not replace a dimensioned drawing sheet |
+| WalkMyPlan | Supplementary 3D layout and circulation inspection | Does not replace checked 2D drawings, verified calculations, or instructor/code review |
+| Source calculations and verified drawing data | Basis for dimensions and coordinated drawing outputs | Must be traceable to the assignment and checked; generated output is not automatically correct |
+
+### 12.6 Consistency checks before an output is treated as ready
+
+- [ ] SVG dimensions and labels match the verified drawing data.
+- [ ] The corresponding DXF has been opened or otherwise validated in compatible CAD software.
+- [ ] CSV units, signs, coordinates, and numerical values match the documented calculations.
+- [ ] Related plans, elevations, sections, schedules, and details agree after revisions.
+- [ ] The PDF uses the intended page size and print scale and has no clipped or unreadable content.
+- [ ] Any unresolved course/instructor requirement is marked as pending rather than assumed resolved.
+- [ ] Previews are labelled as preliminary until the checks above and the instructor's requirements are satisfied.

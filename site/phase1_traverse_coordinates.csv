@@ -1,0 +1,8 @@
+course,bearing,distance_m,start,end,start_easting_m,start_northing_m,latitude_m,departure_m,end_easting_m,end_northing_m,status
+1-2,"N 78° 30' E",15.200000,P1,P2,0.000000,0.000000,3.030393,14.894856,14.894856,3.030393,Given value; unchanged
+2-3,"S 12° 15' E",11.800000,P2,P3,14.894856,3.030393,-11.531327,2.503697,17.398552,-8.500934,Given value; unchanged
+3-4,"S 48° 20' W",8.750000,P3,P4,17.398552,-8.500934,-5.816964,-6.536469,10.862083,-14.317898,Given value; unchanged
+4-5,"S 83° 40' W",12.600000,P4,P5,10.862083,-14.317898,-1.389938,-12.523102,-1.661019,-15.707836,Given value; unchanged
+"5-1 original (from assignment)","N 08° 10' W",16.350000,P5,P1*,-1.661019,-15.707836,16.184195,-2.322568,-3.983587,0.476359,Original given course; illustrates the original misclosure
+"Original closure gap (diagnostic only)","Not a boundary course",4.011967,P1*,P1,-3.983587,0.476359,-0.476359,3.983587,0.000000,0.000000,Diagnostic only; not part of the property boundary
+"5-1 adjusted to close","N 06°02′11″ E",15.795414,P5,P1,-1.661019,-15.707836,15.707836,1.661019,0.000000,0.000000,Adjusted per instructor direction; courses 1-2 through 4-5 held fixed

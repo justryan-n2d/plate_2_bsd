@@ -47,7 +47,7 @@ The property is bounded by Lot 245-A on the north, Lot 246 on the east, a stated
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-The assignment lists an 8.00 m road right-of-way in the project information and refers to an existing 5.0 m barangay road in the lot description. Keep both values visible in the working notes and follow the instructor's direction if clarification is needed.
+Use the stated 5.0 m as the existing road width and 8.00 m as the total road right-of-way. These values serve different purposes. The remaining 3.0 m could be allocated for shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not specify the exact allocation, so do not assume a particular split.
 
 ---
 
@@ -111,13 +111,29 @@ The order below is a practical way to track the stated requirements. The require
 
 ### Phase 1: Lot and site base
 
-- [ ] **T-01** Transcribe the lot bearings and distances from the technical description.
-- [ ] **T-02** Determine and verify the lot area from the technical description.
-- [ ] **T-03** Determine the property-boundary lengths and lot dimensions.
-- [ ] **T-04** Plot the traverse and check its closure.
-- [ ] **T-05** Prepare the site base using the technical description.
-- [ ] **T-06** Show property boundaries, lot dimensions, bearings, distances, north direction, road, and adjacent properties on the site development plan.
-- [ ] **T-07** Analyze lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions.
+- [x] **T-01** Transcribe the lot bearings and distances from the technical description.
+- [x] **T-02** Calculate the area from the closed traverse: 265.26 m² using adjusted P5-1. The difference from the approximate 300.00 m² stated in the brief (34.74 m²) is documented.
+- [x] **T-03** Determine the property-boundary lengths and lot dimensions, with adjusted P5-1 documented separately from the original value.
+- [x] **T-04** Plot and close the traverse by adjusting P5-1 only; retain the original value and show both values in the records.
+- [x] **T-05** Prepare the preliminary site base using the technical description.
+- [x] **T-06** Show property boundaries, course distances and bearings, north direction, road context, and adjacent properties in the preliminary site-base drawing.
+- [x] **T-07** Complete the source-based site analysis and record evidence, limits, and site-verification items in `site/phase1_site_analysis.md` and `site/phase1_site_analysis_matrix.csv`. Exact access points, parcel-specific solar/shading, and existing-condition checks remain subject to field verification and later site-development planning.
+
+#### Phase 1 implementation checkpoint (2026-10-10)
+
+**Current status: The preliminary site-base traverse is closed by adjusting only P5-1 per the instructor's direction. Courses 1-2 through 4-5 remain exactly as given. The original P5-1 value is preserved for reference. The source-based site analysis is documented without beginning the house layout.**
+
+Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), [the site-analysis note](site/phase1_site_analysis.md), and [the site-analysis evidence matrix](site/phase1_site_analysis_matrix.csv).
+
+The original five listed courses produce a latitude sum of +0.4764 m, departure sum of -3.9836 m, and linear misclosure of approximately 4.0120 m. As directed, the first four courses are held unchanged and only P5-1 is adjusted from N 08°10′ W, 16.35 m to N 06°02′11″ E, 15.7954 m (about 15.80 m) so that it closes at P1. Both the original and adjusted P5-1 data are documented.
+
+The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The original survey plan and area discrepancy still need checking before the plot is treated as final.
+
+The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
+
+The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
+
+**Still on hold before a final Site Development Plan:** confirm the original survey reference and 300.00 m² approximate area, verify the physical road/ROW and actual lot geometry, obtain a reliable parcel location, inspect existing drainage/topography and obstructions, and establish applicable setbacks. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
 
 ### Phase 2: Site requirements and preliminary calculations
 

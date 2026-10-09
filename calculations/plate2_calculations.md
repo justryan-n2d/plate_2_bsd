@@ -14,9 +14,9 @@
 
 | No. | Required calculation | Status |
 |---|---|---|
-| C-01 | Lot area | **PENDING verification** |
-| C-02 | Lot dimensions / boundary lengths | Given boundary distances listed below; plot/check pending |
-| C-03 | Traverse closure | **Preliminary result calculated; requires checking against source data** |
+| C-01 | Lot area | **265.26 m² from adjusted closed traverse; compare with approximate 300.00 m² stated area** |
+| C-02 | Lot dimensions / boundary lengths | **Original courses recorded; adjusted perimeter = 64.1454 m** |
+| C-03 | Traverse closure | **Closed by adjusting P5-1 only; original misclosure = 4.0120 m** |
 | C-04 | Required setbacks | **PENDING** |
 | C-05 | Buildable area | **PENDING** |
 | C-06 | Building footprint | **PENDING** |
@@ -41,23 +41,45 @@
 ## Given data
 
 - Approximate lot area stated in the assignment: **300.00 m²**.
-- The assignment also provides five boundary bearings and distances.
+- Lot boundary bearings and distances are given in the technical description.
+- Following the instructor's direction, only P5-1 is adjusted to close the traverse; courses 1-2 through 4-5 remain unchanged.
 
-## Required work
+## Working: area from the adjusted closed traverse
 
-The assignment asks us to determine and verify the lot area from the technical description.
+Use the closed coordinates in the local east-north coordinate system:
 
-## Working
+| Point | Easting (m) | Northing (m) |
+|---|---:|---:|
+| P1 | 0.000000 | 0.000000 |
+| P2 | 14.894856 | 3.030393 |
+| P3 | 17.398552 | -8.500934 |
+| P4 | 10.862083 | -14.317898 |
+| P5 | -1.661019 | -15.707836 |
+| P1 (closed) | 0.000000 | 0.000000 |
 
-A verified area should be calculated from the plotted and checked lot geometry. The traverse-closure check in **C-03** indicates that the listed courses do not currently return to their starting point. Therefore, a final area based on those courses should not yet be reported as verified.
+Use the coordinate / shoelace formula:
 
-| Item | Value |
+```text
+Area = 1/2 × |Σ(EᵢNᵢ₊₁ - Eᵢ₊₁Nᵢ)|
+```
+
+Substitution using the unrounded coordinates from the course components:
+
+```text
+Area ≈ 265.2598 m²
+```
+
+**Calculated area from the adjusted closed traverse: 265.26 m²**
+
+| Comparison | Area |
 |---|---:|
-| Approximate area stated in brief | 300.00 m² |
-| Area calculated from a verified, closed traverse | **PENDING** |
-| Difference from the stated approximate area | **PENDING until area is calculated** |
+| Approximate area stated in the assignment | 300.00 m² |
+| Area calculated from the adjusted closed traverse | 265.26 m² |
+| Difference (calculated minus stated approximate area) | -34.74 m² |
 
-**Result/status:** The only area currently available is the assignment's stated approximate area of **300.00 m²**. Verification is pending until the traverse data is checked.
+The calculated area is about **34.74 m² lower** than the stated approximate area. Keep both values visible; do not adjust other courses just to make the area equal to 300.00 m².
+
+**Result/status:** Area calculated from the closed plot. It is based on the documented adjustment to P5-1, while 300.00 m² remains the approximate area stated in the assignment.
 
 ---
 
@@ -73,18 +95,29 @@ A verified area should be calculated from the plotted and checked lot geometry. 
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-## Working: Total boundary length / perimeter
+## Working: original and adjusted perimeter
+
+Original total using all five distances as written in the assignment:
 
 ```text
-Perimeter = sum of all five boundary distances
-
-          = 15.20 + 11.80 + 8.75 + 12.60 + 16.35
-          = 64.70 m
+Original total = 15.20 + 11.80 + 8.75 + 12.60 + 16.35
+               = 64.70 m
 ```
 
-**Calculated total boundary length:** **64.70 m**
+For the closed plot, keep the first four distances unchanged and use the calculated adjusted closing course P5-1:
 
-The five listed distances are the boundary-course lengths provided in the assignment. Verify them against the source description before treating the plotted lot dimensions as final.
+```text
+Adjusted perimeter = 15.20 + 11.80 + 8.75 + 12.60 + 15.795414
+                   = 64.145414 m
+                   ≈ 64.1454 m
+```
+
+| Item | Bearing | Distance |
+|---|---|---:|
+| Original P5-1 value from assignment | N 08°10′ W | 16.35 m |
+| Adjusted closing course used in plot | N 06°02′11″ E | 15.7954 m (about 15.80 m) |
+
+The original total of **64.70 m** is retained as the sum of the instructor's five stated distances. The perimeter of the adjusted closed plot is **64.1454 m**. The original P5-1 value remains recorded separately in the CSV.
 
 ---
 
@@ -92,18 +125,20 @@ The five listed distances are the boundary-course lengths provided in the assign
 
 ## Purpose
 
-The assignment requires checking the closure of the plotted traverse.
+The assignment provides five boundary courses. The instructor directed that the traverse should be closed. For this plot, courses **1-2 through 4-5 are held unchanged** and only the final course **P5-1** is adjusted to return to P1.
+
+The original P5-1 value is kept in the calculations and coordinate schedule so the adjustment is transparent.
 
 ## Formula and sign convention
 
-For a boundary course with distance (D) and bearing angle (	heta), measured from the north or south direction:
+For a course with distance (D) and bearing angle (\theta), measured from north or south:
 
 ```text
-Latitude increment  = D × cos(θ)
-Departure increment = D × sin(θ)
+Latitude  = D × cos(θ)
+Departure = D × sin(θ)
 ```
 
-Apply signs from the bearing quadrant:
+Use the bearing quadrant for the signs:
 
 | Bearing quadrant | Latitude sign | Departure sign |
 |---|---:|---:|
@@ -112,73 +147,90 @@ Apply signs from the bearing quadrant:
 | S ... W | - | - |
 | N ... W | + | - |
 
-These signs are used to calculate the north-south and east-west components of each course.
+## Step 1: Calculate courses 1-2 through 4-5 without adjustment
 
-## Step 1: Calculate each latitude and departure
-
-The values below are calculated from the bearings and distances supplied in the assignment. Values are rounded to four decimal places.
-
-| Line | Bearing | Distance (m) | Latitude calculation/result (m) | Departure calculation/result (m) |
+| Line | Bearing | Distance (m) | Latitude (m) | Departure (m) |
 |---|---|---:|---:|---:|
-| 1–2 | N 78° 30' E | 15.20 | (+15.20cos78.5^circ = +3.0304) | (+15.20sin78.5^circ = +14.8949) |
-| 2–3 | S 12° 15' E | 11.80 | (-11.80cos12.25^circ = -11.5313) | (+11.80sin12.25^circ = +2.5037) |
-| 3–4 | S 48° 20' W | 8.75 | (-8.75cos48.3333^circ = -5.8170) | (-8.75sin48.3333^circ = -6.5365) |
-| 4–5 | S 83° 40' W | 12.60 | (-12.60cos83.6667^circ = -1.3899) | (-12.60sin83.6667^circ = -12.5231) |
-| 5–1 | N 08° 10' W | 16.35 | (+16.35cos8.1667^circ = +16.1842) | (-16.35sin8.1667^circ = -2.3226) |
-| **Sum** | | **64.70** | **+0.4764 m** | **−3.9836 m** |
+| 1-2 | N 78°30′ E | 15.20 | +3.030393 | +14.894856 |
+| 2-3 | S 12°15′ E | 11.80 | -11.531327 | +2.503697 |
+| 3-4 | S 48°20′ W | 8.75 | -5.816964 | -6.536469 |
+| 4-5 | S 83°40′ W | 12.60 | -1.389938 | -12.523102 |
+| **Sum of first four courses** | | **48.35** | **-15.707836** | **-1.661019** |
 
-## Step 2: Find the latitude and departure misclosures
+## Step 2: Check the original P5-1 as written in the assignment
 
-```text
-Sum of latitudes    = +0.4764 m
-Sum of departures   = -3.9836 m
-```
-
-For a closed traverse, both sums should be zero, subject to the accuracy and rounding of the source measurements.
-
-## Step 3: Calculate linear misclosure
-
-Formula:
+Original value: **N 08°10′ W, 16.35 m**.
 
 ```text
-Linear misclosure = √[(sum of latitudes)² + (sum of departures)²]
+Latitude  = +16.184195 m
+Departure = -2.322568 m
+
+Original traverse latitude sum  = -15.707836 + 16.184195
+                                = +0.476359 m
+
+Original traverse departure sum = -1.661019 - 2.322568
+                                = -3.983587 m
+
+Original linear misclosure = √[(0.476359)² + (-3.983587)²]
+                           ≈ 4.011967 m
+                           ≈ 4.0120 m
 ```
 
-Substitution:
+The original five-course data does not close. The following adjustment changes only the last course in order to close the plotted traverse, as instructed.
+
+## Step 3: Calculate the adjusted P5-1 closing course
+
+To close the traverse, P5-1 must cancel the sums from the first four courses:
 
 ```text
-Linear misclosure = √[(0.4764)² + (-3.9836)²]
-                  ≈ 4.0120 m
+Required latitude  = -(-15.707836) = +15.707836 m
+Required departure = -(-1.661019)  = +1.661019 m
 ```
 
-**Preliminary linear misclosure:** **approximately 4.0120 m**
-
-## Step 4: Calculate the preliminary relative closure
-
-Using the sum of the listed boundary distances:
+Calculate the closing distance:
 
 ```text
-Perimeter = 64.70 m
-
-Relative closure denominator = Perimeter ÷ Linear misclosure
-                             = 64.70 ÷ 4.0120
-                             ≈ 16.13
-
-Approximate closure ratio = 1 : 16.13
+Distance = √[(15.707836)² + (1.661019)²]
+         ≈ 15.795414 m
+         ≈ 15.80 m
 ```
 
-## Result and action required
+Calculate the bearing angle from north:
 
-**CHECK REQUIRED:** The supplied bearings and distances produce a preliminary linear misclosure of approximately **4.0120 m**. This is not a zero closure and should be checked against the original assignment values.
+```text
+θ = tan⁻¹(|departure| / |latitude|)
+  = tan⁻¹(1.661019 / 15.707836)
+  ≈ 6.036287°
+  ≈ 6°02′11″
+```
 
-- [ ] Recheck all bearings, distances, quadrant signs, and arithmetic against the assignment.
-- [ ] Ask the instructor for clarification or corrected data if the values are confirmed to be inconsistent.
-- [ ] Do not silently alter a bearing or distance to force closure.
-- [ ] Recalculate the coordinates and lot area after the source data is clarified.
+Both components are positive, so the closing bearing is in the northeast quadrant.
 
-This result is a mathematical check of the numbers transcribed above, not an assertion about what the intended survey data should have been.
+**Adjusted P5-1 for the closed plot: N 06°02′11″ E, 15.7954 m (about 15.80 m).**
+
+## Step 4: Check the adjusted closed traverse
+
+Using the adjusted closing course:
+
+```text
+Sum of latitudes    ≈ 0.000000 m
+Sum of departures   ≈ 0.000000 m
+Linear misclosure   ≈ 0.000000 m
+```
+
+The adjustment is limited to P5-1. The source value **N 08°10′ W, 16.35 m** is preserved in this worksheet and the CSV as the original assignment data, while the adjusted value is used to close the plotted shape.
+
+**Result/status:** The plotted traverse is closed using the adjusted P5-1 course as directed. The calculated closed-polygon area is recorded in C-01. This is a documented academic adjustment, not a claim that the original technical description itself closes.
 
 ---
+
+### Phase 1 coordinate plot and closure adjustment
+
+The closed preliminary graphic is in [site/phase1_site_base.svg](../site/phase1_site_base.svg), the course coordinate schedule including original and adjusted P5-1 records is in [site/phase1_traverse_coordinates.csv](../site/phase1_traverse_coordinates.csv), and the site analysis is in [site/phase1_site_analysis.md](../site/phase1_site_analysis.md).
+
+These outputs use a local coordinate frame with P1 = (0, 0). They are not georeferenced. The instructor directed that the traverse be closed, so courses 1-2 through 4-5 remain unchanged and P5-1 is adjusted to N 06°02′11″ E, 15.7954 m. The original P5-1 value (N 08°10′ W, 16.35 m) is retained for transparency; the original unadjusted traverse misclosure is approximately 4.0120 m.
+
+The adjusted perimeter is 64.1454 m and the closed-polygon area is 265.26 m². The assignment's approximate 300.00 m² area is 34.74 m² higher than this calculated result. Both values are documented without modifying courses 1-2 through 4-5 or forcing the calculated area to match the approximate area.
 
 # C-04. Required Setbacks
 
@@ -190,7 +242,7 @@ Determine applicable setbacks based on the relevant codes and regulations.
 
 - Approximate lot area: 300.00 m².
 - Road right-of-way in the project-information table: 8.00 m.
-- The lot description also refers to an existing 5.0 m barangay road.
+- The lot description states an existing 5.0 m barangay road width; the project information separately gives an 8.00 m right-of-way. The remaining 3.0 m could accommodate shoulders, drainage, or other road-related spaces depending on the plan.
 
 ## Calculation worksheet
 
@@ -202,7 +254,7 @@ Determine applicable setbacks based on the relevant codes and regulations.
 | Southwest road side | PENDING | Road boundary and applicable requirement need to be determined | Not determined |
 | West | PENDING | PENDING | Not determined |
 
-Do not fill in setback distances until the applicable requirement has been identified from the relevant code/regulation and the site/road boundary used for measurement has been determined.
+Treat the 5.0 m road width and 8.00 m total right-of-way as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan. Do not assume a particular split or allocation because the assignment does not specify one. Do not fill in setback distances until the applicable requirement and the boundary used for measurement have been identified.
 
 **Result:** **PENDING**. Complete this section after the lot is plotted and the applicable requirements are determined.
 
@@ -476,7 +528,8 @@ For each additional calculation, use this labeled format:
 - [ ] Lot area determined and checked.
 - [ ] Lot dimensions/boundary lengths recorded.
 - [ ] Traverse closure shown, including latitude and departure sums and linear misclosure.
-- [ ] Any discrepancy in the source data checked before finalizing lot geometry.
+- [x] P5-1 adjustment to close the traverse is documented, and its original value is retained for reference.
+- [x] Compare the calculated 265.26 m² polygon area against the approximate 300.00 m² area stated in the assignment; the 34.74 m² difference is recorded.
 - [ ] Required setbacks determined and their basis recorded.
 - [ ] Buildable area calculated from the plotted setback envelope.
 - [ ] Building footprint calculated from the proposed ground-floor plan.

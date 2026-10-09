@@ -529,7 +529,7 @@ For each additional calculation, use this labeled format:
 - [ ] Lot dimensions/boundary lengths recorded.
 - [ ] Traverse closure shown, including latitude and departure sums and linear misclosure.
 - [x] P5-1 adjustment to close the traverse is documented, and its original value is retained for reference.
-- [ ] Compare the calculated 265.26 m² polygon area against the approximate 300.00 m² area stated in the assignment.
+- [x] Compare the calculated 265.26 m² polygon area against the approximate 300.00 m² area stated in the assignment; the 34.74 m² difference is recorded.
 - [ ] Required setbacks determined and their basis recorded.
 - [ ] Buildable area calculated from the plotted setback envelope.
 - [ ] Building footprint calculated from the proposed ground-floor plan.

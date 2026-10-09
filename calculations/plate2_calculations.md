@@ -16,7 +16,7 @@
 |---|---|---|
 | C-01 | Lot area | **PENDING verification** |
 | C-02 | Lot dimensions / boundary lengths | Given boundary distances listed below; plot/check pending |
-| C-03 | Traverse closure | **Preliminary result calculated; requires checking against source data** |
+| C-03 | Traverse closure | **Calculated from the given values; closure gap shown without adjustment** |
 | C-04 | Required setbacks | **PENDING** |
 | C-05 | Buildable area | **PENDING** |
 | C-06 | Building footprint | **PENDING** |
@@ -169,14 +169,14 @@ Approximate closure ratio = 1 : 16.13
 
 ## Result and action required
 
-**CHECK REQUIRED:** The supplied bearings and distances produce a preliminary linear misclosure of approximately **4.0120 m**. This is not a zero closure and should be checked against the original assignment values.
+**Calculated result using the given values:** the listed bearings and distances produce a linear misclosure of approximately **4.0120 m**. The courses are kept exactly as stated in the assignment, and the closure gap is shown separately. No bearing or distance is balanced, replaced, or silently changed.
 
-- [ ] Recheck all bearings, distances, quadrant signs, and arithmetic against the assignment.
-- [ ] Ask the instructor for clarification or corrected data if the values are confirmed to be inconsistent.
-- [ ] Do not silently alter a bearing or distance to force closure.
-- [ ] Recalculate the coordinates and lot area after the source data is clarified.
+- [x] Calculate each course latitude and departure using the stated bearing quadrant.
+- [x] Sum the latitudes and departures and calculate the linear misclosure.
+- [x] Record the closure gap without treating it as an extra property boundary.
+- [ ] Verify the lot area from a closed traverse. This remains pending because the listed courses do not close.
 
-This result is a mathematical check of the numbers transcribed above, not an assertion about what the intended survey data should have been.
+This is the computed result of the instructor-provided values as transcribed into this worksheet.
 
 ---
 
@@ -184,7 +184,7 @@ This result is a mathematical check of the numbers transcribed above, not an ass
 
 The preliminary graphic is in [site/phase1_site_base.svg](../site/phase1_site_base.svg), and the course coordinate schedule is in [site/phase1_traverse_coordinates.csv](../site/phase1_traverse_coordinates.csv). The related site notes are in [site/phase1_site_analysis.md](../site/phase1_site_analysis.md).
 
-These outputs use a local coordinate frame with P1 = (0, 0). They are not georeferenced. The fifth course ends at P1*, approximately 4.0120 m from P1; the gap must not be treated as a parcel boundary or silently adjusted. Keep C-01 lot-area verification pending until the source courses are checked. The stated 300.00 m² remains an approximate area from the assignment, not an area verified from the open traverse.
+These outputs use a local coordinate frame with P1 = (0, 0). They are not georeferenced. The fifth course ends at P1*, approximately 4.0120 m from P1; the gap is shown as a closure diagnostic only, not as an added parcel boundary. The source bearings and distances remain unchanged. Keep C-01 lot-area verification pending because the stated 300.00 m² area is approximate and the courses do not close.
 
 # C-04. Required Setbacks
 
@@ -196,7 +196,7 @@ Determine applicable setbacks based on the relevant codes and regulations.
 
 - Approximate lot area: 300.00 m².
 - Road right-of-way in the project-information table: 8.00 m.
-- The lot description also refers to an existing 5.0 m barangay road.
+- The lot description states an existing 5.0 m barangay road width; the project information separately gives an 8.00 m right-of-way.
 
 ## Calculation worksheet
 
@@ -208,7 +208,7 @@ Determine applicable setbacks based on the relevant codes and regulations.
 | Southwest road side | PENDING | Road boundary and applicable requirement need to be determined | Not determined |
 | West | PENDING | PENDING | Not determined |
 
-Do not fill in setback distances until the applicable requirement has been identified from the relevant code/regulation and the site/road boundary used for measurement has been determined.
+Treat the 5.0 m road width and 8.00 m total right-of-way as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan. Do not assume a particular split or allocation because the assignment does not specify one. Do not fill in setback distances until the applicable requirement and the boundary used for measurement have been identified.
 
 **Result:** **PENDING**. Complete this section after the lot is plotted and the applicable requirements are determined.
 

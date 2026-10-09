@@ -119,6 +119,18 @@ The order below is a practical way to track the stated requirements. The require
 - [ ] **T-06** Show property boundaries, lot dimensions, bearings, distances, north direction, road, and adjacent properties on the site development plan.
 - [ ] **T-07** Analyze lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions.
 
+#### Phase 1 implementation checkpoint (2026-10-09)
+
+**Current status: PRELIMINARY; Phase 1 is not ready to be finalized.**
+
+Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), and [the site-analysis note](site/phase1_site_analysis.md).
+
+The five listed courses have a total listed distance of 64.70 m, a latitude sum of +0.4764 m, a departure sum of −3.9836 m, and a linear misclosure of approximately 4.0120 m. The plotted end of the last course is marked P1*; the dashed gap back to P1 is only a closure diagnostic, not an added boundary. No given bearing or distance was adjusted.
+
+The source also lists an 8.00 m road right-of-way in the project information and an existing 5.0 m barangay road in the lot description. Both values are preserved pending clarification.
+
+**Before treating Phase 1 as complete:** confirm the bearings/distances and road-width meaning with the instructor. Until then, lot-area verification, final parcel dimensions, setbacks, and the buildable envelope must remain pending.
+
 ### Phase 2: Site requirements and preliminary calculations
 
 - [ ] **T-10** Determine required setbacks using applicable codes and regulations.

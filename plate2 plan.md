@@ -47,7 +47,7 @@ The property is bounded by Lot 245-A on the north, Lot 246 on the east, a stated
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-The assignment lists an 8.00 m road right-of-way in the project information and refers to an existing 5.0 m barangay road in the lot description. Keep both values visible in the working notes and follow the instructor's direction if clarification is needed.
+Use the stated 5.0 m as the existing road width and 8.00 m as the total road right-of-way. These values serve different purposes. The remaining 3.0 m could be allocated for shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not specify the exact allocation, so do not assume a particular split.
 
 ---
 
@@ -111,25 +111,25 @@ The order below is a practical way to track the stated requirements. The require
 
 ### Phase 1: Lot and site base
 
-- [ ] **T-01** Transcribe the lot bearings and distances from the technical description.
-- [ ] **T-02** Determine and verify the lot area from the technical description.
-- [ ] **T-03** Determine the property-boundary lengths and lot dimensions.
-- [ ] **T-04** Plot the traverse and check its closure.
-- [ ] **T-05** Prepare the site base using the technical description.
-- [ ] **T-06** Show property boundaries, lot dimensions, bearings, distances, north direction, road, and adjacent properties on the site development plan.
-- [ ] **T-07** Analyze lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions.
+- [x] **T-01** Transcribe the lot bearings and distances from the technical description.
+- [ ] **T-02** Determine and verify the lot area from the technical description. The assignment's 300.00 m² value remains approximate; the listed traverse does not close.
+- [x] **T-03** Determine the property-boundary lengths and lot dimensions from the given courses.
+- [x] **T-04** Plot the traverse and check its closure. The calculated linear misclosure is documented as approximately 4.0120 m; no course has been altered.
+- [x] **T-05** Prepare the preliminary site base using the technical description.
+- [x] **T-06** Show property boundaries, course distances and bearings, north direction, road context, and adjacent properties in the preliminary site-base drawing.
+- [ ] **T-07** Complete the site analysis. Preliminary analysis has started; the final access arrangement and full solar assessment still need to be coordinated with the later building design.
 
 #### Phase 1 implementation checkpoint (2026-10-09)
 
-**Current status: PRELIMINARY; Phase 1 is not ready to be finalized.**
+**Current status: Phase 1 preliminary site base implemented using the instructor's given data. Lot-area verification remains pending because the listed traverse does not close.**
 
 Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), and [the site-analysis note](site/phase1_site_analysis.md).
 
 The five listed courses have a total listed distance of 64.70 m, a latitude sum of +0.4764 m, a departure sum of −3.9836 m, and a linear misclosure of approximately 4.0120 m. The plotted end of the last course is marked P1*; the dashed gap back to P1 is only a closure diagnostic, not an added boundary. No given bearing or distance was adjusted.
 
-The source also lists an 8.00 m road right-of-way in the project information and an existing 5.0 m barangay road in the lot description. Both values are preserved pending clarification.
+The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation.
 
-**Before treating Phase 1 as complete:** confirm the bearings/distances and road-width meaning with the instructor. Until then, lot-area verification, final parcel dimensions, setbacks, and the buildable envelope must remain pending.
+The traverse result is recorded as calculated from the given bearings and distances, with the closure gap shown separately. Do not adjust the source values. The stated lot area, 300.00 m², remains approximate; a verified area based on the open traverse, final setback layout, and buildable envelope remain pending.
 
 ### Phase 2: Site requirements and preliminary calculations
 

@@ -135,6 +135,20 @@ The site analysis now records the eight requested topics: lot orientation, north
 
 **Still on hold before a final Site Development Plan:** confirm the original survey reference and 300.00 m² approximate area, verify the physical road/ROW and actual lot geometry, obtain a reliable parcel location, inspect existing drainage/topography and obstructions, and establish applicable setbacks. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
 
+#### Repository status and verification record (2026-10-10)
+
+The Phase 1 implementation was merged into `main` through [Pull Request #1](https://github.com/justryan-n2d/plate_2_bsd/pull/1). Merge commit: `2c5fea33b6e55260d0612cefbc2db38235db02f3`. The earlier statement that the pull request was still unmerged is no longer current.
+
+The following checks were confirmed against the repository files now on `main`:
+
+- Original P5-1, adjusted P5-1, and original closure gap remain separately recorded.
+- Adjusted closing-course components return to P1; the closed traverse is reported with approximately 0.000000 m latitude and departure misclosure, based on the recorded component precision.
+- Adjusted perimeter (64.1454 m), adjusted polygon area (265.26 m²), assignment approximate area (300.00 m²), and 34.74 m² difference are stated consistently in the site-base records.
+- Road width (5.0 m) and total ROW (8.00 m) are identified as separate values; no specific allocation of the remaining 3.0 m is invented.
+- CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
+
+These are document and arithmetic consistency checks, not a professional survey certification. The area discrepancy, survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks still require confirmation. House-layout work remains deferred.
+
 ### Phase 2: Site requirements and preliminary calculations
 
 - [ ] **T-10** Determine required setbacks using applicable codes and regulations.

@@ -2,7 +2,7 @@
 
 **Project:** Proposed Two-Storey Residential Building, CE 393 Plate No. 2  
 **Lot:** 245-B, Barangay San Isidro, Municipality of Palo, Province of Leyte  
-**Status:** Preliminary only. The lot geometry and road-width information need instructor confirmation before the site base can be finalized.
+**Status:** Preliminary site base follows the instructor's given bearings and distances exactly. Road width and right-of-way are treated as separate dimensions. The listed traverse has a calculated closure gap, so the course-derived area is not verified.
 
 ## 1. Information stated in the assignment
 
@@ -14,8 +14,10 @@
 | North boundary | Lot 245-A | Adjoining property named in the technical description |
 | East boundary | Lot 246 | Adjoining property named in the technical description |
 | West boundary | Lot 244 | Adjoining property named in the technical description |
-| Southeast and southwest boundaries | Existing 5.0 m barangay road | As stated in the lot description |
-| Road right-of-way | 8.00 m | Separately listed in project information; clarify relation to the 5.0 m road |
+| Southeast and southwest boundaries | Existing 5.0 m barangay road | As stated in the lot description; road width |
+| Road right-of-way | 8.00 m | Total right-of-way width stated in project information |
+
+The 5.0 m road width and 8.00 m right-of-way are treated as different measurements. The remaining 3.0 m within the right-of-way could accommodate shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not state how this 3.0 m is divided, so no particular allocation is assumed.
 
 ## 2. Orientation and boundary plot
 
@@ -43,9 +45,9 @@ For the later building-layout phase, check morning and afternoon sun on east- an
 
 ## 5. Items requiring confirmation before finalizing Phase 1
 
-1. **Traverse closure:** The source courses miss the starting point by about 4.0120 m. Recheck the five bearings and distances against the instructor's source. Ask for clarification or corrected data if they are confirmed as written.
-2. **Road width / ROW:** The project table states an 8.00 m road right-of-way, while the lot description states an existing 5.0 m barangay road. Confirm whether these describe different things or whether one value needs correction.
-3. **Final parcel area and dimensions:** Do not calculate a verified polygon area, draw setbacks, or establish the buildable envelope until the survey data and applicable road boundary are confirmed.
+1. **Traverse closure:** Using the given bearings and distances exactly as written, the traverse has a calculated linear misclosure of about 4.0120 m. The plot shows the closing gap separately; no course is adjusted or replaced.
+2. **Road width and ROW:** Use 5.0 m as the road width and 8.00 m as the total right-of-way. The remaining 3.0 m could be allocated to shoulders, drainage, or other road-related spaces depending on the road plan. No specific allocation is shown because the brief does not define it.
+3. **Final parcel area and dimensions:** The assignment's 300.00 m² area remains approximate. A verified area calculated from the listed courses remains pending because the traverse does not close. Setbacks and buildable area also remain pending until the applicable requirements and geometry are established.
 
 ## 6. Phase 1 outputs
 

@@ -8,4 +8,4 @@ This folder contains preliminary outputs for the lot-and-site-base phase of CE 3
 
 ## Important status
 
-The five listed courses produce a linear misclosure of about 4.0120 m. The assignment also mentions both a 5.0 m existing barangay road and an 8.00 m road right-of-way. Do not force the traverse closed, change source values without confirmation, or treat the approximate 300.00 m² lot area as verified. Confirm both questions with the instructor before preparing the final site development plan.
+The five listed courses produce a linear misclosure of about 4.0120 m. Use 5.0 m as the road width and 8.00 m as the total right-of-way. The remaining 3.0 m may be used for shoulders, drainage, or other road-related spaces depending on the actual plan; the assignment does not specify the allocation. The listed traverse has a calculated 4.0120 m misclosure, so keep the closing gap visible, do not adjust the given bearings/distances, and do not treat the approximate 300.00 m² area as verified from the open traverse.

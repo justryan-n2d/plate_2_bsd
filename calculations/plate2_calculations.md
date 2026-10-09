@@ -41,23 +41,45 @@
 ## Given data
 
 - Approximate lot area stated in the assignment: **300.00 m²**.
-- The assignment also provides five boundary bearings and distances.
+- Lot boundary bearings and distances are given in the technical description.
+- Following the instructor's direction, only P5-1 is adjusted to close the traverse; courses 1-2 through 4-5 remain unchanged.
 
-## Required work
+## Working: area from the adjusted closed traverse
 
-The assignment asks us to determine and verify the lot area from the technical description.
+Use the closed coordinates in the local east-north coordinate system:
 
-## Working
+| Point | Easting (m) | Northing (m) |
+|---|---:|---:|
+| P1 | 0.000000 | 0.000000 |
+| P2 | 14.894856 | 3.030393 |
+| P3 | 17.398552 | -8.500934 |
+| P4 | 10.862083 | -14.317898 |
+| P5 | -1.661019 | -15.707836 |
+| P1 (closed) | 0.000000 | 0.000000 |
 
-A verified area should be calculated from the plotted and checked lot geometry. The traverse-closure check in **C-03** indicates that the listed courses do not currently return to their starting point. Therefore, a final area based on those courses should not yet be reported as verified.
+Use the coordinate / shoelace formula:
 
-| Item | Value |
+```text
+Area = 1/2 × |Σ(EᵢNᵢ₊₁ - Eᵢ₊₁Nᵢ)|
+```
+
+Substitution using the unrounded coordinates from the course components:
+
+```text
+Area ≈ 265.2598 m²
+```
+
+**Calculated area from the adjusted closed traverse: 265.26 m²**
+
+| Comparison | Area |
 |---|---:|
-| Approximate area stated in brief | 300.00 m² |
-| Area calculated from a verified, closed traverse | **PENDING** |
-| Difference from the stated approximate area | **PENDING until area is calculated** |
+| Approximate area stated in the assignment | 300.00 m² |
+| Area calculated from the adjusted closed traverse | 265.26 m² |
+| Difference (calculated minus stated approximate area) | -34.74 m² |
 
-**Result/status:** The only area currently available is the assignment's stated approximate area of **300.00 m²**. Verification is pending until the traverse data is checked.
+The calculated area is about **34.74 m² lower** than the stated approximate area. Keep both values visible; do not adjust other courses just to make the area equal to 300.00 m².
+
+**Result/status:** Area calculated from the closed plot. It is based on the documented adjustment to P5-1, while 300.00 m² remains the approximate area stated in the assignment.
 
 ---
 
@@ -73,18 +95,29 @@ A verified area should be calculated from the plotted and checked lot geometry. 
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-## Working: Total boundary length / perimeter
+## Working: original and adjusted perimeter
+
+Original total using all five distances as written in the assignment:
 
 ```text
-Perimeter = sum of all five boundary distances
-
-          = 15.20 + 11.80 + 8.75 + 12.60 + 16.35
-          = 64.70 m
+Original total = 15.20 + 11.80 + 8.75 + 12.60 + 16.35
+               = 64.70 m
 ```
 
-**Calculated total boundary length:** **64.70 m**
+For the closed plot, keep the first four distances unchanged and use the calculated adjusted closing course P5-1:
 
-The five listed distances are the boundary-course lengths provided in the assignment. Verify them against the source description before treating the plotted lot dimensions as final.
+```text
+Adjusted perimeter = 15.20 + 11.80 + 8.75 + 12.60 + 15.795414
+                   = 64.145414 m
+                   ≈ 64.1454 m
+```
+
+| Item | Bearing | Distance |
+|---|---|---:|
+| Original P5-1 value from assignment | N 08°10′ W | 16.35 m |
+| Adjusted closing course used in plot | N 06°02′11″ E | 15.7954 m (about 15.80 m) |
+
+The original total of **64.70 m** is retained as the sum of the instructor's five stated distances. The perimeter of the adjusted closed plot is **64.1454 m**. The original P5-1 value remains recorded separately in the CSV.
 
 ---
 
@@ -92,18 +125,20 @@ The five listed distances are the boundary-course lengths provided in the assign
 
 ## Purpose
 
-The assignment requires checking the closure of the plotted traverse.
+The assignment provides five boundary courses. The instructor directed that the traverse should be closed. For this plot, courses **1-2 through 4-5 are held unchanged** and only the final course **P5-1** is adjusted to return to P1.
+
+The original P5-1 value is kept in the calculations and coordinate schedule so the adjustment is transparent.
 
 ## Formula and sign convention
 
-For a boundary course with distance (D) and bearing angle (	heta), measured from the north or south direction:
+For a course with distance (D) and bearing angle (\theta), measured from north or south:
 
 ```text
-Latitude increment  = D × cos(θ)
-Departure increment = D × sin(θ)
+Latitude  = D × cos(θ)
+Departure = D × sin(θ)
 ```
 
-Apply signs from the bearing quadrant:
+Use the bearing quadrant for the signs:
 
 | Bearing quadrant | Latitude sign | Departure sign |
 |---|---:|---:|
@@ -112,71 +147,80 @@ Apply signs from the bearing quadrant:
 | S ... W | - | - |
 | N ... W | + | - |
 
-These signs are used to calculate the north-south and east-west components of each course.
+## Step 1: Calculate courses 1-2 through 4-5 without adjustment
 
-## Step 1: Calculate each latitude and departure
-
-The values below are calculated from the bearings and distances supplied in the assignment. Values are rounded to four decimal places.
-
-| Line | Bearing | Distance (m) | Latitude calculation/result (m) | Departure calculation/result (m) |
+| Line | Bearing | Distance (m) | Latitude (m) | Departure (m) |
 |---|---|---:|---:|---:|
-| 1–2 | N 78° 30' E | 15.20 | (+15.20cos78.5^circ = +3.0304) | (+15.20sin78.5^circ = +14.8949) |
-| 2–3 | S 12° 15' E | 11.80 | (-11.80cos12.25^circ = -11.5313) | (+11.80sin12.25^circ = +2.5037) |
-| 3–4 | S 48° 20' W | 8.75 | (-8.75cos48.3333^circ = -5.8170) | (-8.75sin48.3333^circ = -6.5365) |
-| 4–5 | S 83° 40' W | 12.60 | (-12.60cos83.6667^circ = -1.3899) | (-12.60sin83.6667^circ = -12.5231) |
-| 5–1 | N 08° 10' W | 16.35 | (+16.35cos8.1667^circ = +16.1842) | (-16.35sin8.1667^circ = -2.3226) |
-| **Sum** | | **64.70** | **+0.4764 m** | **−3.9836 m** |
+| 1-2 | N 78°30′ E | 15.20 | +3.030393 | +14.894856 |
+| 2-3 | S 12°15′ E | 11.80 | -11.531327 | +2.503697 |
+| 3-4 | S 48°20′ W | 8.75 | -5.816964 | -6.536469 |
+| 4-5 | S 83°40′ W | 12.60 | -1.389938 | -12.523102 |
+| **Sum of first four courses** | | **48.35** | **-15.707836** | **-1.661019** |
 
-## Step 2: Find the latitude and departure misclosures
+## Step 2: Check the original P5-1 as written in the assignment
 
-```text
-Sum of latitudes    = +0.4764 m
-Sum of departures   = -3.9836 m
-```
-
-For a closed traverse, both sums should be zero, subject to the accuracy and rounding of the source measurements.
-
-## Step 3: Calculate linear misclosure
-
-Formula:
+Original value: **N 08°10′ W, 16.35 m**.
 
 ```text
-Linear misclosure = √[(sum of latitudes)² + (sum of departures)²]
+Latitude  = +16.184195 m
+Departure = -2.322568 m
+
+Original traverse latitude sum  = -15.707836 + 16.184195
+                                = +0.476359 m
+
+Original traverse departure sum = -1.661019 - 2.322568
+                                = -3.983587 m
+
+Original linear misclosure = √[(0.476359)² + (-3.983587)²]
+                           ≈ 4.011967 m
+                           ≈ 4.0120 m
 ```
 
-Substitution:
+The original five-course data does not close. The following adjustment changes only the last course in order to close the plotted traverse, as instructed.
+
+## Step 3: Calculate the adjusted P5-1 closing course
+
+To close the traverse, P5-1 must cancel the sums from the first four courses:
 
 ```text
-Linear misclosure = √[(0.4764)² + (-3.9836)²]
-                  ≈ 4.0120 m
+Required latitude  = -(-15.707836) = +15.707836 m
+Required departure = -(-1.661019)  = +1.661019 m
 ```
 
-**Preliminary linear misclosure:** **approximately 4.0120 m**
-
-## Step 4: Calculate the preliminary relative closure
-
-Using the sum of the listed boundary distances:
+Calculate the closing distance:
 
 ```text
-Perimeter = 64.70 m
-
-Relative closure denominator = Perimeter ÷ Linear misclosure
-                             = 64.70 ÷ 4.0120
-                             ≈ 16.13
-
-Approximate closure ratio = 1 : 16.13
+Distance = √[(15.707836)² + (1.661019)²]
+         ≈ 15.795414 m
+         ≈ 15.80 m
 ```
 
-## Result and action required
+Calculate the bearing angle from north:
 
-**Calculated result using the given values:** the listed bearings and distances produce a linear misclosure of approximately **4.0120 m**. The courses are kept exactly as stated in the assignment, and the closure gap is shown separately. No bearing or distance is balanced, replaced, or silently changed.
+```text
+θ = tan⁻¹(|departure| / |latitude|)
+  = tan⁻¹(1.661019 / 15.707836)
+  ≈ 6.036287°
+  ≈ 6°02′11″
+```
 
-- [x] Calculate each course latitude and departure using the stated bearing quadrant.
-- [x] Sum the latitudes and departures and calculate the linear misclosure.
-- [x] Record the closure gap without treating it as an extra property boundary.
-- [ ] Verify the lot area from a closed traverse. This remains pending because the listed courses do not close.
+Both components are positive, so the closing bearing is in the northeast quadrant.
 
-This is the computed result of the instructor-provided values as transcribed into this worksheet.
+**Adjusted P5-1 for the closed plot: N 06°02′11″ E, 15.7954 m (about 15.80 m).**
+
+## Step 4: Check the adjusted closed traverse
+
+Using the adjusted closing course:
+
+```text
+Sum of latitudes    ≈ 0.000000 m
+Sum of departures   ≈ 0.000000 m
+Linear misclosure   ≈ 0.000000 m
+```
+
+The adjustment is limited to P5-1. The source value **N 08°10′ W, 16.35 m** is preserved in this worksheet and the CSV as the original assignment data, while the adjusted value is used to close the plotted shape.
+
+**Result/status:** The plotted traverse is closed using the adjusted P5-1 course as directed. The calculated closed-polygon area is recorded in C-01. This is a documented academic adjustment, not a claim that the original technical description itself closes.
 
 ---
 

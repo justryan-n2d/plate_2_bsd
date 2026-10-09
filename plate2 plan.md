@@ -117,19 +117,23 @@ The order below is a practical way to track the stated requirements. The require
 - [x] **T-04** Plot and close the traverse by adjusting P5-1 only; retain the original value and show both values in the records.
 - [x] **T-05** Prepare the preliminary site base using the technical description.
 - [x] **T-06** Show property boundaries, course distances and bearings, north direction, road context, and adjacent properties in the preliminary site-base drawing.
-- [ ] **T-07** Complete the site analysis. Preliminary analysis has started; the final access arrangement and full solar assessment still need to be coordinated with the later building design.
+- [x] **T-07** Complete the source-based site analysis and record evidence, limits, and site-verification items in `site/phase1_site_analysis.md` and `site/phase1_site_analysis_matrix.csv`. Exact access points, parcel-specific solar/shading, and existing-condition checks remain subject to field verification and later site-development planning.
 
-#### Phase 1 implementation checkpoint (2026-10-09)
+#### Phase 1 implementation checkpoint (2026-10-10)
 
-**Current status: The site-base traverse is closed by adjusting only P5-1 per the instructor's direction. Courses 1-2 through 4-5 remain exactly as given. The original P5-1 value is preserved for reference.**
+**Current status: The preliminary site-base traverse is closed by adjusting only P5-1 per the instructor's direction. Courses 1-2 through 4-5 remain exactly as given. The original P5-1 value is preserved for reference. The source-based site analysis is documented without beginning the house layout.**
 
-Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), and [the site-analysis note](site/phase1_site_analysis.md).
+Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), [the site-analysis note](site/phase1_site_analysis.md), and [the site-analysis evidence matrix](site/phase1_site_analysis_matrix.csv).
 
-The original five listed courses produce a latitude sum of +0.4764 m, departure sum of −3.9836 m, and linear misclosure of approximately 4.0120 m. As directed, the first four courses are held unchanged and only P5-1 is adjusted from N 08°10′ W, 16.35 m to N 06°02′11″ E, 15.7954 m (about 15.80 m) so that it closes at P1. Both the original and adjusted P5-1 data are documented.
+The original five listed courses produce a latitude sum of +0.4764 m, departure sum of -3.9836 m, and linear misclosure of approximately 4.0120 m. As directed, the first four courses are held unchanged and only P5-1 is adjusted from N 08°10′ W, 16.35 m to N 06°02′11″ E, 15.7954 m (about 15.80 m) so that it closes at P1. Both the original and adjusted P5-1 data are documented.
 
-The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation.
+The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The original survey plan and area discrepancy still need checking before the plot is treated as final.
 
-The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. Setbacks and the buildable envelope remain pending their applicable requirements and a later site-development layout.
+The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
+
+The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
+
+**Still on hold before a final Site Development Plan:** confirm the original survey reference and 300.00 m² approximate area, verify the physical road/ROW and actual lot geometry, obtain a reliable parcel location, inspect existing drainage/topography and obstructions, and establish applicable setbacks. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
 
 ### Phase 2: Site requirements and preliminary calculations
 

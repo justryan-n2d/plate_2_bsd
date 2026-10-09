@@ -112,24 +112,24 @@ The order below is a practical way to track the stated requirements. The require
 ### Phase 1: Lot and site base
 
 - [x] **T-01** Transcribe the lot bearings and distances from the technical description.
-- [ ] **T-02** Determine and verify the lot area from the technical description. The assignment's 300.00 m² value remains approximate; the listed traverse does not close.
-- [x] **T-03** Determine the property-boundary lengths and lot dimensions from the given courses.
-- [x] **T-04** Plot the traverse and check its closure. The calculated linear misclosure is documented as approximately 4.0120 m; no course has been altered.
+- [x] **T-02** Calculate the area from the closed traverse: 265.26 m² using adjusted P5-1. The difference from the approximate 300.00 m² stated in the brief (34.74 m²) is documented.
+- [x] **T-03** Determine the property-boundary lengths and lot dimensions, with adjusted P5-1 documented separately from the original value.
+- [x] **T-04** Plot and close the traverse by adjusting P5-1 only; retain the original value and show both values in the records.
 - [x] **T-05** Prepare the preliminary site base using the technical description.
 - [x] **T-06** Show property boundaries, course distances and bearings, north direction, road context, and adjacent properties in the preliminary site-base drawing.
 - [ ] **T-07** Complete the site analysis. Preliminary analysis has started; the final access arrangement and full solar assessment still need to be coordinated with the later building design.
 
 #### Phase 1 implementation checkpoint (2026-10-09)
 
-**Current status: Phase 1 preliminary site base implemented using the instructor's given data. Lot-area verification remains pending because the listed traverse does not close.**
+**Current status: The site-base traverse is closed by adjusting only P5-1 per the instructor's direction. Courses 1-2 through 4-5 remain exactly as given. The original P5-1 value is preserved for reference.**
 
 Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), and [the site-analysis note](site/phase1_site_analysis.md).
 
-The five listed courses have a total listed distance of 64.70 m, a latitude sum of +0.4764 m, a departure sum of −3.9836 m, and a linear misclosure of approximately 4.0120 m. The plotted end of the last course is marked P1*; the dashed gap back to P1 is only a closure diagnostic, not an added boundary. No given bearing or distance was adjusted.
+The original five listed courses produce a latitude sum of +0.4764 m, departure sum of −3.9836 m, and linear misclosure of approximately 4.0120 m. As directed, the first four courses are held unchanged and only P5-1 is adjusted from N 08°10′ W, 16.35 m to N 06°02′11″ E, 15.7954 m (about 15.80 m) so that it closes at P1. Both the original and adjusted P5-1 data are documented.
 
 The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation.
 
-The traverse result is recorded as calculated from the given bearings and distances, with the closure gap shown separately. Do not adjust the source values. The stated lot area, 300.00 m², remains approximate; a verified area based on the open traverse, final setback layout, and buildable envelope remain pending.
+The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. Setbacks and the buildable envelope remain pending their applicable requirements and a later site-development layout.
 
 ### Phase 2: Site requirements and preliminary calculations
 

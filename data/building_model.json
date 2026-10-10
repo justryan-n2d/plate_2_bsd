@@ -15,7 +15,7 @@
     "Adopt one off-street parking space in the 2.80 m x 5.50 m carport for the student plate; this is an academic design assumption.",
     "Doors, windows, finishes, ceiling/eaves/roof levels and roof pitch are draft design targets, not confirmed code minima.",
     "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included.",
-    "Include a required second-floor balcony 3.00 m wide x 1.50 m projection (4.50 m2), attached to and accessed from the master bedroom on the upper edge of the A-03 plan. Count it separately from enclosed house floor area."
+    "Include a required second-floor balcony 3.00 m wide x 1.50 m projection (4.50 m2), attached to the master bedroom on the east/front (entry and carport) facade. Count it separately from enclosed house floor area."
   ],
   "site": {
     "lot_number": "245-B",
@@ -212,7 +212,7 @@
       "Second Floor": [
         {
           "name": "Master bedroom",
-          "x_m": 0,
+          "x_m": 6.1,
           "y_m": 0,
           "width_m": 3.2,
           "depth_m": 3.4,
@@ -222,7 +222,7 @@
         },
         {
           "name": "Stair opening / flight",
-          "x_m": 4.5,
+          "x_m": 4.1,
           "y_m": 0,
           "width_m": 2,
           "depth_m": 3.2,
@@ -232,7 +232,7 @@
         },
         {
           "name": "Bedroom 3",
-          "x_m": 6.5,
+          "x_m": 0,
           "y_m": 0,
           "width_m": 2.8,
           "depth_m": 3,
@@ -243,7 +243,7 @@
         {
           "name": "Toilet and bath",
           "x_m": 7.2,
-          "y_m": 3,
+          "y_m": 3.4,
           "width_m": 2.1,
           "depth_m": 1.5,
           "target_area_m2": 3.15,
@@ -252,7 +252,7 @@
         },
         {
           "name": "Stair landing / circulation",
-          "x_m": 4.5,
+          "x_m": 4.1,
           "y_m": 3.2,
           "width_m": 2,
           "depth_m": 2.5,
@@ -274,10 +274,10 @@
           "name": "Shared hall / circulation",
           "x_m": 2.8,
           "y_m": 4.9,
-          "width_m": 1.7,
+          "width_m": 1.3,
           "depth_m": 3,
-          "target_area_m2": 5.1,
-          "dimension_note": "additional schematic hall; verify in final layout",
+          "target_area_m2": 3.9,
+          "dimension_note": "1.30 x 3.00 m",
           "status": "planning allowance"
         },
         {
@@ -307,16 +307,17 @@
       "floor": "Second Floor",
       "status": "required",
       "attached_to": "Master bedroom",
-      "plan_location": "North/upper edge of master bedroom in A-03; balcony projects 1.50 m outside the enclosed footprint and remains inside the selected S-01 academic envelope",
+      "plan_location": "East/right edge of A-03 on the entry and carport side; aligned with the master bedroom, with a 1.50 m projection outside the enclosed east wall",
       "access": "0.90 m nominal balcony door from master bedroom",
       "width_m": 3,
       "projection_m": 1.5,
       "area_m2": 4.5,
       "open_external_area": true,
       "railing": "Perimeter guardrail shown schematically; final height/detail to be specified for the academic plate",
-      "note": "Outside the enclosed house footprint; report separately from enclosed gross floor area.",
-      "x_m": 0.2,
-      "y_m": -1.5
+      "note": "Open external area on the east/front facade; report separately from enclosed gross floor area.",
+      "x_m": 9.3,
+      "y_m": 0.2,
+      "front_facade": "east"
     }
   },
   "draft_opening_schedule": [
@@ -372,10 +373,10 @@
   ],
   "drawing_status": {
     "A-01": "Preliminary site development layout using the selected academic 2.00 m setback; coordinate labels for the 5.00 m carriageway within the 8.00 m total ROW.",
-    "A-02": "Preliminary ground-floor plan with room-size targets; openings and final dimensions pending.",
-    "A-03": "Preliminary second-floor plan with required 3.00 m x 1.50 m balcony accessed from the master bedroom, plus stairwell/landing coordination.",
+    "A-02": "Preliminary ground-floor plan with right/east entry side; openings and final dimensions pending. The upper-floor balcony is not enclosed ground-floor area.",
+    "A-03": "Preliminary second-floor plan with required 3.00 m x 1.50 m balcony projecting from the east/front facade at the master bedroom, plus stairwell/landing coordination.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
-    "A-05": "Four schematic elevations; show the balcony on the assumed front façade; heights/openings remain provisional.",
+    "A-05": "Four schematic elevations; identify the east/carport-entry facade as the front and show the required balcony at the matching position; heights/openings remain provisional.",
     "A-06": "Two schematic sections, one through stair; final sections must coordinate final levels/structure.",
     "A-07": "Draft architectural details/schedules; not structural or specification approval."
   }

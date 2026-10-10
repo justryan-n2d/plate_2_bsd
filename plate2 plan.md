@@ -130,7 +130,7 @@ The original five listed courses produce a latitude sum of +0.4764 m, departure 
 
 The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The 300.00 m² value is explicitly approximate. The 265.26 m² value is the calculated area of the adjusted closed polygon; the 34.74 m² difference is documented and accepted as a difference from the approximate figure, not a reason to force the traverse to match 300.00 m². The difference is therefore not a blocker by itself. If the original approved survey document or a later instructor direction becomes available, use it to confirm the source information rather than silently changing the remaining courses.
 
-The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
+The 5.0 m carriageway is treated as being inside the 8.00 m total ROW. The remaining 3.0 m is part of the ROW outside the carriageway in total, but the exact division is not stated. Show both dimensions separately and do not invent exact shoulder/drainage widths.
 
 The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
 
@@ -148,7 +148,7 @@ The following checks were confirmed against the repository files now on `main`:
 - Road width (5.0 m) and total ROW (8.00 m) are identified as separate values; no specific allocation of the remaining 3.0 m is invented.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
-These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks may still require confirmation for a final site-development plan. House-layout work remains deferred until Phase 2 site requirements are worked through.
+These are document and arithmetic consistency checks for the academic activity, not a professional survey certification. Use 265.26 m² as the working lot area. The 5.00 m carriageway is within the 8.00 m total ROW. Phase 2 has now selected the uniform 2.00 m academic setback assumption and completed the dependent preliminary calculations; Phase 5 must coordinate those assumptions into the architectural sheets.
 
 ### Phase 2: Site requirements and preliminary calculations
 
@@ -186,7 +186,7 @@ S-02 to S-04 remain comparison-only alternatives, not blockers. These assumption
 
 **Status: Preliminary space-planning package prepared.** Room targets and diagrams are recorded in `space_planning/`, with a validator at `scripts/validate_space_planning.py`. All target dimensions are planning assumptions rather than code minimums. The diagrams are not to scale and do not define the final building orientation, driveway, doors, windows, setbacks, or stairs.
 
-Phase 2 is still pending. The proposed buildable envelope, setbacks, footprint, calculated floor areas, open space, parking requirement, occupant load, and other code-based dimensions must be checked before any dimensioned floor plan is accepted. Phase 4 must separately verify stair geometry. Balcony inclusion remains conditional. The zoning must be revised if those checks require it.
+Phase 2 now has an academic calculation baseline using 265.26 m² lot area, a 5.00 m carriageway within the 8.00 m total ROW, and uniform 2.00 m setbacks. The preliminary footprint, floor areas, open area, six-person design occupant count and one-space parking assumption must now be coordinated with the final dimensioned floor plans. Phase 4 stair values also need to agree with A-06. Balcony inclusion remains conditional.
 
 ### Phase 4: Stair planning and calculations
 

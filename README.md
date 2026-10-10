@@ -25,7 +25,8 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Calculation worksheet](calculations/plate2_calculations.md): calculation methods, values, and checks.
 - [Phase 2 site requirements and preliminary calculations](calculations/phase2_site_calculations.md): code-based occupancy scenarios, setback inputs, and remaining verification items.
-- [Preliminary building-envelope scenarios](calculations/phase2_envelope_scenarios.md): four reproducible inset-geometry comparisons, local coordinates, and the unresolved local setback decision.
+- [Preliminary building-envelope scenarios](calculations/phase2_envelope_scenarios.md): four reproducible inset-geometry comparisons and local coordinates, with Scenario A selected as the working envelope for Phase 3.
+- [Phase 3 space program and adjacency](design/phase3_space_program.md): first-draft room-area targets, ground-floor and second-floor relationship diagrams, and layout checks.
 - [Phase 2 setback inputs](site/phase2_setback_inputs.csv): adopted 2.00 m working offsets for all five edges.
 - [Phase 2 code requirements register](site/phase2_code_requirements.csv): traceable provisions, assumptions, calculated values, and unresolved evidence.
 - [Traverse coordinate CSV](site/phase1_traverse_coordinates.csv): original and adjusted course records, coordinates, and closure diagnostics.

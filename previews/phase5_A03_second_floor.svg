@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
-<title id="title">A-03 - Second Floor plan</title>
-<desc id="desc">Preliminary second floor plan concept with required room labels and target clear dimensions, not to scale for construction and not approved for code compliance. Master bedroom: 3.20 x 3.40 m | Stair opening / flight: 2.00 x 3.20 m; stairwell zone | Bedroom 3: 2.80 x 3.00 m | Toilet and bath: 1.50 x 2.10 m, rotated | Stair landing / circulation: 2.00 x 2.50 m | Bedroom 2: 2.80 x 3.00 m | Shared hall / circulation: additional schematic hall; verify in final layout | Family area: 2.80 x 3.00 m</desc>
+<title id="title">A-03 - Second Floor plan with required balcony</title>
+<desc id="desc">Preliminary second floor plan concept with required room labels, target clear dimensions, and a required 3.00 x 1.50 m balcony (4.50 m2) accessed from the master bedroom. Not to scale for construction and not approved for code compliance. Master bedroom: 3.20 x 3.40 m | Stair opening / flight: 2.00 x 3.20 m; stairwell zone | Bedroom 3: 2.80 x 3.00 m | Toilet and bath: 1.50 x 2.10 m, rotated | Stair landing / circulation: 2.00 x 2.50 m | Bedroom 2: 2.80 x 3.00 m | Shared hall / circulation: additional schematic hall; verify in final layout | Family area: 2.80 x 3.00 m | Balcony: 3.00 x 1.50 m, 4.50 m2</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.note{font-size:13px;fill:#475569}.small{font-size:11px;fill:#475569}</style>
 <rect width="1250" height="780" fill="#f8fafc"/>
 <text class="title" x="35" y="40">A-03 | SECOND FLOOR PLAN</text>
 <text class="sub" x="35" y="67">Conceptual arrangement based on the Phase 3 room schedule and provisional Phase 4 stair; not a final dimensioned plan.</text>
-<rect x="128" y="143" width="423.90000000000003" height="363.7" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="128" y="79" width="423.90000000000003" height="427.7" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="7 5"/>
 <rect x="140" y="155" width="399.90000000000003" height="339.7" fill="#ffffff" stroke="#111827" stroke-width="4"/>
 <g><rect x="140" y="155" width="137.6" height="146.2" fill="#fff0d6" stroke="#334155" stroke-width="1.5"/><text x="208.8" y="222.1" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Master bedroom</text><text x="208.8" y="238.1" text-anchor="middle" font-size="10" fill="#475569">3.20 x 3.40 m</text></g>
 <g><rect x="333.5" y="155" width="86" height="137.6" fill="#eee8fa" stroke="#334155" stroke-width="1.5"/><text x="376.5" y="217.8" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Stair opening / flight</text><text x="376.5" y="233.8" text-anchor="middle" font-size="10" fill="#475569">2.00 x 3.20 m; stairwell zone</text></g>
@@ -19,7 +19,18 @@
 <rect x="155.05" y="170.05" width="86" height="60.199999999999996" fill="#ffffff" stroke="#94a3b8"/><rect x="155.05" y="236.7" width="86" height="47.300000000000004" fill="#ffffff" stroke="#94a3b8"/>
    <rect x="159.35" y="378.6" width="77.4" height="64.5" fill="#ffffff" stroke="#94a3b8"/>
    <line x1="333.5" y1="165.75" x2="419.5" y2="286.15" stroke="#64748b" stroke-width="2" stroke-dasharray="5 4"/>
-<line x1="140" y1="539.7" x2="539.9000000000001" y2="539.7" stroke="#475569" stroke-width="1.2"/><line x1="140" y1="532.7" x2="140" y2="546.7" stroke="#475569"/><line x1="539.9000000000001" y1="532.7" x2="539.9000000000001" y2="546.7" stroke="#475569"/><text x="339.95000000000005" y="531.7" text-anchor="middle" font-size="12" fill="#334155">9.30 m overall</text>
+<!-- Required balcony, accessed from the master bedroom -->
+<rect x="148.6" y="90.5" width="129" height="64.5" fill="#d1fae5" stroke="#0f766e" stroke-width="1.7"/>
+<line x1="151" y1="94" x2="275.2" y2="94" stroke="#047857" stroke-width="3"/>
+<line x1="151" y1="94" x2="151" y2="155" stroke="#047857" stroke-width="2"/>
+<line x1="275.2" y1="94" x2="275.2" y2="155" stroke="#047857" stroke-width="2"/>
+<text x="212.8" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="#065f46">BALCONY</text>
+<text x="212.8" y="133" text-anchor="middle" font-size="10" fill="#065f46">3.00 x 1.50 m</text>
+<!-- 0.90 m nominal doorway to master bedroom -->
+<line x1="190" y1="155" x2="228.7" y2="155" stroke="#ffffff" stroke-width="7"/>
+<line x1="190" y1="155" x2="190" y2="116.3" stroke="#334155" stroke-width="1.5"/>
+<path d="M190,116.3 A38.7,38.7 0 0 1 228.7,155" fill="none" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 3"/>
+<line x1="140" y1="600" x2="539.9000000000001" y2="600" stroke="#475569" stroke-width="1.2"/><line x1="140" y1="593" x2="140" y2="607" stroke="#475569"/><line x1="539.9000000000001" y1="593" x2="539.9000000000001" y2="607" stroke="#475569"/><text x="339.95000000000005" y="592" text-anchor="middle" font-size="12" fill="#334155">9.30 m overall (house)</text>
  <line x1="569.9000000000001" y1="155" x2="569.9000000000001" y2="494.7" stroke="#475569" stroke-width="1.2"/><line x1="562.9000000000001" y1="155" x2="576.9000000000001" y2="155" stroke="#475569"/><line x1="562.9000000000001" y1="494.7" x2="576.9000000000001" y2="494.7" stroke="#475569"/><text x="584.9000000000001" y="324.85" font-size="12" fill="#334155" transform="rotate(90 584.9000000000001 324.85)">7.90 m overall</text>
 <g stroke="#0284c7" stroke-width="5">
 <line x1="163.65" y1="155" x2="206.65" y2="155"/>
@@ -31,7 +42,7 @@
 <text x="735" y="165" font-size="17" font-weight="700" fill="#172033">SPACE AND COORDINATION NOTES</text>
 <text class="small" x="735" y="195">• Master bedroom: 3.20 x 3.40 m</text><text class="small" x="735" y="219">• Stair opening / flight: 2.00 x 3.20 m; stairwell zone</text><text class="small" x="735" y="243">• Bedroom 3: 2.80 x 3.00 m</text><text class="small" x="735" y="267">• Toilet and bath: 1.50 x 2.10 m, rotated</text><text class="small" x="735" y="291">• Stair landing / circulation: 2.00 x 2.50 m</text><text class="small" x="735" y="315">• Bedroom 2: 2.80 x 3.00 m</text><text class="small" x="735" y="339">• Shared hall / circulation: additional schematic hall; verify in final layout</text><text class="small" x="735" y="363">• Family area: 2.80 x 3.00 m</text>
 <line x1="735" y1="402" x2="1185" y2="402" stroke="#e2e8f0"/>
-<text class="note" x="735" y="434">• Stair opening aligns with the preliminary Phase 4 stair zone; verify the final landing and opening.</text><text class="note" x="735" y="459">• Balcony is omitted from the massing layout pending setback/privacy review.</text><text class="note" x="735" y="484">• Door/window positions and clear dimensions remain preliminary.</text>
+<text class="note" x="735" y="434">• Stair opening aligns with the preliminary Phase 4 stair zone; verify the final landing and opening.</text><text class="note" x="735" y="459">• Required balcony: 3.00 x 1.50 m (4.50 m²), accessed from master bedroom.</text><text class="note" x="735" y="484">• Balcony is an external area and is reported separately from enclosed floor area. Door, railing and wall details remain preliminary.</text>
 <rect x="710" y="590" width="500" height="130" rx="10" fill="#fff7ed" stroke="#fdba74"/>
 <text x="730" y="620" font-size="15" font-weight="700" fill="#9a3412">PRELIMINARY ONLY</text>
 <text class="note" x="730" y="647">2.00 m setback screening and local zoning are not finalized.</text>

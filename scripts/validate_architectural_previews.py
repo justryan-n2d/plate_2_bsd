@@ -294,7 +294,7 @@ def validate_svg_files() -> None:
             for required_text in ("8.00 m TOTAL ROW", "5.00 m CARRIAGEWAY", "Remaining ROW outside carriageway: 3.00 m in total"):
                 if required_text not in visible_text:
                     fail(f"A-01 is missing the required road/ROW note: {required_text}")
-            if "no specific placement of the carriageway within the ROW is assumed" not in visible_text.lower():
+            if "no specific placement of the carriageway within the row is assumed" not in visible_text.lower():
                 fail("A-01 must state that no specific lateral placement of the carriageway within the ROW is assumed")
 
         if drawing_no == "A-03":

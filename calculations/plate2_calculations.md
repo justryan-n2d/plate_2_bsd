@@ -234,183 +234,116 @@ The adjusted perimeter is 64.1454 m and the closed-polygon area is 265.26 m². T
 
 # C-04. Required Setbacks
 
-## Assignment requirement
+**Final applicable setbacks: PENDING.** The project does not yet have verified road/ROW lines or confirmed Palo zoning / yard classification.
 
-Determine applicable setbacks based on the relevant codes and regulations.
+References:
+- [PD 1096, Section 708(a), Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320): general 2 m property-line distance for Group A dwellings, subject to other provisions.
+- [2004 Revised IRR, Table VIII.2, reference copy](https://www.iibh.org/kijun/pdf/Philippines_02_IRR_of_NBC_of_the_Philippines.pdf): R-1 front 4.50 m and side/rear 2.00 m for newly-developed subdivisions, as described in its note. Its applicability to this parcel has not been confirmed.
 
-## Given data available
+The assignment separately gives an existing 5.0 m road and an 8.00 m ROW. Confirm the actual ROW line and whether P2-P3, P3-P4 or both are front yards before choosing a scenario.
 
-- Approximate lot area: 300.00 m².
-- Road right-of-way in the project-information table: 8.00 m.
-- The lot description states an existing 5.0 m barangay road width; the project information separately gives an 8.00 m right-of-way. The remaining 3.0 m could accommodate shoulders, drainage, or other road-related spaces depending on the plan.
+| Screening scenario | P1-P2 | P2-P3 | P3-P4 | P4-P5 | P5-P1 | Offset area | Current house fits | Current carport fits |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| S-01: uniform 2.00 m | 2.00 | 2.00 | 2.00 | 2.00 | 2.00 | 152.4309 m² | Yes | Yes |
+| S-02: P2-P3 front at 4.50 m | 2.00 | 4.50 | 2.00 | 2.00 | 2.00 | 128.9837 m² | Yes | No |
+| S-03: P3-P4 front at 4.50 m | 2.00 | 2.00 | 4.50 | 2.00 | 2.00 | 128.8989 m² | No | No |
+| S-04: both road edges 4.50 m | 2.00 | 4.50 | 4.50 | 2.00 | 2.00 | 112.6268 m² | No | No |
 
-## Calculation worksheet
+These are geometric screening polygons, **not approved legal setbacks**. The fit flags compare the house and carport at their current draft positions only. A failed flag means relocate/redesign the current rectangle; it does not mean no building can fit.
 
-| Boundary / side | Applicable setback | Source / basis | Status |
-|---|---:|---|---|
-| North | PENDING | PENDING | Not determined |
-| East | PENDING | PENDING | Not determined |
-| Southeast road side | PENDING | Road boundary and applicable requirement need to be determined | Not determined |
-| Southwest road side | PENDING | Road boundary and applicable requirement need to be determined | Not determined |
-| West | PENDING | PENDING | Not determined |
+Details: [Phase 2 requirements](../site/phase2_site_requirements.md), [scenario CSV](../site/phase2_setback_scenarios.csv), [scenario preview](../previews/phase2_setback_scenarios.svg).
 
-Treat the 5.0 m road width and 8.00 m total right-of-way as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan. Do not assume a particular split or allocation because the assignment does not specify one. Do not fill in setback distances until the applicable requirement and the boundary used for measurement have been identified.
-
-**Result:** **PENDING**. Complete this section after the lot is plotted and the applicable requirements are determined.
+**Result:** PENDING official survey, ROW, local zoning and yard-classification confirmation.
 
 ---
 
 # C-05. Buildable Area
 
-## Assignment requirement
+Calculate the final envelope only after C-04 is confirmed: plot the verified lot, set off the applicable distances from the correct reference boundaries, construct the offset intersections and calculate the enclosed area. Then check the selected footprint and carport against the resulting polygon.
 
-Determine the allowable building envelope.
+| Item | Current value | Status |
+|---|---:|---|
+| Adjusted academic traverse area | 265.2598 m² | Calculated; not cadastral certification |
+| Uniform 2.00 m screening polygon | 152.4309 m² | Scenario only |
+| R-1 style single-road-front scenarios | 128.8989-128.9837 m² | Applicability pending |
+| Both road edges at 4.50 m | 112.6268 m² | Stress test only |
+| **Final buildable envelope** | **PENDING** | Legal setback / ROW selection required |
 
-## Required inputs
-
-- Verified lot geometry from C-01 to C-03.
-- Applicable setbacks from C-04.
-- Setback lines plotted from the correct property/road boundaries.
-
-## Working procedure
-
-1. Plot the verified property boundary.
-2. Draw the applicable setback lines.
-3. Identify the area inside the lot and outside the required setback areas.
-4. Measure or calculate the resulting buildable envelope.
-
-| Item | Result |
-|---|---:|
-| Verified lot area | PENDING |
-| Setbacks confirmed | PENDING |
-| Buildable envelope area | **PENDING** |
-
-**Result:** **PENDING** until the lot geometry and setbacks are confirmed.
+**Result:** PENDING. Do not use a screening area as the final buildable area.
 
 ---
 
 # C-06. Building Footprint
 
-## Assignment requirement
+Current A-01 concept geometry:
 
-Determine the proposed ground-floor building footprint.
+| Item | Draft dimensions | Area | Status |
+|---|---:|---:|---|
+| Main house rectangle | 9.30 m × 7.90 m | 73.47 m² | Preliminary |
+| Carport placeholder | 2.80 m × 5.50 m | 15.40 m² | Preliminary one-car concept |
+| Combined covered ground budget | House + carport | 88.87 m² | Arithmetic only |
 
-## Required inputs
+Current-position check against the offset alternatives: both rectangles fit S-01; only the house fits S-02; neither rectangle fits S-03 or S-04 at its current position. The latter results require a placement/layout revision, not a conclusion that no building can fit.
 
-- Buildable envelope from C-05.
-- Proposed ground-floor layout.
-- Dimensions of the outside building walls.
-
-## Working
-
-After the ground-floor plan is prepared, calculate its footprint from the dimensions of the proposed building outline. If the outline has multiple parts, show the separate area calculations and their sum.
-
-```text
-Building footprint = area enclosed by the proposed ground-floor
-                     building outline
-```
-
-| Item | Result |
-|---|---:|
-| Proposed exterior building dimensions | PENDING |
-| Proposed building footprint | **PENDING** |
-| Check against buildable envelope | PENDING |
-
-**Result:** **PENDING** until the building footprint is designed and dimensioned.
+**Result:** Final footprint and placement PENDING the official buildable envelope and revised A-01/A-02/A-03 drawings.
 
 ---
 
 # C-07. Floor Areas
 
-## Assignment requirement
+Official areas must be measured from coordinated, dimensioned floor plans. The current SVG plans are preliminary, so these figures are programming estimates only.
 
-Calculate the ground-floor area, second-floor area, and total floor area.
+| Item | Calculation basis | Indicative value |
+|---|---|---:|
+| Ground-floor enclosed room target | Phase 3 room schedule | 52.32 m² |
+| Ground-floor circulation allowance | Planning allowance | 4.50 m² |
+| Ground-floor programme subtotal | 52.32 + 4.50 | 56.82 m² |
+| Rough gross ground-floor budget | 56.82 / 0.85, assuming 15% wall/structure overhead | 66.85 m² |
+| Second-floor indoor room target | Phase 3 room schedule | 44.23 m² |
+| Rough gross second-floor budget | 44.23 / 0.85, same assumed overhead | 52.04 m² |
+| **Final ground-floor area** | From dimensioned A-02 | **PENDING** |
+| **Final second-floor area** | From dimensioned A-03 | **PENDING** |
+| **Final total floor area** | Ground + second, using adopted area method | **PENDING** |
 
-## Required inputs
+The 15% factor is a planning allowance, not a code factor. Reconcile wall thickness, stairwell/opening treatment, landings and the accepted footprint before recording official areas.
 
-- Dimensioned ground-floor plan.
-- Dimensioned second-floor plan.
-- Consistent area-measurement method for both floors.
-
-## Working
-
-Record the area of the proposed ground floor and second floor from the completed drawings. If the plan is divided into simpler shapes, label each part, show its formula, and add the partial areas.
-
-```text
-Ground-floor area = sum of the measured areas on the ground floor
-
-Second-floor area = sum of the measured areas on the second floor
-
-Total floor area   = Ground-floor area + Second-floor area
-```
-
-| Floor area | Result |
-|---|---:|
-| Ground floor | PENDING m² |
-| Second floor | PENDING m² |
-| **Total floor area** | **PENDING m²** |
-
-**Result:** **PENDING** until both floor plans are dimensioned.
+**Result:** Final floor areas PENDING.
 
 ---
 
 # C-08. Remaining Open Space
 
-## Assignment requirement
+The remaining arithmetic area is not the same as the final code-defined open-space result.
 
-Determine the remaining open space.
+| Item | Calculation | Result |
+|---|---|---:|
+| Adjusted academic lot area | C-01 | 265.2598 m² |
+| Main house rectangle | 9.30 × 7.90 | 73.47 m² |
+| Lot area less main house only | 265.2598 − 73.47 | 191.7898 m² |
+| House + carport | 73.47 + 15.40 | 88.87 m² |
+| Lot area less both rectangles | 265.2598 − 88.87 | 176.3898 m² |
 
-## Required inputs
+These are simple arithmetic values only. Confirm lot category, final geometry, legal coverage/open-space definition and applicable local requirements.
 
-- Lot area calculated from the verified lot geometry.
-- Proposed building footprint.
-
-## Working worksheet
-
-```text
-Remaining open space = lot area - area occupied by the building footprint
-```
-
-Substitution:
-
-```text
-Remaining open space = [verified lot area] - [building footprint]
-                      = PENDING m²
-```
-
-| Item | Result |
-|---|---:|
-| Verified lot area | PENDING m² |
-| Building footprint | PENDING m² |
-| Remaining open space | **PENDING m²** |
-
-**Result:** **PENDING**. Use the area values from C-01 and C-06 when they are completed.
+**Result:** Final open space / lot occupancy PENDING.
 
 ---
 
 # C-09. Occupant Load
 
-## Assignment requirement
+Given data: the assignment lists Group A occupancy and a proposed household of **5-6 persons**. That household estimate is not automatically the code-calculated occupant load.
 
-Determine the applicable occupant load.
+| Input / step | Value | Status |
+|---|---|---|
+| Proposed household size | 5-6 persons | Given |
+| Applicable occupant-load method/factor | PENDING | Confirm official requirement |
+| Area / space classification | PENDING | Determine which part of the building the method applies to |
+| Formula, substituted values and rounding | PENDING | Document with source |
+| **Code occupant load** | **PENDING persons** | Not yet calculated |
 
-## Given data
+Do not invent an occupant-load factor or simply copy the household size as the code result.
 
-- Proposed occupants: **5–6 persons**.
-- Occupancy group stated in the assignment: **A**.
-
-The proposed number of occupants is not automatically the same as a code-calculated occupant load. Complete the calculation using the applicable requirement identified for this activity.
-
-## Calculation worksheet
-
-| Input / step | Value |
-|---|---|
-| Area used for the occupant-load calculation | PENDING |
-| Applicable occupant-load factor or method | PENDING: determine from the applicable requirement |
-| Formula / method | PENDING until the applicable method is identified |
-| Calculated occupant load | **PENDING persons** |
-
-Record the formula, units, substituted values, rounding method, and source of the applicable requirement once determined. Do not invent an occupant-load factor.
+**Result:** PENDING official method confirmation.
 
 ---
 

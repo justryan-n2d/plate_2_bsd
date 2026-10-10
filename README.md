@@ -9,7 +9,7 @@ Project workspace for the proposed two-storey residential building plate.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
 - GitHub Actions now generates the DXF and SVG preview, validates the outputs against the source CSV, and uploads a ZIP artifact on successful runs.
-- The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
+- The latest recorded full validation passed: [GitHub Actions run 50](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38023516564), including unit tests, report checks, traverse validation, and DXF/SVG generation and validation.
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
 - Phase 2 site-envelope work is complete for progression to the classroom design phase. The project uses a 2.00 m working setback from each of the five plotted property boundaries, giving a **152.43 m² working envelope** in [the preliminary envelope scenario report](calculations/phase2_envelope_scenarios.md).
@@ -22,6 +22,7 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 
 ## Project records
 
+- [Repository implementation status](docs/implementation-status.md): current Phase 1/2 accomplishments, Phase 3 progress, validation state, remaining work, and file map.
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Calculation worksheet](calculations/plate2_calculations.md): calculation methods, values, and checks.
 - [Phase 2 site requirements and preliminary calculations](calculations/phase2_site_calculations.md): code-based occupancy scenarios, setback inputs, and remaining verification items.
@@ -47,6 +48,8 @@ DXF is the editable CAD master in this workflow. DWG is a converted delivery cop
 ## Folder guide
 
 - **calculations/**: calculation work and results.
+- **design/**: proposed building space program and adjacency notes.
+- **docs/**: implementation status and project history.
 - **site/**: current Phase 1 source data, drawing, and analysis.
 - **data/**: future shared building model and schedules. The building model file will be added after the layout is actually defined.
 - **scripts/**: drawing generation and validation tools.
@@ -69,5 +72,5 @@ The generator writes drawings/phase1_site_base.dxf and previews/phase1_site_base
 
 - The adjusted traverse is an academic plotting basis under the instructor's direction, not cadastral survey certification.
 - The instructor clarified the road cross-section as 8.00 m total RROW = 5.00 m carriageway + 1.50 m RROW strip on each side; the site drawing uses this allocation.
-- Exact road/ROW edges, site levels, drainage, obstructions, setbacks, and parcel-specific hazard results are not inferred from the local coordinate plot.
+- The 2.00 m boundary inset is the selected working assumption for this classroom activity. The local coordinate plot does not establish actual survey monuments, site levels, drainage, obstructions, or parcel-specific hazard results.
 - Automated checks do not establish code compliance, structural adequacy, permit readiness, or construction readiness.

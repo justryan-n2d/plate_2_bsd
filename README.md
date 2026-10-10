@@ -7,7 +7,8 @@ Project workspace for the proposed two-storey residential building plate.
 - Phase 1 site-base inputs and analysis are in the site folder.
 - The academic plot closes by keeping courses 1-2 through 4-5 unchanged and using the documented adjusted P5-1 closing course.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
-- Drawing generation and validation scripts are being introduced.
+- Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
+- The first Actions run failed before exposing step details or logs; the cause remains unresolved, so validation is not yet claimed successful.
 - No generated DXF or final DWG is claimed as complete until the script is run and the output is inspected.
 
 ## Phase 1 site-base preview

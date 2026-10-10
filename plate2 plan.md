@@ -147,7 +147,7 @@ The following checks were confirmed against the repository files now on `main`:
 - The road graphic uses the instructor's clarified allocation: 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
-These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks may still require confirmation for a final site-development plan. House-layout work remains deferred until Phase 2 site requirements are worked through.
+These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, actual site conditions, precise site alignment, and applicable final setbacks may still require confirmation for a final site-development plan. The 8.00 m / 5.00 m / 1.50 m road cross-section allocation itself is given by the instructor. House-layout work remains deferred until Phase 2 site requirements are worked through.
 
 ### Phase 2: Site requirements and preliminary calculations
 
@@ -168,7 +168,7 @@ Phase 2 implementation has started in [the Phase 2 site calculation report](calc
 
 The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited national-code provisions, assignment facts, provisional calculations, and local/site-specific items requiring verification.
 
-- **T-10:** The road cross-section is now specified by the instructor as 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side. Final setback/envelope treatment remains pending confirmation of the applicable yard rule and its correct reference line, not the allocation of the remaining 3.00 m.
+- **T-10:** The instructor's road cross-section is recorded as 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side. The remaining setback/envelope work concerns the applicable final yard rule and measurement reference, not the allocation of the remaining 3.00 m.
 - **T-11:** The envelope calculation logic and unit tests are implemented. The project-specific buildable-envelope area is intentionally not reported until the missing road-facing reference geometry is available.
 - **T-18:** A preliminary one-slot requirement is supported for a single-family dwelling lot above 120 m² under the cited 2004 IRR table; the standard car-slot rectangle is documented as 2.50 m × 5.00 m for perpendicular/diagonal parking or 2.15 m × 6.00 m for parallel parking. Confirm occupancy division and local Building Official interpretation before finalizing.
 - **T-19:** The conditional corner-lot (90%) and inside-lot (80%) occupancy ceilings have been calculated. These are not substitutes for setbacks or the final footprint.

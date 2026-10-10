@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1300" height="930" viewBox="0 0 1300 930" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-access="family-area" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1300" height="930" viewBox="0 0 1300 930" role="img" aria-labelledby="title desc">
 <title id="title">A-05 Four preliminary elevations</title>
 <desc id="desc">Four preliminary schematic elevations of a two-storey residential building. The front is the east 7.90 m facade on the entry/carport side, with a 3.00 m wide balcony aligned with the family-area portion of the east/front facade, matching its location along A-03. Gable ends are labelled left and right sides. Storey levels, openings, eaves and roof ridge remain provisional; not for construction.</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}</style>
@@ -32,7 +32,7 @@
     <line x1="824.65" y1="696" x2="1085.35" y2="696" stroke="#334155" stroke-width="1.5"/>
     <rect x="812.65" y="541.23" width="284.7" height="55.76999999999998" fill="#e2e8f0" stroke="#334155" stroke-width="2.2"/><line x1="812.65" y1="597" x2="1097.35" y2="597" stroke="#334155" stroke-width="2"/><rect x="876.6875" y="721" width="48" height="36" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/><line x1="900.6875" y1="721" x2="900.6875" y2="757" stroke="#334155"/><rect x="876.6875" y="720" width="48" height="36" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/><line x1="900.6875" y1="720" x2="900.6875" y2="756" stroke="#334155"/><rect x="949.05" y="725.7" width="29.7" height="69.3" fill="#fef3c7" stroke="#334155" stroke-width="1.6"/>
 <!-- Front/east balcony beside family area; 3.00 m span along facade x 1.50 m projection -->
-<g id="front-balcony-elevation" data-span-m="3.00" data-projection-m="1.50" data-offset-m="4.90" transform="translate(6.6,0)">
+<g id="front-balcony-elevation" data-span-m="3.00" data-projection-m="1.50" data-offset-m="4.90" data-access-space="family-area" transform="translate(6.6,0)">
   <rect x="979.75" y="696" width="99" height="7" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
   <line x1="979.75" y1="663" x2="1078.75" y2="663" stroke="#0f766e" stroke-width="3"/>
   <line x1="979.75" y1="663" x2="979.75" y2="696" stroke="#0f766e" stroke-width="2"/>

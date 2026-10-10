@@ -162,6 +162,48 @@ def validate_model(data: dict) -> None:
     if not math.isclose(total_including_balcony, total_enclosed + balcony_area, rel_tol=0.0, abs_tol=0.01):
         fail("Total floor area including balcony is inconsistent")
 
+    if not math.isclose(
+        float(building["floor_levels"]["second_ffl_m"]) - float(building["floor_levels"]["ground_ffl_m"]),
+        float(building["assumed_heights"]["ground_floor_to_second_floor_m"]),
+        rel_tol=0.0,
+        abs_tol=0.001,
+    ):
+        fail("Ground-to-second floor level difference does not match the assumed stair rise")
+
+    # The stair enclosure and upper-floor opening must occupy the same plan coordinates.
+    ground_stair = next((r for r in building["rooms"]["Ground Floor"] if r["name"] == "Stairway"), None)
+    upper_stair = next((r for r in building["rooms"]["Second Floor"] if r["name"] == "Stair opening / flight"), None)
+    if ground_stair is None or upper_stair is None:
+        fail("Both floor plans must define the stair/stair-opening zone")
+    for key in ("x_m", "y_m", "width_m", "depth_m"):
+        if not math.isclose(float(ground_stair[key]), float(upper_stair[key]), rel_tol=0.0, abs_tol=0.001):
+            fail(f"Ground stair and upper-floor opening are not aligned for {key}")
+
+    # Room planning boxes must not overlap one another on the same floor.
+    for floor, rooms in building["rooms"].items():
+        for index, first in enumerate(rooms):
+            fx1, fy1 = float(first["x_m"]), float(first["y_m"])
+            fx2 = fx1 + float(first["width_m"])
+            fy2 = fy1 + float(first["depth_m"])
+            for second in rooms[index + 1:]:
+                sx1, sy1 = float(second["x_m"]), float(second["y_m"])
+                sx2 = sx1 + float(second["width_m"])
+                sy2 = sy1 + float(second["depth_m"])
+                overlap_x = min(fx2, sx2) - max(fx1, sx1)
+                overlap_y = min(fy2, sy2) - max(fy1, sy1)
+                if overlap_x > 0.01 and overlap_y > 0.01:
+                    fail(f"Room planning boxes overlap on {floor}: {first['name']} / {second['name']}")
+
+    roof = building["roof"]
+    heights = building["assumed_heights"]
+    pitch = math.radians(float(roof["pitch_degrees"]))
+    expected_ridge = float(heights["eaves_m"]) + math.tan(pitch) * float(foot["width_m"]) / 2.0
+    if not math.isclose(expected_ridge, float(heights["roof_ridge_m"]), rel_tol=0.0, abs_tol=0.02):
+        fail(
+            f"Roof ridge elevation is inconsistent with width/pitch: "
+            f"calculated={expected_ridge:.3f} m, recorded={float(heights['roof_ridge_m']):.3f} m"
+        )
+
     for floor, rooms in building["rooms"].items():
         names: set[str] = set()
         for room in rooms:
@@ -182,7 +224,63 @@ def validate_model(data: dict) -> None:
                 fail(f"Missing dimension note for {floor} / {name}")
 
 
-def validate_svg_files() -> None:
+def validate_room_svg_geometry(root: ET.Element, data: dict, floor_key: str, filename: str) -> None:
+    """Confirm the visible room rectangles match their shared-model coordinates."""
+    footprint = data["building"]["footprint"]
+    outline = root.find(".//*[@id='main-house-outline']")
+    if outline is None:
+        fail(f"{filename} is missing the main-house outline used for geometry checks")
+    x0 = float(outline.attrib["x"])
+    y0 = float(outline.attrib["y"])
+    scale_x = float(outline.attrib["width"]) / float(footprint["width_m"])
+    scale_y = float(outline.attrib["height"]) / float(footprint["depth_m"])
+    expected = {room["name"]: room for room in data["building"]["rooms"][floor_key]}
+    found: dict[str, tuple[float, float, float, float]] = {}
+
+    for group in root.iter():
+        if local_name(group.tag) != "g":
+            continue
+        room_name = group.attrib.get("data-room-name")
+        if not room_name:
+            continue
+        if room_name not in expected:
+            fail(f"{filename} has an unrecognized room geometry tag: {room_name}")
+        room_rect = next((child for child in list(group) if local_name(child.tag) == "rect"), None)
+        if room_rect is None:
+            fail(f"{filename} room {room_name} has no direct room rectangle")
+        try:
+            actual = (
+                (float(room_rect.attrib["x"]) - x0) / scale_x,
+                (float(room_rect.attrib["y"]) - y0) / scale_y,
+                float(room_rect.attrib["width"]) / scale_x,
+                float(room_rect.attrib["height"]) / scale_y,
+            )
+        except (KeyError, ValueError, ZeroDivisionError):
+            fail(f"{filename} room {room_name} has invalid numeric rectangle geometry")
+        target = expected[room_name]
+        wanted = (
+            float(target["x_m"]),
+            float(target["y_m"]),
+            float(target["width_m"]),
+            float(target["depth_m"]),
+        )
+        for label, actual_value, expected_value in zip(("x", "y", "width", "depth"), actual, wanted):
+            if not math.isclose(actual_value, expected_value, rel_tol=0.0, abs_tol=0.02):
+                fail(
+                    f"{filename} room {room_name} {label} mismatch: "
+                    f"drawing={actual_value:.3f} m, model={expected_value:.3f} m"
+                )
+        if room_name in found:
+            fail(f"{filename} duplicates room geometry tag: {room_name}")
+        found[room_name] = actual
+
+    missing = set(expected) - set(found)
+    extra = set(found) - set(expected)
+    if missing or extra:
+        fail(f"{filename} room geometry tags disagree with the model; missing={sorted(missing)}, extra={sorted(extra)}")
+
+
+def validate_svg_files(data: dict) -> None:
     for filename, drawing_no in DRAWINGS.items():
         path = PREVIEW_DIR / filename
         if not path.is_file():
@@ -258,6 +356,11 @@ def validate_svg_files() -> None:
             for name, a, e in zip(("east-edge x", "family-area alignment y", "projection width", "facade span"), actual, expected):
                 if not math.isclose(a, e, rel_tol=0.0, abs_tol=0.03):
                     fail(f"{filename} balcony {name} mismatch: {a} != {e}")
+        if drawing_no == "A-02":
+            validate_room_svg_geometry(root, data, "Ground Floor", filename)
+        elif drawing_no == "A-03":
+            validate_room_svg_geometry(root, data, "Second Floor", filename)
+
         if drawing_no == "A-01":
             expected_site_dimensions = {
                 "data-road-carriageway-m": 5.0,
@@ -335,7 +438,7 @@ def main() -> int:
         fail(f"Missing shared building model: {MODEL_PATH}")
     data = json.loads(MODEL_PATH.read_text(encoding="utf-8"))
     validate_model(data)
-    validate_svg_files()
+    validate_svg_files(data)
     print("PASS: site area and 2 m screening geometry agree with the shared building model.")
     print("PASS: house/carport and family-area balcony fit within the S-01 academic envelope.")
     print("PASS: each room target area equals width x depth and fits the nominal footprint.")

@@ -162,6 +162,17 @@ These are document and arithmetic consistency checks, not a professional survey 
 - [ ] **T-18** Determine the applicable parking requirement.
 - [ ] **T-19** Identify and calculate other applicable code-based dimensions and requirements.
 
+#### Phase 2 implementation checkpoint (2026-10-10)
+
+Phase 2 implementation has started in [the Phase 2 site calculation report](calculations/phase2_site_calculations.md). The calculation script reads the Phase 1 closed-traverse coordinates, calculates the Section 708(a) lot-occupancy scenarios, validates the setback-input rows, and includes a tested polygon-inset function.
+
+- **T-10:** The national-code baseline has been documented, but final setbacks remain pending local zoning confirmation and verified road-centerline / RROW geometry.
+- **T-11:** The envelope calculation logic and unit tests are implemented. The project-specific buildable-envelope area is intentionally not reported until the missing road-facing reference geometry is available.
+- **T-18:** A preliminary one-slot parking result is recorded for the calculated lot area above 120 m², subject to confirmation against the current official IRR table and the local Building Official.
+- **T-19:** The conditional corner-lot (90%) and inside-lot (80%) occupancy ceilings have been calculated. These are not substitutes for setbacks or the final footprint.
+
+No task is marked complete solely on this preliminary review. Footprint, floor areas, final remaining open space, and occupant-load calculations remain dependent on the verified envelope and dimensioned layout.
+
 ### Phase 3: Space planning
 
 - [ ] **T-20** Make the space-requirement table for the proposed rooms and spaces.

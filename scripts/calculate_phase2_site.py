@@ -76,6 +76,28 @@ def calculate_preliminary_parking_slots(area_m2: float) -> int | None:
     return 1 if area_m2 > 120.0 else None
 
 
+def parking_slot_geometry(orientation: str = "perpendicular") -> dict[str, float | str]:
+    """Return the 2004 NBCP Revised IRR minimum car-slot dimensions.
+
+    Dimensions are the nominal slot rectangle only. They do not include a
+    driveway, turning space, garage wall thickness, or access aisle.
+    """
+    options = {
+        "perpendicular": {"width_m": 2.50, "length_m": 5.00},
+        "diagonal": {"width_m": 2.50, "length_m": 5.00},
+        "parallel": {"width_m": 2.15, "length_m": 6.00},
+    }
+    if orientation not in options:
+        raise ValueError("orientation must be 'perpendicular', 'diagonal', or 'parallel'.")
+    dimensions = options[orientation]
+    return {
+        "orientation": orientation,
+        "width_m": dimensions["width_m"],
+        "length_m": dimensions["length_m"],
+        "area_m2": dimensions["width_m"] * dimensions["length_m"],
+    }
+
+
 def _validate_convex_polygon(vertices: Sequence[Point]) -> float:
     if len(vertices) < 3:
         raise ValueError("A polygon needs at least three vertices.")
@@ -360,7 +382,9 @@ def build_phase2_report(
         "",
         "| Item | Current finding | Status |",
         "|---|---|---|",
-        f"| Parking | {f'{parking_slots} off-street/on-site slot indicated as a preliminary minimum' if parking_slots is not None else 'Pending applicable use classification and current parking-table verification'} | PRELIMINARY; verify at local OBO |",
+        f"| Parking demand | {f'{parking_slots} off-street, on-site slot indicated for a lot above 120 m², assuming a single-family dwelling under Group A / Division A-1' if parking_slots is not None else 'Pending lot/use classification and current parking-table verification'} | PRELIMINARY; confirm occupancy division locally |",
+        "| Standard car-slot size | 2.50 m × 5.00 m = 12.50 m² for perpendicular/diagonal parking; parallel option 2.15 m × 6.00 m = 12.90 m² | 2004 Revised IRR Rule VII, parking dimensions; slot must be outside RROW |",
+        "| Driveway, maneuvering and garage clearances | Not included in the rectangle-area calculation | PENDING layout and applicable access checks |",
         "| Occupant load | Assignment gives 5–6 proposed occupants; code occupant load still requires the applicable floor area / method and occupancy classification | PENDING |",
         "| Building footprint | Must be selected after setback envelope and preliminary room arrangement are coordinated | PENDING |",
         "| Ground-floor area | Requires the dimensioned ground-floor plan | PENDING |",
@@ -375,6 +399,7 @@ def build_phase2_report(
         "2. [DPWH National Building Code Development Office documents](https://dpwh.architectureboard.com.ph/documents/), including the 2004 Revised Implementing Rules and Regulations of PD 1096. Verify Table VII.4 parking requirements against the current official text and local Building Official interpretation before finalizing the design.",
         "3. [DPWH Department Order No. 056, s. 2016 (official PDF)](https://www.dpwh.gov.ph/dpwh/sites/default/files/issuances/DO_056_s2016.pdf), Annex provision containing Table VIII.2; its note limits the listed residential setback table to newly developed subdivisions.",
         "4. [Civil Code of the Philippines, Article 670 and related easement provisions](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360).",
+        "5. [2004 Revised Implementing Rules and Regulations of PD 1096, Rule VII parking requirements (copy hosted by the Professional Regulatory Board of Architecture)](https://www.architectureboard.com.ph/wp-content/uploads/2019/09/1.12-PD1096_-2004revIRR_PRBoA-unofcl-versnw08annotns.pdf). The parking table indicates at least one on-site off-street slot for a single-family dwelling lot above 120.00 m²; the slot dimensions are 2.50 m × 5.00 m for perpendicular/diagonal or 2.15 m × 6.00 m for parallel parking. Confirm the applicable official text and local Building Official interpretation.",
         "",
         "## 7. Inputs still required before finalizing Phase 2",
         "",

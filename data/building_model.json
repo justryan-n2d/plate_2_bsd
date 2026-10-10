@@ -307,14 +307,16 @@
       "floor": "Second Floor",
       "status": "required",
       "attached_to": "Master bedroom",
-      "plan_location": "Upper edge of A-03 plan; orientation remains schematic",
+      "plan_location": "North/upper edge of master bedroom in A-03; balcony projects 1.50 m outside the enclosed footprint and remains inside the selected S-01 academic envelope",
       "access": "0.90 m nominal balcony door from master bedroom",
       "width_m": 3,
       "projection_m": 1.5,
       "area_m2": 4.5,
       "open_external_area": true,
       "railing": "Perimeter guardrail shown schematically; final height/detail to be specified for the academic plate",
-      "note": "Outside the enclosed house footprint; report separately from enclosed gross floor area."
+      "note": "Outside the enclosed house footprint; report separately from enclosed gross floor area.",
+      "x_m": 0.2,
+      "y_m": -1.5
     }
   },
   "draft_opening_schedule": [

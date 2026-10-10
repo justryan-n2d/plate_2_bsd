@@ -10,6 +10,7 @@ from scripts.calculate_phase2_site import (
     load_boundary_inputs,
     load_traverse,
     polygon_area,
+    parking_slot_geometry,
     resolve_buildable_envelope,
 )
 
@@ -46,6 +47,20 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         self.assertEqual(calculate_preliminary_parking_slots(265.2598), 1)
         self.assertEqual(calculate_preliminary_parking_slots(120.01), 1)
         self.assertIsNone(calculate_preliminary_parking_slots(120.0))
+
+    def test_parking_slot_dimensions_match_2004_irr_values(self):
+        perpendicular = parking_slot_geometry("perpendicular")
+        self.assertEqual(perpendicular["width_m"], 2.50)
+        self.assertEqual(perpendicular["length_m"], 5.00)
+        self.assertAlmostEqual(perpendicular["area_m2"], 12.50)
+
+        parallel = parking_slot_geometry("parallel")
+        self.assertEqual(parallel["width_m"], 2.15)
+        self.assertEqual(parallel["length_m"], 6.00)
+        self.assertAlmostEqual(parallel["area_m2"], 12.90)
+
+        with self.assertRaises(ValueError):
+            parking_slot_geometry("angled")
 
     def test_repository_inputs_preserve_unresolved_road_geometry(self):
         traverse = load_traverse(DEFAULT_TRAVERSE)

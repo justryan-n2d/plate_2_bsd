@@ -11,7 +11,7 @@ Project workspace for the proposed two-storey residential building plate.
 - GitHub Actions generates and validates the Phase 1 DXF/SVG output from the traverse data.
 - Phase 3 now has a preliminary room requirement table, adjacency matrix, relationship diagram, and conceptual zoning diagrams for both floors. Phase 4 now adds a stair calculation/source-data package and plan/section previews. These are preliminary, not structural or construction drawings.
 - Phase 5 A-01 to A-07 draft previews and the shared building model are merged into `main` through [PR #5](https://github.com/justryan-n2d/plate_2_bsd/pull/5); they remain preliminary and are not code-approved.
-- Phase 2 now compares four setback screening scenarios. Official Palo zoning, legal ROW and front-yard classification remain unconfirmed. See `PROJECT_STATUS.md`.
+- Phase 2 now uses 265.26 m² as the working lot area, selects S-01 with uniform 2.00 m academic setbacks, and records the 5.00 m carriageway within the 8.00 m total ROW. See `site/phase2_site_requirements.md` and `PROJECT_STATUS.md`.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
@@ -23,7 +23,7 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 
 ## Phase 2 setback scenario preview
 
-The four orange dashed offsets are screening cases only, not final approved setbacks. Confirm the official survey / ROW and Palo zoning/front-yard classification before selecting an option.
+S-01 (uniform 2.00 m setbacks) is the selected academic design basis. S-02 to S-04 remain comparison cases only. The site notes treat the 5.00 m carriageway as inside the 8.00 m total ROW.
 
 ![Phase 2 setback scenarios](previews/phase2_setback_scenarios.svg)
 
@@ -31,7 +31,7 @@ See [Phase 2 site requirements](site/phase2_site_requirements.md) and [scenario 
 
 ## Phase 3 space-planning previews
 
-These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 setbacks and the buildable envelope remain pending. The Phase 4 stair study is now merged, but its floor-height assumption and final code/section coordination remain to be confirmed.
+These SVGs are conceptual zoning diagrams, not dimensioned floor plans. The Phase 2 academic setback and buildable-envelope calculations are now recorded; the floor plans still need to be coordinated to them. The Phase 4 stair study uses an assumed 3.000 m floor-to-floor height that must match the final academic section.
 
 ### Adjacency / relationship diagram
 

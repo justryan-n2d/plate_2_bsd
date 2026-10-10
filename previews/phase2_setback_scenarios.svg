@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1330" height="885" viewBox="0 0 1330 885" role="img" aria-labelledby="title desc">
+<title id="title">Phase 2 setback scenario comparison</title>
+<desc id="desc">Four screening only site setback scenarios on the Lot 245-B adjusted local traverse. Each shows the lot, offset polygon, current house and carport. This is not a final or legally confirmed setback decision.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:27px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.legend{font-size:12px;fill:#475569}</style>
+<rect width="1330" height="885" fill="#f8fafc"/>
+<text class="title" x="25" y="38">PHASE 2 | SETBACK SCENARIO COMPARISON</text>
+<text class="sub" x="25" y="64">Lot 245-B | Adjusted academic traverse | Local coordinates in metres</text>
+<rect x="20" y="74" width="1290" height="20" rx="4" fill="#fff7ed"/>
+<text x="30" y="88" font-size="11" font-weight="700" fill="#9a3412">ALL FOUR OPTIONS ARE SCREENING SCENARIOS ONLY. Official Palo zoning, road ROW and front-yard classification remain unconfirmed.</text>
+<g>
+ <rect x="20" y="100" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+ <text x="38" y="127" font-size="17" font-weight="700" fill="#172033">S-01 | Uniform 2.00 m screening offset</text>
+ <text x="38" y="148" font-size="11" fill="#64748b">2.00 m on all five boundaries</text>
+ <path d="M70.0,218.0 L248.7,181.6 L278.8,320.0 L200.3,389.8 L50.1,406.5 Z" fill="#e2e8f0" fill-opacity="0.58" stroke="#334155" stroke-width="2"/>
+ <path d="M92.0,238.0 L230.3,209.9 L252.4,311.4 L190.1,366.8 L77.1,379.3 Z" fill="#fed7aa" fill-opacity="0.38" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+ <rect x="90.3" y="260.5" width="111.6" height="94.8" fill="#bfdbfe" fill-opacity="0.72" stroke="#2563eb" stroke-width="1.6"/><text x="146.1" y="307.9" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">HOUSE</text>
+ <rect x="201.9" y="255.2" width="33.6" height="66.0" fill="#bbf7d0" fill-opacity="0.72" stroke="#15803d" stroke-width="1.6"/><text x="218.7" y="288.2" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">CARPORT</text>
+ <circle cx="70.0" cy="218.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="74.0" y="214.0" font-size="9" fill="#334155">P1</text><circle cx="248.7" cy="181.6" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="252.7" y="177.6" font-size="9" fill="#334155">P2</text><circle cx="278.8" cy="320.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="282.8" y="316.0" font-size="9" fill="#334155">P3</text><circle cx="200.3" cy="389.8" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="204.3" y="385.8" font-size="9" fill="#334155">P4</text><circle cx="50.1" cy="406.5" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="54.1" y="402.5" font-size="9" fill="#334155">P5</text>
+ <text x="335" y="204" font-size="13" font-weight="700" fill="#172033">Screening envelope</text>
+ <text x="335" y="225" font-size="18" font-weight="700" fill="#9a3412">152.4309 m²</text>
+ <line x1="335" y1="240" x2="630" y2="240" stroke="#e2e8f0"/>
+ <text x="335" y="266" font-size="12" fill="#334155">Current house placement:</text>
+ <text x="335" y="285" font-size="13" font-weight="700" fill="#166534">FITS</text>
+ <text x="335" y="317" font-size="12" fill="#334155">Current carport placement:</text>
+ <text x="335" y="336" font-size="13" font-weight="700" fill="#166534">FITS</text>
+ <text x="335" y="371" font-size="11" fill="#64748b">NO means relocate/redesign current</text>
+ <text x="335" y="387" font-size="11" fill="#64748b">rectangle; not proof no building can fit.</text>
+ <text x="335" y="423" font-size="11" font-weight="700" fill="#9a3412">SCREENING ONLY - NOT A FINAL SETBACK</text>
+ </g>
+<g>
+ <rect x="680" y="100" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+ <text x="698" y="127" font-size="17" font-weight="700" fill="#172033">S-02 | P2-P3 assumed front at 4.50 m</text>
+ <text x="698" y="148" font-size="11" fill="#64748b">4.50 m only on road edge P2-P3</text>
+ <path d="M730.0,218.0 L908.7,181.6 L938.8,320.0 L860.3,389.8 L710.1,406.5 Z" fill="#e2e8f0" fill-opacity="0.58" stroke="#334155" stroke-width="2"/>
+ <path d="M752.0,238.0 L860.9,215.9 L886.6,334.3 L850.1,366.8 L737.1,379.3 Z" fill="#fed7aa" fill-opacity="0.38" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+ <rect x="750.3" y="260.5" width="111.6" height="94.8" fill="#bfdbfe" fill-opacity="0.72" stroke="#2563eb" stroke-width="1.6"/><text x="806.1" y="307.9" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">HOUSE</text>
+ <rect x="861.9" y="255.2" width="33.6" height="66.0" fill="#fecaca" fill-opacity="0.72" stroke="#dc2626" stroke-width="1.6"/><text x="878.7" y="288.2" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">CARPORT</text>
+ <circle cx="730.0" cy="218.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="734.0" y="214.0" font-size="9" fill="#334155">P1</text><circle cx="908.7" cy="181.6" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="912.7" y="177.6" font-size="9" fill="#334155">P2</text><circle cx="938.8" cy="320.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="942.8" y="316.0" font-size="9" fill="#334155">P3</text><circle cx="860.3" cy="389.8" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="864.3" y="385.8" font-size="9" fill="#334155">P4</text><circle cx="710.1" cy="406.5" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="714.1" y="402.5" font-size="9" fill="#334155">P5</text>
+ <text x="995" y="204" font-size="13" font-weight="700" fill="#172033">Screening envelope</text>
+ <text x="995" y="225" font-size="18" font-weight="700" fill="#9a3412">128.9837 m²</text>
+ <line x1="995" y1="240" x2="1290" y2="240" stroke="#e2e8f0"/>
+ <text x="995" y="266" font-size="12" fill="#334155">Current house placement:</text>
+ <text x="995" y="285" font-size="13" font-weight="700" fill="#166534">FITS</text>
+ <text x="995" y="317" font-size="12" fill="#334155">Current carport placement:</text>
+ <text x="995" y="336" font-size="13" font-weight="700" fill="#b91c1c">DOES NOT FIT</text>
+ <text x="995" y="371" font-size="11" fill="#64748b">NO means relocate/redesign current</text>
+ <text x="995" y="387" font-size="11" fill="#64748b">rectangle; not proof no building can fit.</text>
+ <text x="995" y="423" font-size="11" font-weight="700" fill="#9a3412">SCREENING ONLY - NOT A FINAL SETBACK</text>
+ </g>
+<g>
+ <rect x="20" y="485" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+ <text x="38" y="512" font-size="17" font-weight="700" fill="#172033">S-03 | P3-P4 assumed front at 4.50 m</text>
+ <text x="38" y="533" font-size="11" fill="#64748b">4.50 m only on road edge P3-P4</text>
+ <path d="M70.0,603.0 L248.7,566.6 L278.8,705.0 L200.3,774.8 L50.1,791.5 Z" fill="#e2e8f0" fill-opacity="0.58" stroke="#334155" stroke-width="2"/>
+ <path d="M92.0,623.0 L230.3,594.9 L245.0,662.7 L138.5,757.5 L77.1,764.3 Z" fill="#fed7aa" fill-opacity="0.38" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+ <rect x="90.3" y="645.5" width="111.6" height="94.8" fill="#fecaca" fill-opacity="0.72" stroke="#dc2626" stroke-width="1.6"/><text x="146.1" y="692.9" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">HOUSE</text>
+ <rect x="201.9" y="640.2" width="33.6" height="66.0" fill="#fecaca" fill-opacity="0.72" stroke="#dc2626" stroke-width="1.6"/><text x="218.7" y="673.2" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">CARPORT</text>
+ <circle cx="70.0" cy="603.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="74.0" y="599.0" font-size="9" fill="#334155">P1</text><circle cx="248.7" cy="566.6" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="252.7" y="562.6" font-size="9" fill="#334155">P2</text><circle cx="278.8" cy="705.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="282.8" y="701.0" font-size="9" fill="#334155">P3</text><circle cx="200.3" cy="774.8" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="204.3" y="770.8" font-size="9" fill="#334155">P4</text><circle cx="50.1" cy="791.5" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="54.1" y="787.5" font-size="9" fill="#334155">P5</text>
+ <text x="335" y="589" font-size="13" font-weight="700" fill="#172033">Screening envelope</text>
+ <text x="335" y="610" font-size="18" font-weight="700" fill="#9a3412">128.8989 m²</text>
+ <line x1="335" y1="625" x2="630" y2="625" stroke="#e2e8f0"/>
+ <text x="335" y="651" font-size="12" fill="#334155">Current house placement:</text>
+ <text x="335" y="670" font-size="13" font-weight="700" fill="#b91c1c">DOES NOT FIT</text>
+ <text x="335" y="702" font-size="12" fill="#334155">Current carport placement:</text>
+ <text x="335" y="721" font-size="13" font-weight="700" fill="#b91c1c">DOES NOT FIT</text>
+ <text x="335" y="756" font-size="11" fill="#64748b">NO means relocate/redesign current</text>
+ <text x="335" y="772" font-size="11" fill="#64748b">rectangle; not proof no building can fit.</text>
+ <text x="335" y="808" font-size="11" font-weight="700" fill="#9a3412">SCREENING ONLY - NOT A FINAL SETBACK</text>
+ </g>
+<g>
+ <rect x="680" y="485" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+ <text x="698" y="512" font-size="17" font-weight="700" fill="#172033">S-04 | Both road edges at 4.50 m</text>
+ <text x="698" y="533" font-size="11" fill="#64748b">4.50 m on both P2-P3 and P3-P4</text>
+ <path d="M730.0,603.0 L908.7,566.6 L938.8,705.0 L860.3,774.8 L710.1,791.5 Z" fill="#e2e8f0" fill-opacity="0.58" stroke="#334155" stroke-width="2"/>
+ <path d="M752.0,623.0 L860.9,600.9 L879.3,685.6 L798.5,757.5 L737.1,764.3 Z" fill="#fed7aa" fill-opacity="0.38" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+ <rect x="750.3" y="645.5" width="111.6" height="94.8" fill="#fecaca" fill-opacity="0.72" stroke="#dc2626" stroke-width="1.6"/><text x="806.1" y="692.9" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">HOUSE</text>
+ <rect x="861.9" y="640.2" width="33.6" height="66.0" fill="#fecaca" fill-opacity="0.72" stroke="#dc2626" stroke-width="1.6"/><text x="878.7" y="673.2" text-anchor="middle" font-size="9" font-weight="700" fill="#172033">CARPORT</text>
+ <circle cx="730.0" cy="603.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="734.0" y="599.0" font-size="9" fill="#334155">P1</text><circle cx="908.7" cy="566.6" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="912.7" y="562.6" font-size="9" fill="#334155">P2</text><circle cx="938.8" cy="705.0" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="942.8" y="701.0" font-size="9" fill="#334155">P3</text><circle cx="860.3" cy="774.8" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="864.3" y="770.8" font-size="9" fill="#334155">P4</text><circle cx="710.1" cy="791.5" r="3" fill="#fff" stroke="#334155" stroke-width="1.2"/><text x="714.1" y="787.5" font-size="9" fill="#334155">P5</text>
+ <text x="995" y="589" font-size="13" font-weight="700" fill="#172033">Screening envelope</text>
+ <text x="995" y="610" font-size="18" font-weight="700" fill="#9a3412">112.6268 m²</text>
+ <line x1="995" y1="625" x2="1290" y2="625" stroke="#e2e8f0"/>
+ <text x="995" y="651" font-size="12" fill="#334155">Current house placement:</text>
+ <text x="995" y="670" font-size="13" font-weight="700" fill="#b91c1c">DOES NOT FIT</text>
+ <text x="995" y="702" font-size="12" fill="#334155">Current carport placement:</text>
+ <text x="995" y="721" font-size="13" font-weight="700" fill="#b91c1c">DOES NOT FIT</text>
+ <text x="995" y="756" font-size="11" fill="#64748b">NO means relocate/redesign current</text>
+ <text x="995" y="772" font-size="11" fill="#64748b">rectangle; not proof no building can fit.</text>
+ <text x="995" y="808" font-size="11" font-weight="700" fill="#9a3412">SCREENING ONLY - NOT A FINAL SETBACK</text>
+ </g>
+<rect x="20" y="858" width="1290" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="35" y="862" width="14" height="10" fill="#e2e8f0" stroke="#334155"/><text class="legend" x="55" y="871">Lot boundary</text>
+<rect x="165" y="862" width="14" height="10" fill="#fed7aa" fill-opacity="0.5" stroke="#d97706" stroke-dasharray="3 2"/><text class="legend" x="185" y="871">Screening offset</text>
+<rect x="315" y="862" width="14" height="10" fill="#bfdbfe" stroke="#2563eb"/><text class="legend" x="335" y="871">Current house position fits</text>
+<rect x="515" y="862" width="14" height="10" fill="#bbf7d0" stroke="#15803d"/><text class="legend" x="535" y="871">Current carport position fits</text>
+<rect x="760" y="862" width="14" height="10" fill="#fecaca" stroke="#dc2626"/><text class="legend" x="780" y="871">Current rectangle outside offset</text>
+<text class="legend" x="1030" y="871">Not for permit / construction.</text>
+</svg>

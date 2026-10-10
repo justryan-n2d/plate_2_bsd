@@ -20,7 +20,7 @@ Phase 2 has an adopted academic calculation baseline: 265.26 m² working lot are
 - All listed room dimensions are **provisional clear-dimension targets for planning**, not code minimums, final dimensions or construction instructions.
 - The diagrams are **not to scale** and do not set the building orientation, lot position, driveway, vehicle gate, pedestrian gate, doors, windows or setbacks.
 - The carport is a single-car planning placeholder. It does not establish the legal or code-required parking count or size.
-- The balcony is required by the student's design direction. Use a 3.00 m × 1.50 m external balcony accessed from the master bedroom; show a guardrail schematically and carry it into A-03/A-05.
+- The balcony is required by the student's design direction. Use a 3.00 m × 1.50 m external balcony on the east/front entry-carport facade, accessed from the master bedroom; align its plan, elevation, section, roof projection and D-04/guardrail note across A-03/A-04/A-05/A-06/A-07.
 - The stair footprint is a space allowance only. Stair width, risers, tread, landings, headroom and total stair height remain for Phase 4.
 - Building utilities, including detailed plumbing and sanitary systems, remain excluded. Keeping the two bathrooms near each other vertically is only an architectural coordination preference.
 - Room-area targets are not official ground-floor, second-floor or total floor-area calculations. Wall thicknesses, final circulation, stair/void treatment and the buildable envelope must be resolved in later phases.

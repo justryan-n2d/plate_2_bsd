@@ -101,9 +101,9 @@ def main() -> int:
         fail("Clear flight width is below the stored Group A dwelling minimum")
     if float(geo["landing_depth_m"]) < width:
         fail("Landing depth is less than one flight's clear width")
-    if not close(sum(float(v) for v in per_flight) and total_rise, total_rise):
-        fail("Total rise check failed")
     flight_rise = [r * recorded_riser for r in per_flight]
+    if not close(sum(flight_rise), total_rise, 1e-5):
+        fail("The sum of the two flight rises does not match the total stair rise")
     if any(r > float(geo["maximum_vertical_distance_between_landings_m"]) for r in flight_rise):
         fail("Vertical distance between landings exceeds the recorded limit")
     if float(geo["minimum_headroom_m"]) < 2.0:

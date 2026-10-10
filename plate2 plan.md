@@ -527,7 +527,7 @@ This section records the workflow agreed during project planning. It is intended
 
 ### 12.2 Repository organization and implementation status
 
-The initial scaffolding has been committed to the current main branch. Folder notes explain the purpose of directories whose final drawing outputs do not exist yet. This keeps the structure visible without adding empty placeholder drawings or pretending that unreviewed outputs are complete.
+The initial scaffolding has been committed to the current main branch. The generator and both validation scripts now run successfully in GitHub Actions. A DXF and corresponding SVG are generated, validated, and uploaded as a 14-day workflow artifact. Generated outputs are not automatically committed to the branch; manual CAD-app review is still required before they are treated as accepted drawing deliverables.
 
 ```text
 plate_2_bsd/
@@ -545,22 +545,23 @@ plate_2_bsd/
 ├── data/
 │   └── README.md                          [exists; model/schedules deferred]
 ├── scripts/
-│   ├── generate_site_base.py               [exists; not yet run]
-│   ├── validate_site_base.py               [exists; automation result pending]
+│   ├── generate_site_base.py               [exists; generated outputs in CI]
+│   ├── validate_site_base.py               [exists; passes in CI]
+│   ├── validate_generated_dxf.py           [exists; DXF/SVG checks pass in CI]
 │   └── requirements.txt                    [exists]
 ├── previews/
-│   └── README.md                           [exists; generated preview not yet created]
+│   └── README.md                           [exists; generated SVG is a CI artifact]
 ├── drawings/
-│   └── README.md                           [exists; DXF not yet created]
+│   └── README.md                           [exists; generated DXF is a CI artifact]
 ├── exports/
 │   ├── pdf/README.md                       [exists]
 │   └── dwg/README.md                       [exists]
 └── .github/
     └── workflows/
-        └── validate-drawings.yml           [exists; successful run not yet confirmed]
+        └── validate-drawings.yml           [exists; successful end-to-end run]
 ```
 
-**Deferred intentionally:** data/building_model.json and data/schedules.csv will be added when real layout geometry and schedule values exist. The existing site-coordinate CSV remains the Phase 1 source record; it is not duplicated in data/. The generator is designed to read the existing CSV and create a DXF/SVG, but those outputs are not claimed to exist until the generator has run and the output has been reviewed.
+**Deferred intentionally:** data/building_model.json and data/schedules.csv will be added when real layout geometry and schedule values exist. The existing site-coordinate CSV remains the Phase 1 source record; it is not duplicated in data/. The successful pipeline generates drawings/phase1_site_base.dxf and previews/phase1_site_base_preview.svg on the GitHub runner and uploads them as an artifact that expires after 14 days. These generated files are not committed to the repository automatically. Open the DXF in compatible CAD software for manual visual review before treating it as accepted.
 
 ### 12.3 GitHub SVG preview requirements
 
@@ -617,7 +618,7 @@ plate_2_bsd/
 
 ## 13. Repository implementation roadmap (before house-layout drafting)
 
-This section turns the agreed digital workflow into an ordered implementation plan. The current site-base files are preserved. Initial repository scaffolding, source scripts, dependency documentation, and a read-only validation workflow have been committed. The generated DXF/SVG, successful automated validation, and CAD-app inspection remain pending. The first objective is to establish a repeatable, checkable CAD export from the existing Phase 1 data. Only after this pipeline is verified should it be used as the basis for the later building drawings.
+This section turns the agreed digital workflow into an ordered implementation plan. The current site-base files are preserved. Initial repository scaffolding, generation scripts, validation scripts, dependency documentation, and the read-only GitHub Actions workflow are committed. The automated pipeline has now succeeded end-to-end: it generated the DXF and SVG, validated both against the existing Phase 1 source data, and uploaded the outputs as a 14-day artifact. Manual inspection of the DXF in a compatible CAD application remains pending.
 
 ### Stage R-1: Finalize the project plan
 
@@ -629,39 +630,40 @@ This section turns the agreed digital workflow into an ordered implementation pl
 
 - [x] **R-10** Add a root README.md explaining the project, current phase, deliverables, drawing-generation workflow, limitations, and links to the current site files.
 - [x] **R-11** Add scripts/ for deterministic drawing generation and validation code.
-- [x] **R-12** Add drawings/ for the editable DXF masters; the first DXF output itself remains pending.
-- [x] **R-13** Add previews/ for project-wide SVG previews. Preserve site/phase1_site_base.svg; the generated preview is not yet created.
+- [x] **R-12** Add drawings/ for editable DXF masters; the initial DXF is now generated and validated in CI as an artifact, but is not yet committed to the repository.
+- [x] **R-13** Add previews/ for project-wide SVG previews. Preserve site/phase1_site_base.svg; the generated preview is validated in CI and available in the workflow artifact, not yet committed as a repository file.
 - [x] **R-14** Add exports/pdf/ and exports/dwg/ with folder documentation for reviewed deliverables. Final exports are not yet present.
 - [ ] **R-15** Define a machine-readable source format for the future building layout in data/building_model.json only when room geometry, levels, openings, and design parameters are ready to be recorded. Do not duplicate the Phase 1 coordinate CSV without a clear need.
 - [x] **R-16a** Add Python dependency documentation and an initial read-only .github/workflows/validate-drawings.yml workflow.
-- [ ] **R-16b** Confirm the GitHub Actions validation succeeds. The first run completed as a failure with no step summaries or logs exposed by the available run result, so the cause has not yet been established. Do not mark the pipeline as verified until this is resolved.
+- [x] **R-16b** Confirm that GitHub Actions validation succeeds. Successful runs are available in the [workflow history](https://github.com/justryan-n2d/plate_2_bsd/actions/workflows/validate-drawings.yml); the end-to-end run generates, validates, and uploads the DXF/SVG artifact.
 
 ### Stage R-3: Generate the first editable CAD file from Phase 1
 
-- [x] **R-20** Implement scripts/generate_site_base.py to read site/phase1_traverse_coordinates.csv and build the closed lot from courses 1-2 through 4-5 plus the adjusted P5-1 row. The generator script is committed but has not yet been run.
+- [x] **R-20** Implement scripts/generate_site_base.py to read site/phase1_traverse_coordinates.csv and build the closed lot from courses 1-2 through 4-5 plus the adjusted P5-1 row. The generator has run successfully in GitHub Actions.
 - [x] **R-21** Ensure the original P5-1 and the diagnostic closure-gap row remain reference data only; the generator selects only the four stated courses and adjusted P5-1 for the boundary.
-- [ ] **R-22** Generate drawings/phase1_site_base.dxf with metre units, named layers, true coordinate geometry, useful labels, and a closed parcel outline. Record source-to-CAD unit conventions; never scale the geometry by eye.
-- [ ] **R-23** Generate the associated SVG from the same source coordinates and drawing definitions, then inspect it. Avoid hand-editing generated geometry so it disagrees with DXF.
+- [x] **R-22** Generate drawings/phase1_site_base.dxf with metre units, named layers, source-coordinate geometry, labels, and a closed parcel outline. The validated output is uploaded as a workflow artifact, not auto-committed.
+- [x] **R-23a** Generate the SVG preview from the same source coordinates and validate its XML, polygon coordinates, vertex count, and required notes. The generated preview is included in the workflow artifact.
+- [ ] **R-23b** Visually inspect the generated SVG and DXF in a CAD-capable viewer; automated validation does not replace visual review.
 - [x] **R-24** Include notes in the generator for original and adjusted P5-1, approximate and calculated area, and the 5.0 m road / 8.00 m ROW distinction. Do not invent a split of the remaining 3.0 m.
-- [ ] **R-25** Keep generated CAD and preview outputs marked preliminary until automated checks and visual inspection pass.
+- [ ] **R-25** Keep generated CAD and preview outputs marked preliminary until manual visual inspection in compatible CAD software is complete.
 
 ### Stage R-4: Validate the DXF/SVG generation pipeline
 
-- [ ] **R-30** Independently recompute the first four course components and confirm that adjusted P5-1 closes to P1 within a defined numerical tolerance.
-- [ ] **R-31** Check the expected boundary vertex count, line lengths, perimeter (about 64.1454 m), calculated closed-polygon area (about 265.26 m²), and coordinate bounds against the documented source data.
-- [ ] **R-32** Check DXF structure, drawing units, expected layers/entities, closed boundary geometry, and the absence of diagnostic-only segments from the actual parcel outline.
-- [ ] **R-33** Check that labels and dimension text are consistent with the values that generated the geometry. Do not infer scale from an SVG viewport or screenshot.
-- [ ] **R-34** Run visual inspection of SVG and open the DXF in compatible CAD software/viewer. Compare the boundary and annotations with the CSV and calculation notes.
-- [x] **R-35** Add reproducible validation commands/scripts. The validator is committed; its successful run still needs confirmation. A successful run means the checks passed; it does not certify a cadastral survey, code compliance, structural adequacy, or instructor approval.
+- [x] **R-30** Independently recompute the first four course components and confirm that adjusted P5-1 closes to P1 within a defined numerical tolerance.
+- [x] **R-31** Check the five boundary vertices, course lengths, perimeter (64.145414 m), calculated closed-polygon area (265.2598 m²), and all source vertex coordinates against the CSV.
+- [x] **R-32** Check DXF structural audit, metre units, required layers/entities, a single closed parcel polyline, and no extra entities on the property-boundary layer.
+- [x] **R-33** Check that DXF vertex and course labels match source point names, bearings, and distances; check that key reference notes are present.
+- [ ] **R-34** Manually inspect the SVG and open the DXF in compatible CAD software/viewer. Compare visual clarity, text placement, boundary linework, and annotations with the CSV and calculation notes.
+- [x] **R-35** Add reproducible validation commands/scripts and verify successful runs in GitHub Actions. Passing automated checks do not certify a cadastral survey, code compliance, structural adequacy, or instructor approval.
 
 ### Stage R-5: GitHub automation and previews
 
-- [x] **R-40a** Add a GitHub Actions workflow that installs the documented dependency and runs the Phase 1 validation script. The workflow is configured, but its successful execution is not yet confirmed.
-- [x] **R-41** Keep CI read-only: validate source data, with no workflow permission to commit to main or overwrite reviewed drawings.
-- [ ] **R-40b** Resolve the initial Actions failure and verify a successful validation run before relying on CI results.
-- [ ] **R-42** Commit reviewed generated SVG previews and DXF outputs deliberately, with a commit message that identifies the source revision and outputs updated.
-- [x] **R-43** Add a root README with the existing site SVG embedded and links to project records. Add links to the generated preview only after it exists and renders correctly.
-- [ ] **R-44** Improve workflow failure diagnostics and decide whether temporary build outputs should be published as expiring workflow artifacts. Avoid committing bulky temporary logs.
+- [x] **R-40a** Configure GitHub Actions to install the dependency, validate the source traverse, generate the DXF/SVG, validate both outputs, and upload them as an artifact.
+- [x] **R-41** Keep CI read-only: generate and validate outputs without permission to commit to main or overwrite reviewed drawings.
+- [x] **R-40b** Resolve the initial unsuccessful runs by rerunning the job, then verify successful end-to-end runs. The latest successful run includes stronger geometry and label checks.
+- [ ] **R-42** Commit reviewed generated SVG previews and DXF outputs only after manual CAD-app inspection. Until then, keep generated outputs as expiring workflow artifacts.
+- [x] **R-43** Add the root README with the existing site SVG embedded, links to source records, and directions for downloading the latest generated outputs from Actions.
+- [x] **R-44** Add failure-reporting checks and upload successful DXF/SVG outputs as a 14-day workflow artifact. No automatic commits or large persistent build outputs are created.
 
 ### Stage R-6: Reuse the verified pipeline for the building plate
 
@@ -687,7 +689,7 @@ This section turns the agreed digital workflow into an ordered implementation pl
 Do not advance to the next gate until its checks are met:
 
 1. **Plan gate:** folder structure, source-of-truth rules, file ownership, and task order are recorded in this plan.
-2. **Site CAD gate:** DXF is generated from the existing CSV, validation checks pass, and the drawing has been visually inspected in a compatible CAD viewer.
+2. **Site CAD gate:** DXF is generated from the existing CSV and automated validation passes. Manual inspection in compatible CAD software is still required before this gate is complete.
 3. **Site-requirements gate:** applicable setbacks and the buildable envelope are calculated and their assumptions are documented.
 4. **Building-layout gate:** the room program, space-requirement table, and adjacency diagram are agreed before the detailed floor-plan geometry is treated as a design.
 5. **Coordinated-drawing gate:** floor plans, roof plan, elevations, sections, details, and schedules agree on dimensions and levels.

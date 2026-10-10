@@ -164,6 +164,8 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 #### Phase 2 implementation checkpoint (2026-10-10)
 
+See the consolidated [repository implementation status](docs/implementation-status.md) for completed work, validation records, current branch/PR status, and the remaining steps.
+
 **Status: Phase 2's site-envelope gate is complete for this instructor-led academic activity, and Phase 3 can proceed.** The Phase 2 site calculation report and the preliminary building-envelope scenario report record the adopted assumptions, numerical results, and coordinates. The calculation script validates the Phase 1 traverse, applies the 2.00 m working offset on all five edges, calculates the working inset area, and includes tested geometry functions.
 
 The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited code provisions, assignment facts, working assumptions, and calculated values.
@@ -173,7 +175,7 @@ The [Phase 2 code requirements register](site/phase2_code_requirements.csv) sepa
 - **T-18:** Use one on-site off-street parking slot as the preliminary activity basis. The slot rectangle is 2.50 m × 5.00 m for perpendicular/diagonal parking, or 2.15 m × 6.00 m for parallel parking.
 - **Occupancy check:** Because the assignment describes road frontage on both southeast and southwest sides, use the 90% corner-lot scenario (238.73 m² maximum occupied area, 26.53 m² corresponding open area) for the working comparison. The 80% inside-lot values remain in the calculation report for reference.
 
-The site-envelope basis is complete enough to proceed to Phase 3. The actual building footprint, floor areas, remaining open space, occupant-load calculation, stair geometry, and parking placement depend on the room layout and will be completed as the plans develop.
+The site-envelope basis is complete enough to proceed to Phase 3. The first-draft space program and adjacency diagrams are in [design/phase3_space_program.md](design/phase3_space_program.md). The actual building footprint, floor areas, remaining open space, occupant-load calculation, stair geometry, and parking placement depend on the room layout and will be completed as the plans develop.
 
 ### Phase 3: Space planning
 

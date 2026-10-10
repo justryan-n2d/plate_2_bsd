@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="0.20" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
 <title id="title">A-03 - Second Floor plan with required balcony</title>
-<desc id="desc">Preliminary second floor plan concept with required room labels, target clear dimensions, and a required 3.00 x 1.50 m balcony (4.50 m2) on the east/front (right) facade, accessed from the master bedroom. Not to scale for construction and not approved for code compliance. Master bedroom: 3.20 x 3.40 m | Stair opening / flight: 2.00 x 3.20 m; stairwell zone | Bedroom 3: 2.80 x 3.00 m | Toilet and bath: 1.50 x 2.10 m, rotated | Stair landing / circulation: 2.00 x 2.50 m | Bedroom 2: 2.80 x 3.00 m | Shared hall / circulation: additional schematic hall; verify in final layout | Family area: 2.80 x 3.00 m | Balcony: 3.00 x 1.50 m, 4.50 m2</desc>
+<desc id="desc">Preliminary second floor plan concept with required room labels, target clear dimensions, and a required 3.00 x 1.50 m balcony (4.50 m2) on the east/front (right) facade, accessed from the family area. Not to scale for construction and not approved for code compliance. Master bedroom: 3.20 x 3.40 m | Stair opening / flight: 2.00 x 3.20 m; stairwell zone | Bedroom 3: 2.80 x 3.00 m | Toilet and bath: 1.50 x 2.10 m, rotated | Stair landing / circulation: 2.00 x 2.50 m | Bedroom 2: 2.80 x 3.00 m | Shared hall / circulation: additional schematic hall; verify in final layout | Family area: 2.80 x 3.00 m | Balcony: 3.00 x 1.50 m, 4.50 m2</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.note{font-size:13px;fill:#475569}.small{font-size:11px;fill:#475569}</style>
 <rect width="1250" height="780" fill="#f8fafc"/>
 <text class="title" x="35" y="40">A-03 | SECOND FLOOR PLAN</text>
@@ -16,39 +16,39 @@
 <g><rect x="140" y="365.70000000000005" width="120.39999999999999" height="129" fill="#fff0d6" stroke="#334155" stroke-width="1.5"/><text x="200.2" y="424.20000000000005" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Bedroom 2</text><text x="200.2" y="440.20000000000005" text-anchor="middle" font-size="10" fill="#475569">2.80 x 3.00 m</text></g>
 <g><rect x="260.4" y="365.70000000000005" width="55.9" height="129" fill="#eee8fa" stroke="#334155" stroke-width="1.5"/><text x="288.35" y="424.20000000000005" text-anchor="middle" font-size="9" font-weight="600" fill="#172033">Shared hall</text><text x="288.35" y="440.20000000000005" text-anchor="middle" font-size="9" fill="#475569">1.30 x 3.00 m</text></g>
 <g><rect x="419.5" y="365.70000000000005" width="120.39999999999999" height="129" fill="#dfeefa" stroke="#334155" stroke-width="1.5"/><text x="479.7" y="424.20000000000005" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Family area</text><text x="479.7" y="440.20000000000005" text-anchor="middle" font-size="10" fill="#475569">2.80 x 3.00 m</text></g>
-<rect x="417.35" y="170.05" width="86" height="60.199999999999996" fill="#ffffff" stroke="#94a3b8"/><rect x="417.35" y="236.7" width="86" height="47.300000000000004" fill="#ffffff" stroke="#94a3b8"/>
-   <rect x="159.35" y="378.6" width="77.4" height="64.5" fill="#ffffff" stroke="#94a3b8"/>
+
+   
    <line x1="316.3" y1="165.75" x2="402.3" y2="286.15" stroke="#64748b" stroke-width="2" stroke-dasharray="5 4"/>
 <!-- Required 3.00 m x 1.50 m balcony on the east/front facade; east is right on this plan -->
-<rect id="front-balcony-plan" x="539.9" y="163.6" width="64.5" height="129" fill="#d1fae5" stroke="#0f766e" stroke-width="1.7"/>
-<line x1="542.4" y1="166" x2="601.9" y2="166" stroke="#047857" stroke-width="2"/>
-<line x1="601.9" y1="166" x2="601.9" y2="290.6" stroke="#047857" stroke-width="3"/>
-<line x1="542.4" y1="290.6" x2="601.9" y2="290.6" stroke="#047857" stroke-width="2"/>
-<line x1="601.9" y1="166" x2="601.9" y2="290.6" stroke="#047857" stroke-width="2"/>
-<line x1="601.9" y1="190.9" x2="601.9" y2="190.9" stroke="#047857" stroke-width="3"/>
-<line x1="601.9" y1="215.8" x2="601.9" y2="215.8" stroke="#047857" stroke-width="3"/>
-<line x1="601.9" y1="240.7" x2="601.9" y2="240.7" stroke="#047857" stroke-width="3"/>
-<line x1="601.9" y1="265.6" x2="601.9" y2="265.6" stroke="#047857" stroke-width="3"/>
-<text x="571.9" y="212" text-anchor="middle" font-size="11" font-weight="700" fill="#065f46" transform="rotate(90 571.9 212)">BALCONY</text>
-<text x="571.9" y="244" text-anchor="middle" font-size="10" fill="#065f46" transform="rotate(90 571.9 244)">3.00 x 1.50 m</text>
-<!-- Nominal 0.90 m access door on the east wall of the master bedroom -->
-<line x1="539.9" y1="204.45" x2="539.9" y2="243.15" stroke="#ffffff" stroke-width="7"/>
-<line x1="539.9" y1="204.45" x2="501.2" y2="204.45" stroke="#334155" stroke-width="1.5"/>
-<path d="M501.2,204.45 A38.7,38.7 0 0 0 539.9,243.15" fill="none" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 3"/>
+<rect id="front-balcony-plan" x="539.9" y="365.7" width="64.5" height="129" fill="#d1fae5" stroke="#0f766e" stroke-width="1.7"/>
+<line x1="542.4" y1="368.1" x2="601.9" y2="368.1" stroke="#047857" stroke-width="2"/>
+<line x1="601.9" y1="368.1" x2="601.9" y2="492.7" stroke="#047857" stroke-width="3"/>
+<line x1="542.4" y1="492.7" x2="601.9" y2="492.7" stroke="#047857" stroke-width="2"/>
+<line x1="601.9" y1="368.1" x2="601.9" y2="492.7" stroke="#047857" stroke-width="2"/>
+<line x1="601.9" y1="392.6" x2="601.9" y2="392.6" stroke="#047857" stroke-width="3"/>
+<line x1="601.9" y1="417.5" x2="601.9" y2="417.5" stroke="#047857" stroke-width="3"/>
+<line x1="601.9" y1="442.4" x2="601.9" y2="442.4" stroke="#047857" stroke-width="3"/>
+<line x1="601.9" y1="467.3" x2="601.9" y2="467.3" stroke="#047857" stroke-width="3"/>
+<text x="571.9" y="414.1" text-anchor="middle" font-size="11" font-weight="700" fill="#065f46" transform="rotate(90 571.9 414.1)">BALCONY</text>
+<text x="571.9" y="446.1" text-anchor="middle" font-size="10" fill="#065f46" transform="rotate(90 571.9 446.1)">3.00 x 1.50 m</text>
+<!-- Nominal 0.90 m D-04 access door on the east wall of the family area -->
+<line x1="539.9" y1="449" x2="539.9" y2="487.7" stroke="#ffffff" stroke-width="7"/>
+<line x1="539.9" y1="449" x2="501.2" y2="449" stroke="#334155" stroke-width="1.5"/>
+<path d="M501.2,449 A38.7,38.7 0 0 0 539.9,487.7" fill="none" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 3"/>
 <line x1="140" y1="600" x2="539.9000000000001" y2="600" stroke="#475569" stroke-width="1.2"/><line x1="140" y1="593" x2="140" y2="607" stroke="#475569"/><line x1="539.9000000000001" y1="593" x2="539.9000000000001" y2="607" stroke="#475569"/><text x="339.95000000000005" y="592" text-anchor="middle" font-size="12" fill="#334155">9.30 m overall (house)</text>
  <line x1="629.9000000000001" y1="155" x2="629.9000000000001" y2="494.7" stroke="#475569" stroke-width="1.2"/><line x1="622.9000000000001" y1="155" x2="636.9000000000001" y2="155" stroke="#475569"/><line x1="622.9000000000001" y1="494.7" x2="636.9000000000001" y2="494.7" stroke="#475569"/><text x="644.9000000000001" y="324.85" font-size="12" fill="#334155" transform="rotate(90 644.9000000000001 324.85)">7.90 m overall</text>
 <g stroke="#0284c7" stroke-width="5">
 <line x1="163.65" y1="155" x2="206.65" y2="155"/>
 <line x1="163.65" y1="494.7" x2="219.55" y2="494.7"/>
-<line x1="539.9000000000001" y1="348.5" x2="539.9000000000001" y2="400.1"/>
+<line x1="539.9000000000001" y1="307" x2="539.9000000000001" y2="358.6"/>
 <line x1="303.4" y1="494.7" x2="346.4" y2="494.7"/>
 </g>
 <rect x="710" y="130" width="500" height="420" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
 <text x="735" y="165" font-size="17" font-weight="700" fill="#172033">SPACE AND COORDINATION NOTES</text>
 <text class="small" x="735" y="195">• Master bedroom: 3.20 x 3.40 m</text><text class="small" x="735" y="219">• Stair opening / flight: 2.00 x 3.20 m; stairwell zone</text><text class="small" x="735" y="243">• Bedroom 3: 2.80 x 3.00 m</text><text class="small" x="735" y="267">• Toilet and bath: 1.50 x 2.10 m, rotated</text><text class="small" x="735" y="291">• Stair landing / circulation: 2.00 x 2.50 m</text><text class="small" x="735" y="315">• Bedroom 2: 2.80 x 3.00 m</text><text class="small" x="735" y="339">• Shared hall / circulation: additional schematic hall; verify in final layout</text><text class="small" x="735" y="363">• Family area: 2.80 x 3.00 m</text>
 <line x1="735" y1="402" x2="1185" y2="402" stroke="#e2e8f0"/>
-<text class="note" x="735" y="434">• Stair opening aligns with the preliminary Phase 4 stair zone; verify the final landing and opening.</text><text class="note" x="735" y="459">• Required front/east balcony: 3.00 x 1.50 m (4.50 m²), accessed from master bedroom.</text><text class="note" x="735" y="484">• Balcony projects from the east/right front facade, aligned with the master bedroom and entry/carport side; external area is separate from enclosed floor area.</text>
-<text class="note" x="735" y="509">• Front/east on this sheet is the right-hand side, matching the entry and carport side on A-01/A-02.</text>
+<text class="note" x="735" y="434">• Stair opening aligns with the preliminary Phase 4 stair zone; verify the final landing and opening.</text><text class="note" x="735" y="459">• Required front/east balcony: 3.00 x 1.50 m (4.50 m²), accessed from family area through D-04.</text><text class="note" x="735" y="484">• Balcony projects from the east/right front facade beside the family area; its 4.50 m² is separate from enclosed floor area.</text>
+<text class="note" x="735" y="509">• Front/east is the right-hand side; balcony location matches the family area, not a bedroom.</text>
 <rect x="710" y="590" width="500" height="130" rx="10" fill="#fff7ed" stroke="#fdba74"/>
 <text x="730" y="620" font-size="15" font-weight="700" fill="#9a3412">PRELIMINARY ONLY</text>
 <text class="note" x="730" y="647">Selected 2.00 m academic setbacks; final dimensions remain preliminary.</text>

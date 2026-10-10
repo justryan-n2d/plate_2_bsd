@@ -28,17 +28,17 @@
 <line x1="830" y1="490" x2="1235" y2="490" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
 <text x="845" y="598" font-size="12" fill="#334155">Ground FFL ±0.000</text>
 <text x="845" y="480" font-size="12" fill="#334155">Second FFL +3.000</text>
-<g id="front-balcony-section">
+<g id="front-balcony-section" data-span-m="3.00" data-projection-m="1.50">
   <rect x="1227" y="406" width="8" height="84" fill="#dbeafe" stroke="#334155" stroke-width="1.2"/>
   <line x1="1231" y1="406" x2="1231" y2="490" stroke="#334155" stroke-width="1"/>
-  <rect x="1235" y="486" width="65" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+  <rect x="1235" y="490" width="65" height="8" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
   <line x1="1237" y1="454" x2="1300" y2="454" stroke="#0f766e" stroke-width="3"/>
-  <line x1="1237" y1="454" x2="1237" y2="486" stroke="#0f766e" stroke-width="2"/>
-  <line x1="1252.75" y1="454" x2="1252.75" y2="486" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1268.5" y1="454" x2="1268.5" y2="486" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1284.25" y1="454" x2="1284.25" y2="486" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1300" y1="454" x2="1300" y2="486" stroke="#0f766e" stroke-width="2"/>
-  <line x1="1237" y1="486" x2="1300" y2="486" stroke="#0f766e" stroke-width="2"/>
+  <line x1="1237" y1="454" x2="1237" y2="490" stroke="#0f766e" stroke-width="2"/>
+  <line x1="1252.75" y1="454" x2="1252.75" y2="490" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1268.5" y1="454" x2="1268.5" y2="490" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1284.25" y1="454" x2="1284.25" y2="490" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1300" y1="454" x2="1300" y2="490" stroke="#0f766e" stroke-width="2"/>
+  <line x1="1237" y1="490" x2="1300" y2="490" stroke="#0f766e" stroke-width="2"/>
   <line x1="1235" y1="516" x2="1300" y2="516" stroke="#64748b" stroke-width="1.2"/>
   <line x1="1235" y1="510" x2="1235" y2="522" stroke="#64748b"/>
   <line x1="1300" y1="510" x2="1300" y2="522" stroke="#64748b"/>

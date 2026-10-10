@@ -218,7 +218,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 #### Phase 5 implementation checkpoint (2026-10-10)
 
-A **preliminary A-01 to A-07 preview package** is committed on the `phase5-architectural-plans` branch. The preview index is in the main README and the project-wide assumptions/status are recorded in `PROJECT_STATUS.md` and `space_planning/phase5_architecture_notes.md`. The shared source model is `data/building_model.json`; `scripts/validate_architectural_previews.py` checks its arithmetic and basic SVG consistency.
+A **preliminary A-01 to A-07 preview package** was merged into `main` through [PR #5](https://github.com/justryan-n2d/plate_2_bsd/pull/5). The preview index is in the main README and the project-wide assumptions/status are recorded in `PROJECT_STATUS.md` and `space_planning/phase5_architecture_notes.md`. The shared source model is `data/building_model.json`; `scripts/validate_architectural_previews.py` checks its arithmetic and basic SVG consistency.
 
 These are drafts only, not final drawing deliverables. Phase 2 remains unfinished: the applicable local zoning/setbacks, legal road/ROW lines, final buildable envelope, parking, open-space and occupant-load calculations have not been confirmed. A-01 shows a **uniform 2.00 m screening offset only**, not the final approved setback. Floor levels, opening locations and sizes, roof pitch and story heights also remain provisional.
 

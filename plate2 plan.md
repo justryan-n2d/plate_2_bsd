@@ -623,7 +623,7 @@ This section turns the agreed digital workflow into an ordered implementation pl
 
 - [x] **R-01** Record the deliverables, source-of-truth rules, repository structure, generation workflow, and validation gates in this plan.
 - [x] **R-02** Record the adjusted P5-1 course transparently and treat 300.00 m² as the assignment's approximate lot-area figure. Keep the 265.26 m² adjusted-polygon result documented; do not force the plotted area to equal the approximate figure.
-- [ ] **R-03** Review this plan against the instructor's assignment before implementing the folder changes or the generator. Any unconfirmed assignment detail stays labelled pending.
+- [x] **R-03** Cross-check this plan against the provided assignment. The required drawings, calculations, documentation, paper sizes, and scope exclusions remain represented; items whose expected detail is ambiguous are still flagged for instructor direction.
 
 ### Stage R-2: Add repository scaffolding
 

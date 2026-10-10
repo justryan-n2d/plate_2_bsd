@@ -177,12 +177,16 @@ The site-envelope basis is complete enough to proceed to Phase 3. The actual bui
 
 ### Phase 3: Space planning
 
-- [ ] **T-20** Make the space-requirement table for the proposed rooms and spaces.
-- [ ] **T-21** Prepare an adjacency / relationship diagram showing functional relationships between the spaces.
-- [ ] **T-22** Consider functional relationships, privacy, accessibility, convenience, service relationships, circulation, and safety.
-- [ ] **T-23** Arrange the required ground-floor spaces.
-- [ ] **T-24** Arrange the required second-floor spaces.
-- [ ] **T-25** Review the building layout for functional space relationships and circulation.
+- [x] **T-20** Prepare a first-draft space-requirement table with proposed room dimensions and target areas in [phase3_space_program.md](design/phase3_space_program.md). The room sizes are design targets, not values given by the instructor.
+- [x] **T-21** Prepare first-draft ground-floor and second-floor adjacency diagrams in [phase3_space_program.md](design/phase3_space_program.md).
+- [x] **T-22** Record preliminary priorities for privacy, accessibility, service relationships, convenience, circulation, and safety in the space program.
+- [ ] **T-23** Arrange the required ground-floor spaces inside the working 152.43 m² site envelope.
+- [ ] **T-24** Arrange the required second-floor spaces and coordinate the stair/bathroom positions with the ground floor.
+- [ ] **T-25** Review the dimensioned building layout for functional relationships and circulation.
+
+#### Phase 3 implementation checkpoint (2026-10-10)
+
+The first-draft [space program and adjacency diagrams](design/phase3_space_program.md) are now recorded. The program preserves all required rooms from the instructor's assignment and proposes adjustable clear dimensions for early planning. The next task is to arrange the room blocks within the selected working envelope, then refine the dimensions and recalculate floor areas from the resulting plan.
 
 ### Phase 4: Stair planning and calculations
 

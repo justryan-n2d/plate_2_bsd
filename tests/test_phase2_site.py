@@ -81,7 +81,7 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         road_rows = [row for row in boundaries if row["edge_type"] == "road frontage"]
         self.assertEqual(len(road_rows), 2)
         for row in road_rows:
-            self.assertIn("8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side", row["notes"])
+            self.assertIn("8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side", row["notes"])
             self.assertIn("formal lot-line/RROW alignment", row["notes"])
             self.assertNotIn("allocation is pending", row["notes"].lower())
 
@@ -96,13 +96,13 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         self.assertEqual(scenarios[0]["offsets_m"], [2.0, 2.0, 2.0, 2.0, 2.0])
         self.assertEqual(scenarios[3]["offsets_m"], [2.0, 2.0, 4.5, 4.5, 2.0])
 
-    def test_scenario_report_is_current_and_keeps_local_rule_unresolved(self):
+    def test_scenario_report_is_current_and_uses_selected_working_basis(self):
         traverse = load_traverse(DEFAULT_TRAVERSE)
         expected = build_preliminary_envelope_scenarios_report(traverse["vertices"])
         report_path = DEFAULT_TRAVERSE.parent.parent / "calculations" / "phase2_envelope_scenarios.md"
         self.assertEqual(report_path.read_text(encoding="utf-8"), expected)
         self.assertIn("Scenario A is selected as the working envelope for Phase 3", expected)
-        self.assertIn("for purposes of Section 704", expected)
+        self.assertIn("8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side", expected)
         self.assertIn("152.43 m²", expected)
 
     def test_negative_offsets_are_rejected(self):

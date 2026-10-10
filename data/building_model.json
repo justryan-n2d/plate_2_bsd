@@ -81,13 +81,13 @@
     ],
     "setback_reference": "Selected academic assumption for the student activity: uniform 2.00 m from the five boundaries using PD 1096 Section 708(a) as the general Group A dwelling baseline.",
     "building_placement": {
-      "southwest_easting_m": 1.6893311,
+      "southwest_easting_m": 1.8893311,
       "south_edge_northing_m": -9.8457888,
       "width_m": 9.3,
       "depth_m": 7.9
     },
     "carport_placement": {
-      "southwest_easting_m": 10.99,
+      "southwest_easting_m": 11.1893311,
       "south_edge_northing_m": -8.6,
       "width_m": 2.8,
       "depth_m": 5.5

@@ -127,13 +127,13 @@ Preliminary outputs are available in [the site base SVG](site/phase1_site_base.s
 
 The original five listed courses produce a latitude sum of +0.4764 m, departure sum of -3.9836 m, and linear misclosure of approximately 4.0120 m. As directed, the first four courses are held unchanged and only P5-1 is adjusted from N 08°10′ W, 16.35 m to N 06°02′11″ E, 15.7954 m (about 15.80 m) so that it closes at P1. Both the original and adjusted P5-1 data are documented.
 
-The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The original survey plan and area discrepancy still need checking before the plot is treated as final.
+The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The 300.00 m² value is explicitly approximate. The 265.26 m² value is the calculated area of the adjusted closed polygon; the 34.74 m² difference is documented and accepted as a difference from the approximate figure, not a reason to force the traverse to match 300.00 m². The difference is therefore not a blocker by itself. If the original approved survey document or a later instructor direction becomes available, use it to confirm the source information rather than silently changing the remaining courses.
 
 The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
 
 The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
 
-**Still on hold before a final Site Development Plan:** confirm the original survey reference and 300.00 m² approximate area, verify the physical road/ROW and actual lot geometry, obtain a reliable parcel location, inspect existing drainage/topography and obstructions, and establish applicable setbacks. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
+**Still on hold before a final Site Development Plan:** verify physical road/ROW limits and actual site conditions, obtain a reliable parcel location for location-specific checks, and establish applicable setbacks. The area difference is documented but is not treated as an error solely because the 300.00 m² figure is approximate. The adjusted traverse is an academic plotting basis under the instructor's direction, not a cadastral certification. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
 
 #### Repository status and verification record (2026-10-10)
 
@@ -147,7 +147,7 @@ The following checks were confirmed against the repository files now on `main`:
 - Road width (5.0 m) and total ROW (8.00 m) are identified as separate values; no specific allocation of the remaining 3.0 m is invented.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
-These are document and arithmetic consistency checks, not a professional survey certification. The area discrepancy, survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks still require confirmation. House-layout work remains deferred.
+These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks may still require confirmation for a final site-development plan. House-layout work remains deferred until Phase 2 site requirements are worked through.
 
 ### Phase 2: Site requirements and preliminary calculations
 
@@ -476,7 +476,7 @@ Detailed working is kept in [calculations/plate2_calculations.md](calculations/p
 
 ### B. Drawing checking
 
-- [ ] Check that the plotted lot courses use the assignment's bearings and distances as transcribed, and document any source-data discrepancy before treating the site base as final.
+- [ ] Check that courses 1-2 through 4-5 use the stated bearings and distances unchanged, and that the closed academic plot uses the documented adjusted P5-1 only. Keep the original P5-1 value as source-reference data; do not label it as the adjusted boundary course or present the adjusted plot as a cadastral certification.
 - [ ] Check dimensions, room names, door/window locations, furniture, stairs, circulation, and reference/grid lines against the corresponding drawing requirements.
 - [ ] Compare the ground-floor plan, second-floor plan, roof plan, four elevations, and sections so that related dimensions and features agree.
 - [ ] Check that the stair shown in the plans is consistent with the stair calculation and at least one section passes through the stairway.
@@ -519,7 +519,8 @@ This section records the workflow agreed during project planning. It is intended
 
 - **ChatGPT + code** will be used to help prepare repeatable calculations, drawing geometry, dimensions, schedules, and exports. All calculated values and drawing outputs must still be checked against the assignment and applicable requirements.
 - **SVG** will be a project output from the beginning, not an afterthought. It will act as a quick visual preview for checking the 2D drawings inside GitHub or a browser.
-- **DXF** will be used for editable drawing geometry in compatible CAD software.
+- **DXF** will be the generated, editable CAD master in compatible CAD software. Its geometry must come from the project's source data and generation code rather than from a separately hand-redrawn image.
+- **DWG** will be a converted delivery copy when required. The conversion must be checked in compatible CAD software; corrections should normally be made in the source data/generator and regenerated, not only in the converted copy.
 - **PDF** will be used for review, sheet arrangement, and printing/submission after dimensions, scales, labels, and page setup have been checked.
 - **CSV** will store supporting tabular data where useful, such as lot coordinates, calculation results, area summaries, and schedules. CSV is supporting data, not the final architectural drawing format.
 - **WalkMyPlan** will be used as a supplementary 3D visualization/inspection tool to review room arrangement, circulation, stairs, and the general spatial layout. It is a preview aid, not the source of truth for surveyed lot geometry, dimensions, code compliance, structural adequacy, or final 2D documentation.
@@ -530,28 +531,36 @@ Create folders as the project outputs are produced. This is a planned organizati
 
 ```text
 plate_2_bsd/
-├── README.md
-├── plate2 plan.md
+├── plate2 plan.md                         [exists]
 ├── calculations/
-│   └── plate2_calculations.md
-├── data/
-│   ├── lot-coordinates.csv
-│   ├── area-calculations.csv
-│   └── schedules.csv
-├── scripts/
-│   └── drawing-generation scripts
-├── previews/
-│   ├── site-development-plan.svg
-│   ├── ground-floor-plan.svg
-│   ├── second-floor-plan.svg
-│   └── other drawing previews as they become available
-├── drawings/
-│   └── editable CAD files (.dxf)
-└── exports/
-    └── print/review sheets (.pdf)
+│   └── plate2_calculations.md             [exists]
+├── site/                                  [exists: Phase 1 source files and outputs]
+│   ├── README.md
+│   ├── phase1_site_analysis.md
+│   ├── phase1_site_analysis_matrix.csv
+│   ├── phase1_site_base.svg
+│   └── phase1_traverse_coordinates.csv
+├── README.md                              [to add: project status and previews]
+├── data/                                  [to add when its schema is defined]
+│   ├── building_model.json                [planned: shared building geometry and levels]
+│   └── schedules.csv                      [planned: once the schedule data exists]
+├── scripts/                               [to add]
+│   ├── generate_site_base.py              [planned]
+│   ├── validate_site_base.py              [planned]
+│   └── requirements.txt or pyproject.toml [planned: Python dependencies]
+├── previews/                              [to add for project-wide drawing previews]
+│   └── future drawing previews            [planned; avoid duplicating the Phase 1 SVG]
+├── drawings/                              [to add]
+│   └── phase1_site_base.dxf               [planned first CAD output]
+├── exports/                               [to add]
+│   ├── pdf/                               [planned: checked print/review sheets]
+│   └── dwg/                               [planned: converted DWG deliverables]
+└── .github/
+    └── workflows/
+        └── validate-drawings.yml          [planned: automated checks/build]
 ```
 
-Actual filenames may be adjusted to match the generator and final sheet organization. Do not commit placeholder drawings as if they were verified outputs.
+**Status key:** exists means present on the current main branch; to add and planned mean not yet created. Keep the existing site/ files and relative links intact. The site-coordinate CSV remains the source record for Phase 1; do not duplicate or re-key it into data/ without a clear reason. The first generator should read the existing CSV and write a DXF/SVG from it. Do not commit empty placeholder files or label unverified outputs as complete.
 
 ### 12.3 GitHub SVG preview requirements
 
@@ -602,3 +611,84 @@ Actual filenames may be adjusted to match the generator and final sheet organiza
 - [ ] The PDF uses the intended page size and print scale and has no clipped or unreadable content.
 - [ ] Any unresolved course/instructor requirement is marked as pending rather than assumed resolved.
 - [ ] Previews are labelled as preliminary until the checks above and the instructor's requirements are satisfied.
+
+
+---
+
+## 13. Repository implementation roadmap (before house-layout drafting)
+
+This section turns the agreed digital workflow into an ordered implementation plan. The current site-base files are preserved. The folder structure and automation are planned work, not work already completed. The first objective is to establish a repeatable, checkable CAD export from the existing Phase 1 data. Only after this pipeline is verified should it be used as the basis for the later building drawings.
+
+### Stage R-1: Finalize the project plan
+
+- [x] **R-01** Record the deliverables, source-of-truth rules, repository structure, generation workflow, and validation gates in this plan.
+- [x] **R-02** Record the adjusted P5-1 course transparently and treat 300.00 m² as the assignment's approximate lot-area figure. Keep the 265.26 m² adjusted-polygon result documented; do not force the plotted area to equal the approximate figure.
+- [ ] **R-03** Review this plan against the instructor's assignment before implementing the folder changes or the generator. Any unconfirmed assignment detail stays labelled pending.
+
+### Stage R-2: Add repository scaffolding
+
+- [ ] **R-10** Add a root README.md explaining the project, current phase, deliverables, drawing-generation workflow, limitations, and links to the current site files.
+- [ ] **R-11** Add scripts/ for deterministic drawing generation and validation code.
+- [ ] **R-12** Add drawings/ for generated editable DXF masters.
+- [ ] **R-13** Add previews/ for future project-wide SVG drawing previews. Preserve site/phase1_site_base.svg; do not create a second copy unless the preview workflow requires it and the links are updated.
+- [ ] **R-14** Add exports/pdf/ and exports/dwg/ for reviewed deliverables. Keep generated files out of the repository until they are useful, checked, and traceable to source data.
+- [ ] **R-15** Define a machine-readable source format for the future building layout in data/building_model.json only when room geometry, levels, openings, and design parameters are ready to be recorded. Do not duplicate the Phase 1 coordinate CSV without a clear need.
+- [ ] **R-16** Add Python dependency documentation and a minimal .github/workflows/validate-drawings.yml workflow after the first generator and its checks work locally or in a reproducible environment.
+
+### Stage R-3: Generate the first editable CAD file from Phase 1
+
+- [ ] **R-20** Implement scripts/generate_site_base.py to read site/phase1_traverse_coordinates.csv and build the closed lot from courses 1-2 through 4-5 plus the adjusted P5-1 row.
+- [ ] **R-21** Ensure the original P5-1 and the diagnostic closure-gap row remain reference data only; they must not be added as extra property-boundary segments in the closed polygon.
+- [ ] **R-22** Generate drawings/phase1_site_base.dxf with an explicitly documented drawing-unit convention, named layers, true coordinate geometry, useful labels, and a closed parcel outline. Record all source-to-CAD unit conversions; never scale the geometry by eye.
+- [ ] **R-23** Generate or refresh the associated SVG from the same source coordinates and drawing definitions. Avoid hand-editing generated geometry in SVG in a way that makes it disagree with DXF.
+- [ ] **R-24** Retain visible notes for the original and adjusted P5-1 values, the approximate area stated in the assignment, the area calculated from the adjusted polygon, and the 5.0 m road / 8.00 m ROW distinction. Do not invent a split of the remaining 3.0 m.
+- [ ] **R-25** Keep the generated CAD file and preview marked preliminary until the automated checks and visual inspection pass.
+
+### Stage R-4: Validate the DXF/SVG generation pipeline
+
+- [ ] **R-30** Independently recompute the first four course components and confirm that adjusted P5-1 closes to P1 within a defined numerical tolerance.
+- [ ] **R-31** Check the expected boundary vertex count, line lengths, perimeter (about 64.1454 m), calculated closed-polygon area (about 265.26 m²), and coordinate bounds against the documented source data.
+- [ ] **R-32** Check DXF structure, drawing units, expected layers/entities, closed boundary geometry, and the absence of diagnostic-only segments from the actual parcel outline.
+- [ ] **R-33** Check that labels and dimension text are consistent with the values that generated the geometry. Do not infer scale from an SVG viewport or screenshot.
+- [ ] **R-34** Run visual inspection of SVG and open the DXF in compatible CAD software/viewer. Compare the boundary and annotations with the CSV and calculation notes.
+- [ ] **R-35** Add reproducible validation commands/scripts. A successful run means the checks passed; it does not certify a cadastral survey, code compliance, structural adequacy, or instructor approval.
+
+### Stage R-5: GitHub automation and previews
+
+- [ ] **R-40** Configure GitHub Actions to install the documented Python dependencies, run validation checks, and generate build outputs or workflow artifacts when appropriate.
+- [ ] **R-41** Start with read-only CI: validate and build, but do not let an automated workflow commit to main or overwrite checked drawings.
+- [ ] **R-42** Commit reviewed SVG previews and DXF outputs deliberately, with a commit message that identifies the source revision and output updated.
+- [ ] **R-43** Add preview links or embedded SVGs to the root README.md only when the file exists and renders correctly in GitHub.
+- [ ] **R-44** Ensure any workflow failure clearly identifies the failed input/check. Keep diagnostic logs and bulky temporary output as expiring workflow artifacts where practical rather than committing them all.
+
+### Stage R-6: Reuse the verified pipeline for the building plate
+
+- [ ] **R-50** Define one shared building-geometry model for room outlines, walls, doors, windows, floor levels, stairs, roof geometry, and drawing annotations. Use it to generate related views where practical.
+- [ ] **R-51** Plan and generate the site-development plan only after setbacks, buildable envelope, road/ROW assumptions, and site-access constraints have been worked through.
+- [ ] **R-52** Generate ground-floor, second-floor, and roof-plan DXF/SVG drawings from the agreed geometry.
+- [ ] **R-53** Coordinate elevations, building sections, stair dimensions, architectural details, and schedules with the same agreed dimensions and levels. Any view that requires separate geometry must still use documented common parameters.
+- [ ] **R-54** Generate checked A3 PDF sheets and long-bond calculation pages in line with the assignment. Check the plot scale, sheet layout, dimensions, labels, and clipped content.
+- [ ] **R-55** Convert final checked DXF files to DWG using a compatible converter. Inspect the resulting DWG; do not assume conversion preserves every annotation, dimension style, layer, or plot setting perfectly.
+
+### 13.1 Source of truth and file ownership
+
+- The instructor's assignment is the source of required deliverables and stated inputs.
+- calculations/plate2_calculations.md records calculation methods, values, and their status.
+- site/phase1_traverse_coordinates.csv is the machine-readable course/coordinate record for the current site base, including separate original and adjusted closing-course records.
+- The drawing-generation code and its declared input files define generated SVG/DXF geometry. Generated output must be reproducible from those inputs.
+- The closed academic plot uses the adjusted P5-1 course. The original assignment course is retained as source-reference information and must not be silently substituted or erased.
+- A converted DWG is a delivery copy, not the independent source of truth. When a correction is needed, update the source data or generator, regenerate the DXF/SVG, validate them, and then reconvert.
+- No drawing, calculation, or code-derived result should be described as professionally certified, permit-ready, or construction-ready merely because it passes automated checks.
+
+### 13.2 Implementation acceptance gates
+
+Do not advance to the next gate until its checks are met:
+
+1. **Plan gate:** folder structure, source-of-truth rules, file ownership, and task order are recorded in this plan.
+2. **Site CAD gate:** DXF is generated from the existing CSV, validation checks pass, and the drawing has been visually inspected in a compatible CAD viewer.
+3. **Site-requirements gate:** applicable setbacks and the buildable envelope are calculated and their assumptions are documented.
+4. **Building-layout gate:** the room program, space-requirement table, and adjacency diagram are agreed before the detailed floor-plan geometry is treated as a design.
+5. **Coordinated-drawing gate:** floor plans, roof plan, elevations, sections, details, and schedules agree on dimensions and levels.
+6. **Submission gate:** checked PDF sheets, supporting calculations and documentation, and final DWG delivery copies are reviewed against the instructor's list.
+
+The calculated area of the adjusted polygon is retained as 265.26 m². The 300.00 m² value remains the approximate lot area stated in the assignment. The project records both without forcing one to equal the other.

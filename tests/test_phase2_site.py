@@ -1,0 +1,94 @@
+import unittest
+
+from scripts.calculate_phase2_site import (
+    DEFAULT_SETBACKS,
+    DEFAULT_TRAVERSE,
+    build_phase2_report,
+    calculate_maximum_occupancy,
+    calculate_preliminary_parking_slots,
+    inset_convex_polygon,
+    load_boundary_inputs,
+    load_traverse,
+    polygon_area,
+    resolve_buildable_envelope,
+)
+
+
+class Phase2SiteCalculationTests(unittest.TestCase):
+    def test_corner_lot_occupancy_limit_uses_calculated_area(self):
+        result = calculate_maximum_occupancy(265.2598, "corner")
+        self.assertAlmostEqual(result["maximum_occupancy_m2"], 238.73382, places=5)
+        self.assertAlmostEqual(result["minimum_open_space_m2"], 26.52598, places=5)
+        self.assertEqual(result["factor"], 0.90)
+
+    def test_inside_lot_occupancy_limit_is_eighty_percent(self):
+        result = calculate_maximum_occupancy(265.2598, "inside")
+        self.assertAlmostEqual(result["maximum_occupancy_m2"], 212.20784, places=5)
+        self.assertAlmostEqual(result["minimum_open_space_m2"], 53.05196, places=5)
+
+    def test_inset_polygon_respects_each_edge_offset(self):
+        square = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0)]
+        inset = inset_convex_polygon(square, [2.0, 2.0, 2.0, 2.0])
+        self.assertEqual(len(inset), 4)
+        self.assertAlmostEqual(polygon_area(inset), 36.0, places=6)
+        self.assertTrue(all(2.0 - 1e-6 <= x <= 8.0 + 1e-6 for x, _ in inset))
+        self.assertTrue(all(2.0 - 1e-6 <= y <= 8.0 + 1e-6 for _, y in inset))
+
+    def test_missing_road_reference_offset_prevents_final_envelope(self):
+        vertices = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0)]
+        offsets = [2.0, 2.0, None, 2.0]
+        envelope = resolve_buildable_envelope(vertices, offsets)
+        self.assertIsNone(envelope["vertices"])
+        self.assertIsNone(envelope["area_m2"])
+        self.assertIn("missing", envelope["status"].lower())
+
+    def test_preliminary_parking_for_this_lot_area_is_one_slot(self):
+        self.assertEqual(calculate_preliminary_parking_slots(265.2598), 1)
+        self.assertEqual(calculate_preliminary_parking_slots(120.01), 1)
+        self.assertIsNone(calculate_preliminary_parking_slots(120.0))
+
+    def test_repository_inputs_preserve_unresolved_road_geometry(self):
+        traverse = load_traverse(DEFAULT_TRAVERSE)
+        boundaries = load_boundary_inputs(DEFAULT_SETBACKS)
+        envelope = resolve_buildable_envelope(
+            traverse["vertices"], [row["geometry_inset_m"] for row in boundaries]
+        )
+        self.assertAlmostEqual(traverse["area_m2"], 265.2598, places=3)
+        self.assertAlmostEqual(traverse["perimeter_m"], 64.145414, places=4)
+        self.assertIsNone(envelope["area_m2"])
+        self.assertEqual(envelope["missing_edge_indices"], [2, 3])
+
+    def test_negative_offsets_are_rejected(self):
+        square = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0)]
+        with self.assertRaises(ValueError):
+            inset_convex_polygon(square, [2.0, -1.0, 2.0, 2.0])
+
+    def test_report_preserves_area_difference_and_does_not_fabricate_envelope(self):
+        report = build_phase2_report(
+            area_m2=265.2598,
+            stated_approximate_area_m2=300.0,
+            perimeter_m=64.145414,
+            boundary_rows=[{
+                "boundary_course": "3-4",
+                "adjacency": "road",
+                "geometry_inset_m": None,
+                "code_clearance_m": 2.0,
+                "status": "geometry pending",
+                "notes": "road centerline not located",
+            }],
+            corner_occupancy=calculate_maximum_occupancy(265.2598, "corner"),
+            inside_occupancy=calculate_maximum_occupancy(265.2598, "inside"),
+            envelope={
+                "vertices": None,
+                "area_m2": None,
+                "status": "Incomplete: missing road reference offsets",
+            },
+        )
+        self.assertIn("265.26 m²", report)
+        self.assertIn("300.00 m²", report)
+        self.assertIn("34.74 m²", report)
+        self.assertIn("NOT CALCULATED", report)
+
+
+if __name__ == "__main__":
+    unittest.main()

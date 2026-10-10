@@ -47,7 +47,7 @@ The property is bounded by Lot 245-A on the north, Lot 246 on the east, a stated
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-Use the stated 5.0 m as the existing road width and 8.00 m as the total road right-of-way. These values serve different purposes. The remaining 3.0 m could be allocated for shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not specify the exact allocation, so do not assume a particular split.
+Use the instructor's clarified road cross-section: 8.00 m total RROW = 5.00 m existing barangay road + 1.50 m remaining RROW strip on each side. Show the 5.00 m carriageway and both 1.50 m strips separately on the preliminary site plan. The 3.00 m balance is therefore allocated symmetrically for this plate, not left unspecified.
 
 ---
 
@@ -129,7 +129,7 @@ The original five listed courses produce a latitude sum of +0.4764 m, departure 
 
 The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The 300.00 m² value is explicitly approximate. The 265.26 m² value is the calculated area of the adjusted closed polygon; the 34.74 m² difference is documented and accepted as a difference from the approximate figure, not a reason to force the traverse to match 300.00 m². The difference is therefore not a blocker by itself. If the original approved survey document or a later instructor direction becomes available, use it to confirm the source information rather than silently changing the remaining courses.
 
-The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
+The 5.00 m carriageway and 8.00 m total RROW remain separately dimensioned. Per the instructor's clarification, the total includes a 1.50 m strip on each side of the 5.00 m carriageway. Use this known allocation in the academic road graphic; do not relabel the roadside strips as a specific sidewalk or drainage feature unless the assignment specifies that use.
 
 The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
 
@@ -144,7 +144,7 @@ The following checks were confirmed against the repository files now on `main`:
 - Original P5-1, adjusted P5-1, and original closure gap remain separately recorded.
 - Adjusted closing-course components return to P1; the closed traverse is reported with approximately 0.000000 m latitude and departure misclosure, based on the recorded component precision.
 - Adjusted perimeter (64.1454 m), adjusted polygon area (265.26 m²), assignment approximate area (300.00 m²), and 34.74 m² difference are stated consistently in the site-base records.
-- Road width (5.0 m) and total ROW (8.00 m) are identified as separate values; no specific allocation of the remaining 3.0 m is invented.
+- The road graphic uses the instructor's clarified allocation: 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
 These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks may still require confirmation for a final site-development plan. House-layout work remains deferred until Phase 2 site requirements are worked through.
@@ -168,7 +168,7 @@ Phase 2 implementation has started in [the Phase 2 site calculation report](calc
 
 The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited national-code provisions, assignment facts, provisional calculations, and local/site-specific items requiring verification.
 
-- **T-10:** The national-code baseline has been documented, but final setbacks remain pending local zoning confirmation and verified road-centerline / RROW geometry.
+- **T-10:** The road cross-section is now specified by the instructor as 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side. Final setback/envelope treatment remains pending confirmation of the applicable yard rule and its correct reference line, not the allocation of the remaining 3.00 m.
 - **T-11:** The envelope calculation logic and unit tests are implemented. The project-specific buildable-envelope area is intentionally not reported until the missing road-facing reference geometry is available.
 - **T-18:** A preliminary one-slot requirement is supported for a single-family dwelling lot above 120 m² under the cited 2004 IRR table; the standard car-slot rectangle is documented as 2.50 m × 5.00 m for perpendicular/diagonal parking or 2.15 m × 6.00 m for parallel parking. Confirm occupancy division and local Building Official interpretation before finalizing.
 - **T-19:** The conditional corner-lot (90%) and inside-lot (80%) occupancy ceilings have been calculated. These are not substitutes for setbacks or the final footprint.
@@ -658,7 +658,7 @@ This section turns the agreed digital workflow into an ordered implementation pl
 - [x] **R-23a** Generate the SVG preview from the same source coordinates and validate its XML, polygon coordinates, vertex count, and required notes. The generated preview is included in the workflow artifact.
 - [x] **R-23b** Visually inspect the rendered SVG preview. The parcel outline, vertex labels, course list, notes, north arrow, and graphic scale are visible and legible at preview size.
 - [ ] **R-23c** Open the DXF in compatible CAD software and visually verify model-space units, layers, linework, text placement, extents, and plot behavior. SVG preview review does not replace this CAD-app check.
-- [x] **R-24** Include notes in the generator for original and adjusted P5-1, approximate and calculated area, and the 5.0 m road / 8.00 m ROW distinction. Do not invent a split of the remaining 3.0 m.
+- [x] **R-24** Include notes for original and adjusted P5-1, approximate and calculated area, and the instructor-specified road cross-section: 5.00 m carriageway plus 1.50 m RROW strip on each side, 8.00 m total.
 - [ ] **R-25** Keep the generated CAD output marked preliminary until the DXF has been opened and visually checked in compatible CAD software. The SVG preview has been visually reviewed, but that does not certify the DXF or drawing scale.
 
 ### Stage R-4: Validate the DXF/SVG generation pipeline

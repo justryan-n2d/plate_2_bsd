@@ -133,7 +133,7 @@ The 5.00 m carriageway and 8.00 m total RROW remain separately dimensioned. Per 
 
 The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
 
-**Still on hold before a final Site Development Plan:** use the instructor-provided road cross-section (8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side) in the site graphic, check actual site conditions if required, and establish the applicable final setbacks. The area difference is documented but is not treated as an error solely because the 300.00 m² figure is approximate. The adjusted traverse is an academic plotting basis under the instructor's direction, not a cadastral certification. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
+The instructor-provided road cross-section (8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side) is recorded for the site graphic. Phase 2 adopts a 2.00 m inset from each of the five plotted property boundaries as the working setback for this classroom activity, giving a **152.43 m² working envelope**. The approximate-area difference (300.00 m² stated versus 265.26 m² calculated) remains documented without changing the given courses beyond the instructor-directed closing-course adjustment. Exact driveway, pedestrian entrance, and service-access positions are deferred until Phase 3 layout planning.
 
 #### Repository status and verification record (2026-10-10)
 
@@ -166,7 +166,7 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 **Status: Phase 2's site-envelope gate is complete for this instructor-led academic activity, and Phase 3 can proceed.** The Phase 2 site calculation report and the preliminary building-envelope scenario report record the adopted assumptions, numerical results, and coordinates. The calculation script validates the Phase 1 traverse, applies the 2.00 m working offset on all five edges, calculates the working inset area, and includes tested geometry functions.
 
-The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited national-code provisions, assignment facts, provisional calculations, and local/site-specific items requiring verification.
+The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited code provisions, assignment facts, working assumptions, and calculated values.
 
 - **T-10:** The working setback is adopted as 2.00 m inward from each plotted property boundary for this academic activity.
 - **T-11:** Scenario A in [phase2_envelope_scenarios.md](calculations/phase2_envelope_scenarios.md) gives a working envelope of **152.43 m²**. Scenarios B-D are retained for comparison only.

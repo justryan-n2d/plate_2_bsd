@@ -2,7 +2,7 @@ name: Validate Phase 2 Site Requirement Scenarios
 
 on:
   push:
-    branches: [main]
+    branches: [main, phase2-site-requirements]
     paths:
       - "site/phase1_traverse_coordinates.csv"
       - "site/phase2_setback_scenarios.csv"

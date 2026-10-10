@@ -186,7 +186,7 @@ S-02 to S-04 remain comparison-only alternatives, not blockers. These assumption
 
 **Status: Preliminary space-planning package prepared.** Room targets and diagrams are recorded in `space_planning/`, with a validator at `scripts/validate_space_planning.py`. All target dimensions are planning assumptions rather than code minimums. The diagrams are not to scale and do not define the final building orientation, driveway, doors, windows, setbacks, or stairs.
 
-Phase 2 now has an academic calculation baseline using 265.26 m² lot area, a 5.00 m carriageway within the 8.00 m total ROW, and uniform 2.00 m setbacks. The required 3.00 m × 1.50 m balcony is attached to the master bedroom in A-03 and shown on the assumed front elevation in A-05. Its 4.50 m² area is reported separately from the 146.94 m² enclosed house floor area; total including balcony is 151.44 m². Coordinate these dimensions with the final floor plans and A-06 stair section.
+Phase 2 uses 265.26 m² as the working lot area, a 5.00 m carriageway within the 8.00 m total ROW, and uniform 2.00 m academic setbacks. The required 3.00 m × 1.50 m balcony projects from the east/front entry-carport facade and is accessed from the master bedroom in A-03. A-01 shows its elevated projection, A-04 the projection below the roof, A-05 the front elevation, A-06 the matching section, and A-07 the D-04 door/guardrail details. Its 4.50 m² is reported separately from the 146.94 m² enclosed area; total including balcony is 151.44 m².
 
 ### Phase 4: Stair planning and calculations
 
@@ -212,7 +212,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 - [ ] **T-41 / A-02** Finalize the Ground Floor Plan. A preliminary draft is available at `previews/phase5_A02_ground_floor.svg`.
 - [ ] **T-42 / A-03** Finalize the Second Floor Plan including the required 3.00 m × 1.50 m balcony accessed from the master bedroom. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
 - [ ] **T-43 / A-04** Finalize the Roof Plan. A preliminary draft is available at `previews/phase5_A04_roof_plan.svg`.
-- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Show the required balcony on the matching façade; the current draft shows it on the assumed front elevation.
+- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Show the required balcony only on the east/front entry-carport facade, aligned with the master bedroom and matching the common geometry in A-03, A-04, A-05, A-06 and A-07.
 - [ ] **T-45 / A-06** Finalize at least two building sections, with at least one through the actual coordinated stairway. Current draft diagrams are at `previews/phase5_A06_sections.svg`.
 - [ ] **T-46 / A-07** Finalize architectural details and schedules, including the balcony guardrail note and nominal balcony door in the opening schedule. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
 - [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information across all sheets.
@@ -223,7 +223,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 A preliminary A-01 to A-07 preview package is committed to the repository. The shared source model is `data/building_model.json`; the current SVG previews are useful for review, but they are still draft diagrams rather than finished drawing sheets.
 
-Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, and a 152.43 m² setback envelope. The required 3.00 m × 1.50 m balcony is on the east/front entry-carport side, attached to the master bedroom in A-03 and coordinated across the drawings A-01 to A-07. A-01 must show the road/ROW dimensions, and A-02/A-03/A-05 must be coordinated with the 73.47 m² enclosed area per floor, 4.50 m² balcony, 146.94 m² enclosed total and 151.44 m² total including balcony.
+Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, and a 152.43 m² setback envelope. The required 3.00 m × 1.50 m balcony is on the east/front entry-carport side, attached to the master bedroom in A-03 and coordinated across the drawings A-01 to A-07. A-01 must show the road/ROW dimensions, and A-02/A-03/A-04/A-05/A-06/A-07 must be coordinated with the 73.47 m² enclosed area per floor, 4.50 m² balcony, 146.94 m² enclosed total and 151.44 m² total including balcony.
 
 Model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review, final schedules and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until these drawing and export checks are completed. All drawings remain academic drafts, not permit or construction documents.
 

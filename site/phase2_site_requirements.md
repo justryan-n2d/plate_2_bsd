@@ -22,7 +22,7 @@ Use these values consistently throughout Phase 2 and when revising the Phase 5 d
 | Main house rectangle | 9.30 m × 7.90 m |
 | Covered carport | 2.80 m × 5.50 m, for one car |
 | Floor-to-floor height | 3.000 m, matching the Phase 4 stair-study assumption |
-| Floor-area method | Use the 9.30 m × 7.90 m main-house envelope for each floor in this preliminary exercise; carport is treated separately as covered site area |
+| Floor-area method | Use 73.47 m² enclosed area per floor; report the required 4.50 m² balcony separately from enclosed floor area |
 | Parking assumption | One off-street parking space, represented by the planned single-car carport |
 
 The 265.26 m² value is the chosen working area for this academic exercise. The assignment also calls the lot area approximately 300.00 m²; retain that as a source note, but do not treat the difference as a blocker or keep changing the working area.
@@ -112,9 +112,12 @@ For this preliminary calculation, use the same 9.30 m × 7.90 m main-house outer
 
 | Item | Calculation | Adopted area |
 |---|---|---:|
-| Ground-floor house area | 9.30 × 7.90 | **73.47 m²** |
-| Second-floor house area | 9.30 × 7.90, same-envelope assumption | **73.47 m²** |
-| Total house floor area | 73.47 + 73.47 | **146.94 m²** |
+| Ground-floor enclosed house area | 9.30 × 7.90 | **73.47 m²** |
+| Second-floor enclosed house area | 9.30 × 7.90, same-envelope assumption | **73.47 m²** |
+| Required second-floor balcony | 3.00 × 1.50 | **4.50 m²** |
+| Second-floor total including balcony | 73.47 + 4.50 | **77.97 m²** |
+| Total enclosed house floor area | 73.47 + 73.47 | **146.94 m²** |
+| Total floor area including balcony | 146.94 + 4.50 | **151.44 m²** |
 | Separate open-sided carport | 2.80 × 5.50 | 15.40 m² covered site area, not included above |
 
 These are gross outer-envelope planning figures. If the final A-03 drawing later shows a smaller second-floor outline or an actual open-to-below area, recalculate the second-floor and total areas from that geometry.
@@ -207,11 +210,11 @@ The existing CSV and SVG retain S-01 to S-04 so the design decision is visible. 
 - [x] T-12 / C-06: Record the 73.47 m² house footprint and 15.40 m² carport.
 - [x] T-13 / C-07: Calculate the ground-floor area as 73.47 m² under the stated envelope assumption.
 - [x] T-14 / C-07: Calculate the second-floor area as 73.47 m² under the same-envelope assumption.
-- [x] T-15 / C-07: Calculate total house floor area as 146.94 m².
+- [x] T-15 / C-07: Calculate total enclosed house floor area as 146.94 m²; report 4.50 m² balcony separately for 151.44 m² total including balcony.
 - [x] T-16 / C-08: Calculate uncovered lot area as 176.39 m² (66.5%).
 - [x] T-17 / C-09: Adopt 6 persons as the academic design occupant count from the assignment's 5–6 person range.
 - [x] T-18 / C-11: Adopt one car space in the 2.80 m × 5.50 m carport.
 - [x] T-19 / C-12: Record the applicable preliminary Group A occupancy, entrance/exit, light/ventilation, and sanitation checks.
 - [x] Carry Phase 4 stair calculations forward using the 3.000 m rise assumption.
 
-**Phase 2 academic calculation baseline: complete using the agreed assumptions.** The remaining action is to coordinate these adopted values into A-01 to A-03 and the final plate sheets. This checklist does not claim real-site survey, permit, or construction approval.
+**Phase 2 academic calculation baseline: complete using the agreed assumptions.** The required 3.00 m × 1.50 m balcony contributes 4.50 m² of external floor area and is reported separately from the enclosed area. Coordinate it into A-03 and show it in the relevant elevation before final plate issue. The remaining action is to coordinate these adopted values into A-01 to A-03 and the final plate sheets. This checklist does not claim real-site survey, permit, or construction approval.

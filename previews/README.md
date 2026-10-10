@@ -6,4 +6,6 @@ The existing Phase 1 source preview is site/phase1_site_base.svg. It remains the
 
 The generated preview is produced by GitHub Actions at phase1_site_base_preview.svg and passes automated XML, coordinate-projection, vertex-count, and note checks. It is included with the DXF in the [successful workflow artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847), but is not yet committed as a repository file. The SVG preview has also been visually inspected for obvious clipping and readability issues. Manual opening and inspection of the DXF in compatible CAD software remains pending.
 
+The conceptual Phase 3 zoning and adjacency previews are committed in `space_planning/`. They are not to scale and do not prove code compliance or final layout dimensions.
+
 SVG previews are for browser inspection. They do not prove CAD units, print scale, survey accuracy, or code compliance.

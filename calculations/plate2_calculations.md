@@ -327,7 +327,7 @@ Balcony area = width × projection
              = 4.50 m²
 ```
 
-The balcony is open to the exterior, attached to the master bedroom, and accessed through a nominal 0.90 m balcony door. Include a perimeter guardrail in the architectural concept. The east/front balcony is within the plan's selected S-01 2.00 m academic setback envelope. Coordinate its location in A-01, A-03, A-04, A-05, A-06 and A-07; report it separately from enclosed area.
+The balcony is open to the exterior, attached to the family area, and accessed through the nominal 0.90 m D-04 balcony door. Include a perimeter guardrail in the architectural concept. The east/front balcony is within the plan's selected S-01 2.00 m academic setback envelope. Coordinate its location in A-01, A-03, A-04, A-05, A-06 and A-07; report it separately from enclosed area.
 
 ## Total floor area
 

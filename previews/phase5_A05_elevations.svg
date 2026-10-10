@@ -32,20 +32,20 @@
     <line x1="824.65" y1="696" x2="1085.35" y2="696" stroke="#334155" stroke-width="1.5"/>
     <rect x="812.65" y="541.23" width="284.7" height="55.76999999999998" fill="#e2e8f0" stroke="#334155" stroke-width="2.2"/><line x1="812.65" y1="597" x2="1097.35" y2="597" stroke="#334155" stroke-width="2"/><rect x="876.6875" y="721" width="48" height="36" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/><line x1="900.6875" y1="721" x2="900.6875" y2="757" stroke="#334155"/><rect x="876.6875" y="720" width="48" height="36" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/><line x1="900.6875" y1="720" x2="900.6875" y2="756" stroke="#334155"/><rect x="949.05" y="720.7" width="29.7" height="69.3" fill="#fef3c7" stroke="#334155" stroke-width="1.6"/>
 <!-- Front/east balcony aligned to master bedroom; 3.00 m span along facade x 1.50 m projection -->
-<g id="front-balcony-elevation">
-  <rect x="979.75" y="690" width="99" height="7" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
-  <line x1="979.75" y1="660" x2="1078.75" y2="660" stroke="#0f766e" stroke-width="3"/>
-  <line x1="979.75" y1="660" x2="979.75" y2="690" stroke="#0f766e" stroke-width="2"/>
-  <line x1="999.55" y1="660" x2="999.55" y2="690" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1019.35" y1="660" x2="1019.35" y2="690" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1039.15" y1="660" x2="1039.15" y2="690" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1058.95" y1="660" x2="1058.95" y2="690" stroke="#0f766e" stroke-width="1.5"/>
-  <line x1="1078.75" y1="660" x2="1078.75" y2="690" stroke="#0f766e" stroke-width="2"/>
-  <line x1="979.75" y1="690" x2="1078.75" y2="690" stroke="#0f766e" stroke-width="2"/>
-  <rect x="1014.4" y="620.7" width="29.7" height="69.3" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
-  <line x1="1029.25" y1="620.7" x2="1029.25" y2="690" stroke="#334155" stroke-width="1.2"/>
+<g id="front-balcony-elevation" data-span-m="3.00" data-projection-m="1.50" data-offset-m="0.20">
+  <rect x="979.75" y="696" width="99" height="7" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+  <line x1="979.75" y1="663" x2="1078.75" y2="663" stroke="#0f766e" stroke-width="3"/>
+  <line x1="979.75" y1="663" x2="979.75" y2="696" stroke="#0f766e" stroke-width="2"/>
+  <line x1="999.55" y1="663" x2="999.55" y2="696" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1019.35" y1="663" x2="1019.35" y2="696" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1039.15" y1="663" x2="1039.15" y2="696" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1058.95" y1="663" x2="1058.95" y2="696" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1078.75" y1="663" x2="1078.75" y2="696" stroke="#0f766e" stroke-width="2"/>
+  <line x1="979.75" y1="696" x2="1078.75" y2="696" stroke="#0f766e" stroke-width="2"/>
+  <rect x="1014.4" y="626.7" width="29.7" height="69.3" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1029.25" y1="626.7" x2="1029.25" y2="696" stroke="#334155" stroke-width="1.2"/>
   <text x="1029.25" y="648" text-anchor="middle" font-size="9" font-weight="700" fill="#065f46">D-04</text>
-  <text x="1029.25" y="714" text-anchor="middle" font-size="10" fill="#065f46">BALCONY 3.00 m</text>
+  <text x="1029.25" y="724" text-anchor="middle" font-size="10" fill="#065f46">BALCONY 3.00 m</text>
 </g>
     <line x1="808.65" y1="696" x2="1101.35" y2="696" stroke="#94a3b8" stroke-dasharray="5 4"/>
     <text x="818.65" y="689" font-size="10" fill="#64748b">+3.000</text><text x="818.65" y="789" font-size="10" fill="#64748b">±0.000</text>

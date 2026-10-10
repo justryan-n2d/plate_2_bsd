@@ -123,6 +123,8 @@ The order below is a practical way to track the stated requirements. The require
 
 **Current status: The preliminary site-base traverse is closed by adjusting only P5-1 per the instructor's direction. Courses 1-2 through 4-5 remain exactly as given. The original P5-1 value is preserved for reference. The source-based site analysis is documented without beginning the house layout.**
 
+The Phase 2 code requirements register is in [site/phase2_code_requirements.csv](site/phase2_code_requirements.csv). It separates the cited national-code provisions, assignment facts, provisional calculations, and local/site-specific items that remain to be verified.
+
 Preliminary outputs are available in [the site base SVG](site/phase1_site_base.svg), [the traverse coordinate schedule](site/phase1_traverse_coordinates.csv), [the site-analysis note](site/phase1_site_analysis.md), and [the site-analysis evidence matrix](site/phase1_site_analysis_matrix.csv).
 
 The original five listed courses produce a latitude sum of +0.4764 m, departure sum of -3.9836 m, and linear misclosure of approximately 4.0120 m. As directed, the first four courses are held unchanged and only P5-1 is adjusted from N 08°10′ W, 16.35 m to N 06°02′11″ E, 15.7954 m (about 15.80 m) so that it closes at P1. Both the original and adjusted P5-1 data are documented.
@@ -168,7 +170,7 @@ Phase 2 implementation has started in [the Phase 2 site calculation report](calc
 
 - **T-10:** The national-code baseline has been documented, but final setbacks remain pending local zoning confirmation and verified road-centerline / RROW geometry.
 - **T-11:** The envelope calculation logic and unit tests are implemented. The project-specific buildable-envelope area is intentionally not reported until the missing road-facing reference geometry is available.
-- **T-18:** A preliminary one-slot parking result is recorded for the calculated lot area above 120 m², subject to confirmation against the current official IRR table and the local Building Official.
+- **T-18:** A preliminary one-slot requirement is supported for a single-family dwelling lot above 120 m² under the cited 2004 IRR table; the standard car-slot rectangle is documented as 2.50 m × 5.00 m for perpendicular/diagonal parking or 2.15 m × 6.00 m for parallel parking. Confirm occupancy division and local Building Official interpretation before finalizing.
 - **T-19:** The conditional corner-lot (90%) and inside-lot (80%) occupancy ceilings have been calculated. These are not substitutes for setbacks or the final footprint.
 
 No task is marked complete solely on this preliminary review. Footprint, floor areas, final remaining open space, and occupant-load calculations remain dependent on the verified envelope and dimensioned layout.

@@ -21,6 +21,14 @@ Project workspace for the proposed two-storey residential building plate.
 
 See the [site folder README](site/README.md) for source files, assumptions, and verification limits.
 
+## Phase 2 setback scenario preview
+
+The four orange dashed offsets are screening cases only, not final approved setbacks. Confirm the official survey / ROW and Palo zoning/front-yard classification before selecting an option.
+
+![Phase 2 setback scenarios](previews/phase2_setback_scenarios.svg)
+
+See [Phase 2 site requirements](site/phase2_site_requirements.md) and [scenario data](site/phase2_setback_scenarios.csv).
+
 ## Phase 3 space-planning previews
 
 These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 setbacks and the buildable envelope remain pending. The Phase 4 stair study is now merged, but its floor-height assumption and final code/section coordination remain to be confirmed.
@@ -38,14 +46,6 @@ These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 
 ![Preliminary second-floor zoning](space_planning/second_floor_zoning.svg)
 
 See the [Phase 3 space-planning notes](space_planning/space_planning.md), [room schedule](space_planning/space_requirement_table.csv), and [adjacency matrix](space_planning/adjacency_matrix.csv).
-
-## Phase 2 setback scenario preview
-
-The four orange dashed offsets are screening cases only, not final approved setbacks. Confirm the official survey / ROW and Palo zoning/front-yard classification before selecting an option.
-
-![Phase 2 setback scenarios](previews/phase2_setback_scenarios.svg)
-
-See [Phase 2 site requirements](site/phase2_site_requirements.md) and [scenario data](site/phase2_setback_scenarios.csv).
 
 ## Phase 4 stair study
 

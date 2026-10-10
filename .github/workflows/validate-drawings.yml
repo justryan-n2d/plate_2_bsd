@@ -8,6 +8,7 @@ on:
       - "site/phase2_setback_inputs.csv"
       - "site/phase2_code_requirements.csv"
       - "calculations/phase2_site_calculations.md"
+      - "calculations/phase2_envelope_scenarios.md"
       - "tests/**"
       - "scripts/**"
       - ".github/workflows/validate-drawings.yml"
@@ -17,6 +18,7 @@ on:
       - "site/phase2_setback_inputs.csv"
       - "site/phase2_code_requirements.csv"
       - "calculations/phase2_site_calculations.md"
+      - "calculations/phase2_envelope_scenarios.md"
       - "tests/**"
       - "scripts/**"
       - ".github/workflows/validate-drawings.yml"
@@ -52,6 +54,9 @@ jobs:
 
       - name: Verify committed Phase 2 report is current
         run: python scripts/calculate_phase2_site.py --check-report calculations/phase2_site_calculations.md
+
+      - name: Verify preliminary envelope scenario report is current
+        run: python scripts/calculate_phase2_site.py --check-scenarios-report calculations/phase2_envelope_scenarios.md
 
       - name: Generate DXF and SVG
         run: python scripts/generate_site_base.py

@@ -7,7 +7,7 @@
 <text class="title" x="35" y="40">A-03 | SECOND FLOOR PLAN</text>
 <text class="sub" x="35" y="67">Conceptual arrangement based on the Phase 3 room schedule and provisional Phase 4 stair; not a final dimensioned plan.</text>
 <rect x="128" y="79" width="488.4" height="427.7" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="7 5"/>
-<rect x="140" y="155" width="399.90000000000003" height="339.7" fill="#ffffff" stroke="#111827" stroke-width="4"/>
+<rect id="main-house-outline" x="140" y="155" width="399.90000000000003" height="339.7" fill="#ffffff" stroke="#111827" stroke-width="4"/>
 <g transform="translate(262.3,0)"><rect x="140" y="155" width="137.6" height="146.2" fill="#fff0d6" stroke="#334155" stroke-width="1.5"/><text x="208.8" y="222.1" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Master bedroom</text><text x="208.8" y="238.1" text-anchor="middle" font-size="10" fill="#475569">3.20 x 3.40 m</text></g>
 <g transform="translate(-17.2,0)"><rect x="333.5" y="155" width="86" height="137.6" fill="#eee8fa" stroke="#334155" stroke-width="1.5"/><text x="376.5" y="217.8" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Stair opening / flight</text><text x="376.5" y="233.8" text-anchor="middle" font-size="10" fill="#475569">2.00 x 3.20 m; stairwell zone</text></g>
 <g transform="translate(-279.5,0)"><rect x="419.5" y="155" width="120.39999999999999" height="129" fill="#fff0d6" stroke="#334155" stroke-width="1.5"/><text x="479.7" y="213.5" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Bedroom 3</text><text x="479.7" y="229.5" text-anchor="middle" font-size="10" fill="#475569">2.80 x 3.00 m</text></g>

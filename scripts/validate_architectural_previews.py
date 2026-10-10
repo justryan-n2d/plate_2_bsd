@@ -119,8 +119,17 @@ def validate_model(data: dict) -> None:
         fail("Balcony must project from the east exterior wall")
     if balcony_y < 0 or balcony_y + balcony_width > depth + 1e-6:
         fail("Balcony span must fit along the east facade within the nominal house depth")
-    if balcony.get("attached_to") != "Master bedroom":
-        fail("Balcony must be attached to the master bedroom for the current plan")
+    if balcony.get("attached_to") != "Family area":
+        fail("Balcony must be attached to the family area, not a bedroom")
+    family = next((room for room in building["rooms"]["Second Floor"] if room["name"] == "Family area"), None)
+    if family is None:
+        fail("Second-floor model must include the family area")
+    if not math.isclose(balcony_y, float(family["y_m"]), rel_tol=0.0, abs_tol=0.001):
+        fail("Balcony alignment must start at the family-area facade edge")
+    if not math.isclose(balcony_width, float(family["depth_m"]), rel_tol=0.0, abs_tol=0.001):
+        fail("Balcony span must match the family-area length along the east facade")
+    if not math.isclose(float(family["x_m"]) + float(family["width_m"]), width, rel_tol=0.0, abs_tol=0.001):
+        fail("Family area must share the east/front exterior wall with the balcony")
 
     north_edge = float(site["building_placement"]["south_edge_northing_m"]) + float(site["building_placement"]["depth_m"])
     base_x = float(site["building_placement"]["southwest_easting_m"])
@@ -186,7 +195,7 @@ def validate_svg_files() -> None:
             fail(f"{filename} root element is not svg")
         if root.attrib.get("data-front-facade") != "east":
             fail(f"{filename} must use the shared east/front facade orientation")
-        for attr, expected in (("data-balcony-width-m", 3.0), ("data-balcony-projection-m", 1.5), ("data-balcony-offset-m", 0.2)):
+        for attr, expected in (("data-balcony-width-m", 3.0), ("data-balcony-projection-m", 1.5), ("data-balcony-offset-m", 4.9)):
             try:
                 actual = float(root.attrib[attr])
             except (KeyError, ValueError):
@@ -239,12 +248,12 @@ def validate_svg_files() -> None:
             scale_x, scale_y = ew / 9.30, eh / 7.90
             expected = (
                 ex + ew,
-                ey + 0.20 * scale_y,
+                ey + balcony_y * scale_y,
                 1.50 * scale_x,
                 3.00 * scale_y,
             )
             actual = (bx, by, bw, bh)
-            for name, a, e in zip(("east-edge x", "front-offset y", "projection width", "facade span"), actual, expected):
+            for name, a, e in zip(("east-edge x", "family-area alignment y", "projection width", "facade span"), actual, expected):
                 if not math.isclose(a, e, rel_tol=0.0, abs_tol=0.03):
                     fail(f"{filename} balcony {name} mismatch: {a} != {e}")
         if drawing_no == "A-03":
@@ -252,22 +261,28 @@ def validate_svg_files() -> None:
                 fail("A-03 must describe and visibly show the required balcony")
             if "3.00 x 1.50 m" not in visible_text:
                 fail("A-03 must label the balcony dimensions as 3.00 x 1.50 m")
+            if "accessed from the family area" not in desc:
+                fail("A-03 must state that the balcony is accessed from the family area")
+            if "Family area" not in visible_text or "D-04" not in visible_text:
+                fail("A-03 must show the family area and its D-04 balcony access")
+            if any(local_name(el.tag) == "rect" and el.attrib.get("x") in {"417.35", "159.35"} and el.attrib.get("fill") == "#ffffff" for el in root.iter()):
+                fail("A-03 contains opaque furniture boxes that can cover room labels")
         if drawing_no == "A-05":
             if "balcony" not in visible_text.lower() or "FRONT ELEVATION - ENTRY / CARPORT SIDE" not in visible_text:
                 fail("A-05 must show the balcony on the east/front entry-carport elevation")
             front_balcony = root.find(".//*[@id='front-balcony-elevation']")
             if front_balcony is None:
                 fail("A-05 must include the front-balcony elevation geometry")
-            if front_balcony.attrib.get("data-span-m") != "3.00" or front_balcony.attrib.get("data-projection-m") != "1.50":
-                fail("A-05 balcony span/projection metadata must match the shared model")
+            if front_balcony.attrib.get("data-span-m") != "3.00" or front_balcony.attrib.get("data-projection-m") != "1.50" or front_balcony.attrib.get("data-offset-m") != "4.90":
+                fail("A-05 balcony span/projection/position metadata must match the family-area location")
         if drawing_no == "A-06":
             front_section = root.find(".//*[@id='front-balcony-section']")
             if front_section is None:
                 fail("A-06 must include a section through the front balcony")
-            if front_section.attrib.get("data-span-m") != "3.00" or front_section.attrib.get("data-projection-m") != "1.50":
-                fail("A-06 balcony span/projection metadata must match the shared model")
+            if front_section.attrib.get("data-span-m") != "3.00" or front_section.attrib.get("data-projection-m") != "1.50" or front_section.attrib.get("data-offset-m") != "4.90":
+                fail("A-06 balcony span/projection/position metadata must match the family-area location")
         if drawing_no == "A-07":
-            if "Front/east balcony" not in visible_text or "D-04 Balcony door: 0.90 x 2.10 m" not in visible_text:
+            if "Front/east balcony beside family area" not in visible_text or "D-04 Balcony door from family area: 0.90 x 2.10 m" not in visible_text:
                 fail("A-07 balcony note and D-04 door schedule must match the front balcony")
 
 
@@ -278,10 +293,10 @@ def main() -> int:
     validate_model(data)
     validate_svg_files()
     print("PASS: site area and 2 m screening geometry agree with the shared building model.")
-    print("PASS: house/carport and east/front balcony fit within the S-01 academic envelope.")
+    print("PASS: house/carport and family-area balcony fit within the S-01 academic envelope.")
     print("PASS: each room target area equals width x depth and fits the nominal footprint.")
     print("PASS: all seven A-01 to A-07 SVG sheets parse and are labelled preliminary.")
-    print("PASS: A-01/A-03/A-04 balcony projection geometry and A-05/A-06/A-07 front views use matching dimensions and orientation.")
+    print("PASS: A-01/A-03/A-04 balcony geometry aligns with the family area; A-05/A-06/A-07 match its location and D-04 access.")
     print("NOTE: this verifies file/data consistency only, not setbacks, code compliance, design adequacy, or permit/construction readiness.")
     return 0
 

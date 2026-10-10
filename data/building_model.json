@@ -9,10 +9,10 @@
   },
   "assumptions": [
     "The adjusted Phase 1 traverse is an academic plotting basis, not cadastral certification.",
-    "The 2.00 m uniform inward offset is a screening illustration based on the general Group A dwelling text in PD 1096 Section 708(a); applicable local zoning, R-1 table conditions, road ROW limits, firewalls and greater setbacks have not been confirmed.",
+    "For this student activity, the selected academic setback basis is a uniform 2.00 m inward offset on all five lot boundaries using the general Group A dwelling baseline in PD 1096 Section 708(a). This is an explicit classroom assumption, not a real construction/permit determination.",
     "Ground finished-floor elevation is ±0.000 m and second finished-floor elevation is +3.000 m, matching the Phase 4 assumed rise; both require instructor confirmation.",
-    "The 9.30 m x 7.90 m rectangular house is a concept footprint, not a verified compliant building footprint.",
-    "The single-car 2.80 m x 5.50 m covered carport and its position are schematic; final access, turning, gate and road-opening position are unresolved.",
+    "The 9.30 m x 7.90 m rectangular house is the adopted academic footprint (73.47 m2); use the same outer envelope for both preliminary floor-area calculations unless the final second-floor plan is changed.",
+    "Adopt one off-street parking space in the 2.80 m x 5.50 m carport for the student plate; this is an academic design assumption.",
     "Doors, windows, finishes, ceiling/eaves/roof levels and roof pitch are draft design targets, not confirmed code minima.",
     "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included."
   ],
@@ -78,7 +78,7 @@
       "P2-P3",
       "P3-P4"
     ],
-    "setback_reference": "PD 1096 Section 708(a) provides a general Group A dwelling minimum distance from property line. This is not the final local zoning/setback determination.",
+    "setback_reference": "Selected academic assumption for the student activity: uniform 2.00 m from the five boundaries using PD 1096 Section 708(a) as the general Group A dwelling baseline.",
     "building_placement": {
       "southwest_easting_m": 1.6893311,
       "south_edge_northing_m": -11.4457888,
@@ -95,7 +95,13 @@
     "carport_area_m2": 15.4,
     "combined_covered_ground_area_m2": 88.87,
     "indicative_combined_cover_percent_of_adjusted_area": 33.5,
-    "remaining_unbuilt_area_if_carport_included_m2": 176.3898
+    "remaining_unbuilt_area_if_carport_included_m2": 176.39,
+    "academic_working_area_m2": 265.26,
+    "road_interpretation": "The 5.00 m carriageway is inside the 8.00 m total ROW; the remaining 3.00 m is ROW outside the carriageway in total, with no specific split assumed.",
+    "row_remaining_outside_carriageway_total_m": 3,
+    "selected_academic_scenario": "S-01",
+    "academic_setback_assumption_m": 2,
+    "assumption_status": "Academic planning basis only; no real-project approval is being represented."
   },
   "building": {
     "footprint": {
@@ -284,7 +290,15 @@
           "status": "required"
         }
       ]
-    }
+    },
+    "academic_floor_area_assumption": {
+      "ground_floor_gross_m2": 73.47,
+      "second_floor_gross_m2": 73.47,
+      "total_gross_house_floor_area_m2": 146.94,
+      "note": "Both floors use the 9.30 m x 7.90 m exterior envelope for the preliminary calculation; open-sided carport is excluded from enclosed house floor area."
+    },
+    "academic_occupant_count": 6,
+    "academic_parking_spaces": 1
   },
   "draft_opening_schedule": [
     {
@@ -331,7 +345,7 @@
     }
   ],
   "drawing_status": {
-    "A-01": "Preliminary site development layout using screening setback geometry; exact access and legal envelope pending.",
+    "A-01": "Preliminary site development layout using the selected academic 2.00 m setback; coordinate labels for the 5.00 m carriageway within the 8.00 m total ROW.",
     "A-02": "Preliminary ground-floor plan with room-size targets; openings and final dimensions pending.",
     "A-03": "Preliminary second-floor plan with stairwell/landing coordination; verify final fit.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",

@@ -65,11 +65,11 @@
 
 <text class="heading" x="740" y="520">ROAD WIDTH + RIGHT-OF-WAY</text>
 <rect x="740" y="533" width="532" height="132" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
-<text class="small" x="756" y="558">Road width: 5.0 m | Total road right-of-way: 8.00 m.</text>
+<text class="small" x="756" y="558">Instructor cross-section: total RROW 8.00 m.</text>
 <text class="small" x="756" y="580">The two values serve different purposes.</text>
-<text class="small" x="756" y="602">Remaining 3.0 m may allow shoulders, drainage, or other</text>
+<text class="small" x="756" y="602">5.00 m carriageway + 1.50 m strip on each side.</text>
 <text class="small" x="756" y="622">road-related spaces, depending on the actual plan.</text>
-<text class="alert" x="756" y="645" style="fill:#9a3412">Remaining 3.0 m allocation is not specified.</text>
+<text class="alert" x="756" y="645" style="fill:#9a3412">Allocation supplied by instructor; strip use is unspecified.</text>
 
 <text class="heading" x="740" y="700">PHASE 1 STATUS</text>
 <rect x="740" y="713" width="532" height="134" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>

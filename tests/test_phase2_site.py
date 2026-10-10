@@ -82,7 +82,7 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         self.assertEqual(len(road_rows), 2)
         for row in road_rows:
             self.assertIn("8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side", row["notes"])
-            self.assertIn("formal lot-line/RROW alignment", row["notes"])
+            self.assertIn("use a 2.00 m inset", row["notes"])
             self.assertNotIn("allocation is pending", row["notes"].lower())
 
     def test_preliminary_envelope_scenario_areas_are_reproducible(self):
@@ -102,7 +102,7 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         report_path = DEFAULT_TRAVERSE.parent.parent / "calculations" / "phase2_envelope_scenarios.md"
         self.assertEqual(report_path.read_text(encoding="utf-8"), expected)
         self.assertIn("Scenario A is selected as the working envelope for Phase 3", expected)
-        self.assertIn("8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side", expected)
+        self.assertIn("8.00 m total RROW = 1.50 m side strip + 5.00 m carriageway + 1.50 m side strip", expected)
         self.assertIn("152.43 m²", expected)
 
     def test_negative_offsets_are_rejected(self):
@@ -150,7 +150,7 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         self.assertIn("265.26 m²", report)
         self.assertIn("300.00 m²", report)
         self.assertIn("34.74 m²", report)
-        self.assertIn("NOT CALCULATED", report)
+        self.assertIn("WORKING ACADEMIC ENVELOPE NOT YET COMPUTED", report)
 
 
 if __name__ == "__main__":

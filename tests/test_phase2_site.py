@@ -76,6 +76,13 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         self.assertIsNone(envelope["area_m2"])
         self.assertEqual(envelope["missing_edge_indices"], [2, 3])
 
+        road_rows = [row for row in boundaries if row["edge_type"] == "road frontage"]
+        self.assertEqual(len(road_rows), 2)
+        for row in road_rows:
+            self.assertIn("8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side", row["notes"])
+            self.assertIn("formal lot-line/RROW alignment", row["notes"])
+            self.assertNotIn("allocation is pending", row["notes"].lower())
+
     def test_preliminary_envelope_scenario_areas_are_reproducible(self):
         traverse = load_traverse(DEFAULT_TRAVERSE)
         scenarios = calculate_preliminary_envelope_scenarios(traverse["vertices"])

@@ -10,7 +10,7 @@
 | A-02 | [Ground Floor Plan](../previews/phase5_A02_ground_floor.svg) | Required ground-floor room targets, circulation band, schematic furniture and placeholder opening marks. |
 | A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Three bedrooms, shared bath, family area, stair opening and landing/circulation, plus a required 3.00 m × 1.50 m balcony accessed from the master bedroom. |
 | A-04 | [Roof Plan](../previews/phase5_A04_roof_plan.svg) | Gable roof, ridge, assumed pitch, eaves and conceptual slope arrows. |
-| A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels; the required balcony is shown on the assumed front façade. |
+| A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels; the required balcony is shown on the east/front entry-carport façade. |
 | A-06 | [Building Sections](../previews/phase5_A06_sections.svg) | Stair vertical-development section study and general building section diagram. |
 | A-07 | [Details and Schedules](../previews/phase5_A07_details_schedules.svg) | Typical wall/floor section concept, stair data, balcony guardrail note, provisional balcony-door/door/window schedule and finish schedule. |
 
@@ -43,7 +43,7 @@ Reference: [Supreme Court E-Library - PD 1096](https://elibrary.judiciary.gov.ph
 
 ## Floor plans and room coordination
 
-The ground and second-floor enclosed room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. The required 3.00 m × 1.50 m balcony projects outside the enclosed footprint from the master bedroom on the upper edge of A-03, with a nominal 0.90 m access door and a schematic perimeter guardrail. It is included as a separate 4.50 m² external area, not as enclosed room area. In the drawings, room boxes and opening markers remain conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids need a coordinated design pass.
+The ground and second-floor enclosed room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. The required 3.00 m × 1.50 m balcony projects east from the master bedroom wall on the entry/carport-facing front, with a nominal 0.90 m access door and a schematic perimeter guardrail. A-01 shows its elevated projection, A-03 its plan geometry, A-04 its projection below the roof, A-05 the front elevation, A-06 the section, and A-07 the matching D-04/guardrail notes. It is a separate 4.50 m² external area, not enclosed floor area. In the drawings, room boxes and opening markers remain conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids need a coordinated design pass.
 
 The second-floor plan places the stair opening/flight zone over the ground-floor stair zone and adds the Phase 4 landing allowance. This relationship is a starting arrangement only. Confirm exact landing geometry, stair direction, floor opening and headroom against the accepted vertical section.
 
@@ -64,7 +64,7 @@ The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 
 - Keep 265.26 m² as the academic working lot area and the approximate 300.00 m² figure as a note from the assignment.
 - Retain the agreed 5.00 m carriageway within the 8.00 m total ROW and the selected uniform 2.00 m academic setbacks.
 - Keep the main-house footprint (73.47 m²), the required balcony (3.00 m × 1.50 m = 4.50 m²), and the carport (15.40 m²) consistent across data and drawings.
-- Show the balcony door from the master bedroom and the balcony guardrail in A-03; show the balcony on the matching elevation in A-05.
+- Coordinate the east/front balcony as one 3.00 m × 1.50 m element across A-01 site projection, A-03 plan, A-04 roof plan, A-05 front elevation, A-06 section, and A-07 D-04/guardrail notes.
 - Report enclosed floor area as 146.94 m² and total including balcony as 151.44 m²; do not mix the two totals.
 - Confirm floor levels and stair/headroom assumptions; coordinate the stair in A-02/A-03/A-06.
 - Coordinate remaining doors/windows, ventilation, natural lighting, privacy, furniture clearances, structural reference lines and roof drainage.

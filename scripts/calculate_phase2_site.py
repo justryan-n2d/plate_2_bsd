@@ -225,7 +225,7 @@ def calculate_preliminary_envelope_scenarios(vertices: Sequence[Point]) -> list[
     definitions = [
         {
             "scenario_id": "A",
-            "label": "2.00 m on all parcel edges (minimum-only baseline)",
+            "label": "2.00 m on all parcel edges (working baseline for Phase 3)",
             "offsets_m": [2.0, 2.0, 2.0, 2.0, 2.0],
         },
         {
@@ -279,7 +279,7 @@ def build_preliminary_envelope_scenarios_report(vertices: Sequence[Point]) -> st
     for scenario in scenarios:
         offsets = scenario["offsets_m"]
         if scenario["scenario_id"] == "A":
-            status = "National-code minimum-only baseline"
+            status = "Selected working envelope for Phase 3"
         else:
             status = "Sensitivity comparison only"
         lines.append(
@@ -289,7 +289,7 @@ def build_preliminary_envelope_scenarios_report(vertices: Sequence[Point]) -> st
         )
     lines += [
         "",
-        "The 2.00 m values in Scenario A apply the Section 708(a) Group A dwelling minimum as a geometry-only starting point. They do not establish that the local front/street-side yard is only 2.00 m. Scenarios B-D substitute a 4.50 m property-line offset on one or both road-facing courses to show sensitivity to a possible larger front yard; they are not a finding that Table VIII.2 applies to this parcel.",
+        "For this instructor-led activity, Scenario A is adopted as the working envelope for Phase 3. Scenarios B-D are retained only as sensitivity comparisons and are not used for the working room layout.",
         "",
         "### Inner polygon vertices for drafting comparison",
         "",
@@ -307,24 +307,24 @@ def build_preliminary_envelope_scenarios_report(vertices: Sequence[Point]) -> st
             lines.append(f"| S{index} | {x:.6f} | {y:.6f} |")
         lines.append("")
     lines += [
-        "## 3. Which setback rule and reference line can be supported?",
+        "## 3. Working setback basis for this activity",
         "",
-        "1. **PD 1096 Section 708(a):** a Group A dwelling must be at least 2.00 m from the property line, subject to Civil Code easements of light and view. This supports Scenario A as a minimum-only property-boundary comparison, not as the final yard schedule.",
-        "2. **PD 1096 Section 704(a):** the street/alley centerline is treated as an adjacent property line *for purposes of Section 704*. That clause does not, by itself, identify the applicable front-yard or street-side-yard distance for this parcel. The offsets in this report are therefore stated from the plotted property boundary; none is measured from the road centerline.",
-        "3. **2004 Revised IRR Table VIII.2:** the R-1 values commonly cited are 4.50 m front and 2.00 m side/rear, but the table note says the listed setback requirements are for newly developed subdivisions. The assignment does not establish that Lot 245-B is in a newly developed subdivision or provide the parcel's Palo zoning classification.",
-        "4. **Road alignment:** if a lot course coincides with the outer edge of the 8.00 m RROW, the stated cross-section gives a derived 4.00 m from carriageway centerline to that outer edge (2.50 m half-carriageway + 1.50 m strip). This is a conditional geometric interpretation; confirm the formal RROW/lot-line alignment from the survey or road plan before relying on it.",
+        "1. **PD 1096 Section 708(a):** use the Group A dwelling baseline of at least 2.00 m from the property line, subject to Civil Code easements of light and view. For this classroom activity, the same 2.00 m offset is used as the working setback on all five plotted parcel edges.",
+        "2. **Road measurement reference:** all offsets in the scenario and the working envelope are measured inward from the plotted property boundaries. The road cross-section remains as given by the instructor: 8.00 m total RROW, comprising 5.00 m carriageway and 1.50 m strip on each side.",
+        "3. **Alternative comparisons:** the 4.50 m values in Scenarios B-D are shown for comparison only. They are not used for the working Phase 3 envelope in this activity.",
+        "4. **Lot geometry:** the working envelope follows the adjusted Phase 1 polygon, which preserves courses 1-2 through 4-5 and uses the instructor-directed adjusted closing course P5-1.",
         "",
-        "A publicly verifiable Palo zoning provision assigning this specific parcel a zone and yard schedule was not located in this review. The locally applicable front yard, street-side yard, lot classification, and measurement reference must therefore be confirmed with the Municipal Planning and Development Coordinator / Zoning Officer or Building Official, or with the instructor for the academic plate.",
+        "The project will proceed using the instructor-provided assignment values and this documented 2.00 m working setback basis. The selected inset is an academic planning envelope, not a surveyed boundary or construction certification.",
         "",
-        "## 4. Current decision",
+        "## 4. Working envelope selected for Phase 3",
         "",
-        "**No final buildable envelope has been selected.** Scenario A gives a 152.43 m² minimum-only inset; the comparison range shown by Scenarios B-D is 112.29-128.90 m². These areas are not the proposed building footprint, do not establish code compliance, and do not replace the separate 90%/80% lot-occupancy limits. A final envelope must use the confirmed local yard classification and measurement reference on all five courses.",
+        "**Scenario A is selected as the working envelope for Phase 3.** The inset area is **152.43 m²** using a 2.00 m property-boundary offset on each of the five edges. The lot description gives road frontage on the southeast and southwest, so the 90% corner-lot occupancy scenario is used for the working comparison: 238.73 m² maximum occupied area, which is larger than the inset envelope. The building footprint will be placed within the 152.43 m² working envelope and may be smaller to accommodate parking, access, light, ventilation, and the required spaces.",
         "",
         "## 5. References",
         "",
         "- [PD 1096, National Building Code of the Philippines, Sections 704(a) and 708(a), Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/11/53320).",
         "- [DPWH Department Order No. 056, s. 2016, official PDF containing the Table VIII.2 note](https://www.dpwh.gov.ph/dpwh/sites/default/files/issuances/DO_056_s2016.pdf).",
-        "- [2004 Revised IRR of PD 1096, PRBoA-hosted copy](https://www.architectureboard.com.ph/wp-content/uploads/2019/09/1.12-PD1096_-2004revIRR_PRBoA-unofcl-versnw08annotns.pdf). The local zoning rules and applicable interpretation still need confirmation.",
+        "- [2004 Revised IRR of PD 1096, PRBoA-hosted copy](https://www.architectureboard.com.ph/wp-content/uploads/2019/09/1.12-PD1096_-2004revIRR_PRBoA-unofcl-versnw08annotns.pdf). The 4.50 m comparison is not used as the working layout assumption in this activity.",
         "",
         "**Use limit:** Preliminary academic calculations only. The source traverse is an adjusted plotting basis, not a cadastral certification. Do not use these scenarios for setting out or construction.",
         "",
@@ -556,10 +556,10 @@ def build_phase2_report(
         "## 6. Code and reference basis",
         "",
         "1. [Presidential Decree No. 1096, National Building Code of the Philippines, Section 704(a) and Section 708(a)](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/11/53320). Section 708(a) supplies the Group A dwelling baseline distance and corner-/inside-lot occupancy ceilings; Section 704(a) supplies the street-centerline rule.",
-        "2. [DPWH National Building Code Development Office documents](https://dpwh.architectureboard.com.ph/documents/), including the 2004 Revised Implementing Rules and Regulations of PD 1096. Verify Table VII.4 parking requirements against the current official text and local Building Official interpretation before finalizing the design.",
+        "2. [DPWH National Building Code Development Office documents](https://dpwh.architectureboard.com.ph/documents/), including the 2004 Revised Implementing Rules and Regulations of PD 1096, used here as the academic reference basis for the preliminary parking calculation.",
         "3. [DPWH Department Order No. 056, s. 2016 (official PDF)](https://www.dpwh.gov.ph/dpwh/sites/default/files/issuances/DO_056_s2016.pdf), Annex provision containing Table VIII.2; its note limits the listed residential setback table to newly developed subdivisions.",
         "4. [Civil Code of the Philippines, Article 670 and related easement provisions](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/53360).",
-        "5. [2004 Revised Implementing Rules and Regulations of PD 1096, Rule VII parking requirements (copy hosted by the Professional Regulatory Board of Architecture)](https://www.architectureboard.com.ph/wp-content/uploads/2019/09/1.12-PD1096_-2004revIRR_PRBoA-unofcl-versnw08annotns.pdf). The parking table indicates at least one on-site off-street slot for a single-family dwelling lot above 120.00 m²; the slot dimensions are 2.50 m × 5.00 m for perpendicular/diagonal or 2.15 m × 6.00 m for parallel parking. Confirm the applicable official text and local Building Official interpretation.",
+        "5. [2004 Revised Implementing Rules and Regulations of PD 1096, Rule VII parking requirements (copy hosted by the Professional Regulatory Board of Architecture)](https://www.architectureboard.com.ph/wp-content/uploads/2019/09/1.12-PD1096_-2004revIRR_PRBoA-unofcl-versnw08annotns.pdf). The parking table indicates at least one on-site off-street slot for a single-family dwelling lot above 120.00 m²; the slot dimensions are 2.50 m × 5.00 m for perpendicular/diagonal or 2.15 m × 6.00 m for parallel parking.",
         "",
         "## 7. Inputs still required before finalizing Phase 2",
         "",

@@ -131,6 +131,23 @@ def validate_model(data: dict) -> None:
     if not all(point_in_polygon(point, screen) for point in balcony_world):
         fail("Balcony projection falls outside the selected S-01 academic setback envelope")
 
+    area_assumptions = building.get("academic_floor_area_assumption", {})
+    ground_gross = float(area_assumptions.get("ground_floor_gross_m2", 0))
+    second_enclosed = float(area_assumptions.get("second_floor_enclosed_gross_m2", 0))
+    second_with_balcony = float(area_assumptions.get("second_floor_total_with_balcony_m2", 0))
+    total_enclosed = float(area_assumptions.get("total_enclosed_house_floor_area_m2", 0))
+    total_including_balcony = float(area_assumptions.get("total_floor_area_including_balcony_m2", 0))
+    if not math.isclose(ground_gross, calc_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Ground-floor area assumption does not match the main footprint")
+    if not math.isclose(second_enclosed, calc_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Second-floor enclosed area assumption does not match the stated same-envelope basis")
+    if not math.isclose(second_with_balcony, second_enclosed + balcony_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Second-floor total including balcony is inconsistent")
+    if not math.isclose(total_enclosed, ground_gross + second_enclosed, rel_tol=0.0, abs_tol=0.01):
+        fail("Total enclosed house floor area is inconsistent")
+    if not math.isclose(total_including_balcony, total_enclosed + balcony_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Total floor area including balcony is inconsistent")
+
     for floor, rooms in building["rooms"].items():
         names: set[str] = set()
         for room in rooms:

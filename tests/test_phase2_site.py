@@ -8,6 +8,7 @@ from scripts.calculate_phase2_site import (
     calculate_preliminary_parking_slots,
     inset_convex_polygon,
     load_boundary_inputs,
+    load_code_requirements,
     load_traverse,
     polygon_area,
     parking_slot_geometry,
@@ -77,6 +78,22 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         square = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0)]
         with self.assertRaises(ValueError):
             inset_convex_polygon(square, [2.0, -1.0, 2.0, 2.0])
+
+    def test_code_requirements_register_has_unique_traceable_rows(self):
+        rows = load_code_requirements(DEFAULT_TRAVERSE.parent / "phase2_code_requirements.csv")
+        ids = [row["requirement_id"] for row in rows]
+        self.assertGreaterEqual(len(rows), 12)
+        self.assertEqual(len(ids), len(set(ids)))
+        self.assertIn("P2-05", ids)  # road centerline / right-of-way geometry
+        self.assertIn("P2-07", ids)  # perpendicular / diagonal parking dimensions
+        self.assertTrue(all(row["topic"].strip() for row in rows))
+        self.assertTrue(all(row["status"].strip() for row in rows))
+
+    def test_clockwise_and_counterclockwise_polygon_insets_have_same_area(self):
+        ccw = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0)]
+        cw = list(reversed(ccw))
+        self.assertAlmostEqual(polygon_area(inset_convex_polygon(ccw, [2, 2, 2, 2])), 36.0)
+        self.assertAlmostEqual(polygon_area(inset_convex_polygon(cw, [2, 2, 2, 2])), 36.0)
 
     def test_report_preserves_area_difference_and_does_not_fabricate_envelope(self):
         report = build_phase2_report(

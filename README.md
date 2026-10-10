@@ -21,7 +21,7 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 
 ## Phase 3 space-planning previews
 
-These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 setbacks and the buildable envelope, plus Phase 4 stair calculations, remain pending.
+These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 setbacks and the buildable envelope remain pending. The Phase 4 stair study is now merged, but its floor-height assumption and final code/section coordination remain to be confirmed.
 
 ### Adjacency / relationship diagram
 
@@ -48,9 +48,56 @@ The preliminary stair study uses a **provisional 3.000 m floor-to-floor rise**; 
 
 Verify applicability of the 2024 BP 344 accessibility provisions before finalizing the width, treads, risers and landings. Phase 5 still needs the coordinated building section through the actual stair.
 
+## Phase 4 stair study
+
+The preliminary stair study is merged into `main`; it assumes a 3.000 m floor-to-floor rise and is not structural or construction documentation.
+
+![Preliminary stair plan](space_planning/stair_plan.svg)
+
+![Preliminary stair section study](space_planning/stair_section.svg)
+
+See [stair calculations and code hold points](space_planning/stair_design.md).
+
+## Phase 5 architectural draft previews
+
+These A-01 to A-07 sheets are on the `phase5-architectural-plans` branch. They are preliminary visual drafts. The 2.00 m inset on A-01 is only a screening assumption, and Phase 2 local zoning/setback confirmation remains pending.
+
+### A-01 - Site Development Plan
+
+![A-01 preliminary site plan](previews/phase5_A01_site_development.svg)
+
+### A-02 - Ground Floor Plan
+
+![A-02 preliminary ground floor](previews/phase5_A02_ground_floor.svg)
+
+### A-03 - Second Floor Plan
+
+![A-03 preliminary second floor](previews/phase5_A03_second_floor.svg)
+
+### A-04 - Roof Plan
+
+![A-04 preliminary roof plan](previews/phase5_A04_roof_plan.svg)
+
+### A-05 - Four Elevations
+
+![A-05 preliminary elevations](previews/phase5_A05_elevations.svg)
+
+### A-06 - Building Sections
+
+![A-06 preliminary sections](previews/phase5_A06_sections.svg)
+
+### A-07 - Details and Schedules
+
+![A-07 preliminary details and schedules](previews/phase5_A07_details_schedules.svg)
+
+See the [Phase 5 architecture notes](space_planning/phase5_architecture_notes.md), [shared building model](data/building_model.json), and [project status](PROJECT_STATUS.md).
+
 ## Project records
 
+- [Project status](PROJECT_STATUS.md): what is finished, current phase, assumptions, blockers, and next steps.
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
+- [Shared preliminary building model](data/building_model.json): site/building geometry and assumptions for Phase 5 drafts.
+- [Phase 5 architectural notes](space_planning/phase5_architecture_notes.md): drawing register and limitations.
 - [Calculation worksheet](calculations/plate2_calculations.md): calculation methods, values, and checks.
 - [Traverse coordinate CSV](site/phase1_traverse_coordinates.csv): original and adjusted course records, coordinates, and closure diagnostics.
 - [Site analysis](site/phase1_site_analysis.md): supported site findings and items requiring further verification.

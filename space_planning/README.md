@@ -24,3 +24,16 @@ These are preliminary planning targets and diagrams, not dimensioned architectur
 - [Structured stair values](../data/stair_design.json)
 
 The current study assumes a 3.000 m floor-to-floor rise. It is preliminary and not structural or construction documentation.
+
+
+## Phase 5 architectural drafts
+
+- [Phase 5 architecture notes](phase5_architecture_notes.md)
+- [Ground floor plan A-02](../previews/phase5_A02_ground_floor.svg)
+- [Second floor plan A-03](../previews/phase5_A03_second_floor.svg)
+- [Roof plan A-04](../previews/phase5_A04_roof_plan.svg)
+- [Elevations A-05](../previews/phase5_A05_elevations.svg)
+- [Sections A-06](../previews/phase5_A06_sections.svg)
+- [Details and schedules A-07](../previews/phase5_A07_details_schedules.svg)
+
+These are preliminary drafts; Phase 2 setbacks and local zoning remain unresolved.

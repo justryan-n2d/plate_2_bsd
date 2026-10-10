@@ -8,6 +8,7 @@
     .sub{font-size:15px;fill:#526176}
     .zone-title{font-size:14px;font-weight:700}
     .zone-size{font-size:12px;fill:#526176}
+    .node-label{font-size:13px;font-weight:600}
     .note{font-size:13px;fill:#526176}
   </style>
   <rect width="1200" height="900" fill="#f8fafc"/>

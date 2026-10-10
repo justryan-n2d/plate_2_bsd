@@ -7,7 +7,6 @@ on:
       - "site/phase1_traverse_coordinates.csv"
       - "site/phase2_setback_inputs.csv"
       - "site/phase2_code_requirements.csv"
-      - "site/phase2_code_requirements.csv"
       - "calculations/phase2_site_calculations.md"
       - "tests/**"
       - "scripts/**"

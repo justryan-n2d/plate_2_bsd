@@ -25,7 +25,7 @@
   <g><rect x="465" y="375" width="245" height="130" rx="12" fill="#eeeafa" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="587.5" y="430" text-anchor="middle"><tspan x="587.5" dy="0">Stair landing /</tspan><tspan x="587.5" dy="20">circulation</tspan></text></g>
   <g><rect x="725" y="375" width="290" height="130" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="870" y="430" text-anchor="middle"><tspan x="870" dy="0">Shared circulation</tspan><tspan x="870" dy="20">5.00 m² target</tspan></text></g>
   <g><rect x="985" y="247" width="185" height="75" rx="12" fill="#d1fae5" stroke="#0f766e" stroke-width="1.8"/><text class="node-label" x="1077.5" y="275" text-anchor="middle"><tspan x="1077.5" dy="0">Required balcony</tspan><tspan x="1077.5" dy="20">3.00 x 1.50 m</tspan></text></g>
-  <line x1="985" y1="284" x2="985" y2="284" stroke="#0f766e" stroke-width="3"/>
+  <line x1="985" y1="284" x2="1003" y2="284" stroke="#0f766e" stroke-width="3"/>
   <text class="note" x="180" y="787">- Bedrooms should have independent access from shared circulation; no bedroom should be a passage to another room.</text>
   <text class="note" x="180" y="812">- Keep the upstairs bath near bedrooms and preferably near the ground-floor bath if the actual plan permits.</text>
   <text class="note" x="180" y="837">- The required balcony is directly accessible from the master bedroom on the east/right front side and is measured separately from enclosed room area.</text>

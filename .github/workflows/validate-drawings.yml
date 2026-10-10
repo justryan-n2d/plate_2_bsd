@@ -1,4 +1,4 @@
-name: Validate Plate 2 CAD and Phase 2 Site Calculations
+name: Validate Plate 2 CAD, Site Calculations, and Envelope Scenarios
 
 on:
   push:

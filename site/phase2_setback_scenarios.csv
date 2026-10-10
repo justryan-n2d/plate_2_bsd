@@ -1,0 +1,5 @@
+scenario_id,scenario_name,setback_1_2_m,setback_2_3_m,setback_3_4_m,setback_4_5_m,setback_5_1_m,screening_envelope_area_m2,current_house_rectangle_fits,current_carport_rectangle_fits,interpretation_limit
+S-01,Uniform 2.00 m screening offset,2.00,2.00,2.00,2.00,2.00,152.4309,YES,YES,General Group A dwelling distance screen only; not a confirmed local setback decision
+S-02,4.50 m front-yard scenario on road edge P2-P3,2.00,4.50,2.00,2.00,2.00,128.9837,YES,NO,R-1 table-style comparison only; only this road edge is assumed front for this scenario
+S-03,4.50 m front-yard scenario on road edge P3-P4,2.00,2.00,4.50,2.00,2.00,128.8989,NO,NO,R-1 table-style comparison only; only this road edge is assumed front for this scenario
+S-04,4.50 m screening on both road edges P2-P3 and P3-P4,2.00,4.50,4.50,2.00,2.00,112.6268,NO,NO,Conservative dual-frontage stress test; not an assertion that both fronts legally require 4.50 m

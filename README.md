@@ -8,8 +8,9 @@ Project workspace for the proposed two-storey residential building plate.
 - The academic plot closes by keeping courses 1-2 through 4-5 unchanged and using the documented adjusted P5-1 closing course.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
-- The first Actions run failed before exposing step details or logs; the cause remains unresolved, so validation is not yet claimed successful.
-- No generated DXF or final DWG is claimed as complete until the script is run and the output is inspected.
+- GitHub Actions now generates the DXF and SVG preview, validates the outputs against the source CSV, and uploads a ZIP artifact on successful runs.
+- The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
+- Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
 ## Phase 1 site-base preview
 
@@ -55,7 +56,7 @@ Use Python 3.11 or newer, from the repository root:
     python scripts/validate_site_base.py
     python scripts/generate_site_base.py
 
-The generator writes drawings/phase1_site_base.dxf and previews/phase1_site_base_preview.svg. Validate the source data first. Generated CAD output remains preliminary until inspected in compatible CAD software.
+The generator writes drawings/phase1_site_base.dxf and previews/phase1_site_base_preview.svg. The workflow runs the source validator, generates both files, validates the generated DXF and SVG, and uploads them as the `plate2-phase1-cad-*` artifact for 14 days. See [GitHub Actions](https://github.com/justryan-n2d/plate_2_bsd/actions/workflows/validate-drawings.yml) and open the latest successful run to download the files. Generated CAD output remains preliminary until inspected in compatible CAD software.
 
 ## Limits
 

@@ -81,12 +81,8 @@ def validate_dxf(dxf_path: Path, source_plot: dict) -> list[str]:
             f"found {doc.header.get('$INSUNITS', 0)!r}."
         )
 
-    missing_layers = REQUIRED_LAYERS.difference(set(doc.layers.entries.keys()))
-    # Some ezdxf releases expose layer entries differently; use the public
-    # layer collection as a fallback if necessary.
-    if missing_layers:
-        available_layers = {layer.dxf.name for layer in doc.layers}
-        missing_layers = REQUIRED_LAYERS.difference(available_layers)
+    available_layers = {layer.dxf.name for layer in doc.layers}
+    missing_layers = REQUIRED_LAYERS.difference(available_layers)
     if missing_layers:
         raise ValueError(f"DXF missing required layers: {', '.join(sorted(missing_layers))}")
 

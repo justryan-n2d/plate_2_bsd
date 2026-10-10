@@ -164,12 +164,18 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 ### Phase 3: Space planning
 
-- [ ] **T-20** Make the space-requirement table for the proposed rooms and spaces.
-- [ ] **T-21** Prepare an adjacency / relationship diagram showing functional relationships between the spaces.
-- [ ] **T-22** Consider functional relationships, privacy, accessibility, convenience, service relationships, circulation, and safety.
-- [ ] **T-23** Arrange the required ground-floor spaces.
-- [ ] **T-24** Arrange the required second-floor spaces.
-- [ ] **T-25** Review the building layout for functional space relationships and circulation.
+- [x] **T-20** Prepare the preliminary space-requirement table in `space_planning/space_requirement_table.csv`.
+- [x] **T-21** Prepare the adjacency matrix and SVG relationship diagram in `space_planning/`.
+- [x] **T-22** Review functional relationships, privacy, accessibility considerations, convenience, service relationships, circulation, and safety at concept level.
+- [x] **T-23** Arrange the required ground-floor spaces in a conceptual zoning diagram.
+- [x] **T-24** Arrange the required second-floor spaces in a conceptual zoning diagram.
+- [x] **T-25** Review the preliminary zoning for relationships and circulation; final review remains required after Phase 2 and Phase 4.
+
+#### Phase 3 implementation checkpoint (2026-10-10)
+
+**Status: Preliminary space-planning package prepared.** Room targets and diagrams are recorded in `space_planning/`, with a validator at `scripts/validate_space_planning.py`. All target dimensions are planning assumptions rather than code minimums. The diagrams are not to scale and do not define the final building orientation, driveway, doors, windows, setbacks, or stairs.
+
+Phase 2 is still pending. The proposed buildable envelope, setbacks, footprint, calculated floor areas, open space, parking requirement, occupant load, and other code-based dimensions must be checked before any dimensioned floor plan is accepted. Phase 4 must separately verify stair geometry. Balcony inclusion remains conditional. The zoning must be revised if those checks require it.
 
 ### Phase 4: Stair planning and calculations
 
@@ -207,8 +213,8 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 ### Phase 7: Required documentation
 
-- [ ] **T-60** Complete the Space Requirement Table.
-- [ ] **T-61** Complete the Adjacency Diagram.
+- [x] **T-60** Draft the Space Requirement Table is prepared in `space_planning/`; reconfirm after the dimensioned layout is developed.
+- [x] **T-61** Preliminary Adjacency Diagram is prepared in `space_planning/`; recheck against the final layout.
 - [ ] **T-62** Complete the Site Analysis.
 - [ ] **T-63** Complete the Preliminary Building Specifications.
 - [ ] **T-64** Complete the Specification Schedule.

@@ -43,7 +43,6 @@ These are occupancy ceilings, not the proposed building footprint. For the worki
 
 Calculated inset-envelope area: **152.43 m²**.
 Envelope status: Working academic envelope calculated from all five supplied property-boundary offsets.
-
 This remains a geometric result for the supplied offsets, not a building permit or professional survey determination.
 
 ## 5. Other preliminary requirements

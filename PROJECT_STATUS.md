@@ -3,13 +3,14 @@
 **Last updated:** 2026-10-10  
 **Repository:** [`justryan-n2d/plate_2_bsd`](https://github.com/justryan-n2d/plate_2_bsd)  
 **Main branch after latest merge:** `d71de4f1d76af5b8317ff0421077aa7a8e24f0de`  
-**Current working branch:** `phase5-architectural-plans`
+**Current working branch:** `phase5-architectural-plans`  
+**Current review:** [Pull Request #5](https://github.com/justryan-n2d/plate_2_bsd/pull/5), open and not yet merged.
 
 ## Current position
 
 **Phase 5 is in progress.** Preliminary SVG previews have been created for A-01 through A-07 and a shared `data/building_model.json` records the current geometry and assumptions. The Phase 5 branch has not been merged into `main`.
 
-Phase 3 was merged by [PR #3](https://github.com/justryan-n2d/plate_2_bsd/pull/3). Phase 4 was merged by [PR #4](https://github.com/justryan-n2d/plate_2_bsd/pull/4). The Phase 3, Phase 4 and existing Phase 1 CAD workflows passed in the previous verification cycle.
+Phase 3 was merged by [PR #3](https://github.com/justryan-n2d/plate_2_bsd/pull/3). Phase 4 was merged by [PR #4](https://github.com/justryan-n2d/plate_2_bsd/pull/4). For the current Phase 5 revision, the A-01 to A-07 validator passed; the Phase 3 validation and the existing Phase 1 CAD validation also passed on that revision.
 
 ## Status by phase
 

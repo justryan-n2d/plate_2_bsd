@@ -118,7 +118,7 @@ The order below is a practical way to track the stated requirements. The require
 - [x] **T-04** Plot and close the traverse by adjusting P5-1 only; retain the original value and show both values in the records.
 - [x] **T-05** Prepare the preliminary site base using the technical description.
 - [x] **T-06** Show property boundaries, course distances and bearings, north direction, road context, and adjacent properties in the preliminary site-base drawing.
-- [x] **T-07** Complete the source-based site analysis and record evidence, limits, and site-verification items in `site/phase1_site_analysis.md` and `site/phase1_site_analysis_matrix.csv`. Exact access points, parcel-specific solar/shading, and existing-condition checks remain subject to field verification and later site-development planning.
+- [x] **T-07** Complete the source-based site analysis and record stated facts, academic assumptions and limitations in `site/phase1_site_analysis.md` and `site/phase1_site_analysis_matrix.csv`. Treat the described level/grass site and absence of an existing building as the assignment basis; show entry, driveway, planting and solar-orientation decisions as preliminary design assumptions rather than field-verified facts.
 
 #### Phase 1 implementation checkpoint (2026-10-10)
 

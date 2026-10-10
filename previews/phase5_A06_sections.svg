@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="930" viewBox="0 0 1400 930" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="0.20" width="1400" height="930" viewBox="0 0 1400 930" role="img" aria-labelledby="title desc">
 <title id="title">A-06 Preliminary building sections</title>
-<desc id="desc">Two preliminary sections, including a stair vertical-development study, show the assumed ground floor, second floor, eave and roof-ridge levels. The drawing is preliminary and not a final coordinated building section; it must be checked with the final structure and code requirements.</desc>
+<desc id="desc">Two preliminary sections. Section B-B cuts across the east/front wall and shows the second-floor balcony projecting 1.50 m outward with a schematic guardrail. The drawing remains preliminary and must be coordinated with the final structure and applicable code requirements.</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.head{font-size:16px;font-weight:700;fill:#172033}.note{font-size:12px;fill:#475569}</style>
 <rect width="1400" height="930" fill="#f8fafc"/>
 <text class="title" x="35" y="40">A-06 | BUILDING SECTIONS (PRELIMINARY)</text>
-<text class="sub" x="35" y="67">Section A-A through stair development; Section B-B through general room massing. Not construction details.</text>
+<text class="sub" x="35" y="67">Section A-A through stair development; Section B-B through the east/front balcony wall. Not construction details.</text>
 <rect x="35" y="90" width="650" height="760" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
 <text class="head" x="60" y="125">SECTION A-A | STAIR</text>
 <line x1="80" y1="420" x2="640" y2="420" stroke="#64748b" stroke-width="2.5"/>
@@ -19,7 +19,7 @@
 <text class="note" x="60" y="538">Verify minimum 2.000 m clear headroom under actual beams/slabs.</text>
 <text class="note" x="60" y="562">Final cut line and landing/stair opening must match A-02 / A-03.</text>
 <rect x="710" y="90" width="655" height="760" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
-<text class="head" x="735" y="125">SECTION B-B | GENERAL BUILDING</text>
+<text class="head" x="735" y="125">SECTION B-B | THROUGH FRONT BALCONY</text>
 <line x1="760" y1="610" x2="1310" y2="610" stroke="#64748b" stroke-width="2"/>
 <rect x="830" y="370" width="405" height="240" fill="#f1f5f9" stroke="#334155" stroke-width="2.5"/>
 <line x1="830" y1="490" x2="1235" y2="490" stroke="#334155" stroke-width="4"/>
@@ -28,10 +28,26 @@
 <line x1="830" y1="490" x2="1235" y2="490" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
 <text x="845" y="598" font-size="12" fill="#334155">Ground FFL ±0.000</text>
 <text x="845" y="480" font-size="12" fill="#334155">Second FFL +3.000</text>
+<g id="front-balcony-section">
+  <rect x="1235" y="486" width="65" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1237" y1="454" x2="1300" y2="454" stroke="#0f766e" stroke-width="3"/>
+  <line x1="1237" y1="454" x2="1237" y2="486" stroke="#0f766e" stroke-width="2"/>
+  <line x1="1252.75" y1="454" x2="1252.75" y2="486" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1268.5" y1="454" x2="1268.5" y2="486" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1284.25" y1="454" x2="1284.25" y2="486" stroke="#0f766e" stroke-width="1.5"/>
+  <line x1="1300" y1="454" x2="1300" y2="486" stroke="#0f766e" stroke-width="2"/>
+  <line x1="1237" y1="486" x2="1300" y2="486" stroke="#0f766e" stroke-width="2"/>
+  <line x1="1235" y1="516" x2="1300" y2="516" stroke="#64748b" stroke-width="1.2"/>
+  <line x1="1235" y1="510" x2="1235" y2="522" stroke="#64748b"/>
+  <line x1="1300" y1="510" x2="1300" y2="522" stroke="#64748b"/>
+  <text x="1267.5" y="536" text-anchor="middle" font-size="11" fill="#334155">1.50 m projection</text>
+  <text x="1150" y="438" font-size="10" fill="#065f46">Front balcony</text>
+</g>
+
 <text x="845" y="358" font-size="12" fill="#334155">Eaves +6.000</text>
 <text x="1032" y="228" text-anchor="middle" font-size="12" fill="#334155">Ridge +7.690</text>
-<line x1="1270" y1="610" x2="1270" y2="370" stroke="#64748b" stroke-width="1.5"/><line x1="1263" y1="610" x2="1277" y2="610" stroke="#64748b"/><line x1="1263" y1="370" x2="1277" y2="370" stroke="#64748b"/>
-<text x="1283" y="490" font-size="12" fill="#334155" transform="rotate(90 1283 490)">6.00 m to eaves</text>
+<line x1="1335" y1="610" x2="1335" y2="370" stroke="#64748b" stroke-width="1.5"/><line x1="1328" y1="610" x2="1342" y2="610" stroke="#64748b"/><line x1="1328" y1="370" x2="1342" y2="370" stroke="#64748b"/>
+<text x="1348" y="490" font-size="12" fill="#334155" transform="rotate(90 1348 490)">6.00 m to eaves</text>
 <text class="note" x="735" y="670">Assumed floor levels: 3.000 m floor-to-floor. Roof and story heights remain provisional.</text>
 <text class="note" x="735" y="694">Verify floor/ceiling clear heights, wall openings, slab and beam depths.</text>
 <text class="note" x="735" y="718">No structural member sizing or footing reinforcement is included.</text>

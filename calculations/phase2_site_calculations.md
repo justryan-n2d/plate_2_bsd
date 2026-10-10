@@ -44,7 +44,7 @@ These are occupancy ceilings, not the proposed building footprint. For the worki
 Calculated inset-envelope area: **152.43 m²**.
 Envelope status: Working academic envelope calculated from all five supplied property-boundary offsets.
 
-This is the working envelope for Phase 3 layout based on a 2.00 m inset from all five plotted property boundaries. It is an academic planning result, not a survey certification or construction-ready determination.
+This remains a geometric result for the supplied offsets, not a building permit or professional survey determination.
 
 ## 5. Other preliminary requirements
 

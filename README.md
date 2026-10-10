@@ -9,7 +9,7 @@ Project workspace for the proposed two-storey residential building plate.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
 - GitHub Actions generates and validates the Phase 1 DXF/SVG output from the traverse data.
-- Phase 3 now has a preliminary room requirement table, adjacency matrix, relationship diagram, and conceptual zoning diagrams for both floors. These are explicitly not-to-scale and not code-approved.
+- Phase 3 now has a preliminary room requirement table, adjacency matrix, relationship diagram, and conceptual zoning diagrams for both floors. Phase 4 now adds a stair calculation/source-data package and plan/section previews. These are preliminary, not structural or construction drawings.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
@@ -36,6 +36,17 @@ These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 
 ![Preliminary second-floor zoning](space_planning/second_floor_zoning.svg)
 
 See the [Phase 3 space-planning notes](space_planning/space_planning.md), [room schedule](space_planning/space_requirement_table.csv), and [adjacency matrix](space_planning/adjacency_matrix.csv).
+
+## Phase 4 stair study
+
+The preliminary stair study uses a **provisional 3.000 m floor-to-floor rise**; this is an assumption pending confirmation of the building levels. The package includes calculation notes, structured source values, a plan preview and a vertical-development preview. The diagrams are not structural or construction drawings.
+
+- [Stair calculation and code hold points](space_planning/stair_design.md)
+- [Stair plan SVG preview](space_planning/stair_plan.svg)
+- [Stair section/development SVG preview](space_planning/stair_section.svg)
+- [Stair source data](data/stair_design.json)
+
+Verify applicability of the 2024 BP 344 accessibility provisions before finalizing the width, treads, risers and landings. Phase 5 still needs the coordinated building section through the actual stair.
 
 ## Project records
 

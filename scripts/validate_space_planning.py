@@ -155,7 +155,7 @@ def validate_schedule() -> tuple[set[str], dict[str, set[str]], list[dict[str, s
         if row["space_type"].strip() == "optional-external"
     )
     expected = {
-        "ground enclosed target": (ground_enclosed, 51.52),
+        "ground enclosed target": (ground_enclosed, 52.32),
         "ground circulation allowance": (ground_allowance, 4.50),
         "upper enclosed target": (upper_enclosed, 44.23),
         "carport placeholder": (carport, 15.40),

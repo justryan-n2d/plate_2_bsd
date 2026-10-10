@@ -14,3 +14,13 @@ This folder contains the preliminary space programme and conceptual space-planni
 ## Important limits
 
 These are preliminary planning targets and diagrams, not dimensioned architectural plans. Phase 2 setbacks and buildable area are not yet resolved. No final building orientation, driveway, doors, windows, stair dimensions, code compliance or utility design is established by these files. Check the project plan and calculation worksheet before using any target as a final dimension.
+
+
+## Phase 4 stair study
+
+- [Stair design calculations and code hold points](stair_design.md)
+- [Stair plan preview](stair_plan.svg)
+- [Stair section/development preview](stair_section.svg)
+- [Structured stair values](../data/stair_design.json)
+
+The current study assumes a 3.000 m floor-to-floor rise. It is preliminary and not structural or construction documentation.

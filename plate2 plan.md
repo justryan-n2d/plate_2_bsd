@@ -179,13 +179,21 @@ Phase 2 is still pending. The proposed buildable envelope, setbacks, footprint, 
 
 ### Phase 4: Stair planning and calculations
 
-- [ ] **T-30** Determine the total stair height.
-- [ ] **T-31** Determine the stair width.
-- [ ] **T-32** Determine the number of risers.
-- [ ] **T-33** Calculate the riser height.
-- [ ] **T-34** Determine the tread depth.
-- [ ] **T-35** Determine the landing dimensions.
-- [ ] **T-36** Check that the stair layout and dimensions are shown consistently on plans and in at least one building section through the stairway.
+- [x] **T-30** Set a provisional 3.000 m floor-to-floor stair rise, explicitly marked as an assumption because the final levels are not yet specified.
+- [x] **T-31** Set 0.900 m clear width per flight for the preliminary private Group A dwelling stair.
+- [x] **T-32** Select 18 total risers, arranged as two flights of 9.
+- [x] **T-33** Calculate the equal riser height: 166.7 mm.
+- [x] **T-34** Select a 280 mm preliminary tread depth and calculate 2.240 m run per flight.
+- [x] **T-35** Set a 0.900 m intermediate landing depth and a nominal 2.000 m x 3.200 m stair-space envelope.
+- [x] **T-36** Add a stair plan and vertical-development preview and validate that their values agree with the shared stair data. The final building section through the actual stair remains a Phase 5 A-06 deliverable.
+
+#### Phase 4 implementation checkpoint (2026-10-10)
+
+The preliminary stair study is documented in `space_planning/stair_design.md`, with machine-readable values in `data/stair_design.json`, plan and section/development previews in `space_planning/stair_plan.svg` and `space_planning/stair_section.svg`, and arithmetic checks in `scripts/validate_stair_design.py`.
+
+The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 mm, two flights with 9 risers / 8 physical treads per flight, 280 mm treads, 2.240 m run per flight, 900 mm clear width per flight, and a 900 mm intermediate landing depth. The nominal envelope is 2.000 m x 3.200 m (6.40 m²); the Phase 3 schedule is updated to reserve this larger space.
+
+**Important hold points:** the floor-to-floor height is not stated as a final value in the assignment, and accessibility-code applicability has not been confirmed. The design is not certified for an accessible route. If the revised BP 344 accessibility requirements apply, the stair dimensions and footprint must be redesigned. Headroom, handrail/guard details, doors, finish thicknesses and stair structural design must also be resolved in the coordinated Phase 5 drawings.
 
 ### Phase 5: Architectural plan set
 

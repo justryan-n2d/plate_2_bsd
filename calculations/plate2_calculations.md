@@ -418,45 +418,99 @@ Record the formula, units, substituted values, rounding method, and source of th
 
 ## Assignment requirements
 
-Determine:
-- Stair width
-- Number of risers
-- Riser height
-- Tread depth
-- Landing dimensions
-- Total stair height
+Determine stair width, number of risers, riser height, tread depth, landing dimensions and total stair height.
 
-## Required inputs
+## Design assumption requiring confirmation
 
-- Floor-to-floor height shown in the building design.
-- Proposed stair arrangement.
-- Applicable dimensions/requirements for the stair.
+The assignment/repository does not yet provide final finished-floor elevations. The following preliminary computation therefore assumes a **3.000 m floor-to-floor rise**, from ground floor FFL ±0.000 m to second floor FFL +3.000 m. Change this input and recalculate if the instructor's building section specifies a different level difference.
 
-## Calculation worksheet
+## Working
 
-| Item | Symbol / method | Result |
-|---|---|---|
-| Total stair height | Difference between the two floor levels served | PENDING m |
-| Number of risers | Determine from total rise and selected permitted riser height, then use a whole number | PENDING |
-| Riser height | Total stair rise ÷ number of risers | PENDING m |
-| Tread depth | Determine from the stair design and applicable requirement | PENDING m |
-| Stair width | Determine from the stair design and applicable requirement | PENDING m |
-| Landing dimensions | Determine from the stair layout and applicable requirement | PENDING m |
-| Total stair height check | Confirm calculated rise matches the floor-level difference | PENDING |
-
-## Working template
+### Total stair height
 
 ```text
-Total stair rise             = [floor-to-floor height] = PENDING m
-Selected number of risers    = PENDING
-Calculated riser height      = total stair rise ÷ number of risers
-                             = PENDING m
-Tread depth                  = PENDING m
-Stair width                  = PENDING m
-Landing dimensions           = PENDING
+H = second-floor FFL - ground-floor FFL
+H = 3.000 m - 0.000 m = 3.000 m
 ```
 
-**Result:** **PENDING** until the floor heights and stair design are established.
+### Number of risers and riser height
+
+Choose 18 equal risers so that the rise remains below a 175 mm design target.
+
+```text
+N = 18 risers
+R = H / N = 3.000 m / 18
+R = 0.1666667 m = 166.7 mm
+
+Check: 18 x 166.6667 mm = 3000.0 mm
+```
+
+Arrange two flights with 9 risers in each:
+
+```text
+Rise per flight = 9 x 166.6667 mm
+                = 1500 mm = 1.500 m
+```
+
+### Tread depth and run
+
+Select a 280 mm tread depth for the preliminary design. Each flight has 9 risers, 8 physical treads, and 2.240 m horizontal run.
+
+```text
+Treads per flight = 9 - 1 = 8
+Run per flight = 8 x 0.280 m = 2.240 m
+Physical treads = 8 + 8 = 16
+Combined physical tread run = 16 x 0.280 m = 4.480 m
+```
+
+Comfort cross-check only:
+
+```text
+2R + T = 2(166.7 mm) + 280 mm
+       = 613.4 mm (approximately)
+```
+
+The comfort expression is not a substitute for the applicable code requirements.
+
+### Preliminary width and landing
+
+| Item | Result | Check / note |
+|---|---:|---|
+| Floor-to-floor rise | 3.000 m | Assumed, not given |
+| Number of risers | 18 | 9 per flight |
+| Calculated rise | 166.7 mm | Uniform in both flights |
+| Tread depth | 280 mm | Exceeds the cited general 250 mm minimum |
+| Physical treads | 16 total | 8 per flight |
+| Horizontal run per flight | 2.240 m | 8 x 280 mm |
+| Clear width per flight | 0.900 m | Preliminary private-dwelling stair target |
+| Intermediate landing depth | 0.900 m | At least one flight width |
+| Combined half-landing width | 2.000 m nominal | Two 0.900 m flights plus a 0.200 m central separation allowance |
+| Effective plan length | 3.140 m | 2.240 m run + 0.900 m landing |
+| Nominal space envelope | 2.000 x 3.200 m | 6.40 m²; an allowance for coordination, not finished dimensions |
+| Minimum headroom | 2.000 m | Must be checked in the coordinated section |
+| Target handrail height | 0.850 m | Verify against the adopted rule and the final open-side guards |
+
+## Code-basis notes
+
+PD 1096 Section 708(h) states Group A dwelling stair requirements. The general NBCP stairway provisions include a maximum riser of 200 mm, minimum tread/run of 250 mm, 2.00 m minimum headroom, and landing/handrail provisions. The selected 900 mm clear flight width, 166.7 mm rise and 280 mm tread are preliminary choices checked against the cited ordinary stair criteria. The local building official/instructor must confirm the exact applicable rule set.
+
+References:
+- [PD 1096 / National Building Code of the Philippines](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320)
+- [PD 1096, Senate Legislative Reference Bureau](https://ldr.senate.gov.ph/legislative%2Bissuances/Presidential%20Decree%20No.%201096%2C%20s.%201977)
+- [NCDA: 2024 Revised IRR of BP 344](https://ncda.gov.ph/revised-2024-rules-and-regulations-implementing-batas-pambansa-344/)
+
+**Accessibility hold point:** The design is not represented as an accessible staircase. Where the revised BP 344 accessible-stair provisions apply, the published values include a 150 mm maximum riser, 300 mm minimum tread, 1.50 m clear staircase width, landings at least 1.50 m deep, and complementary ramp/lift/escalator along accessible routes. This would require redesigning both stair geometry and reserved area; confirm applicability before finalizing.
+
+## Checks still required in the final drawings
+
+- Minimum 2.00 m clear headroom from a plane parallel to tread nosings to the soffit.
+- Landing and door-swing clearances.
+- Uniform tread/riser dimensions, finished surfaces and lighting.
+- Handrails and guards at open sides.
+- Slab, beam and finish depths at both levels.
+- Structural sizing and detailing, outside the current stair geometry calculation.
+
+**Result:** Preliminary calculation complete under the **assumed 3.000 m floor-to-floor rise**. These results must be revised if the accepted floor levels, code applicability or selected stair arrangement changes.
 
 ---
 

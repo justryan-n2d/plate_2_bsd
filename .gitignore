@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Temporary editor and backup files
+*.bak
+*.tmp
+*~
+
+# Generated DXF and SVG outputs are intentionally not ignored:
+# commit them only after review and approval.

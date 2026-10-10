@@ -48,6 +48,14 @@ The preliminary stair study uses a **provisional 3.000 m floor-to-floor rise**; 
 
 Verify applicability of the 2024 BP 344 accessibility provisions before finalizing the width, treads, risers and landings. Phase 5 still needs the coordinated building section through the actual stair.
 
+## Phase 2 setback scenario preview
+
+The four orange dashed offsets are screening cases only, not final approved setbacks. Confirm the official survey / ROW and Palo zoning/front-yard classification before selecting an option.
+
+![Phase 2 setback scenarios](previews/phase2_setback_scenarios.svg)
+
+See [Phase 2 site requirements](site/phase2_site_requirements.md) and [scenario data](site/phase2_setback_scenarios.csv).
+
 ## Phase 4 stair study
 
 The preliminary stair study is merged into `main`; it assumes a 3.000 m floor-to-floor rise and is not structural or construction documentation.
@@ -95,6 +103,8 @@ See the [Phase 5 architecture notes](space_planning/phase5_architecture_notes.md
 ## Project records
 
 - [Project status](PROJECT_STATUS.md): what is finished, current phase, assumptions, blockers, and next steps.
+- [Phase 2 site-requirement screening](site/phase2_site_requirements.md): code references and unresolved setback / ROW decisions.
+- [Setback scenario data](site/phase2_setback_scenarios.csv): four calculated offsets and current footprint-fit flags.
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Shared preliminary building model](data/building_model.json): site/building geometry and assumptions for Phase 5 drafts.
 - [Phase 5 architectural notes](space_planning/phase5_architecture_notes.md): drawing register and limitations.

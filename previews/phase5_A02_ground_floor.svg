@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
+<title id="title">A-02 - Ground Floor plan</title>
+<desc id="desc">Preliminary ground floor plan concept with required room labels and target clear dimensions, not to scale for construction and not approved for code compliance. Bedroom / guest room: 3.00 x 3.00 m | Toilet and bath: 1.50 x 2.10 m | Stairway: 2.00 x 3.20 m envelope | Storage / service area: 1.50 x 2.00 m | Entrance / foyer: 1.50 x 1.50 m | Living room: 3.60 x 3.80 m | Dining area: 2.80 x 2.80 m | Kitchen: 2.50 x 2.80 m</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.note{font-size:13px;fill:#475569}.small{font-size:11px;fill:#475569}</style>
+<rect width="1250" height="780" fill="#f8fafc"/>
+<text class="title" x="35" y="40">A-02 | GROUND FLOOR PLAN</text>
+<text class="sub" x="35" y="67">Conceptual arrangement based on the Phase 3 room schedule and provisional Phase 4 stair; not a final dimensioned plan.</text>
+<rect x="128" y="143" width="423.90000000000003" height="363.7" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="140" y="155" width="399.90000000000003" height="339.7" fill="#ffffff" stroke="#111827" stroke-width="4"/>
+<g><rect x="140" y="155" width="129" height="129" fill="#fff0d6" stroke="#334155" stroke-width="1.5"/><text x="204.5" y="213.5" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Bedroom / guest room</text><text x="204.5" y="229.5" text-anchor="middle" font-size="10" fill="#475569">3.00 x 3.00 m</text></g>
+<g><rect x="269" y="155" width="64.5" height="90.3" fill="#e0f2e8" stroke="#334155" stroke-width="1.5"/><text x="301.25" y="194.15" text-anchor="middle" font-size="10" font-weight="600" fill="#172033">Toilet and bath</text><text x="301.25" y="210.15" text-anchor="middle" font-size="9" fill="#475569">1.50 x 2.10 m</text></g>
+<g><rect x="333.5" y="155" width="86" height="137.6" fill="#eee8fa" stroke="#334155" stroke-width="1.5"/><text x="376.5" y="217.8" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Stairway</text><text x="376.5" y="233.8" text-anchor="middle" font-size="10" fill="#475569">2.00 x 3.20 m envelope</text></g>
+<g><rect x="419.5" y="155" width="64.5" height="86" fill="#e0f2e8" stroke="#334155" stroke-width="1.5"/><text x="451.75" y="192" text-anchor="middle" font-size="10" font-weight="600" fill="#172033">Storage / service area</text><text x="451.75" y="208" text-anchor="middle" font-size="9" fill="#475569">1.50 x 2.00 m</text></g>
+<g><rect x="475.4" y="266.8" width="64.5" height="64.5" fill="#e8f1fa" stroke="#334155" stroke-width="1.5"/><text x="507.65" y="293.05" text-anchor="middle" font-size="10" font-weight="600" fill="#172033">Entrance / foyer</text><text x="507.65" y="309.05" text-anchor="middle" font-size="9" fill="#475569">1.50 x 1.50 m</text></g>
+<g><rect x="140" y="331.29999999999995" width="154.8" height="163.4" fill="#dfeefa" stroke="#334155" stroke-width="1.5"/><text x="217.4" y="406.99999999999994" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Living room</text><text x="217.4" y="422.99999999999994" text-anchor="middle" font-size="10" fill="#475569">3.60 x 3.80 m</text></g>
+<g><rect x="294.8" y="331.29999999999995" width="120.39999999999999" height="120.39999999999999" fill="#dfeefa" stroke="#334155" stroke-width="1.5"/><text x="355" y="385.49999999999994" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Dining area</text><text x="355" y="401.49999999999994" text-anchor="middle" font-size="10" fill="#475569">2.80 x 2.80 m</text></g>
+<g><rect x="415.2" y="331.29999999999995" width="107.5" height="120.39999999999999" fill="#e0f2e8" stroke="#334155" stroke-width="1.5"/><text x="468.95" y="385.49999999999994" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Kitchen</text><text x="468.95" y="401.49999999999994" text-anchor="middle" font-size="10" fill="#475569">2.50 x 2.80 m</text></g>
+<rect x="140" y="292.6" width="335.4" height="38.7" fill="#f8fafc" stroke="#64748b" stroke-dasharray="5 4"/><text x="307.7" y="311.95000000000005" text-anchor="middle" font-size="11" fill="#475569">Clear hall / circulation band (0.90 m target; verify final widths)</text>
+   <rect x="159.35" y="172.2" width="73.1" height="40.85" rx="3" fill="#ffffff" stroke="#94a3b8"/><rect x="159.35" y="221.65" width="73.1" height="43" rx="3" fill="#ffffff" stroke="#94a3b8"/>
+   <rect x="155.05" y="354.95000000000005" width="103.2" height="27.95" rx="4" fill="#cbd5e1" stroke="#94a3b8"/><rect x="183" y="389.35" width="51.6" height="23.650000000000002" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+   <rect x="327.04999999999995" y="359.25" width="55.9" height="34.4" rx="3" fill="#ffffff" stroke="#94a3b8"/><rect x="335.65" y="367.85" width="38.7" height="17.2" fill="#e2e8f0" stroke="#94a3b8"/>
+   <rect x="425.95" y="337.75" width="86" height="19.35" fill="#fef3c7" stroke="#b77935"/><rect x="494.75" y="337.75" width="19.35" height="86" fill="#fef3c7" stroke="#b77935"/>
+<line x1="140" y1="539.7" x2="539.9000000000001" y2="539.7" stroke="#475569" stroke-width="1.2"/><line x1="140" y1="532.7" x2="140" y2="546.7" stroke="#475569"/><line x1="539.9000000000001" y1="532.7" x2="539.9000000000001" y2="546.7" stroke="#475569"/><text x="339.95000000000005" y="531.7" text-anchor="middle" font-size="12" fill="#334155">9.30 m overall</text>
+ <line x1="569.9000000000001" y1="155" x2="569.9000000000001" y2="494.7" stroke="#475569" stroke-width="1.2"/><line x1="562.9000000000001" y1="155" x2="576.9000000000001" y2="155" stroke="#475569"/><line x1="562.9000000000001" y1="494.7" x2="576.9000000000001" y2="494.7" stroke="#475569"/><text x="584.9000000000001" y="324.85" font-size="12" fill="#334155" transform="rotate(90 584.9000000000001 324.85)">7.90 m overall</text>
+<g stroke="#0284c7" stroke-width="5">
+<line x1="163.65" y1="155" x2="206.65" y2="155"/>
+<line x1="163.65" y1="494.7" x2="219.55" y2="494.7"/>
+<line x1="539.9000000000001" y1="348.5" x2="539.9000000000001" y2="400.1"/>
+<line x1="303.4" y1="494.7" x2="346.4" y2="494.7"/>
+</g>
+<rect x="710" y="130" width="500" height="420" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="735" y="165" font-size="17" font-weight="700" fill="#172033">SPACE AND COORDINATION NOTES</text>
+<text class="small" x="735" y="195">• Bedroom / guest room: 3.00 x 3.00 m</text><text class="small" x="735" y="219">• Toilet and bath: 1.50 x 2.10 m</text><text class="small" x="735" y="243">• Stairway: 2.00 x 3.20 m envelope</text><text class="small" x="735" y="267">• Storage / service area: 1.50 x 2.00 m</text><text class="small" x="735" y="291">• Entrance / foyer: 1.50 x 1.50 m</text><text class="small" x="735" y="315">• Living room: 3.60 x 3.80 m</text><text class="small" x="735" y="339">• Dining area: 2.80 x 2.80 m</text><text class="small" x="735" y="363">• Kitchen: 2.50 x 2.80 m</text>
+<line x1="735" y1="402" x2="1185" y2="402" stroke="#e2e8f0"/>
+<text class="note" x="735" y="434">• Single-car carport is shown on A-01 only; final doorway/driveway location is not fixed.</text><text class="note" x="735" y="459">• Door and window positions are diagrammatic placeholders.</text><text class="note" x="735" y="484">• Target clear room dimensions are not finished wall-to-wall dimensions.</text>
+<rect x="710" y="590" width="500" height="130" rx="10" fill="#fff7ed" stroke="#fdba74"/>
+<text x="730" y="620" font-size="15" font-weight="700" fill="#9a3412">PRELIMINARY ONLY</text>
+<text class="note" x="730" y="647">2.00 m setback screening and local zoning are not finalized.</text>
+<text class="note" x="730" y="671">Floor levels, door swings, window sizes, ventilation, wall thickness,</text>
+<text class="note" x="730" y="695">structural grid and code checks must be confirmed before final issue.</text>
+<text class="sub" x="35" y="752">Local units: metres. Room boxes use target clear dimensions; wall thicknesses and construction offsets are not dimensioned here.</text>
+</svg>

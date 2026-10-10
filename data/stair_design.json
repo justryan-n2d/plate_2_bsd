@@ -1,0 +1,73 @@
+{
+  "project": "CE 393 Plate No. 2 - Proposed Two-Storey Residential Building",
+  "status": "preliminary_design_assumption",
+  "design_type": "U-shaped return stair with an intermediate half-landing",
+  "units": {
+    "length": "m",
+    "rise_and_tread": "m",
+    "clear_width": "m"
+  },
+  "floor_levels": {
+    "ground_floor_finished_floor_elevation_m": 0.0,
+    "second_floor_finished_floor_elevation_m": 3.0,
+    "floor_to_floor_rise_m": 3.0,
+    "basis": "Provisional design assumption only. The assignment/repository does not yet specify final floor-to-floor height. Replace with the accepted building section levels before architectural drawing coordination."
+  },
+  "geometry": {
+    "number_of_flights": 2,
+    "total_risers": 18,
+    "risers_per_flight": [9, 9],
+    "riser_height_m": 0.1666666667,
+    "design_target_max_riser_m": 0.175,
+    "tread_depth_m": 0.28,
+    "treads_per_flight": [8, 8],
+    "total_physical_treads": 16,
+    "horizontal_run_per_flight_m": 2.24,
+    "combined_physical_tread_run_m": 4.48,
+    "clear_width_per_flight_m": 0.90,
+    "landing_depth_m": 0.90,
+    "nominal_combined_landing_width_m": 2.00,
+    "vertical_rise_per_flight_m": 1.50,
+    "maximum_vertical_distance_between_landings_m": 3.60,
+    "minimum_headroom_m": 2.00,
+    "target_handrail_height_m": 0.85,
+    "nominal_space_envelope_m": {
+      "width": 2.00,
+      "length": 3.20,
+      "area": 6.40
+    },
+    "envelope_basis": "Two clear 0.90 m flights plus a nominal 0.20 m central separation allowance; each flight needs 2.24 m of tread run and a 0.90 m half-landing depth, totalling 3.14 m. The 2.00 x 3.20 m zone is a planning envelope, not finished wall-to-wall dimensions."
+  },
+  "checks": {
+    "nbcp_group_a_dwelling_width_min_m": 0.75,
+    "nbcp_general_stair_max_riser_m": 0.20,
+    "nbcp_general_stair_min_tread_m": 0.25,
+    "nbcp_landing_depth_minimum_basis": "At least the clear width of the stair flight, subject to the applicable straight-run/landing provision.",
+    "bp344_accessible_stair_applicability": "VERIFY. The base concept is for a private Group A dwelling stair and is not represented as an accessible staircase. Where the revised 2024 BP 344 IRR requirements for an accessible staircase apply, redesign is required; the published accessibility requirements include 150 mm maximum risers, 300 mm minimum treads, 1.50 m clear width, landings at least 1.50 m deep, and complementary ramp/lift/escalator along an accessible route.",
+    "headroom_check": "At least 2.00 m clear from the plane parallel to tread nosings to the soffit; verify in the detailed building section.",
+    "handrail_check": "Target 0.85 m above tread nosings under NBCP stairway guidance; verify final handrail/guard requirements. Where BP 344 applies, additional accessible handrail and tactile provisions are required."
+  },
+  "limitations": [
+    "Floor-to-floor height is a design assumption, not source-given data.",
+    "No beam, slab, stringer, reinforcement or stair structural design is included.",
+    "The nominal space envelope is not a dimensioned construction drawing.",
+    "Confirm applicable NBCP IRR provisions, BP 344 applicability, instructor criteria, structural depth, headroom and final room layout before freezing stair geometry."
+  ],
+  "references": [
+    {
+      "name": "Presidential Decree No. 1096, National Building Code of the Philippines, Section 708(h)",
+      "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320",
+      "use": "Group A dwelling stair requirements; verify the provision against the adopted building rules and local official interpretation."
+    },
+    {
+      "name": "Presidential Decree No. 1096 / NBCP stairway provisions",
+      "url": "https://ldr.senate.gov.ph/legislative%2Bissuances/Presidential%20Decree%20No.%201096%2C%20s.%201977",
+      "use": "General stairway width, rise/run, landings, handrails and landing interval provisions."
+    },
+    {
+      "name": "National Council on Disability Affairs, 2024 Revised IRR of BP 344",
+      "url": "https://ncda.gov.ph/revised-2024-rules-and-regulations-implementing-batas-pambansa-344/",
+      "use": "Accessibility review; applicability to the specific dwelling and stair route must be determined before finalizing."
+    }
+  ]
+}

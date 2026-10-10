@@ -12,6 +12,8 @@ Project workspace for the proposed two-storey residential building plate.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
+- Phase 2 site requirements and calculations now have a checked input file, a standard-library calculation tool, eight automated tests, and a report that clearly flags unresolved road-frontage geometry.
+
 ## Phase 1 site-base preview
 
 ![Preliminary Phase 1 site base](site/phase1_site_base.svg)
@@ -22,6 +24,8 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Calculation worksheet](calculations/plate2_calculations.md): calculation methods, values, and checks.
+- [Phase 2 site requirements and preliminary calculations](calculations/phase2_site_calculations.md): code-based occupancy scenarios, setback inputs, and remaining verification items.
+- [Phase 2 setback inputs](site/phase2_setback_inputs.csv): per-boundary code baseline and geometry-input status.
 - [Traverse coordinate CSV](site/phase1_traverse_coordinates.csv): original and adjusted course records, coordinates, and closure diagnostics.
 - [Site analysis](site/phase1_site_analysis.md): supported site findings and items requiring further verification.
 - [Site analysis matrix](site/phase1_site_analysis_matrix.csv): site topics, evidence, status, and follow-up actions.

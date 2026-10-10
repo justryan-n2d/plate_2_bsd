@@ -8,7 +8,7 @@
 |---|---|---|
 | A-01 | [Site Development Plan](../previews/phase5_A01_site_development.svg) | Adjusted local lot polygon, 2.00 m inward screening line, concept house/carport placement, preliminary area budget and unresolved site constraints. |
 | A-02 | [Ground Floor Plan](../previews/phase5_A02_ground_floor.svg) | Required ground-floor room targets, circulation band, schematic furniture and placeholder opening marks. |
-| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Three bedrooms, shared bath, family area, stair opening and landing/circulation, plus a required 3.00 m × 1.50 m balcony accessed from the master bedroom. |
+| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Three bedrooms, shared bath, family area, stair opening and landing/circulation, plus a required 3.00 m × 1.50 m balcony beside and accessed from the family area. |
 | A-04 | [Roof Plan](../previews/phase5_A04_roof_plan.svg) | Gable roof, ridge, assumed pitch, eaves and conceptual slope arrows. |
 | A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels; the required balcony is shown on the east/front entry-carport façade. |
 | A-06 | [Building Sections](../previews/phase5_A06_sections.svg) | Stair vertical-development section study and general building section diagram. |
@@ -43,7 +43,7 @@ Reference: [Supreme Court E-Library - PD 1096](https://elibrary.judiciary.gov.ph
 
 ## Floor plans and room coordination
 
-The ground and second-floor enclosed room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. The required 3.00 m × 1.50 m balcony projects east from the master bedroom wall on the entry/carport-facing front, with a nominal 0.90 m access door and a schematic perimeter guardrail. A-01 shows its elevated projection, A-03 its plan geometry, A-04 its projection below the roof, A-05 the front elevation, A-06 the section, and A-07 the matching D-04/guardrail notes. It is a separate 4.50 m² external area, not enclosed floor area. In the drawings, room boxes and opening markers remain conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids need a coordinated design pass.
+The ground and second-floor enclosed room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. The required 3.00 m × 1.50 m balcony projects east from the family-area wall on the entry/carport-facing front, with nominal D-04 access from the family area and a schematic perimeter guardrail. A-01 shows its elevated projection, A-03 its plan geometry, A-04 its projection below the roof, A-05 the front elevation, A-06 the section, and A-07 the matching D-04/guardrail notes. It is a separate 4.50 m² external area, not enclosed floor area. In the drawings, room boxes and opening markers remain conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids need a coordinated design pass.
 
 The second-floor plan places the stair opening/flight zone over the ground-floor stair zone and adds the Phase 4 landing allowance. This relationship is a starting arrangement only. Confirm exact landing geometry, stair direction, floor opening and headroom against the accepted vertical section.
 
@@ -51,7 +51,7 @@ The second-floor plan places the stair opening/flight zone over the ground-floor
 
 The drawings reuse the Phase 4 assumption of a 3.000 m ground-to-second-floor rise. Eaves at +6.000 m, ridge at approximately +7.690 m and roof pitch of 20 degrees are new design assumptions. They need to be reconciled with the required ceiling heights, roof construction, elevations and stair headroom in the final sheets.
 
-The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 m, bedroom door 0.80 x 2.10 m, bath door 0.70 x 2.10 m, balcony door 0.90 x 2.10 m, typical window 1.20 x 1.20 m, living window 1.50 x 1.20 m, and bath window 0.60 x 0.60 m. These are academic design targets; coordinate door swings and clearances with the selected room uses.
+The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 m, bedroom door 0.80 x 2.10 m, bath door 0.70 x 2.10 m, balcony door from family area 0.90 x 2.10 m, typical window 1.20 x 1.20 m, living window 1.50 x 1.20 m, and bath window 0.60 x 0.60 m. These are academic design targets; coordinate door swings and clearances with the selected room uses.
 
 ## Shared model and validation limits
 

@@ -434,7 +434,7 @@ A commonly cited NBCP Rule XIX passenger-car stall size is 2.40 m × 5.00 m. The
 
 **Result:** One proposed parking space, 2.80 m × 5.50 m. This is the selected classroom design assumption; use a different number/dimension if the instructor gave a specific parking table.
 
-Reference: [PD 1096, Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320).
+References: [PD 1096, Section 708, Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320); [Supreme Court E-Library decision quoting NBCP Rule XIX parking-slot dimensions](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/49990). The slot-size comparison is a cited baseline for this class exercise, not a claim that no later or instructor-specific table applies.
 
 ---
 

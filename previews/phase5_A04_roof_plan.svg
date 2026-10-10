@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-access="family-area" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
 <title id="title">A-04 Preliminary roof plan</title>
 <desc id="desc">Preliminary 9.30 by 7.90 metre gable roof plan with assumed 20 degree pitch, ridge along the building depth, eaves and slope arrows. The required east/front balcony beside the family area is shown as a dashed projection beyond the east edge. Not a roof-framing or construction drawing.</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.note{font-size:13px;fill:#475569}.head{font-size:16px;font-weight:700;fill:#172033}</style>

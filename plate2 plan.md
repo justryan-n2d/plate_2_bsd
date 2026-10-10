@@ -214,7 +214,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 - [ ] **T-43 / A-04** Finalize the Roof Plan. A preliminary draft is available at `previews/phase5_A04_roof_plan.svg`.
 - [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Show the required balcony on the matching façade; the current draft shows it on the assumed front elevation.
 - [ ] **T-45 / A-06** Finalize at least two building sections, with at least one through the actual coordinated stairway. Current draft diagrams are at `previews/phase5_A06_sections.svg`.
-- [ ] **T-46 / A-07** Finalize architectural details and schedules. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
+- [ ] **T-46 / A-07** Finalize architectural details and schedules, including the balcony guardrail note and nominal balcony door in the opening schedule. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
 - [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information across all sheets.
 - [ ] **T-48 / D-01** Finish the shared-data drawing generator so SVG previews and editable DXF exports are produced from matching geometry/dimensions. `data/building_model.json` exists, but automatic generation and DXF export are not complete.
 - [ ] **T-49 / D-02** Review every SVG preview against the assignment, code calculations, and drawing coordination requirements; revise before final export.

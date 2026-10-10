@@ -12,7 +12,7 @@ Project workspace for the proposed two-storey residential building plate.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
-- Phase 2 site requirements and calculations now have a checked input file, a standard-library calculation tool, eight automated tests, and a report that clearly flags unresolved road-frontage geometry.
+- Phase 2 site requirements and calculations have a code register, setback inputs, a standard-library calculation tool, and automated tests; the road cross-section allocation is specified by the instructor, while the final yard-reference treatment remains under code/local review.
 
 ## Phase 1 site-base preview
 
@@ -66,6 +66,6 @@ The generator writes drawings/phase1_site_base.dxf and previews/phase1_site_base
 ## Limits
 
 - The adjusted traverse is an academic plotting basis under the instructor's direction, not cadastral survey certification.
-- The 5.0 m road width and 8.00 m right-of-way are separate stated values. No precise allocation of the remaining 3.0 m is assumed.
+- The instructor clarified the road cross-section as 8.00 m total RROW = 5.00 m carriageway + 1.50 m RROW strip on each side; the site drawing uses this allocation.
 - Exact road/ROW edges, site levels, drainage, obstructions, setbacks, and parcel-specific hazard results are not inferred from the local coordinate plot.
 - Automated checks do not establish code compliance, structural adequacy, permit readiness, or construction readiness.

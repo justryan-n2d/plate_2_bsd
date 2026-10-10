@@ -195,6 +195,8 @@ def validate_svg_files() -> None:
             fail(f"{filename} root element is not svg")
         if root.attrib.get("data-front-facade") != "east":
             fail(f"{filename} must use the shared east/front facade orientation")
+        if root.attrib.get("data-balcony-access") != "family-area":
+            fail(f"{filename} must share family-area access to the east/front balcony")
         for attr, expected in (("data-balcony-width-m", 3.0), ("data-balcony-projection-m", 1.5), ("data-balcony-offset-m", 4.9)):
             try:
                 actual = float(root.attrib[attr])
@@ -265,6 +267,9 @@ def validate_svg_files() -> None:
                 fail("A-03 must state that the balcony is accessed from the family area")
             if "Family area" not in visible_text or "D-04" not in visible_text:
                 fail("A-03 must show the family area and its D-04 balcony access")
+            access_door = root.find(".//*[@id='family-area-balcony-door']")
+            if access_door is None or access_door.attrib.get("data-access-space") != "family-area" or access_door.attrib.get("data-width-m") != "0.90":
+                fail("A-03 D-04 must be a 0.90 m door from the family area")
             if any(local_name(el.tag) == "rect" and el.attrib.get("x") in {"417.35", "159.35"} and el.attrib.get("fill") == "#ffffff" for el in root.iter()):
                 fail("A-03 contains opaque furniture boxes that can cover room labels")
         if drawing_no == "A-05":
@@ -273,13 +278,13 @@ def validate_svg_files() -> None:
             front_balcony = root.find(".//*[@id='front-balcony-elevation']")
             if front_balcony is None:
                 fail("A-05 must include the front-balcony elevation geometry")
-            if front_balcony.attrib.get("data-span-m") != "3.00" or front_balcony.attrib.get("data-projection-m") != "1.50" or front_balcony.attrib.get("data-offset-m") != "4.90":
+            if front_balcony.attrib.get("data-span-m") != "3.00" or front_balcony.attrib.get("data-projection-m") != "1.50" or front_balcony.attrib.get("data-offset-m") != "4.90" or front_balcony.attrib.get("data-access-space") != "family-area":
                 fail("A-05 balcony span/projection/position metadata must match the family-area location")
         if drawing_no == "A-06":
             front_section = root.find(".//*[@id='front-balcony-section']")
             if front_section is None:
                 fail("A-06 must include a section through the front balcony")
-            if front_section.attrib.get("data-span-m") != "3.00" or front_section.attrib.get("data-projection-m") != "1.50" or front_section.attrib.get("data-offset-m") != "4.90":
+            if front_section.attrib.get("data-span-m") != "3.00" or front_section.attrib.get("data-projection-m") != "1.50" or front_section.attrib.get("data-offset-m") != "4.90" or front_section.attrib.get("data-access-space") != "family-area":
                 fail("A-06 balcony span/projection/position metadata must match the family-area location")
         if drawing_no == "A-07":
             if "Front/east balcony beside family area" not in visible_text or "D-04 Balcony door from family area: 0.90 x 2.10 m" not in visible_text:

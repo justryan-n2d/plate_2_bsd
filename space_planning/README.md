@@ -13,7 +13,7 @@ This folder contains the preliminary space programme and conceptual space-planni
 
 ## Important limits
 
-These are preliminary planning targets and diagrams, not dimensioned architectural plans. Phase 2 setbacks and buildable area are not yet resolved. No final building orientation, driveway, doors, windows, stair dimensions, code compliance or utility design is established by these files. Check the project plan and calculation worksheet before using any target as a final dimension.
+These are preliminary planning targets and diagrams, not dimensioned architectural plans. Phase 2 now records an academic baseline using 265.26 m² lot area and S-01 uniform 2.00 m setbacks. The second-floor balcony is required at 3.00 m × 1.50 m (4.50 m²), connected directly to the master bedroom and counted separately from enclosed floor area. Door/window positions, detailed stair geometry and final dimension coordination are still preliminary.
 
 
 ## Phase 4 stair study
@@ -36,4 +36,4 @@ The current study assumes a 3.000 m floor-to-floor rise. It is preliminary and n
 - [Sections A-06](../previews/phase5_A06_sections.svg)
 - [Details and schedules A-07](../previews/phase5_A07_details_schedules.svg)
 
-These are preliminary drafts; Phase 2 setbacks and local zoning remain unresolved.
+These are preliminary academic drafts. A-03 includes the required master-bedroom balcony and A-05 shows it on the assumed front façade; check the drawings and area totals remain consistent after later revisions.

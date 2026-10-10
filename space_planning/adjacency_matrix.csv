@@ -16,6 +16,7 @@ Second Floor,Family area,Bedroom 3,near,Bedrooms should be reached by short shar
 Second Floor,Bedroom 2,Toilet and bath (second floor),near,The shared bath should be convenient to bedrooms.
 Second Floor,Bedroom 3,Toilet and bath (second floor),near,The shared bath should be convenient to bedrooms.
 Second Floor,Master bedroom,Toilet and bath (second floor),near,The shared bath should remain reachable without crossing another bedroom.
-Second Floor,Family area,Balcony (if appropriate),conditional,Only connect a balcony if site and code checks support it.
+Second Floor,Family area,Balcony,direct,The balcony is accessed directly from the family area through nominal door D-04; external area stays separate from enclosed floor area.
+Second Floor,Master bedroom,Balcony,buffered,Balcony access is from the family area, not through the master bedroom.
 Cross-floor,Toilet and bath (ground floor),Toilet and bath (second floor),near,Prefer vertical proximity for future coordination; no utility design is included here.
 Cross-floor,Stairway,Stair landing / circulation,direct,Align the stair flight and upper landing in the later dimensioned plan.

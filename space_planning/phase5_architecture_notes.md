@@ -8,11 +8,11 @@
 |---|---|---|
 | A-01 | [Site Development Plan](../previews/phase5_A01_site_development.svg) | Adjusted local lot polygon, 2.00 m inward screening line, concept house/carport placement, preliminary area budget and unresolved site constraints. |
 | A-02 | [Ground Floor Plan](../previews/phase5_A02_ground_floor.svg) | Required ground-floor room targets, circulation band, schematic furniture and placeholder opening marks. |
-| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Three bedrooms, shared bath, family area, stair opening and landing/circulation. |
+| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Three bedrooms, shared bath, family area, stair opening and landing/circulation, plus a required 3.00 m × 1.50 m balcony beside and accessed from the family area. |
 | A-04 | [Roof Plan](../previews/phase5_A04_roof_plan.svg) | Gable roof, ridge, assumed pitch, eaves and conceptual slope arrows. |
-| A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels. |
+| A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels; the required balcony is shown on the east/front entry-carport façade. |
 | A-06 | [Building Sections](../previews/phase5_A06_sections.svg) | Stair vertical-development section study and general building section diagram. |
-| A-07 | [Details and Schedules](../previews/phase5_A07_details_schedules.svg) | Typical wall/floor section concept, stair data, provisional door/window schedule and finish schedule. |
+| A-07 | [Details and Schedules](../previews/phase5_A07_details_schedules.svg) | Typical wall/floor section concept, stair data, balcony guardrail note, provisional balcony-door/door/window schedule and finish schedule. |
 
 ## Basis carried forward from Phases 1-4
 
@@ -38,12 +38,12 @@ Reference: [Supreme Court E-Library - PD 1096](https://elibrary.judiciary.gov.ph
 | House footprint | 9.30 x 7.90 = 73.47 m² | Concept rectangle |
 | Carport placeholder | 2.80 x 5.50 = 15.40 m² | Position and code dimensions unconfirmed |
 | Combined covered ground budget | 88.87 m² | Arithmetic only |
-| Indicative combined coverage versus 265.26 m² | 33.5% | Arithmetic only; not a code certification |
+| Indicative combined coverage versus 265.26 m² | 33.5% | Arithmetic for the academic exercise |
 | Lot area less house and carport areas | 176.39 m² | Arithmetic remainder only, not the final code open-space result |
 
 ## Floor plans and room coordination
 
-The ground and second-floor room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. In the drawings, boxes and opening markers are conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids require a proper coordinated design pass.
+The ground and second-floor enclosed room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. The required 3.00 m × 1.50 m balcony projects east from the family-area wall on the entry/carport-facing front, with nominal D-04 access from the family area and a schematic perimeter guardrail. A-01 shows its elevated projection, A-03 its plan geometry, A-04 its projection below the roof, A-05 the front elevation, A-06 the section, and A-07 the matching D-04/guardrail notes. It is a separate 4.50 m² external area, not enclosed floor area. In the drawings, room boxes and opening markers remain conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids need a coordinated design pass.
 
 The second-floor plan places the stair opening/flight zone over the ground-floor stair zone and adds the Phase 4 landing allowance. This relationship is a starting arrangement only. Confirm exact landing geometry, stair direction, floor opening and headroom against the accepted vertical section.
 
@@ -51,7 +51,7 @@ The second-floor plan places the stair opening/flight zone over the ground-floor
 
 The drawings reuse the Phase 4 assumption of a 3.000 m ground-to-second-floor rise. Eaves at +6.000 m, ridge at approximately +7.690 m and roof pitch of 20 degrees are new design assumptions. They need to be reconciled with the required ceiling heights, roof construction, elevations and stair headroom in the final sheets.
 
-The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 m, bedroom door 0.80 x 2.10 m, bath door 0.70 x 2.10 m, typical window 1.20 x 1.20 m, living window 1.50 x 1.20 m, and bath window 0.60 x 0.60 m. These are not code-approved dimensions; final sizes and opening free areas must be checked against the selected room uses and applicable code.
+The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 m, bedroom door 0.80 x 2.10 m, bath door 0.70 x 2.10 m, balcony door from family area 0.90 x 2.10 m, typical window 1.20 x 1.20 m, living window 1.50 x 1.20 m, and bath window 0.60 x 0.60 m. These are academic design targets; coordinate door swings and clearances with the selected room uses.
 
 ## Shared model and validation limits
 
@@ -61,11 +61,12 @@ The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 
 
 ## Explicit remaining checks
 
-- Confirm official survey and road ROW geometry, and check the 265.26 m² vs approximate 300.00 m² discrepancy with the correct survey source.
-- Confirm Palo zoning / residential type and the actual applicable setbacks, open space and lot occupancy rules.
-- Recalculate buildable envelope and confirm proposed footprint/carport fit.
-- Complete final occupant-load and parking calculations.
-- Confirm floor levels and BP 344 applicability; redesign the stair if required.
-- Coordinate doors/windows, ventilation, natural lighting, privacy, furniture clearances, structural reference lines and the roof drainage approach.
+- Keep 265.26 m² as the academic working lot area and the approximate 300.00 m² figure as a note from the assignment.
+- Retain the agreed 5.00 m carriageway within the 8.00 m total ROW and the selected uniform 2.00 m academic setbacks.
+- Keep the main-house footprint (73.47 m²), the required balcony (3.00 m × 1.50 m = 4.50 m²), and the carport (15.40 m²) consistent across data and drawings.
+- Coordinate the east/front balcony as one 3.00 m × 1.50 m element across A-01 site projection, A-03 plan, A-04 roof plan, A-05 front elevation, A-06 section, and A-07 D-04/guardrail notes.
+- Report enclosed floor area as 146.94 m² and total including balcony as 151.44 m²; do not mix the two totals.
+- Confirm floor levels and stair/headroom assumptions; coordinate the stair in A-02/A-03/A-06.
+- Coordinate remaining doors/windows, ventilation, natural lighting, privacy, furniture clearances, structural reference lines and roof drainage.
 - Complete structural design only as required and directed by the assignment; the current typical wall section has no structural member sizing or reinforcement.
 - Review all sheets visually, then export editable CAD and final A3/PDF sheets after dimensions are frozen.

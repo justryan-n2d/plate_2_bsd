@@ -9,12 +9,13 @@
   },
   "assumptions": [
     "The adjusted Phase 1 traverse is an academic plotting basis, not cadastral certification.",
-    "The 2.00 m uniform inward offset is a screening illustration based on the general Group A dwelling text in PD 1096 Section 708(a); applicable local zoning, R-1 table conditions, road ROW limits, firewalls and greater setbacks have not been confirmed.",
+    "For this student activity, the selected academic setback basis is a uniform 2.00 m inward offset on all five lot boundaries using the general Group A dwelling baseline in PD 1096 Section 708(a). This is an explicit classroom assumption, not a real construction/permit determination.",
     "Ground finished-floor elevation is ±0.000 m and second finished-floor elevation is +3.000 m, matching the Phase 4 assumed rise; both require instructor confirmation.",
-    "The 9.30 m x 7.90 m rectangular house is a concept footprint, not a verified compliant building footprint.",
-    "The single-car 2.80 m x 5.50 m covered carport and its position are schematic; final access, turning, gate and road-opening position are unresolved.",
+    "The 9.30 m x 7.90 m rectangular house is the adopted academic footprint (73.47 m2); use the same outer envelope for both preliminary floor-area calculations unless the final second-floor plan is changed.",
+    "Adopt one off-street parking space in the 2.80 m x 5.50 m carport for the student plate; this is an academic design assumption.",
     "Doors, windows, finishes, ceiling/eaves/roof levels and roof pitch are draft design targets, not confirmed code minima.",
-    "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included."
+    "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included.",
+    "Include a required second-floor balcony 3.00 m wide x 1.50 m projection (4.50 m2), attached to the family area on the east/front (entry and carport) facade. Count it separately from enclosed house floor area."
   ],
   "site": {
     "lot_number": "245-B",
@@ -78,15 +79,15 @@
       "P2-P3",
       "P3-P4"
     ],
-    "setback_reference": "PD 1096 Section 708(a) provides a general Group A dwelling minimum distance from property line. This is not the final local zoning/setback determination.",
+    "setback_reference": "Selected academic assumption for the student activity: uniform 2.00 m from the five boundaries using PD 1096 Section 708(a) as the general Group A dwelling baseline.",
     "building_placement": {
-      "southwest_easting_m": 1.6893311,
-      "south_edge_northing_m": -11.4457888,
+      "southwest_easting_m": 1.8893311,
+      "south_edge_northing_m": -9.8457888,
       "width_m": 9.3,
       "depth_m": 7.9
     },
     "carport_placement": {
-      "southwest_easting_m": 10.99,
+      "southwest_easting_m": 11.1893311,
       "south_edge_northing_m": -8.6,
       "width_m": 2.8,
       "depth_m": 5.5
@@ -95,7 +96,13 @@
     "carport_area_m2": 15.4,
     "combined_covered_ground_area_m2": 88.87,
     "indicative_combined_cover_percent_of_adjusted_area": 33.5,
-    "remaining_unbuilt_area_if_carport_included_m2": 176.3898
+    "remaining_unbuilt_area_if_carport_included_m2": 176.39,
+    "academic_working_area_m2": 265.26,
+    "road_interpretation": "The 5.00 m carriageway is inside the 8.00 m total ROW; the remaining 3.00 m is ROW outside the carriageway in total, with no specific split assumed.",
+    "row_remaining_outside_carriageway_total_m": 3,
+    "selected_academic_scenario": "S-01",
+    "academic_setback_assumption_m": 2,
+    "assumption_status": "Academic planning basis only; no real-project approval is being represented."
   },
   "building": {
     "footprint": {
@@ -270,7 +277,7 @@
           "width_m": 1.7,
           "depth_m": 3,
           "target_area_m2": 5.1,
-          "dimension_note": "additional schematic hall; verify in final layout",
+          "dimension_note": "1.70 x 3.00 m",
           "status": "planning allowance"
         },
         {
@@ -284,6 +291,33 @@
           "status": "required"
         }
       ]
+    },
+    "academic_floor_area_assumption": {
+      "ground_floor_gross_m2": 73.47,
+      "second_floor_enclosed_gross_m2": 73.47,
+      "second_floor_balcony_m2": 4.5,
+      "second_floor_total_with_balcony_m2": 77.97,
+      "total_enclosed_house_floor_area_m2": 146.94,
+      "total_floor_area_including_balcony_m2": 151.44,
+      "note": "Each enclosed floor uses the 9.30 m x 7.90 m exterior envelope. Add the 3.00 m x 1.50 m second-floor balcony separately; it is an external area and not part of the enclosed house floor area."
+    },
+    "academic_occupant_count": 6,
+    "academic_parking_spaces": 1,
+    "balcony": {
+      "floor": "Second Floor",
+      "status": "required",
+      "attached_to": "Family area",
+      "plan_location": "East/right edge of A-03, directly beside the family area on the entry/carport-facing front facade; 3.00 m span along the facade and 1.50 m outward projection",
+      "access": "0.90 m nominal D-04 balcony door from family area",
+      "width_m": 3,
+      "projection_m": 1.5,
+      "area_m2": 4.5,
+      "open_external_area": true,
+      "railing": "Perimeter guardrail shown schematically; final height/detail to be specified for the academic plate",
+      "note": "Open external area on the east/front facade beside the family area; accessed from the family area and reported separately from enclosed gross floor area.",
+      "x_m": 9.3,
+      "y_m": 4.9,
+      "front_facade": "east"
     }
   },
   "draft_opening_schedule": [
@@ -328,15 +362,22 @@
       "width_m": 0.6,
       "height_m": 0.6,
       "status": "provisional"
+    },
+    {
+      "id": "D-04",
+      "type": "Balcony door from family area",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "status": "provisional"
     }
   ],
   "drawing_status": {
-    "A-01": "Preliminary site development layout using screening setback geometry; exact access and legal envelope pending.",
-    "A-02": "Preliminary ground-floor plan with room-size targets; openings and final dimensions pending.",
-    "A-03": "Preliminary second-floor plan with stairwell/landing coordination; verify final fit.",
+    "A-01": "Preliminary site plan; elevated east/front balcony projection beside family area is shown separately from ground coverage. Main-house placement shifted north to retain academic envelope containment; coordinate balcony overhang and carport canopy in final design.",
+    "A-02": "Preliminary ground-floor plan with right/east entry side; openings and final dimensions pending. The upper-floor balcony is not enclosed ground-floor area.",
+    "A-03": "Preliminary second-floor plan with room boxes coordinated to the current A-03 layout and the stair opening/landing aligned with the A-02 stair zone. Door/window locations and final dimensions remain pending.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
-    "A-05": "Four schematic elevations; heights and openings are assumptions.",
-    "A-06": "Two schematic sections, one through stair; final sections must coordinate final levels/structure.",
-    "A-07": "Draft architectural details/schedules; not structural or specification approval."
+    "A-05": "Four schematic elevations with required balcony on the east/front facade at the family-area end; door D-04, balcony and dimensions remain provisional.",
+    "A-06": "Schematic section through east/front balcony beside family area, showing the 1.50 m projection and D-04 access.",
+    "A-07": "Provisional architectural details and schedules with D-04 balcony door from family area and schematic balcony guardrail."
   }
 }

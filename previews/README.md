@@ -24,3 +24,9 @@ A-01 to A-07 are committed preliminary SVG drawing previews:
 - `phase5_A07_details_schedules.svg`
 
 Shared assumptions are recorded in `../data/building_model.json` and `../space_planning/phase5_architecture_notes.md`. These SVGs are for draft review, not construction. The 2.00 m site inset is a screening scenario, not an approved building envelope. See `../PROJECT_STATUS.md` for the current phase and hold points.
+
+
+## Phase 2 setback-scenario preview
+
+- [Four setback screening scenarios](phase2_setback_scenarios.svg): comparison of offset areas and current house/carport placement.
+- The geometry preview is illustrative. Official local zoning, legal ROW lines and road-frontage classification remain unresolved.

@@ -1,0 +1,40 @@
+name: Validate Phase 2 Site Requirement Scenarios
+
+on:
+  push:
+    branches: [main, phase2-site-requirements]
+    paths:
+      - "site/phase1_traverse_coordinates.csv"
+      - "site/phase2_setback_scenarios.csv"
+      - "data/building_model.json"
+      - "previews/phase2_setback_scenarios.svg"
+      - "scripts/validate_phase2_site_requirements.py"
+      - ".github/workflows/validate-phase2-site-requirements.yml"
+  pull_request:
+    paths:
+      - "site/phase1_traverse_coordinates.csv"
+      - "site/phase2_setback_scenarios.csv"
+      - "data/building_model.json"
+      - "previews/phase2_setback_scenarios.svg"
+      - "scripts/validate_phase2_site_requirements.py"
+      - ".github/workflows/validate-phase2-site-requirements.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-phase2:
+    name: Validate setback scenario geometry
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile-check validator
+        run: python -m py_compile scripts/validate_phase2_site_requirements.py
+      - name: Validate scenario geometry and preview
+        run: python scripts/validate_phase2_site_requirements.py

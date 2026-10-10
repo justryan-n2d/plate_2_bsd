@@ -10,6 +10,8 @@ Project workspace for the proposed two-storey residential building plate.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
 - GitHub Actions generates and validates the Phase 1 DXF/SVG output from the traverse data.
 - Phase 3 now has a preliminary room requirement table, adjacency matrix, relationship diagram, and conceptual zoning diagrams for both floors. Phase 4 now adds a stair calculation/source-data package and plan/section previews. These are preliminary, not structural or construction drawings.
+- Phase 5 A-01 to A-07 draft previews and the shared building model are merged into `main` through [PR #5](https://github.com/justryan-n2d/plate_2_bsd/pull/5); they remain preliminary and are not code-approved.
+- Phase 2 now uses 265.26 m² as the working lot area, selects S-01 with uniform 2.00 m academic setbacks, and records the 5.00 m carriageway within the 8.00 m total ROW. See `site/phase2_site_requirements.md` and `PROJECT_STATUS.md`.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
@@ -19,9 +21,17 @@ Project workspace for the proposed two-storey residential building plate.
 
 See the [site folder README](site/README.md) for source files, assumptions, and verification limits.
 
+## Phase 2 setback scenario preview
+
+S-01 (uniform 2.00 m setbacks) is the selected academic design basis. S-02 to S-04 remain comparison cases only. The site notes treat the 5.00 m carriageway as inside the 8.00 m total ROW.
+
+![Phase 2 setback scenarios](previews/phase2_setback_scenarios.svg)
+
+See [Phase 2 site requirements](site/phase2_site_requirements.md) and [scenario data](site/phase2_setback_scenarios.csv).
+
 ## Phase 3 space-planning previews
 
-These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 setbacks and the buildable envelope remain pending. The Phase 4 stair study is now merged, but its floor-height assumption and final code/section coordination remain to be confirmed.
+These SVGs are conceptual zoning diagrams, not dimensioned floor plans. The Phase 2 academic setback and buildable-envelope calculations are now recorded; the floor plans still need to be coordinated to them. The Phase 4 stair study uses an assumed 3.000 m floor-to-floor height that must match the final academic section.
 
 ### Adjacency / relationship diagram
 
@@ -39,17 +49,6 @@ See the [Phase 3 space-planning notes](space_planning/space_planning.md), [room 
 
 ## Phase 4 stair study
 
-The preliminary stair study uses a **provisional 3.000 m floor-to-floor rise**; this is an assumption pending confirmation of the building levels. The package includes calculation notes, structured source values, a plan preview and a vertical-development preview. The diagrams are not structural or construction drawings.
-
-- [Stair calculation and code hold points](space_planning/stair_design.md)
-- [Stair plan SVG preview](space_planning/stair_plan.svg)
-- [Stair section/development SVG preview](space_planning/stair_section.svg)
-- [Stair source data](data/stair_design.json)
-
-Verify applicability of the 2024 BP 344 accessibility provisions before finalizing the width, treads, risers and landings. Phase 5 still needs the coordinated building section through the actual stair.
-
-## Phase 4 stair study
-
 The preliminary stair study is merged into `main`; it assumes a 3.000 m floor-to-floor rise and is not structural or construction documentation.
 
 ![Preliminary stair plan](space_planning/stair_plan.svg)
@@ -60,7 +59,7 @@ See [stair calculations and code hold points](space_planning/stair_design.md).
 
 ## Phase 5 architectural draft previews
 
-These A-01 to A-07 sheets are on the `phase5-architectural-plans` branch. They are preliminary visual drafts. The 2.00 m inset on A-01 is only a screening assumption, and Phase 2 local zoning/setback confirmation remains pending.
+These A-01 to A-07 sheets are preliminary visual drafts for the student activity. Phase 2 uses 265.26 m² as the working lot area, a uniform 2.00 m setback on all five boundaries, and the 5.00 m carriageway inside the 8.00 m total ROW. The second-floor design includes a required 3.00 m × 1.50 m balcony on the east/front entry-carport facade beside and accessed from the family area; its 4.50 m² is counted separately from enclosed floor area.
 
 ### A-01 - Site Development Plan
 
@@ -71,6 +70,8 @@ These A-01 to A-07 sheets are on the `phase5-architectural-plans` branch. They a
 ![A-02 preliminary ground floor](previews/phase5_A02_ground_floor.svg)
 
 ### A-03 - Second Floor Plan
+
+The second floor includes a required 3.00 m × 1.50 m east/front balcony beside and accessed from the family area. A-03/A-04 show its plan and projection below the roof; A-05/A-06 show the matching front elevation and section, and A-07 lists D-04 and the guardrail. Its 4.50 m² is listed separately from enclosed floor area.
 
 ![A-03 preliminary second floor](previews/phase5_A03_second_floor.svg)
 
@@ -95,6 +96,8 @@ See the [Phase 5 architecture notes](space_planning/phase5_architecture_notes.md
 ## Project records
 
 - [Project status](PROJECT_STATUS.md): what is finished, current phase, assumptions, blockers, and next steps.
+- [Phase 2 site requirements and calculations](site/phase2_site_requirements.md): agreed academic assumptions, selected 2.00 m setbacks, ROW interpretation and completed preliminary calculations.
+- [Setback scenario data](site/phase2_setback_scenarios.csv): four calculated offsets, with S-01 marked as the selected academic basis.
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Shared preliminary building model](data/building_model.json): site/building geometry and assumptions for Phase 5 drafts.
 - [Phase 5 architectural notes](space_planning/phase5_architecture_notes.md): drawing register and limitations.

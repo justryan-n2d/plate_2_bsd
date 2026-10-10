@@ -24,7 +24,8 @@ The completed plate is intended to serve as the base building plan for the subse
 | Occupancy group | A |
 | Initial construction type | Type V-A |
 | Proposed occupants | 5–6 persons |
-| Approximate lot area | 300.00 m² |
+| Approximate lot area in assignment brief | 300.00 m² (source value) |
+| Adopted academic working lot area | **265.26 m²** from the adjusted closed traverse |
 | Road right-of-way in project information | 8.00 m |
 | Site condition | Generally level / grass land |
 | Existing building | None |
@@ -47,7 +48,7 @@ The property is bounded by Lot 245-A on the north, Lot 246 on the east, a stated
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-Use the stated 5.0 m as the existing road width and 8.00 m as the total road right-of-way. These values serve different purposes. The remaining 3.0 m could be allocated for shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not specify the exact allocation, so do not assume a particular split.
+**Academic interpretation:** the 5.0 m carriageway is inside the 8.00 m total road ROW. The remaining 3.0 m is ROW outside the carriageway in total, but the assignment does not specify its division, so do not invent exact shoulder/drainage widths. Show both the 5.0 m road and the 8.00 m ROW as separate dimensions. Use 265.26 m² as the working lot area and do not subtract the road width from it.
 
 ---
 
@@ -99,7 +100,7 @@ The required-submission list also includes column, footing and beam details/sche
 - [ ] Toilet and bath
 - [ ] Family area
 - [ ] Stair landing / circulation
-- [ ] Balcony, if appropriate
+- [ ] Required balcony: 3.00 m × 1.50 m, beside and accessed from the family area
 
 Additional spaces may be included when justified by the design.
 
@@ -117,7 +118,7 @@ The order below is a practical way to track the stated requirements. The require
 - [x] **T-04** Plot and close the traverse by adjusting P5-1 only; retain the original value and show both values in the records.
 - [x] **T-05** Prepare the preliminary site base using the technical description.
 - [x] **T-06** Show property boundaries, course distances and bearings, north direction, road context, and adjacent properties in the preliminary site-base drawing.
-- [x] **T-07** Complete the source-based site analysis and record evidence, limits, and site-verification items in `site/phase1_site_analysis.md` and `site/phase1_site_analysis_matrix.csv`. Exact access points, parcel-specific solar/shading, and existing-condition checks remain subject to field verification and later site-development planning.
+- [x] **T-07** Complete the source-based site analysis and record stated facts, academic assumptions and limitations in `site/phase1_site_analysis.md` and `site/phase1_site_analysis_matrix.csv`. Treat the described level/grass site and absence of an existing building as the assignment basis; show entry, driveway, planting and solar-orientation decisions as preliminary design assumptions rather than field-verified facts.
 
 #### Phase 1 implementation checkpoint (2026-10-10)
 
@@ -129,7 +130,7 @@ The original five listed courses produce a latitude sum of +0.4764 m, departure 
 
 The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The 300.00 m² value is explicitly approximate. The 265.26 m² value is the calculated area of the adjusted closed polygon; the 34.74 m² difference is documented and accepted as a difference from the approximate figure, not a reason to force the traverse to match 300.00 m². The difference is therefore not a blocker by itself. If the original approved survey document or a later instructor direction becomes available, use it to confirm the source information rather than silently changing the remaining courses.
 
-The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
+The 5.0 m carriageway is treated as being inside the 8.00 m total ROW. The remaining 3.0 m is part of the ROW outside the carriageway in total, but the exact division is not stated. Show both dimensions separately and do not invent exact shoulder/drainage widths.
 
 The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
 
@@ -147,20 +148,30 @@ The following checks were confirmed against the repository files now on `main`:
 - Road width (5.0 m) and total ROW (8.00 m) are identified as separate values; no specific allocation of the remaining 3.0 m is invented.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
-These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks may still require confirmation for a final site-development plan. House-layout work remains deferred until Phase 2 site requirements are worked through.
+These are document and arithmetic consistency checks for the academic activity, not a professional survey certification. Use 265.26 m² as the working lot area. The 5.00 m carriageway is within the 8.00 m total ROW. Phase 2 has now selected the uniform 2.00 m academic setback assumption and completed the dependent preliminary calculations; Phase 5 must coordinate those assumptions into the architectural sheets.
 
 ### Phase 2: Site requirements and preliminary calculations
 
-- [ ] **T-10** Determine required setbacks using applicable codes and regulations.
-- [ ] **T-11** Determine the buildable area / allowable building envelope.
-- [ ] **T-12** Determine the proposed building footprint.
-- [ ] **T-13** Calculate the ground-floor area.
-- [ ] **T-14** Calculate the second-floor area.
-- [ ] **T-15** Calculate the total floor area.
-- [ ] **T-16** Determine the remaining open space.
-- [ ] **T-17** Determine the applicable occupant load.
-- [ ] **T-18** Determine the applicable parking requirement.
-- [ ] **T-19** Identify and calculate other applicable code-based dimensions and requirements.
+- [x] **T-10** Adopt a uniform 2.00 m setback on all five boundaries as the classroom design assumption based on PD 1096 Section 708(a).
+- [x] **T-11** Calculate the selected setback-envelope area: 152.43 m².
+- [x] **T-12** Record the main-house footprint (9.30 m × 7.90 m = 73.47 m²) and carport (2.80 m × 5.50 m = 15.40 m²).
+- [x] **T-13** Calculate ground-floor gross area as 73.47 m².
+- [x] **T-14** Calculate second-floor enclosed gross area as 73.47 m², assuming the same outer envelope.
+- [x] **T-15** Calculate total enclosed house floor area as 146.94 m²; include the required 4.50 m² balcony separately for 151.44 m² total including balcony.
+- [x] **T-16** Calculate remaining uncovered lot area: 176.39 m² (approximately 66.5%, counting the roofed carport as covered ground area).
+- [x] **T-17** Adopt 6 persons as the academic design occupant count from the assignment's stated 5–6 person range.
+- [x] **T-18** Adopt one off-street car space in the 2.80 m × 5.50 m carport.
+- [x] **T-19** Record preliminary Group A lot-occupancy, entrance/exit, light/ventilation, sanitation, and road/ROW checks.
+
+#### Phase 2 implementation checkpoint (2026-10-10)
+
+**Status: Academic Phase 2 calculation baseline completed using the agreed assumptions.** The working lot area is 265.26 m² from the adjusted closed traverse. The 5.00 m carriageway is inside the 8.00 m total ROW; the remaining 3.00 m is not split into assumed shoulder or drainage widths. The selected S-01 setback is 2.00 m on every boundary, producing a 152.43 m² setback envelope.
+
+The preliminary calculations use a 9.30 m × 7.90 m house (73.47 m²), a 2.80 m × 5.50 m carport (15.40 m²), combined covered ground area of 88.87 m² (about 33.5% of the lot), enclosed ground- and second-floor areas of 73.47 m² each, a required 3.00 m × 1.50 m balcony (4.50 m²), total enclosed house floor area of 146.94 m², total including balcony of 151.44 m², and 176.39 m² of uncovered lot area (about 66.5%). Six design occupants and one car space are adopted for this activity. The stair values are carried forward from the Phase 4 calculation using the assumed 3.000 m floor-to-floor rise.
+
+S-02 to S-04 remain comparison-only alternatives, not blockers. These assumptions support the class assignment and do not represent a real-site survey, permit or construction approval. The detailed working and references are in `site/phase2_site_requirements.md` and `calculations/plate2_calculations.md`.
+
+**Next coordination:** show the 5.00 m carriageway within the 8.00 m total ROW and the selected 2.00 m setback in A-01; coordinate the adopted areas and stair with A-02/A-03/A-06 before final sheet preparation.
 
 ### Phase 3: Space planning
 
@@ -175,7 +186,7 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 **Status: Preliminary space-planning package prepared.** Room targets and diagrams are recorded in `space_planning/`, with a validator at `scripts/validate_space_planning.py`. All target dimensions are planning assumptions rather than code minimums. The diagrams are not to scale and do not define the final building orientation, driveway, doors, windows, setbacks, or stairs.
 
-Phase 2 is still pending. The proposed buildable envelope, setbacks, footprint, calculated floor areas, open space, parking requirement, occupant load, and other code-based dimensions must be checked before any dimensioned floor plan is accepted. Phase 4 must separately verify stair geometry. Balcony inclusion remains conditional. The zoning must be revised if those checks require it.
+Phase 2 uses 265.26 m² as the working lot area, a 5.00 m carriageway within the 8.00 m total ROW, and uniform 2.00 m academic setbacks. The required 3.00 m × 1.50 m balcony projects from the east/front entry-carport facade beside the family area and is accessed from the family area in A-03. A-01 shows its elevated projection, A-04 the projection below the roof, A-05 the front elevation, A-06 the matching section, and A-07 the D-04 door/guardrail details. Its 4.50 m² is reported separately from the 146.94 m² enclosed area; total including balcony is 151.44 m².
 
 ### Phase 4: Stair planning and calculations
 
@@ -197,24 +208,24 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 ### Phase 5: Architectural plan set
 
-- [ ] **T-40 / A-01** Finalize the Site Development Plan. A preliminary screening layout is available at `previews/phase5_A01_site_development.svg`; final setback, road/ROW, access and zoning confirmation remain pending.
+- [ ] **T-40 / A-01** Revise and finalize the Site Development Plan using the selected 2.00 m academic setbacks. Show the 5.00 m carriageway inside the 8.00 m total ROW; the exact division of the remaining 3.00 m is not specified.
 - [ ] **T-41 / A-02** Finalize the Ground Floor Plan. A preliminary draft is available at `previews/phase5_A02_ground_floor.svg`.
-- [ ] **T-42 / A-03** Finalize the Second Floor Plan. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
+- [ ] **T-42 / A-03** Finalize the Second Floor Plan including the required 3.00 m × 1.50 m balcony beside and accessed from the family area. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
 - [ ] **T-43 / A-04** Finalize the Roof Plan. A preliminary draft is available at `previews/phase5_A04_roof_plan.svg`.
-- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Schematic drafts are available at `previews/phase5_A05_elevations.svg`.
+- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Show the required balcony only on the east/front entry-carport facade, aligned with the family area and matching the common geometry in A-03, A-04, A-05, A-06 and A-07.
 - [ ] **T-45 / A-06** Finalize at least two building sections, with at least one through the actual coordinated stairway. Current draft diagrams are at `previews/phase5_A06_sections.svg`.
-- [ ] **T-46 / A-07** Finalize architectural details and schedules. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
+- [ ] **T-46 / A-07** Finalize architectural details and schedules, including the balcony guardrail note and nominal balcony door in the opening schedule. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
 - [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information across all sheets.
 - [ ] **T-48 / D-01** Finish the shared-data drawing generator so SVG previews and editable DXF exports are produced from matching geometry/dimensions. `data/building_model.json` exists, but automatic generation and DXF export are not complete.
 - [ ] **T-49 / D-02** Review every SVG preview against the assignment, code calculations, and drawing coordination requirements; revise before final export.
 
 #### Phase 5 implementation checkpoint (2026-10-10)
 
-A **preliminary A-01 to A-07 preview package** is committed on the `phase5-architectural-plans` branch. The preview index is in the main README and the project-wide assumptions/status are recorded in `PROJECT_STATUS.md` and `space_planning/phase5_architecture_notes.md`. The shared source model is `data/building_model.json`; `scripts/validate_architectural_previews.py` checks its arithmetic and basic SVG consistency.
+A preliminary A-01 to A-07 preview package is committed to the repository. The shared source model is `data/building_model.json`; the current SVG previews are useful for review, but they are still draft diagrams rather than finished drawing sheets.
 
-These are drafts only, not final drawing deliverables. Phase 2 remains unfinished: the applicable local zoning/setbacks, legal road/ROW lines, final buildable envelope, parking, open-space and occupant-load calculations have not been confirmed. A-01 shows a **uniform 2.00 m screening offset only**, not the final approved setback. Floor levels, opening locations and sizes, roof pitch and story heights also remain provisional.
+Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, and a 152.43 m² setback envelope. The required 3.00 m × 1.50 m balcony is on the east/front entry-carport side, beside and accessed from the family area in A-03, and coordinated across A-01 to A-07. A-01 must show the road/ROW dimensions, and A-02/A-03/A-04/A-05/A-06/A-07 must be coordinated with the 73.47 m² enclosed area per floor, 4.50 m² balcony, 146.94 m² enclosed total and 151.44 m² total including balcony.
 
-The SVG previews are committed for inspection, but model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until the Phase 2 inputs and later coordination checks are resolved.
+Model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review, final schedules and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until these drawing and export checks are completed. All drawings remain academic drafts, not permit or construction documents.
 
 ### Phase 6: Preliminary specifications
 

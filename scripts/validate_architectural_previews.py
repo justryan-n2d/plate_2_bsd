@@ -100,6 +100,110 @@ def validate_model(data: dict) -> None:
     if not math.isclose(combined, float(site["combined_covered_ground_area_m2"]), rel_tol=0.0, abs_tol=0.01):
         fail("Combined ground coverage arithmetic is inconsistent")
 
+    # The balcony is an external projection, so validate it separately from enclosed room boxes.
+    balcony = building.get("balcony")
+    if not isinstance(balcony, dict) or balcony.get("status") != "required":
+        fail("The shared model must include a required second-floor balcony")
+    balcony_width = float(balcony["width_m"])
+    balcony_projection = float(balcony["projection_m"])
+    balcony_area = float(balcony["area_m2"])
+    balcony_x = float(balcony["x_m"])
+    balcony_y = float(balcony["y_m"])
+    if min(balcony_width, balcony_projection, balcony_area) <= 0:
+        fail("Balcony dimensions and area must be positive")
+    if not math.isclose(balcony_width * balcony_projection, balcony_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Balcony area does not match width x projection")
+    if balcony.get("front_facade") != "east":
+        fail("Balcony must be on the selected east/front facade")
+    if not math.isclose(balcony_x, width, rel_tol=0.0, abs_tol=0.001):
+        fail("Balcony must project from the east exterior wall")
+    if balcony_y < 0 or balcony_y + balcony_width > depth + 1e-6:
+        fail("Balcony span must fit along the east facade within the nominal house depth")
+    if balcony.get("attached_to") != "Family area":
+        fail("Balcony must be attached to the family area, not a bedroom")
+    family = next((room for room in building["rooms"]["Second Floor"] if room["name"] == "Family area"), None)
+    if family is None:
+        fail("Second-floor model must include the family area")
+    if not math.isclose(balcony_y, float(family["y_m"]), rel_tol=0.0, abs_tol=0.001):
+        fail("Balcony alignment must start at the family-area facade edge")
+    if not math.isclose(balcony_width, float(family["depth_m"]), rel_tol=0.0, abs_tol=0.001):
+        fail("Balcony span must match the family-area length along the east facade")
+    if not math.isclose(float(family["x_m"]) + float(family["width_m"]), width, rel_tol=0.0, abs_tol=0.001):
+        fail("Family area must share the east/front exterior wall with the balcony")
+
+    north_edge = float(site["building_placement"]["south_edge_northing_m"]) + float(site["building_placement"]["depth_m"])
+    base_x = float(site["building_placement"]["southwest_easting_m"])
+    east_edge = base_x + width
+    balcony_north = north_edge - balcony_y
+    balcony_south = balcony_north - balcony_width
+    balcony_world = [
+        (east_edge, balcony_north),
+        (east_edge + balcony_projection, balcony_north),
+        (east_edge + balcony_projection, balcony_south),
+        (east_edge, balcony_south),
+    ]
+    if not all(point_in_polygon(point, screen) for point in balcony_world):
+        fail("Balcony projection falls outside the selected S-01 academic setback envelope")
+
+    area_assumptions = building.get("academic_floor_area_assumption", {})
+    ground_gross = float(area_assumptions.get("ground_floor_gross_m2", 0))
+    second_enclosed = float(area_assumptions.get("second_floor_enclosed_gross_m2", 0))
+    second_with_balcony = float(area_assumptions.get("second_floor_total_with_balcony_m2", 0))
+    total_enclosed = float(area_assumptions.get("total_enclosed_house_floor_area_m2", 0))
+    total_including_balcony = float(area_assumptions.get("total_floor_area_including_balcony_m2", 0))
+    if not math.isclose(ground_gross, calc_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Ground-floor area assumption does not match the main footprint")
+    if not math.isclose(second_enclosed, calc_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Second-floor enclosed area assumption does not match the stated same-envelope basis")
+    if not math.isclose(second_with_balcony, second_enclosed + balcony_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Second-floor total including balcony is inconsistent")
+    if not math.isclose(total_enclosed, ground_gross + second_enclosed, rel_tol=0.0, abs_tol=0.01):
+        fail("Total enclosed house floor area is inconsistent")
+    if not math.isclose(total_including_balcony, total_enclosed + balcony_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Total floor area including balcony is inconsistent")
+
+    if not math.isclose(
+        float(building["floor_levels"]["second_ffl_m"]) - float(building["floor_levels"]["ground_ffl_m"]),
+        float(building["assumed_heights"]["ground_floor_to_second_floor_m"]),
+        rel_tol=0.0,
+        abs_tol=0.001,
+    ):
+        fail("Ground-to-second floor level difference does not match the assumed stair rise")
+
+    # The stair enclosure and upper-floor opening must occupy the same plan coordinates.
+    ground_stair = next((r for r in building["rooms"]["Ground Floor"] if r["name"] == "Stairway"), None)
+    upper_stair = next((r for r in building["rooms"]["Second Floor"] if r["name"] == "Stair opening / flight"), None)
+    if ground_stair is None or upper_stair is None:
+        fail("Both floor plans must define the stair/stair-opening zone")
+    for key in ("x_m", "y_m", "width_m", "depth_m"):
+        if not math.isclose(float(ground_stair[key]), float(upper_stair[key]), rel_tol=0.0, abs_tol=0.001):
+            fail(f"Ground stair and upper-floor opening are not aligned for {key}")
+
+    # Room planning boxes must not overlap one another on the same floor.
+    for floor, rooms in building["rooms"].items():
+        for index, first in enumerate(rooms):
+            fx1, fy1 = float(first["x_m"]), float(first["y_m"])
+            fx2 = fx1 + float(first["width_m"])
+            fy2 = fy1 + float(first["depth_m"])
+            for second in rooms[index + 1:]:
+                sx1, sy1 = float(second["x_m"]), float(second["y_m"])
+                sx2 = sx1 + float(second["width_m"])
+                sy2 = sy1 + float(second["depth_m"])
+                overlap_x = min(fx2, sx2) - max(fx1, sx1)
+                overlap_y = min(fy2, sy2) - max(fy1, sy1)
+                if overlap_x > 0.01 and overlap_y > 0.01:
+                    fail(f"Room planning boxes overlap on {floor}: {first['name']} / {second['name']}")
+
+    roof = building["roof"]
+    heights = building["assumed_heights"]
+    pitch = math.radians(float(roof["pitch_degrees"]))
+    expected_ridge = float(heights["eaves_m"]) + math.tan(pitch) * float(foot["width_m"]) / 2.0
+    if not math.isclose(expected_ridge, float(heights["roof_ridge_m"]), rel_tol=0.0, abs_tol=0.02):
+        fail(
+            f"Roof ridge elevation is inconsistent with width/pitch: "
+            f"calculated={expected_ridge:.3f} m, recorded={float(heights['roof_ridge_m']):.3f} m"
+        )
+
     for floor, rooms in building["rooms"].items():
         names: set[str] = set()
         for room in rooms:
@@ -120,7 +224,63 @@ def validate_model(data: dict) -> None:
                 fail(f"Missing dimension note for {floor} / {name}")
 
 
-def validate_svg_files() -> None:
+def validate_room_svg_geometry(root: ET.Element, data: dict, floor_key: str, filename: str) -> None:
+    """Confirm the visible room rectangles match their shared-model coordinates."""
+    footprint = data["building"]["footprint"]
+    outline = root.find(".//*[@id='main-house-outline']")
+    if outline is None:
+        fail(f"{filename} is missing the main-house outline used for geometry checks")
+    x0 = float(outline.attrib["x"])
+    y0 = float(outline.attrib["y"])
+    scale_x = float(outline.attrib["width"]) / float(footprint["width_m"])
+    scale_y = float(outline.attrib["height"]) / float(footprint["depth_m"])
+    expected = {room["name"]: room for room in data["building"]["rooms"][floor_key]}
+    found: dict[str, tuple[float, float, float, float]] = {}
+
+    for group in root.iter():
+        if local_name(group.tag) != "g":
+            continue
+        room_name = group.attrib.get("data-room-name")
+        if not room_name:
+            continue
+        if room_name not in expected:
+            fail(f"{filename} has an unrecognized room geometry tag: {room_name}")
+        room_rect = next((child for child in list(group) if local_name(child.tag) == "rect"), None)
+        if room_rect is None:
+            fail(f"{filename} room {room_name} has no direct room rectangle")
+        try:
+            actual = (
+                (float(room_rect.attrib["x"]) - x0) / scale_x,
+                (float(room_rect.attrib["y"]) - y0) / scale_y,
+                float(room_rect.attrib["width"]) / scale_x,
+                float(room_rect.attrib["height"]) / scale_y,
+            )
+        except (KeyError, ValueError, ZeroDivisionError):
+            fail(f"{filename} room {room_name} has invalid numeric rectangle geometry")
+        target = expected[room_name]
+        wanted = (
+            float(target["x_m"]),
+            float(target["y_m"]),
+            float(target["width_m"]),
+            float(target["depth_m"]),
+        )
+        for label, actual_value, expected_value in zip(("x", "y", "width", "depth"), actual, wanted):
+            if not math.isclose(actual_value, expected_value, rel_tol=0.0, abs_tol=0.02):
+                fail(
+                    f"{filename} room {room_name} {label} mismatch: "
+                    f"drawing={actual_value:.3f} m, model={expected_value:.3f} m"
+                )
+        if room_name in found:
+            fail(f"{filename} duplicates room geometry tag: {room_name}")
+        found[room_name] = actual
+
+    missing = set(expected) - set(found)
+    extra = set(found) - set(expected)
+    if missing or extra:
+        fail(f"{filename} room geometry tags disagree with the model; missing={sorted(missing)}, extra={sorted(extra)}")
+
+
+def validate_svg_files(data: dict) -> None:
     for filename, drawing_no in DRAWINGS.items():
         path = PREVIEW_DIR / filename
         if not path.is_file():
@@ -131,6 +291,17 @@ def validate_svg_files() -> None:
             raise ValueError(f"Malformed SVG in {filename}: {exc}") from exc
         if local_name(root.tag) != "svg":
             fail(f"{filename} root element is not svg")
+        if root.attrib.get("data-front-facade") != "east":
+            fail(f"{filename} must use the shared east/front facade orientation")
+        if root.attrib.get("data-balcony-access") != "family-area":
+            fail(f"{filename} must share family-area access to the east/front balcony")
+        for attr, expected in (("data-balcony-width-m", 3.0), ("data-balcony-projection-m", 1.5), ("data-balcony-offset-m", 4.9)):
+            try:
+                actual = float(root.attrib[attr])
+            except (KeyError, ValueError):
+                fail(f"{filename} is missing valid shared balcony metadata: {attr}")
+            if not math.isclose(actual, expected, rel_tol=0.0, abs_tol=0.001):
+                fail(f"{filename} balcony metadata mismatch for {attr}: {actual} != {expected}")
         title = " ".join(
             " ".join("".join(el.itertext()).split())
             for el in root.iter()
@@ -152,6 +323,114 @@ def validate_svg_files() -> None:
             fail(f"{filename} description must state that it is preliminary and not final/construction-ready")
         if drawing_no not in visible_text:
             fail(f"{filename} visible sheet title does not contain {drawing_no}")
+        geometry_ids = {
+            "A-01": ("front-balcony-projection", "main-house-footprint"),
+            "A-03": ("front-balcony-plan", "main-house-outline"),
+            "A-04": ("front-balcony-projection", "main-roof-footprint"),
+        }
+        if drawing_no in geometry_ids:
+            balcony_id, envelope_id = geometry_ids[drawing_no]
+            balcony_shape = root.find(f".//*[@id='{balcony_id}']")
+            envelope_shape = root.find(f".//*[@id='{envelope_id}']")
+            if balcony_shape is None or envelope_shape is None:
+                fail(f"{filename} must include both the house/roof outline and balcony geometry")
+            try:
+                bx = float(balcony_shape.attrib["x"])
+                by = float(balcony_shape.attrib["y"])
+                bw = float(balcony_shape.attrib["width"])
+                bh = float(balcony_shape.attrib["height"])
+                ex = float(envelope_shape.attrib["x"])
+                ey = float(envelope_shape.attrib["y"])
+                ew = float(envelope_shape.attrib["width"])
+                eh = float(envelope_shape.attrib["height"])
+            except (KeyError, ValueError):
+                fail(f"{filename} balcony or envelope geometry has missing numeric coordinates")
+            scale_x, scale_y = ew / 9.30, eh / 7.90
+            expected = (
+                ex + ew,
+                ey + float(root.attrib["data-balcony-offset-m"]) * scale_y,
+                1.50 * scale_x,
+                3.00 * scale_y,
+            )
+            actual = (bx, by, bw, bh)
+            for name, a, e in zip(("east-edge x", "family-area alignment y", "projection width", "facade span"), actual, expected):
+                if not math.isclose(a, e, rel_tol=0.0, abs_tol=0.03):
+                    fail(f"{filename} balcony {name} mismatch: {a} != {e}")
+        if drawing_no == "A-02":
+            validate_room_svg_geometry(root, data, "Ground Floor", filename)
+        elif drawing_no == "A-03":
+            validate_room_svg_geometry(root, data, "Second Floor", filename)
+
+        if drawing_no == "A-01":
+            expected_site_dimensions = {
+                "data-road-carriageway-m": 5.0,
+                "data-road-row-m": 8.0,
+                "data-setback-m": 2.0,
+            }
+            for attr, expected_value in expected_site_dimensions.items():
+                try:
+                    actual_value = float(root.attrib[attr])
+                except (KeyError, ValueError):
+                    fail(f"A-01 is missing valid source metadata: {attr}")
+                if not math.isclose(actual_value, expected_value, rel_tol=0.0, abs_tol=0.001):
+                    fail(f"A-01 source dimension {attr} mismatch: {actual_value} != {expected_value}")
+
+            for boundary in ("P1-P2", "P2-P3", "P3-P4", "P4-P5", "P5-P1"):
+                setback_dimension = root.find(f".//*[@id='setback-dim-{boundary}']")
+                if setback_dimension is None:
+                    fail(f"A-01 must show a 2.00 m setback dimension for boundary {boundary}")
+                label_text = " ".join("".join(el.itertext()) for el in setback_dimension.iter() if local_name(el.tag) == "text")
+                if "2.00 m" not in label_text:
+                    fail(f"A-01 setback dimension {boundary} is missing its 2.00 m label")
+
+            row_dimension = root.find(".//*[@id='row-dimension-line']")
+            carriageway_dimension = root.find(".//*[@id='carriageway-dimension-line']")
+            if row_dimension is None or carriageway_dimension is None:
+                fail("A-01 must have separate dimension lines for the 8.00 m total ROW and 5.00 m carriageway")
+            try:
+                row_length = abs(float(row_dimension.attrib["x2"]) - float(row_dimension.attrib["x1"]))
+                carriageway_length = abs(float(carriageway_dimension.attrib["x2"]) - float(carriageway_dimension.attrib["x1"]))
+            except (KeyError, ValueError):
+                fail("A-01 road/ROW dimension lines are missing numeric endpoints")
+            if row_length <= carriageway_length or not math.isclose(row_length / carriageway_length, 8.0 / 5.0, rel_tol=0.0, abs_tol=0.01):
+                fail("A-01 road/ROW dimension-line lengths must distinguish 8.00 m ROW from the 5.00 m carriageway")
+            for required_text in ("8.00 m TOTAL ROW", "5.00 m CARRIAGEWAY", "Remaining ROW outside carriageway: 3.00 m in total"):
+                if required_text not in visible_text:
+                    fail(f"A-01 is missing the required road/ROW note: {required_text}")
+            if "no specific placement of the carriageway within the row is assumed" not in visible_text.lower():
+                fail("A-01 must state that no specific lateral placement of the carriageway within the ROW is assumed")
+
+        if drawing_no == "A-03":
+            if "balcony" not in desc or "balcony" not in visible_text.lower():
+                fail("A-03 must describe and visibly show the required balcony")
+            if "3.00 x 1.50 m" not in visible_text:
+                fail("A-03 must label the balcony dimensions as 3.00 x 1.50 m")
+            if "accessed from the family area" not in desc:
+                fail("A-03 must state that the balcony is accessed from the family area")
+            if "Family area" not in visible_text or "D-04" not in visible_text:
+                fail("A-03 must show the family area and its D-04 balcony access")
+            access_door = root.find(".//*[@id='family-area-balcony-door']")
+            if access_door is None or access_door.attrib.get("data-access-space") != "family-area" or access_door.attrib.get("data-width-m") != "0.90":
+                fail("A-03 D-04 must be a 0.90 m door from the family area")
+            if any(local_name(el.tag) == "rect" and el.attrib.get("x") in {"417.35", "159.35"} and el.attrib.get("fill") == "#ffffff" for el in root.iter()):
+                fail("A-03 contains opaque furniture boxes that can cover room labels")
+        if drawing_no == "A-05":
+            if "balcony" not in visible_text.lower() or "FRONT ELEVATION - ENTRY / CARPORT SIDE" not in visible_text:
+                fail("A-05 must show the balcony on the east/front entry-carport elevation")
+            front_balcony = root.find(".//*[@id='front-balcony-elevation']")
+            if front_balcony is None:
+                fail("A-05 must include the front-balcony elevation geometry")
+            if front_balcony.attrib.get("data-span-m") != "3.00" or front_balcony.attrib.get("data-projection-m") != "1.50" or front_balcony.attrib.get("data-offset-m") != "4.90" or front_balcony.attrib.get("data-access-space") != "family-area":
+                fail("A-05 balcony span/projection/position metadata must match the family-area location")
+        if drawing_no == "A-06":
+            front_section = root.find(".//*[@id='front-balcony-section']")
+            if front_section is None:
+                fail("A-06 must include a section through the front balcony")
+            if front_section.attrib.get("data-span-m") != "3.00" or front_section.attrib.get("data-projection-m") != "1.50" or front_section.attrib.get("data-offset-m") != "4.90" or front_section.attrib.get("data-access-space") != "family-area":
+                fail("A-06 balcony span/projection/position metadata must match the family-area location")
+        if drawing_no == "A-07":
+            if "Front/east balcony beside family area" not in visible_text or "D-04 Balcony door from family area: 0.90 x 2.10 m" not in visible_text:
+                fail("A-07 balcony note and D-04 door schedule must match the front balcony")
 
 
 def main() -> int:
@@ -159,11 +438,12 @@ def main() -> int:
         fail(f"Missing shared building model: {MODEL_PATH}")
     data = json.loads(MODEL_PATH.read_text(encoding="utf-8"))
     validate_model(data)
-    validate_svg_files()
+    validate_svg_files(data)
     print("PASS: site area and 2 m screening geometry agree with the shared building model.")
-    print("PASS: house/carport rectangles are contained by the screening polygon.")
+    print("PASS: house/carport and family-area balcony fit within the S-01 academic envelope.")
     print("PASS: each room target area equals width x depth and fits the nominal footprint.")
     print("PASS: all seven A-01 to A-07 SVG sheets parse and are labelled preliminary.")
+    print("PASS: A-01/A-03/A-04 balcony geometry aligns with the family area; A-05/A-06/A-07 match its location and D-04 access.")
     print("NOTE: this verifies file/data consistency only, not setbacks, code compliance, design adequacy, or permit/construction readiness.")
     return 0
 

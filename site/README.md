@@ -33,4 +33,13 @@ The Phase 1 site-base work was merged into `main` through [Pull Request #1](http
 
 Checks covered the original and adjusted P5-1 records, closure components, perimeter/area values, the 300.00 m² comparison, CSV formatting, the 5.0 m road versus 8.00 m ROW distinction, and consistency across the project notes. These checks do not certify the property survey or resolve the 34.74 m² area difference. Confirm the original survey plan, parcel/road geometry, actual site conditions, and setbacks before relying on the plot for a final site-development plan.
 
-No house layout has been started.
+No final dimensioned house layout has been approved. A-01 to A-07 concept drafts are now in the previews folder and remain subject to Phase 2 site/code review.
+
+
+## Phase 2 site requirement screening
+
+- [Phase 2 site requirements and code hold points](phase2_site_requirements.md)
+- [Setback scenario CSV](phase2_setback_scenarios.csv)
+- [Visual comparison of four screening scenarios](../previews/phase2_setback_scenarios.svg)
+
+The scenarios use the adjusted academic traverse to compare a uniform 2.00 m offset with R-1 table-style 4.50 m front-yard variants. None is a final legally confirmed setback. Confirm the official survey / road ROW, local zoning and applicable front-yard classification before closing Phase 2.

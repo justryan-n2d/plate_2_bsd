@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
   <title id="title">Plate No. 2 Phase 3 - Second-floor conceptual zoning</title>
-  <desc id="description">Conceptual second-floor zoning diagram, not to scale and not a dimensioned plan. Required spaces: Master bedroom; Bedroom 2; Bedroom 3; Toilet and bath (second floor); Family area; Stair landing / circulation. Optional space: Balcony (if appropriate). The final envelope, orientation and openings remain pending.</desc>
+  <desc id="description">Conceptual second-floor zoning diagram, not to scale and not a dimensioned plan. Required spaces: Master bedroom; Bedroom 2; Bedroom 3; Toilet and bath (second floor); Family area; Stair landing / circulation; Balcony. The 3.00 x 1.50 m balcony is beside and accessed directly from the family area on the east/right front side.</desc>
   <style>
     text{font-family:Arial,Helvetica,sans-serif;fill:#172033}
     .title{font-size:29px;font-weight:700}
@@ -15,20 +15,20 @@
   <text class="title" x="40" y="48">SECOND FLOOR - CONCEPTUAL ZONING</text>
   <text class="sub" x="40" y="78">Private bedrooms around shared circulation and family space. Blocks are not to scale.</text>
   <rect x="160" y="160" width="880" height="505" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2.5" stroke-dasharray="10 7"/>
-  <text class="sub" x="180" y="185">Schematic enclosed building zone (final footprint pending Phase 2)</text>
+  <text class="sub" x="180" y="185">Schematic enclosed building zone; balcony projects outside the enclosed footprint</text>
 
-  <g><rect x="190" y="215" width="235" height="140" rx="12" fill="#fff3dc" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="307.5" y="275" text-anchor="middle"><tspan x="307.5" dy="0">Master bedroom</tspan><tspan x="307.5" dy="20">3.20 x 3.40 m</tspan></text></g>
-  <g><rect x="440" y="215" width="205" height="140" rx="12" fill="#fff3dc" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="542.5" y="275" text-anchor="middle"><tspan x="542.5" dy="0">Bedroom 2</tspan><tspan x="542.5" dy="20">2.80 x 3.00 m</tspan></text></g>
-  <g><rect x="660" y="215" width="205" height="140" rx="12" fill="#fff3dc" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="762.5" y="275" text-anchor="middle"><tspan x="762.5" dy="0">Bedroom 3</tspan><tspan x="762.5" dy="20">2.80 x 3.00 m</tspan></text></g>
-  <g><rect x="880" y="215" width="135" height="140" rx="12" fill="#e4f4eb" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="947.5" y="275" text-anchor="middle"><tspan x="947.5" dy="0">Toilet and bath</tspan><tspan x="947.5" dy="20">1.50 x 2.10 m</tspan></text></g>
-  <g><rect x="190" y="375" width="260" height="130" rx="12" fill="#e8f1f9" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="320" y="430" text-anchor="middle"><tspan x="320" dy="0">Family area</tspan><tspan x="320" dy="20">2.80 x 3.00 m</tspan></text></g>
+  <g><rect x="750" y="215" width="235" height="140" rx="12" fill="#fff3dc" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="867.5" y="275" text-anchor="middle"><tspan x="867.5" dy="0">Master bedroom</tspan><tspan x="867.5" dy="20">3.20 x 3.40 m</tspan></text></g>
+  <g><rect x="520" y="215" width="205" height="140" rx="12" fill="#fff3dc" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="622.5" y="275" text-anchor="middle"><tspan x="622.5" dy="0">Bedroom 2</tspan><tspan x="622.5" dy="20">2.80 x 3.00 m</tspan></text></g>
+  <g><rect x="300" y="215" width="205" height="140" rx="12" fill="#fff3dc" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="402.5" y="275" text-anchor="middle"><tspan x="402.5" dy="0">Bedroom 3</tspan><tspan x="402.5" dy="20">2.80 x 3.00 m</tspan></text></g>
+  <g><rect x="160" y="215" width="135" height="140" rx="12" fill="#e4f4eb" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="227.5" y="275" text-anchor="middle"><tspan x="227.5" dy="0">Toilet and bath</tspan><tspan x="227.5" dy="20">1.50 x 2.10 m</tspan></text></g>
+  <g><rect x="190" y="525" width="260" height="130" rx="12" fill="#e8f1f9" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="320" y="580" text-anchor="middle"><tspan x="320" dy="0">Family area</tspan><tspan x="320" dy="20">2.80 x 3.00 m</tspan></text></g>
   <g><rect x="465" y="375" width="245" height="130" rx="12" fill="#eeeafa" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="587.5" y="430" text-anchor="middle"><tspan x="587.5" dy="0">Stair landing /</tspan><tspan x="587.5" dy="20">circulation</tspan></text></g>
   <g><rect x="725" y="375" width="290" height="130" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="870" y="430" text-anchor="middle"><tspan x="870" dy="0">Shared circulation</tspan><tspan x="870" dy="20">5.00 m² target</tspan></text></g>
-  <g><rect x="725" y="680" width="290" height="80" rx="12" fill="#fffaf0" stroke="#b77935" stroke-width="1.6" stroke-dasharray="7 5"/><text class="node-label" x="870" y="710" text-anchor="middle"><tspan x="870" dy="0">Balcony (if appropriate)</tspan><tspan x="870" dy="20">Optional 1.20 x 3.00 m</tspan></text></g>
-  <line x1="870" y1="505" x2="870" y2="670" stroke="#b77935" stroke-width="3" stroke-dasharray="6 6"/>
+  <g><rect x="470" y="552" width="180" height="75" rx="12" fill="#d1fae5" stroke="#0f766e" stroke-width="1.8"/><text class="node-label" x="560" y="580" text-anchor="middle"><tspan x="560" dy="0">Required balcony</tspan><tspan x="560" dy="20">3.00 x 1.50 m</tspan></text></g>
+  <line x1="450" y1="590" x2="470" y2="590" stroke="#0f766e" stroke-width="3"/>
   <text class="note" x="180" y="787">- Bedrooms should have independent access from shared circulation; no bedroom should be a passage to another room.</text>
   <text class="note" x="180" y="812">- Keep the upstairs bath near bedrooms and preferably near the ground-floor bath if the actual plan permits.</text>
-  <text class="note" x="180" y="837">- The balcony is outside the dashed building zone and remains optional pending site and code checks.</text>
+  <text class="note" x="180" y="837">- The required balcony is directly accessible from the family area through D-04 and is measured separately from enclosed room area.</text>
   <rect x="160" y="850" width="880" height="38" rx="12" fill="#ffffff" stroke="#d7dee8"/>
   <text class="note" x="180" y="874">Phase 4 must confirm that the stair flight, landing, headroom and circulation fit the later dimensioned layout.</text>
 </svg>

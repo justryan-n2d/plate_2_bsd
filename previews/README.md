@@ -9,3 +9,18 @@ The generated preview is produced by GitHub Actions at phase1_site_base_preview.
 The conceptual Phase 3 zoning and adjacency previews are committed in `space_planning/`. They are not to scale and do not prove code compliance or final layout dimensions.
 
 SVG previews are for browser inspection. They do not prove CAD units, print scale, survey accuracy, or code compliance.
+
+
+## Phase 5 architectural draft previews
+
+A-01 to A-07 are committed preliminary SVG drawing previews:
+
+- `phase5_A01_site_development.svg`
+- `phase5_A02_ground_floor.svg`
+- `phase5_A03_second_floor.svg`
+- `phase5_A04_roof_plan.svg`
+- `phase5_A05_elevations.svg`
+- `phase5_A06_sections.svg`
+- `phase5_A07_details_schedules.svg`
+
+Shared assumptions are recorded in `../data/building_model.json` and `../space_planning/phase5_architecture_notes.md`. These SVGs are for draft review, not construction. The 2.00 m site inset is a screening scenario, not an approved building envelope. See `../PROJECT_STATUS.md` for the current phase and hold points.

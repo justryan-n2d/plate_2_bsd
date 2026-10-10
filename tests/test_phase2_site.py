@@ -4,6 +4,8 @@ from scripts.calculate_phase2_site import (
     DEFAULT_SETBACKS,
     DEFAULT_TRAVERSE,
     build_phase2_report,
+    build_preliminary_envelope_scenarios_report,
+    calculate_preliminary_envelope_scenarios,
     calculate_maximum_occupancy,
     calculate_preliminary_parking_slots,
     inset_convex_polygon,
@@ -73,6 +75,26 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         self.assertAlmostEqual(traverse["perimeter_m"], 64.145414, places=4)
         self.assertIsNone(envelope["area_m2"])
         self.assertEqual(envelope["missing_edge_indices"], [2, 3])
+
+    def test_preliminary_envelope_scenario_areas_are_reproducible(self):
+        traverse = load_traverse(DEFAULT_TRAVERSE)
+        scenarios = calculate_preliminary_envelope_scenarios(traverse["vertices"])
+        areas = {item["scenario_id"]: item["area_m2"] for item in scenarios}
+        self.assertAlmostEqual(areas["A"], 152.430851, places=5)
+        self.assertAlmostEqual(areas["B"], 128.898939, places=5)
+        self.assertAlmostEqual(areas["C"], 125.015904, places=5)
+        self.assertAlmostEqual(areas["D"], 112.290926, places=5)
+        self.assertEqual(scenarios[0]["offsets_m"], [2.0, 2.0, 2.0, 2.0, 2.0])
+        self.assertEqual(scenarios[3]["offsets_m"], [2.0, 2.0, 4.5, 4.5, 2.0])
+
+    def test_scenario_report_is_current_and_keeps_local_rule_unresolved(self):
+        traverse = load_traverse(DEFAULT_TRAVERSE)
+        expected = build_preliminary_envelope_scenarios_report(traverse["vertices"])
+        report_path = DEFAULT_TRAVERSE.parent.parent / "calculations" / "phase2_envelope_scenarios.md"
+        self.assertEqual(report_path.read_text(encoding="utf-8"), expected)
+        self.assertIn("No final buildable envelope has been selected", expected)
+        self.assertIn("for purposes of Section 704", expected)
+        self.assertIn("152.43 m²", expected)
 
     def test_negative_offsets_are_rejected(self):
         square = [(0.0, 0.0), (10.0, 0.0), (10.0, 10.0), (0.0, 10.0)]

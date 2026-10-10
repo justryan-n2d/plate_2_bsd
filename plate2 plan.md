@@ -213,8 +213,8 @@ Phase 2 is still pending. The proposed buildable envelope, setbacks, footprint, 
 
 ### Phase 7: Required documentation
 
-- [x] **T-60** Draft the Space Requirement Table is prepared in `space_planning/`; reconfirm after the dimensioned layout is developed.
-- [x] **T-61** Preliminary Adjacency Diagram is prepared in `space_planning/`; recheck against the final layout.
+- [x] **T-60** Prepare a preliminary Space Requirement Table in `space_planning/`; reconfirm after the dimensioned layout is developed.
+- [x] **T-61** Prepare a preliminary Adjacency Diagram in `space_planning/`; recheck against the final layout.
 - [ ] **T-62** Complete the Site Analysis.
 - [ ] **T-63** Complete the Preliminary Building Specifications.
 - [ ] **T-64** Complete the Specification Schedule.

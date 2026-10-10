@@ -33,6 +33,7 @@ REQUIRED_BY_FLOOR = {
         "Toilet and bath (second floor)",
         "Family area",
         "Stair landing / circulation",
+        "Balcony",
     },
 }
 VALID_STATUSES = {"required", "optional", "allowance"}
@@ -159,7 +160,7 @@ def validate_schedule() -> tuple[set[str], dict[str, set[str]], list[dict[str, s
         "ground circulation allowance": (ground_allowance, 4.50),
         "upper enclosed target": (upper_enclosed, 44.23),
         "carport placeholder": (carport, 15.40),
-        "optional balcony": (balcony, 3.60),
+        "required balcony": (balcony, 4.50),
     }
     for label, (actual, target) in expected.items():
         if not math.isclose(actual, target, rel_tol=0.0, abs_tol=0.011):

@@ -68,7 +68,7 @@ S-01 contains the current house and carport rectangles. S-02 to S-04 remain in t
 
 1. Review/merge [PR #6](https://github.com/justryan-n2d/plate_2_bsd/pull/6) after checking the changed calculations and status records.
 2. Revise A-01 to show the 5.00 m carriageway inside the 8.00 m total ROW and the selected 2.00 m academic setback. Do not assign the remaining 3.00 m to specific shoulder/drainage strips without a supplied drawing detail.
-3. Keep the required 3.00 m × 1.50 m east/front balcony attached to the master bedroom in A-03; coordinate A-01/A-04/A-05/A-06/A-07 to the same location and dimensions, and report its 4.50 m² separately from enclosed floor area.
+3. Keep the required 3.00 m × 1.50 m east/front balcony beside and accessed from the family area in A-03; coordinate A-01/A-04/A-05/A-06/A-07 to the same location and dimensions, and report its 4.50 m² separately from enclosed floor area.
 4. Check that the current 9.30 m × 7.90 m footprint, carport, balcony, floor-area assumptions, room layouts and stair agree across A-01, A-02, A-03, A-05 and A-06.
 4. Finish the shared-source SVG generation and editable architectural DXF/DWG export; inspect the exports in compatible CAD software.
 5. Complete Phase 6 specifications, Phase 7 documentation and Phase 8 sheet/print review.

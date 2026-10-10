@@ -8,7 +8,8 @@ Project workspace for the proposed two-storey residential building plate.
 - The academic plot closes by keeping courses 1-2 through 4-5 unchanged and using the documented adjusted P5-1 closing course.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
-- GitHub Actions now generates the DXF and SVG preview, validates the outputs against the source CSV, and uploads a ZIP artifact on successful runs.
+- GitHub Actions generates and validates the Phase 1 DXF/SVG output from the traverse data.
+- Phase 3 now has a preliminary room requirement table, adjacency matrix, relationship diagram, and conceptual zoning diagrams for both floors. These are explicitly not-to-scale and not code-approved.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
@@ -17,6 +18,24 @@ Project workspace for the proposed two-storey residential building plate.
 ![Preliminary Phase 1 site base](site/phase1_site_base.svg)
 
 See the [site folder README](site/README.md) for source files, assumptions, and verification limits.
+
+## Phase 3 space-planning previews
+
+These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 setbacks and the buildable envelope, plus Phase 4 stair calculations, remain pending.
+
+### Adjacency / relationship diagram
+
+![Preliminary adjacency diagram](space_planning/adjacency_diagram.svg)
+
+### Ground-floor conceptual zoning
+
+![Preliminary ground-floor zoning](space_planning/ground_floor_zoning.svg)
+
+### Second-floor conceptual zoning
+
+![Preliminary second-floor zoning](space_planning/second_floor_zoning.svg)
+
+See the [Phase 3 space-planning notes](space_planning/space_planning.md), [room schedule](space_planning/space_requirement_table.csv), and [adjacency matrix](space_planning/adjacency_matrix.csv).
 
 ## Project records
 

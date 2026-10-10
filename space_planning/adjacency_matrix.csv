@@ -1,0 +1,21 @@
+floor,space_a,space_b,relationship,reason
+Ground Floor,Entrance / foyer,Living room,direct,The entry should lead naturally to the public living zone.
+Ground Floor,Entrance / foyer,Stairway,near,The stair should be easy to find without blocking the entry.
+Ground Floor,Entrance / foyer,Garage / carport,near,Provide a convenient route while keeping pedestrians distinct from vehicle movement.
+Ground Floor,Living room,Dining area,direct,Daily social use benefits from a connected living and dining zone.
+Ground Floor,Living room,Stairway,near,Keep vertical circulation accessible from the public zone.
+Ground Floor,Dining area,Kitchen,direct,Food preparation and serving should have a short direct route.
+Ground Floor,Kitchen,Storage / service area,direct,Keep support storage close to kitchen activity.
+Ground Floor,Bedroom / guest room,Toilet and bath (ground floor),near,The guest bedroom should have convenient bathroom access.
+Ground Floor,Bedroom / guest room,Living room,buffered,Keep sleeping space private from the main social zone.
+Ground Floor,Stairway,Toilet and bath (ground floor),near,Proximity may support compact circulation but must not reduce clearances.
+Second Floor,Stair landing / circulation,Family area,direct,The family area should be reached from the upper landing.
+Second Floor,Family area,Master bedroom,buffered,Keep the master bedroom accessible but not exposed directly to the main gathering zone.
+Second Floor,Family area,Bedroom 2,near,Bedrooms should be reached by short shared circulation.
+Second Floor,Family area,Bedroom 3,near,Bedrooms should be reached by short shared circulation.
+Second Floor,Bedroom 2,Toilet and bath (second floor),near,The shared bath should be convenient to bedrooms.
+Second Floor,Bedroom 3,Toilet and bath (second floor),near,The shared bath should be convenient to bedrooms.
+Second Floor,Master bedroom,Toilet and bath (second floor),near,The shared bath should remain reachable without crossing another bedroom.
+Second Floor,Family area,Balcony (if appropriate),conditional,Only connect a balcony if site and code checks support it.
+Cross-floor,Toilet and bath (ground floor),Toilet and bath (second floor),near,Prefer vertical proximity for future coordination; no utility design is included here.
+Cross-floor,Stairway,Stair landing / circulation,direct,Align the stair flight and upper landing in the later dimensioned plan.

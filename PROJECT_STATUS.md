@@ -4,7 +4,7 @@
 **Repository:** [`justryan-n2d/plate_2_bsd`](https://github.com/justryan-n2d/plate_2_bsd)  
 **Main branch after latest merge:** `51efd88248d82da50dfb143c404044a02b4c53bc`  
 **Current working branch:** `phase2-site-requirements`  
-**Current review:** [Pull Request #6](https://github.com/justryan-n2d/plate_2_bsd/pull/6), once opened.
+**Current review:** [Pull Request #6](https://github.com/justryan-n2d/plate_2_bsd/pull/6), open and awaiting review.
 
 ## Current position
 

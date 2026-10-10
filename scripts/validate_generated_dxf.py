@@ -140,6 +140,11 @@ def validate_dxf(dxf_path: Path, source_plot: dict) -> list[str]:
     ]
     if len(circles) != expected_count:
         raise ValueError(f"Expected {expected_count} vertex markers; found {len(circles)}.")
+    marker_centers = [(float(entity.dxf.center.x), float(entity.dxf.center.y)) for entity in circles]
+    for expected in expected_points:
+        if not any(close(center[0], expected[0], 1e-6) and close(center[1], expected[1], 1e-6)
+                   for center in marker_centers):
+            raise ValueError(f"No DXF vertex marker found at source coordinate {expected}.")
 
     course_labels = [
         entity for entity in msp
@@ -148,6 +153,18 @@ def validate_dxf(dxf_path: Path, source_plot: dict) -> list[str]:
     ]
     if len(course_labels) != expected_count:
         raise ValueError(f"Expected {expected_count} course labels; found {len(course_labels)}.")
+    actual_course_text = {entity.dxf.text for entity in course_labels}
+    expected_course_text = {
+        f"{row['course']} | {row['bearing']} | {float(row['distance_m']):.2f} m"
+        for row in source_plot["ordered_courses"]
+    }
+    if actual_course_text != expected_course_text:
+        missing = expected_course_text.difference(actual_course_text)
+        unexpected = actual_course_text.difference(expected_course_text)
+        raise ValueError(
+            f"DXF course labels do not match source data. Missing={sorted(missing)}; "
+            f"unexpected={sorted(unexpected)}."
+        )
 
     vertex_labels = [
         entity for entity in msp
@@ -156,6 +173,13 @@ def validate_dxf(dxf_path: Path, source_plot: dict) -> list[str]:
     ]
     if len(vertex_labels) != expected_count:
         raise ValueError(f"Expected {expected_count} vertex labels; found {len(vertex_labels)}.")
+    actual_vertex_text = {entity.dxf.text for entity in vertex_labels}
+    expected_vertex_text = {point[2] for point in source_plot["vertices"]}
+    if actual_vertex_text != expected_vertex_text:
+        raise ValueError(
+            f"DXF vertex labels do not match source points: expected "
+            f"{sorted(expected_vertex_text)}, found {sorted(actual_vertex_text)}."
+        )
 
     all_text = "\n".join(
         entity.dxf.get("text", "")
@@ -171,12 +195,13 @@ def validate_dxf(dxf_path: Path, source_plot: dict) -> list[str]:
         f"PASS: DXF model-space units are metres and required layers are present.",
         f"PASS: one closed parcel polyline has {len(actual_points)} vertices matching the source CSV.",
         f"PASS: DXF perimeter = {closed_perimeter:.6f} m; area = {closed_area:.4f} m².",
-        f"PASS: {expected_count} vertex markers, {expected_count} vertex labels, and {expected_count} course labels found.",
+        f"PASS: {expected_count} vertex markers and vertex labels match the source points.",
+        f"PASS: {expected_count} course labels match the source bearings and distances.",
         "PASS: DXF retains original/adjusted course, area, road/ROW, and preliminary-status notes.",
     ]
 
 
-def validate_svg(svg_path: Path) -> list[str]:
+def validate_svg(svg_path: Path, source_plot: dict) -> list[str]:
     if not svg_path.is_file():
         raise FileNotFoundError(f"Generated SVG preview not found: {svg_path}")
     try:
@@ -190,9 +215,32 @@ def validate_svg(svg_path: Path) -> list[str]:
     polygons = root.findall(".//svg:polygon", namespace)
     if len(polygons) != 1:
         raise ValueError(f"Expected exactly one generated parcel polygon in SVG; found {len(polygons)}.")
-    points = polygons[0].attrib.get("points", "").strip().split()
-    if len(points) != 5:
-        raise ValueError(f"Expected five parcel vertices in generated SVG; found {len(points)}.")
+    point_tokens = polygons[0].attrib.get("points", "").strip().split()
+    if len(point_tokens) != 5:
+        raise ValueError(f"Expected five parcel vertices in generated SVG; found {len(point_tokens)}.")
+    try:
+        actual_points = [tuple(float(value) for value in token.split(",")) for token in point_tokens]
+    except (TypeError, ValueError) as exc:
+        raise ValueError("SVG polygon contains an invalid coordinate pair.") from exc
+    if any(len(point) != 2 for point in actual_points):
+        raise ValueError("Each SVG polygon point must contain exactly two coordinates.")
+
+    source_vertices = source_plot["vertices"]
+    east = [point[0] for point in source_vertices]
+    north = [point[1] for point in source_vertices]
+    center_e = (min(east) + max(east)) / 2.0
+    center_n = (min(north) + max(north)) / 2.0
+    scale = min(440.0 / (max(east) - min(east)), 420.0 / (max(north) - min(north)))
+    expected_svg_points = [
+        (300.0 + (easting - center_e) * scale, 405.0 - (northing - center_n) * scale)
+        for easting, northing, _name in source_vertices
+    ]
+    for index, (actual, expected) in enumerate(zip(actual_points, expected_svg_points), start=1):
+        if not close(actual[0], expected[0], 0.02) or not close(actual[1], expected[1], 0.02):
+            raise ValueError(
+                f"SVG point {index} does not match the source-coordinate projection: "
+                f"actual={actual}, expected={expected}."
+            )
 
     text_content = " ".join(part.strip() for part in root.itertext() if part.strip())
     missing_notes = [note for note in REQUIRED_SVG_NOTES if note not in text_content]
@@ -216,7 +264,7 @@ def main() -> int:
         plot = get_plot_data(load_rows(args.csv))
         messages = validate_dxf(args.dxf, plot)
         if not args.dxf_only:
-            messages.extend(validate_svg(args.svg))
+            messages.extend(validate_svg(args.svg, plot))
     except (FileNotFoundError, ValueError, OSError, ezdxf.DXFError) as exc:
         print(f"FAIL: {exc}", file=sys.stderr)
         return 1

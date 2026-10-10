@@ -1,6 +1,6 @@
 # Phase 1 Site Base Files
 
-This folder contains preliminary lot-and-site-base outputs for CE 393 Plate No. 2. Phase 1 covers the lot base and source-based site analysis only. No house layout has been started.
+This folder contains the preliminary lot-and-site-base outputs for Phase 1 of CE 393 Plate No. 2. Phase 1 covered the lot base and source-based site analysis only. Conceptual Phase 3 room zoning is documented separately in `../space_planning/`; it is not a dimensioned house layout.
 
 ## Files
 

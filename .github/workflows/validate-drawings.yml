@@ -1,4 +1,4 @@
-name: Validate Plate 2 Drawing Data
+name: Validate and Generate Plate 2 CAD Drawing
 
 on:
   push:
@@ -18,17 +18,39 @@ permissions:
   contents: read
 
 jobs:
-  validate-site-base:
-    name: Validate Phase 1 traverse
+  build-validate-site-cad:
+    name: Generate and validate Phase 1 CAD drawing
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Compile-check Python scripts
+        run: python -m compileall -q scripts
+
       - name: Install drawing dependency
         run: python -m pip install -r scripts/requirements.txt
-      - name: Validate adjusted traverse
+
+      - name: Validate source traverse
         run: python scripts/validate_site_base.py
+
+      - name: Generate DXF and SVG
+        run: python scripts/generate_site_base.py
+
+      - name: Validate generated DXF and SVG against source
+        run: python scripts/validate_generated_dxf.py
+
+      - name: Upload validated CAD drawing and SVG preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: plate2-phase1-cad-${{ github.run_number }}
+          path: |
+            drawings/phase1_site_base.dxf
+            previews/phase1_site_base_preview.svg
+          if-no-files-found: error
+          retention-days: 14

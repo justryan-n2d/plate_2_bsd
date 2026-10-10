@@ -27,7 +27,7 @@ The location name alone is not enough to identify the exact parcel on a map. No 
 | Road right-of-way | 8.00 m | Given separately from road width |
 | Occupants | 5-6 persons | Given project information |
 
-**Road width and right-of-way are not interchangeable.** The assignment states a 5.0 m existing road width and an 8.00 m total right-of-way. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the actual road arrangement, but the assignment does not identify an allocation. No assumed split or road-boundary offset is drawn as a surveyed fact.
+**Road width and right-of-way are distinct, and the cross-section allocation is specified by the instructor.** Use 8.00 m total RROW = 5.00 m existing barangay road + 1.50 m roadside strip on the left + 1.50 m roadside strip on the right. Show these as the academic drawing basis. This instruction supplies the allocation; it does not turn the local-coordinate lot plot into a georeferenced survey.
 
 ## 3. Traverse orientation and closure
 

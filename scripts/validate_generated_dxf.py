@@ -32,14 +32,14 @@ REQUIRED_DXF_NOTES = (
     "Closed perimeter:",
     "Calculated closed-polygon area:",
     "Assignment approximate area:",
-    "Road width 5.0 m; total ROW 8.00 m;",
+    "Road cross-section per instructor: 8.00 m RROW = 5.00 m road + 1.50 m strip each side.",
     "PRELIMINARY ACADEMIC PLOT",
 )
 REQUIRED_SVG_NOTES = (
     "Original P5-1:",
     "Adjusted P5-1:",
     "Assignment approximate area: 300.00 m²",
-    "Road width: 5.0 m | total ROW: 8.00 m",
+    "RROW total: 8.00 m = road 5.00 m + side strips 1.50 m each.",
     "Preliminary academic plot; not survey certification.",
 )
 

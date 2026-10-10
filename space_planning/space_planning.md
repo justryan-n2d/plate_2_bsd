@@ -20,7 +20,7 @@ Phase 2 has an adopted academic calculation baseline: 265.26 m² working lot are
 - All listed room dimensions are **provisional clear-dimension targets for planning**, not code minimums, final dimensions or construction instructions.
 - The diagrams are **not to scale** and do not set the building orientation, lot position, driveway, vehicle gate, pedestrian gate, doors, windows or setbacks.
 - The carport is a single-car planning placeholder. It does not establish the legal or code-required parking count or size.
-- The balcony is required by the student's design direction. Use a 3.00 m × 1.50 m external balcony on the east/front entry-carport facade, accessed from the master bedroom; align its plan, elevation, section, roof projection and D-04/guardrail note across A-03/A-04/A-05/A-06/A-07.
+- The balcony is required by the student's design direction. Use a 3.00 m × 1.50 m external balcony on the east/front entry-carport facade, directly beside and accessed from the family area; align its plan, elevation, section, roof projection and D-04/guardrail note across A-01/A-03/A-04/A-05/A-06/A-07.
 - The stair footprint is a space allowance only. Stair width, risers, tread, landings, headroom and total stair height remain for Phase 4.
 - Building utilities, including detailed plumbing and sanitary systems, remain excluded. Keeping the two bathrooms near each other vertically is only an architectural coordination preference.
 - Room-area targets are not official ground-floor, second-floor or total floor-area calculations. Wall thicknesses, final circulation, stair/void treatment and the buildable envelope must be resolved in later phases.
@@ -49,7 +49,7 @@ The schedule records the spaces named in the assignment and adds a separate circ
 | Second | Toilet and bath | 1.50 x 2.10 m | 3.15 m² | Close to bedrooms |
 | Second | Family area | 2.80 x 3.00 m | 8.40 m² | Connected to upper landing |
 | Second | Stair landing / circulation | 2.00 x 2.50 m | 5.00 m² | Routes to rooms without crossing bedrooms |
-| Second | Balcony | 3.00 x 1.50 m | 4.50 m² | Required external balcony accessed from master bedroom; area tracked separately from enclosed floor area |
+| Second | Balcony | 3.00 x 1.50 m | 4.50 m² | Required external balcony accessed from family area through D-04; area tracked separately from enclosed floor area |
 
 These figures are starting targets, not prescribed minimums. Furniture clearances, door swings, windows, ventilation, wall thickness and actual family needs may require different dimensions.
 
@@ -87,7 +87,7 @@ The 15% allowance is a rough planning assumption, not a code factor. These total
 2. Place the family area near the stair landing so it works as shared space without making bedroom access pass through it.
 3. Keep the common upstairs bath close to the bedrooms. If practical, keep it near the ground-floor bath location to support later coordination, without designing utilities in this plate.
 4. Keep the master bedroom buffered from the stair/family area where possible.
-5. Provide the required balcony off the master bedroom. For this academic concept, locate it on the east/right front side of the master-bedroom zone, 3.00 m along the facade with a 1.50 m outward projection; include a nominal door opening and a schematic perimeter guardrail.
+5. Provide the required balcony beside the family area. For this academic concept, locate it on the east/right front side of the master-bedroom zone, 3.00 m along the facade with a 1.50 m outward projection; include D-04 from the family area and a schematic perimeter guardrail.
 
 ### Accessibility, safety and privacy
 

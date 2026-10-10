@@ -87,7 +87,7 @@ The 15% allowance is a rough planning assumption, not a code factor. These total
 2. Place the family area near the stair landing so it works as shared space without making bedroom access pass through it.
 3. Keep the common upstairs bath close to the bedrooms. If practical, keep it near the ground-floor bath location to support later coordination, without designing utilities in this plate.
 4. Keep the master bedroom buffered from the stair/family area where possible.
-5. Provide the required balcony off the master bedroom. For this academic concept, locate it along the upper edge of the master-bedroom zone, 3.00 m wide with a 1.50 m projection; include a nominal door opening and a schematic perimeter guardrail.
+5. Provide the required balcony off the master bedroom. For this academic concept, locate it on the east/right front side of the master-bedroom zone, 3.00 m along the facade with a 1.50 m outward projection; include a nominal door opening and a schematic perimeter guardrail.
 
 ### Accessibility, safety and privacy
 

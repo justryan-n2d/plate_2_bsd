@@ -17,6 +17,7 @@ from typing import Sequence
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TRAVERSE = ROOT / "site" / "phase1_traverse_coordinates.csv"
 DEFAULT_SETBACKS = ROOT / "site" / "phase2_setback_inputs.csv"
+DEFAULT_REQUIREMENTS = ROOT / "site" / "phase2_code_requirements.csv"
 EXPECTED_COURSES = ("1-2", "2-3", "3-4", "4-5", "5-1 adjusted to close")
 TOLERANCE = 1e-5
 
@@ -303,6 +304,41 @@ def load_boundary_inputs(setback_path: Path) -> list[dict]:
     return rows
 
 
+def load_code_requirements(requirements_path: Path) -> list[dict[str, str]]:
+    """Validate the traceability CSV used to track supported and pending rules."""
+    if not requirements_path.is_file():
+        raise FileNotFoundError(f"Code requirements CSV not found: {requirements_path}")
+    required_columns = {
+        "requirement_id", "topic", "legal_or_assignment_basis",
+        "requirement_or_given_value", "project_application",
+        "calculation_or_action", "status", "source_url", "limitations",
+    }
+    with requirements_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if not reader.fieldnames or not required_columns.issubset(reader.fieldnames):
+            raise ValueError("Code requirements CSV is missing required columns.")
+        rows = list(reader)
+    if not rows:
+        raise ValueError("Code requirements CSV has no requirement rows.")
+    seen: set[str] = set()
+    for line_no, row in enumerate(rows, start=2):
+        if None in row:
+            raise ValueError(f"Code requirements CSV line {line_no} has extra unquoted fields.")
+        if any(row.get(column) is None for column in required_columns):
+            raise ValueError(f"Code requirements CSV line {line_no} has missing fields.")
+        requirement_id = row["requirement_id"].strip()
+        if not requirement_id:
+            raise ValueError(f"Code requirements CSV line {line_no} has an empty requirement ID.")
+        if requirement_id in seen:
+            raise ValueError(f"Duplicate requirement ID in code requirements CSV: {requirement_id}")
+        seen.add(requirement_id)
+        if not row["topic"].strip() or not row["status"].strip():
+            raise ValueError(f"Code requirements CSV line {line_no} must include topic and status.")
+        if not row["source_url"].strip() and row["status"].strip().lower() != "pending":
+            raise ValueError(f"Requirement {requirement_id} needs a source URL or a pending status.")
+    return rows
+
+
 def build_phase2_report(
     *, area_m2: float, stated_approximate_area_m2: float,
     perimeter_m: float, boundary_rows: Sequence[dict],
@@ -419,6 +455,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--traverse", type=Path, default=DEFAULT_TRAVERSE)
     parser.add_argument("--setbacks", type=Path, default=DEFAULT_SETBACKS)
+    parser.add_argument("--requirements", type=Path, default=DEFAULT_REQUIREMENTS)
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--write-report", type=Path, help="Write the generated Markdown report to this path.")
     mode.add_argument("--check-report", type=Path, help="Fail if the report file differs from generated output.")
@@ -426,6 +463,7 @@ def main() -> int:
     try:
         traverse = load_traverse(args.traverse)
         boundary_rows = load_boundary_inputs(args.setbacks)
+        requirement_rows = load_code_requirements(args.requirements)
         offsets = [row["geometry_inset_m"] for row in boundary_rows]
         envelope = resolve_buildable_envelope(traverse["vertices"], offsets)
         corner = calculate_maximum_occupancy(traverse["area_m2"], "corner")
@@ -451,6 +489,7 @@ def main() -> int:
             print(f"PASS: {args.check_report} matches the current source inputs.")
         else:
             print(report, end="")
+        print(f"INFO: validated {len(requirement_rows)} traceable Phase 2 code/assignment requirements.")
         print(f"INFO: adjusted polygon area = {traverse['area_m2']:.4f} m²; perimeter = {traverse['perimeter_m']:.4f} m.")
         print(f"INFO: corner occupancy scenario = {corner['maximum_occupancy_m2']:.2f} m²; inside-lot scenario = {inside['maximum_occupancy_m2']:.2f} m².")
         envelope_text = "NOT CALCULATED (road reference lines unresolved)" if envelope["area_m2"] is None else f"{envelope['area_m2']:.2f} m²"

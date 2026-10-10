@@ -147,33 +147,33 @@ The following checks were confirmed against the repository files now on `main`:
 - The road graphic uses the instructor's clarified allocation: 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
-These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, actual site conditions, precise site alignment, and applicable final setbacks may still require confirmation for a final site-development plan. The 8.00 m / 5.00 m / 1.50 m road cross-section allocation itself is given by the instructor. House-layout work remains deferred until Phase 2 site requirements are worked through.
+These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. For this academic plate, the site layout will use the instructor-provided road cross-section and the 2.00 m working setback baseline adopted in Phase 2. House-layout work can now begin using the 152.43 m² working envelope; the adjusted plot remains an academic drawing based on the assignment's technical description.
 
 ### Phase 2: Site requirements and preliminary calculations
 
-- [ ] **T-10** Determine required setbacks using applicable codes and regulations.
-- [ ] **T-11** Determine the buildable area / allowable building envelope.
+- [x] **T-10** Determine required setbacks using the instructor-activity baseline from PD 1096 Section 708(a): 2.00 m inward from each of the five plotted property boundaries.
+- [x] **T-11** Determine the buildable area / allowable building envelope: Scenario A, a 2.00 m inset on all five edges, calculates to 152.43 m² and is selected as the working envelope for Phase 3.
 - [ ] **T-12** Determine the proposed building footprint.
 - [ ] **T-13** Calculate the ground-floor area.
 - [ ] **T-14** Calculate the second-floor area.
 - [ ] **T-15** Calculate the total floor area.
 - [ ] **T-16** Determine the remaining open space.
 - [ ] **T-17** Determine the applicable occupant load.
-- [ ] **T-18** Determine the applicable parking requirement.
-- [ ] **T-19** Identify and calculate other applicable code-based dimensions and requirements.
+- [x] **T-18** Determine the preliminary parking requirement: use one on-site off-street slot as the activity basis for a single-family dwelling, with a 2.50 m × 5.00 m perpendicular/diagonal slot rectangle.
+- [ ] **T-19** Identify and calculate remaining applicable code-based dimensions and requirements alongside the floor plan and stair design.
 
 #### Phase 2 implementation checkpoint (2026-10-10)
 
-Phase 2 implementation has started in [the Phase 2 site calculation report](calculations/phase2_site_calculations.md) and the new [preliminary building-envelope scenario report](calculations/phase2_envelope_scenarios.md). The calculation script reads the Phase 1 closed-traverse coordinates, calculates the Section 708(a) lot-occupancy scenarios and explicit inset-envelope comparisons, validates the setback-input rows, and includes tested polygon-inset functions.
+**Status: Phase 2's site-envelope gate is complete for this instructor-led academic activity, and Phase 3 can proceed.** The Phase 2 site calculation report and the preliminary building-envelope scenario report record the adopted assumptions, numerical results, and coordinates. The calculation script validates the Phase 1 traverse, applies the 2.00 m working offset on all five edges, calculates the working inset area, and includes tested geometry functions.
 
 The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited national-code provisions, assignment facts, provisional calculations, and local/site-specific items requiring verification.
 
-- **T-10:** The instructor's road cross-section is settled: 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side. Research confirms PD 1096 Section 708(a)'s 2.00 m property-line minimum for Group A dwellings; however, Section 704(a)'s centerline clause is limited by its wording to Section 704, and Table VIII.2's residential yard values are noted for newly developed subdivisions. The publicly available sources reviewed did not establish the parcel's Palo zone or its front versus street-side yard requirements.
-- **T-11:** Four reproducible geometry scenarios are calculated in [phase2_envelope_scenarios.md](calculations/phase2_envelope_scenarios.md): 152.43 m² for the 2.00 m minimum-only baseline; 128.90 m² or 125.02 m² if a 4.50 m candidate yard applies to one of the two road edges; and 112.29 m² if it applies to both. These are comparison areas, not a final adopted envelope. Confirm the local yard rule and formal road/lot-line alignment before selecting offsets.
-- **T-18:** A preliminary one-slot requirement is supported for a single-family dwelling lot above 120 m² under the cited 2004 IRR table; the standard car-slot rectangle is documented as 2.50 m × 5.00 m for perpendicular/diagonal parking or 2.15 m × 6.00 m for parallel parking. Confirm occupancy division and local Building Official interpretation before finalizing.
-- **T-19:** The conditional corner-lot (90%) and inside-lot (80%) occupancy ceilings have been calculated. These are not substitutes for setbacks or the final footprint.
+- **T-10:** The working setback is adopted as 2.00 m inward from each plotted property boundary for this academic activity.
+- **T-11:** Scenario A in [phase2_envelope_scenarios.md](calculations/phase2_envelope_scenarios.md) gives a working envelope of **152.43 m²**. Scenarios B-D are retained for comparison only.
+- **T-18:** Use one on-site off-street parking slot as the preliminary activity basis. The slot rectangle is 2.50 m × 5.00 m for perpendicular/diagonal parking, or 2.15 m × 6.00 m for parallel parking.
+- **Occupancy check:** Because the assignment describes road frontage on both southeast and southwest sides, use the 90% corner-lot scenario (238.73 m² maximum occupied area, 26.53 m² corresponding open area) for the working comparison. The 80% inside-lot values remain in the calculation report for reference.
 
-No task is marked complete solely on this preliminary review. Footprint, floor areas, final remaining open space, and occupant-load calculations remain dependent on the verified envelope and dimensioned layout.
+The site-envelope basis is complete enough to proceed to Phase 3. The actual building footprint, floor areas, remaining open space, occupant-load calculation, stair geometry, and parking placement depend on the room layout and will be completed as the plans develop.
 
 ### Phase 3: Space planning
 

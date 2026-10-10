@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1330" height="885" viewBox="0 0 1330 885" role="img" aria-labelledby="title desc">
 <title id="title">Phase 2 setback scenario comparison</title>
-<desc id="desc">Four screening only site setback scenarios on the Lot 245-B adjusted local traverse. Each shows the lot, offset polygon, current house and carport. This is not a final or legally confirmed setback decision.</desc>
+<desc id="desc">Four site setback scenarios for the Lot 245-B adjusted academic traverse. S-01 is selected for the student activity; S-02 through S-04 are comparisons only. The 5.00 m carriageway is inside the 8.00 m total ROW.</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:27px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.legend{font-size:12px;fill:#475569}</style>
 <rect width="1330" height="885" fill="#f8fafc"/>
 <text class="title" x="25" y="38">PHASE 2 | SETBACK SCENARIO COMPARISON</text>
 <text class="sub" x="25" y="64">Lot 245-B | Adjusted academic traverse | Local coordinates in metres</text>
 <rect x="20" y="74" width="1290" height="20" rx="4" fill="#fff7ed"/>
-<text x="30" y="88" font-size="11" font-weight="700" fill="#9a3412">ALL FOUR OPTIONS ARE SCREENING SCENARIOS ONLY. Official Palo zoning, road ROW and front-yard classification remain unconfirmed.</text>
+<text x="30" y="88" font-size="11" font-weight="700" fill="#9a3412">ACADEMIC BASIS: S-01 uniform 2.00 m setback selected. The 5.00 m carriageway is inside the 8.00 m total ROW.</text>
 <g>
  <rect x="20" y="100" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
  <text x="38" y="127" font-size="17" font-weight="700" fill="#172033">S-01 | Uniform 2.00 m screening offset</text>
@@ -26,7 +26,7 @@
  <text x="335" y="336" font-size="13" font-weight="700" fill="#166534">FITS</text>
  <text x="335" y="371" font-size="11" fill="#64748b">NO means relocate/redesign current</text>
  <text x="335" y="387" font-size="11" fill="#64748b">rectangle; not proof no building can fit.</text>
- <text x="335" y="423" font-size="11" font-weight="700" fill="#9a3412">SCREENING ONLY - NOT A FINAL SETBACK</text>
+ <text x="335" y="423" font-size="11" font-weight="700" fill="#9a3412">SELECTED ACADEMIC BASIS</text>
  </g>
 <g>
  <rect x="680" y="100" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
@@ -46,7 +46,7 @@
  <text x="995" y="336" font-size="13" font-weight="700" fill="#b91c1c">DOES NOT FIT</text>
  <text x="995" y="371" font-size="11" fill="#64748b">NO means relocate/redesign current</text>
  <text x="995" y="387" font-size="11" fill="#64748b">rectangle; not proof no building can fit.</text>
- <text x="995" y="423" font-size="11" font-weight="700" fill="#9a3412">SCREENING ONLY - NOT A FINAL SETBACK</text>
+ <text x="995" y="423" font-size="11" font-weight="700" fill="#9a3412">COMPARISON ONLY - NOT A FINAL SETBACK</text>
  </g>
 <g>
  <rect x="20" y="485" width="630" height="360" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>

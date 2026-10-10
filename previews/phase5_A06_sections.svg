@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="0.20" width="1400" height="930" viewBox="0 0 1400 930" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1400" height="930" viewBox="0 0 1400 930" role="img" aria-labelledby="title desc">
 <title id="title">A-06 Preliminary building sections</title>
-<desc id="desc">Two preliminary sections. Section B-B cuts across the east/front wall and shows the second-floor balcony projecting 1.50 m outward with a schematic guardrail. This is not a final coordinated construction drawing; confirm structural support, levels and applicable code requirements.</desc>
+<desc id="desc">Two preliminary sections. Section B-B cuts across the east/front wall at the family area and shows the balcony projecting 1.50 m outward with a schematic guardrail and nominal D-04 door. This is not a final coordinated construction drawing; confirm structural support, levels and applicable code requirements.</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.head{font-size:16px;font-weight:700;fill:#172033}.note{font-size:12px;fill:#475569}</style>
 <rect width="1400" height="930" fill="#f8fafc"/>
 <text class="title" x="35" y="40">A-06 | BUILDING SECTIONS (PRELIMINARY)</text>
@@ -28,7 +28,7 @@
 <line x1="830" y1="490" x2="1235" y2="490" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
 <text x="845" y="598" font-size="12" fill="#334155">Ground FFL ±0.000</text>
 <text x="845" y="480" font-size="12" fill="#334155">Second FFL +3.000</text>
-<g id="front-balcony-section" data-span-m="3.00" data-projection-m="1.50">
+<g id="front-balcony-section" data-span-m="3.00" data-projection-m="1.50" data-offset-m="4.90">
   <rect x="1227" y="406" width="8" height="84" fill="#dbeafe" stroke="#334155" stroke-width="1.2"/>
   <line x1="1231" y1="406" x2="1231" y2="490" stroke="#334155" stroke-width="1"/>
   <rect x="1235" y="490" width="65" height="8" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
@@ -43,7 +43,7 @@
   <line x1="1235" y1="510" x2="1235" y2="522" stroke="#64748b"/>
   <line x1="1300" y1="510" x2="1300" y2="522" stroke="#64748b"/>
   <text x="1267.5" y="536" text-anchor="middle" font-size="11" fill="#334155">1.50 m projection</text>
-  <text x="1150" y="438" font-size="10" fill="#065f46">Front balcony</text>
+  <text x="1140" y="438" font-size="10" fill="#065f46">Family area / D-04 access</text>
 </g>
 
 <text x="845" y="358" font-size="12" fill="#334155">Eaves +6.000</text>

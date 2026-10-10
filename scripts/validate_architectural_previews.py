@@ -239,11 +239,17 @@ def validate_svg_files() -> None:
         if drawing_no == "A-05":
             if "balcony" not in visible_text.lower() or "FRONT ELEVATION - ENTRY / CARPORT SIDE" not in visible_text:
                 fail("A-05 must show the balcony on the east/front entry-carport elevation")
-            if root.find(".//*[@id='front-balcony-elevation']") is None:
+            front_balcony = root.find(".//*[@id='front-balcony-elevation']")
+            if front_balcony is None:
                 fail("A-05 must include the front-balcony elevation geometry")
+            if front_balcony.attrib.get("data-span-m") != "3.00" or front_balcony.attrib.get("data-projection-m") != "1.50":
+                fail("A-05 balcony span/projection metadata must match the shared model")
         if drawing_no == "A-06":
-            if root.find(".//*[@id='front-balcony-section']") is None:
+            front_section = root.find(".//*[@id='front-balcony-section']")
+            if front_section is None:
                 fail("A-06 must include a section through the front balcony")
+            if front_section.attrib.get("data-span-m") != "3.00" or front_section.attrib.get("data-projection-m") != "1.50":
+                fail("A-06 balcony span/projection metadata must match the shared model")
         if drawing_no == "A-07":
             if "Front/east balcony" not in visible_text or "D-04 Balcony door: 0.90 x 2.10 m" not in visible_text:
                 fail("A-07 balcony note and D-04 door schedule must match the front balcony")

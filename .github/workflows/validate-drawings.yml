@@ -1,10 +1,16 @@
-name: Validate and Generate Plate 2 CAD Drawing
+name: Validate Plate 2 CAD and Phase 2 Site Calculations
 
 on:
   push:
     branches: [main]
     paths:
       - "site/phase1_traverse_coordinates.csv"
+      - "site/phase2_setback_inputs.csv"
+      - "calculations/phase2_site_calculations.md"
+      - "tests/**"
+      - "site/phase2_setback_inputs.csv"
+      - "calculations/phase2_site_calculations.md"
+      - "tests/**"
       - "scripts/**"
       - ".github/workflows/validate-drawings.yml"
   pull_request:
@@ -19,7 +25,7 @@ permissions:
 
 jobs:
   build-validate-site-cad:
-    name: Generate and validate Phase 1 CAD drawing
+    name: Validate Phase 1 CAD and Phase 2 site calculations
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -31,13 +37,19 @@ jobs:
           python-version: "3.12"
 
       - name: Compile-check Python scripts
-        run: python -m compileall -q scripts
+        run: python -m compileall -q scripts tests
 
       - name: Install drawing dependency
         run: python -m pip install -r scripts/requirements.txt
 
       - name: Validate source traverse
         run: python scripts/validate_site_base.py
+
+      - name: Run Phase 2 unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Verify committed Phase 2 report is current
+        run: python scripts/calculate_phase2_site.py --check-report calculations/phase2_site_calculations.md
 
       - name: Generate DXF and SVG
         run: python scripts/generate_site_base.py

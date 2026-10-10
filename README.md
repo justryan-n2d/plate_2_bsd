@@ -59,7 +59,7 @@ See [stair calculations and code hold points](space_planning/stair_design.md).
 
 ## Phase 5 architectural draft previews
 
-These A-01 to A-07 sheets are on the `phase5-architectural-plans` branch. They are preliminary visual drafts. The 2.00 m inset on A-01 is only a screening assumption, and Phase 2 local zoning/setback confirmation remains pending.
+These A-01 to A-07 sheets are preliminary visual drafts. For this student activity, Phase 2 now adopts a uniform 2.00 m setback on all five boundaries and uses 265.26 m² as the working lot area. A-01 still needs to label the 5.00 m carriageway inside the 8.00 m total ROW and coordinate the adopted setback.
 
 ### A-01 - Site Development Plan
 
@@ -94,8 +94,8 @@ See the [Phase 5 architecture notes](space_planning/phase5_architecture_notes.md
 ## Project records
 
 - [Project status](PROJECT_STATUS.md): what is finished, current phase, assumptions, blockers, and next steps.
-- [Phase 2 site-requirement screening](site/phase2_site_requirements.md): code references and unresolved setback / ROW decisions.
-- [Setback scenario data](site/phase2_setback_scenarios.csv): four calculated offsets and current footprint-fit flags.
+- [Phase 2 site requirements and calculations](site/phase2_site_requirements.md): agreed academic assumptions, selected 2.00 m setbacks, ROW interpretation and completed preliminary calculations.
+- [Setback scenario data](site/phase2_setback_scenarios.csv): four calculated offsets, with S-01 marked as the selected academic basis.
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Shared preliminary building model](data/building_model.json): site/building geometry and assumptions for Phase 5 drafts.
 - [Phase 5 architectural notes](space_planning/phase5_architecture_notes.md): drawing register and limitations.

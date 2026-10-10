@@ -223,7 +223,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 A preliminary A-01 to A-07 preview package is committed to the repository. The shared source model is `data/building_model.json`; the current SVG previews are useful for review, but they are still draft diagrams rather than finished drawing sheets.
 
-Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, and a 152.43 m² setback envelope. The required 3.00 m × 1.50 m balcony is drawn in A-03 from the master bedroom and shown on the assumed front elevation in A-05. A-01 must show the road/ROW dimensions, and A-02/A-03/A-05 must be coordinated with the 73.47 m² enclosed area per floor, 4.50 m² balcony, 146.94 m² enclosed total and 151.44 m² total including balcony.
+Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, and a 152.43 m² setback envelope. The required 3.00 m × 1.50 m balcony is on the east/front entry-carport side, attached to the master bedroom in A-03 and coordinated across the drawings A-01 to A-07. A-01 must show the road/ROW dimensions, and A-02/A-03/A-05 must be coordinated with the 73.47 m² enclosed area per floor, 4.50 m² balcony, 146.94 m² enclosed total and 151.44 m² total including balcony.
 
 Model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review, final schedules and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until these drawing and export checks are completed. All drawings remain academic drafts, not permit or construction documents.
 

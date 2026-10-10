@@ -100,6 +100,37 @@ def validate_model(data: dict) -> None:
     if not math.isclose(combined, float(site["combined_covered_ground_area_m2"]), rel_tol=0.0, abs_tol=0.01):
         fail("Combined ground coverage arithmetic is inconsistent")
 
+    # The balcony is an external projection, so validate it separately from enclosed room boxes.
+    balcony = building.get("balcony")
+    if not isinstance(balcony, dict) or balcony.get("status") != "required":
+        fail("The shared model must include a required second-floor balcony")
+    balcony_width = float(balcony["width_m"])
+    balcony_projection = float(balcony["projection_m"])
+    balcony_area = float(balcony["area_m2"])
+    balcony_x = float(balcony["x_m"])
+    balcony_y = float(balcony["y_m"])
+    if min(balcony_width, balcony_projection, balcony_area) <= 0:
+        fail("Balcony dimensions and area must be positive")
+    if not math.isclose(balcony_width * balcony_projection, balcony_area, rel_tol=0.0, abs_tol=0.01):
+        fail("Balcony area does not match width x projection")
+    if not math.isclose(balcony_y, -balcony_projection, rel_tol=0.0, abs_tol=0.001):
+        fail("Balcony should project outward from the upper edge of the second-floor plan")
+    if balcony_x < 0 or balcony_x + balcony_width > width + 1e-6:
+        fail("Balcony attachment span must fit along the nominal house facade")
+    if balcony.get("attached_to") != "Master bedroom":
+        fail("Balcony must be attached to the master bedroom for the current plan")
+
+    north_edge = float(site["building_placement"]["south_edge_northing_m"]) + float(site["building_placement"]["depth_m"])
+    base_x = float(site["building_placement"]["southwest_easting_m"])
+    balcony_world = [
+        (base_x + balcony_x, north_edge),
+        (base_x + balcony_x + balcony_width, north_edge),
+        (base_x + balcony_x + balcony_width, north_edge + balcony_projection),
+        (base_x + balcony_x, north_edge + balcony_projection),
+    ]
+    if not all(point_in_polygon(point, screen) for point in balcony_world):
+        fail("Balcony projection falls outside the selected S-01 academic setback envelope")
+
     for floor, rooms in building["rooms"].items():
         names: set[str] = set()
         for room in rooms:
@@ -152,6 +183,13 @@ def validate_svg_files() -> None:
             fail(f"{filename} description must state that it is preliminary and not final/construction-ready")
         if drawing_no not in visible_text:
             fail(f"{filename} visible sheet title does not contain {drawing_no}")
+        if drawing_no == "A-03":
+            if "balcony" not in desc or "balcony" not in visible_text.lower():
+                fail("A-03 must describe and visibly show the required balcony")
+            if "3.00 x 1.50 m" not in visible_text:
+                fail("A-03 must label the balcony dimensions as 3.00 x 1.50 m")
+        if drawing_no == "A-05" and "balcony" not in visible_text.lower():
+            fail("A-05 should show the balcony on the assumed front elevation")
 
 
 def main() -> int:
@@ -161,9 +199,10 @@ def main() -> int:
     validate_model(data)
     validate_svg_files()
     print("PASS: site area and 2 m screening geometry agree with the shared building model.")
-    print("PASS: house/carport rectangles are contained by the screening polygon.")
+    print("PASS: house/carport rectangles and required balcony are contained by the S-01 academic envelope.")
     print("PASS: each room target area equals width x depth and fits the nominal footprint.")
     print("PASS: all seven A-01 to A-07 SVG sheets parse and are labelled preliminary.")
+    print("PASS: A-03 shows a dimensioned 3.00 m x 1.50 m balcony; A-05 includes the balcony on the assumed front facade.")
     print("NOTE: this verifies file/data consistency only, not setbacks, code compliance, design adequacy, or permit/construction readiness.")
     return 0
 

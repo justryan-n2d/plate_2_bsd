@@ -197,16 +197,24 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 ### Phase 5: Architectural plan set
 
-- [ ] **T-40 / A-01** Prepare the Site Development Plan.
-- [ ] **T-41 / A-02** Prepare the Ground Floor Plan.
-- [ ] **T-42 / A-03** Prepare the Second Floor Plan.
-- [ ] **T-43 / A-04** Prepare the Roof Plan.
-- [ ] **T-44 / A-05** Prepare four elevations: front, rear, left-side, and right-side.
-- [ ] **T-45 / A-06** Prepare at least two building sections, with at least one passing through the stairway.
-- [ ] **T-46 / A-07** Prepare architectural details and schedules.
-- [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information shown across the drawings.
-- [ ] **T-48 / D-01** Establish a code-driven, shared drawing-data source where practical so the SVG inspection previews and DXF drawing exports are generated from matching geometry and dimensions.
-- [ ] **T-49 / D-02** Generate and review an SVG preview as each major 2D drawing is developed; use the preview to find layout, label, dimension, and coordination errors before final export.
+- [ ] **T-40 / A-01** Finalize the Site Development Plan. A preliminary screening layout is available at `previews/phase5_A01_site_development.svg`; final setback, road/ROW, access and zoning confirmation remain pending.
+- [ ] **T-41 / A-02** Finalize the Ground Floor Plan. A preliminary draft is available at `previews/phase5_A02_ground_floor.svg`.
+- [ ] **T-42 / A-03** Finalize the Second Floor Plan. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
+- [ ] **T-43 / A-04** Finalize the Roof Plan. A preliminary draft is available at `previews/phase5_A04_roof_plan.svg`.
+- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Schematic drafts are available at `previews/phase5_A05_elevations.svg`.
+- [ ] **T-45 / A-06** Finalize at least two building sections, with at least one through the actual coordinated stairway. Current draft diagrams are at `previews/phase5_A06_sections.svg`.
+- [ ] **T-46 / A-07** Finalize architectural details and schedules. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
+- [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information across all sheets.
+- [ ] **T-48 / D-01** Finish the shared-data drawing generator so SVG previews and editable DXF exports are produced from matching geometry/dimensions. `data/building_model.json` exists, but automatic generation and DXF export are not complete.
+- [ ] **T-49 / D-02** Review every SVG preview against the assignment, code calculations, and drawing coordination requirements; revise before final export.
+
+#### Phase 5 implementation checkpoint (2026-10-10)
+
+A **preliminary A-01 to A-07 preview package** is committed on the `phase5-architectural-plans` branch. The preview index is in the main README and the project-wide assumptions/status are recorded in `PROJECT_STATUS.md` and `space_planning/phase5_architecture_notes.md`. The shared source model is `data/building_model.json`; `scripts/validate_architectural_previews.py` checks its arithmetic and basic SVG consistency.
+
+These are drafts only, not final drawing deliverables. Phase 2 remains unfinished: the applicable local zoning/setbacks, legal road/ROW lines, final buildable envelope, parking, open-space and occupant-load calculations have not been confirmed. A-01 shows a **uniform 2.00 m screening offset only**, not the final approved setback. Floor levels, opening locations and sizes, roof pitch and story heights also remain provisional.
+
+The SVG previews are committed for inspection, but model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until the Phase 2 inputs and later coordination checks are resolved.
 
 ### Phase 6: Preliminary specifications
 

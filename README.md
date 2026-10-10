@@ -59,7 +59,7 @@ See [stair calculations and code hold points](space_planning/stair_design.md).
 
 ## Phase 5 architectural draft previews
 
-These A-01 to A-07 sheets are preliminary visual drafts for the student activity. Phase 2 uses 265.26 m² as the working lot area, a uniform 2.00 m setback on all five boundaries, and the 5.00 m carriageway inside the 8.00 m total ROW. The second-floor design includes a required 3.00 m × 1.50 m balcony on the east/front entry-carport facade, accessed from the master bedroom; its 4.50 m² is counted separately from enclosed floor area.
+These A-01 to A-07 sheets are preliminary visual drafts for the student activity. Phase 2 uses 265.26 m² as the working lot area, a uniform 2.00 m setback on all five boundaries, and the 5.00 m carriageway inside the 8.00 m total ROW. The second-floor design includes a required 3.00 m × 1.50 m balcony on the east/front entry-carport facade beside and accessed from the family area; its 4.50 m² is counted separately from enclosed floor area.
 
 ### A-01 - Site Development Plan
 
@@ -71,7 +71,7 @@ These A-01 to A-07 sheets are preliminary visual drafts for the student activity
 
 ### A-03 - Second Floor Plan
 
-The second floor includes a required 3.00 m × 1.50 m east/front balcony accessed from the master bedroom. A-03/A-04 show its plan and projection below the roof; A-05/A-06 show the matching front elevation and section, and A-07 lists D-04 and the guardrail. Its 4.50 m² is listed separately from enclosed floor area.
+The second floor includes a required 3.00 m × 1.50 m east/front balcony beside and accessed from the family area. A-03/A-04 show its plan and projection below the roof; A-05/A-06 show the matching front elevation and section, and A-07 lists D-04 and the guardrail. Its 4.50 m² is listed separately from enclosed floor area.
 
 ![A-03 preliminary second floor](previews/phase5_A03_second_floor.svg)
 

@@ -643,9 +643,10 @@ This section turns the agreed digital workflow into an ordered implementation pl
 - [x] **R-21** Ensure the original P5-1 and the diagnostic closure-gap row remain reference data only; the generator selects only the four stated courses and adjusted P5-1 for the boundary.
 - [x] **R-22** Generate drawings/phase1_site_base.dxf with metre units, named layers, source-coordinate geometry, labels, and a closed parcel outline. The validated output is uploaded as a workflow artifact, not auto-committed.
 - [x] **R-23a** Generate the SVG preview from the same source coordinates and validate its XML, polygon coordinates, vertex count, and required notes. The generated preview is included in the workflow artifact.
-- [ ] **R-23b** Visually inspect the generated SVG and DXF in a CAD-capable viewer; automated validation does not replace visual review.
+- [x] **R-23b** Visually inspect the rendered SVG preview. The parcel outline, vertex labels, course list, notes, north arrow, and graphic scale are visible and legible at preview size.
+- [ ] **R-23c** Open the DXF in compatible CAD software and visually verify model-space units, layers, linework, text placement, extents, and plot behavior. SVG preview review does not replace this CAD-app check.
 - [x] **R-24** Include notes in the generator for original and adjusted P5-1, approximate and calculated area, and the 5.0 m road / 8.00 m ROW distinction. Do not invent a split of the remaining 3.0 m.
-- [ ] **R-25** Keep generated CAD and preview outputs marked preliminary until manual visual inspection in compatible CAD software is complete.
+- [ ] **R-25** Keep the generated CAD output marked preliminary until the DXF has been opened and visually checked in compatible CAD software. The SVG preview has been visually reviewed, but that does not certify the DXF or drawing scale.
 
 ### Stage R-4: Validate the DXF/SVG generation pipeline
 
@@ -653,7 +654,8 @@ This section turns the agreed digital workflow into an ordered implementation pl
 - [x] **R-31** Check the five boundary vertices, course lengths, perimeter (64.145414 m), calculated closed-polygon area (265.2598 m²), and all source vertex coordinates against the CSV.
 - [x] **R-32** Check DXF structural audit, metre units, required layers/entities, a single closed parcel polyline, and no extra entities on the property-boundary layer.
 - [x] **R-33** Check that DXF vertex and course labels match source point names, bearings, and distances; check that key reference notes are present.
-- [ ] **R-34** Manually inspect the SVG and open the DXF in compatible CAD software/viewer. Compare visual clarity, text placement, boundary linework, and annotations with the CSV and calculation notes.
+- [x] **R-34a** Visually review the rendered SVG preview for legibility, the plotted outline, labels, and notes; no obvious clipping or overlap was seen at the preview size.
+- [ ] **R-34b** Open the DXF in compatible CAD software/viewer. Compare visible boundary linework, course labels, layers, units, extents, and plot behavior against the CSV and calculation notes.
 - [x] **R-35** Add reproducible validation commands/scripts and verify successful runs in GitHub Actions. Passing automated checks do not certify a cadastral survey, code compliance, structural adequacy, or instructor approval.
 
 ### Stage R-5: GitHub automation and previews

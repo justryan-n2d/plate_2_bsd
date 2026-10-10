@@ -24,7 +24,8 @@ The completed plate is intended to serve as the base building plan for the subse
 | Occupancy group | A |
 | Initial construction type | Type V-A |
 | Proposed occupants | 5–6 persons |
-| Approximate lot area | 300.00 m² |
+| Approximate lot area in assignment brief | 300.00 m² (source value) |
+| Adopted academic working lot area | **265.26 m²** from the adjusted closed traverse |
 | Road right-of-way in project information | 8.00 m |
 | Site condition | Generally level / grass land |
 | Existing building | None |
@@ -47,7 +48,7 @@ The property is bounded by Lot 245-A on the north, Lot 246 on the east, a stated
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-Use the stated 5.0 m as the existing road width and 8.00 m as the total road right-of-way. These values serve different purposes. The remaining 3.0 m could be allocated for shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not specify the exact allocation, so do not assume a particular split.
+**Academic interpretation:** the 5.0 m carriageway is inside the 8.00 m total road ROW. The remaining 3.0 m is ROW outside the carriageway in total, but the assignment does not specify its division, so do not invent exact shoulder/drainage widths. Show both the 5.0 m road and the 8.00 m ROW as separate dimensions. Use 265.26 m² as the working lot area and do not subtract the road width from it.
 
 ---
 
@@ -151,24 +152,26 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 ### Phase 2: Site requirements and preliminary calculations
 
-- [ ] **T-10** Confirm required setbacks with applicable national rules, Palo zoning / local ordinance, verified road ROW and official yard classification. Preliminary scenarios are documented in `site/phase2_site_requirements.md`; final selection remains pending.
-- [ ] **T-11** Determine the final buildable area / allowable building envelope after T-10 is confirmed. Four offset polygons are calculated for comparison, but none is the legally confirmed envelope.
-- [ ] **T-12** Confirm/revise the proposed building footprint and carport placement after the envelope is accepted. The current 9.30 m × 7.90 m house and carport are concept geometry only.
-- [ ] **T-13** Calculate the final ground-floor area from a revised, dimensioned A-02.
-- [ ] **T-14** Calculate the final second-floor area from a revised, dimensioned A-03.
-- [ ] **T-15** Calculate total floor area from the final coordinated floor plans.
-- [ ] **T-16** Determine the final code-defined open space / lot occupancy using the adopted method and confirmed lot classification.
-- [ ] **T-17** Determine the applicable occupant load using the identified official method/factor, not just the stated household size.
-- [ ] **T-18** Confirm the parking requirement and stall/access dimensions using the applicable official rule and local ordinance.
-- [ ] **T-19** Identify and calculate other applicable code-based dimensions and requirements.
+- [x] **T-10** Adopt a uniform 2.00 m setback on all five boundaries as the classroom design assumption based on PD 1096 Section 708(a).
+- [x] **T-11** Calculate the selected setback-envelope area: 152.43 m².
+- [x] **T-12** Record the main-house footprint (9.30 m × 7.90 m = 73.47 m²) and carport (2.80 m × 5.50 m = 15.40 m²).
+- [x] **T-13** Calculate ground-floor gross area as 73.47 m².
+- [x] **T-14** Calculate second-floor gross area as 73.47 m², assuming the same outer envelope.
+- [x] **T-15** Calculate total house floor area: 146.94 m².
+- [x] **T-16** Calculate remaining uncovered lot area: 176.39 m² (approximately 66.5%, counting the roofed carport as covered ground area).
+- [x] **T-17** Adopt 6 persons as the academic design occupant count from the assignment's stated 5–6 person range.
+- [x] **T-18** Adopt one off-street car space in the 2.80 m × 5.50 m carport.
+- [x] **T-19** Record preliminary Group A lot-occupancy, entrance/exit, light/ventilation, sanitation, and road/ROW checks.
 
-#### Phase 2 screening checkpoint (2026-10-10)
+#### Phase 2 implementation checkpoint (2026-10-10)
 
-Four offset scenarios, an area / current-footprint-fit table, a comparison SVG and an automated geometry validator are now included. They show how different road-facing yard assumptions affect the existing draft house/carport placement.
+**Status: Academic Phase 2 calculation baseline completed using the agreed assumptions.** The working lot area is 265.26 m² from the adjusted closed traverse. The 5.00 m carriageway is inside the 8.00 m total ROW; the remaining 3.00 m is not split into assumed shoulder or drainage widths. The selected S-01 setback is 2.00 m on every boundary, producing a 152.43 m² setback envelope.
 
-**No official setback scenario has been selected.** PD 1096 Section 708(a) supports a general 2.00 m property-line distance for Group A dwellings. The published 2004 Revised IRR Table VIII.2 shows an R-1 4.50 m front yard and 2.00 m side/rear yards in the table for newly-developed subdivisions. Applicability to this parcel, the local Palo zoning classification, the legal road ROW and which road-side boundary counts as the front yard are unconfirmed. Keep T-10 and dependent T-11 through T-19 open until these sources are resolved.
+The preliminary calculations use a 9.30 m × 7.90 m house (73.47 m²), a 2.80 m × 5.50 m carport (15.40 m²), combined covered ground area of 88.87 m² (about 33.5% of the lot), gross ground- and second-floor areas of 73.47 m² each, total gross house floor area of 146.94 m², and 176.39 m² of uncovered lot area (about 66.5%). Six design occupants and one car space are adopted for this activity. The stair values are carried forward from the Phase 4 calculation using the assumed 3.000 m floor-to-floor rise.
 
-See `site/phase2_site_requirements.md`, `site/phase2_setback_scenarios.csv` and `previews/phase2_setback_scenarios.svg`. The uniform 2.00 m inset must not be described as the final legal setback.
+S-02 to S-04 remain comparison-only alternatives, not blockers. These assumptions support the class assignment and do not represent a real-site survey, permit or construction approval. The detailed working and references are in `site/phase2_site_requirements.md` and `calculations/plate2_calculations.md`.
+
+**Next coordination:** show the 5.00 m carriageway within the 8.00 m total ROW and the selected 2.00 m setback in A-01; coordinate the adopted areas and stair with A-02/A-03/A-06 before final sheet preparation.
 
 ### Phase 3: Space planning
 
@@ -205,7 +208,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 ### Phase 5: Architectural plan set
 
-- [ ] **T-40 / A-01** Finalize the Site Development Plan. A preliminary screening layout is available at `previews/phase5_A01_site_development.svg`; final setback, road/ROW, access and zoning confirmation remain pending.
+- [ ] **T-40 / A-01** Revise and finalize the Site Development Plan using the selected 2.00 m academic setbacks. Show the 5.00 m carriageway inside the 8.00 m total ROW; the exact division of the remaining 3.00 m is not specified.
 - [ ] **T-41 / A-02** Finalize the Ground Floor Plan. A preliminary draft is available at `previews/phase5_A02_ground_floor.svg`.
 - [ ] **T-42 / A-03** Finalize the Second Floor Plan. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
 - [ ] **T-43 / A-04** Finalize the Roof Plan. A preliminary draft is available at `previews/phase5_A04_roof_plan.svg`.
@@ -218,11 +221,11 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 #### Phase 5 implementation checkpoint (2026-10-10)
 
-A **preliminary A-01 to A-07 preview package** was merged into `main` through [PR #5](https://github.com/justryan-n2d/plate_2_bsd/pull/5). The preview index is in the main README and the project-wide assumptions/status are recorded in `PROJECT_STATUS.md` and `space_planning/phase5_architecture_notes.md`. The shared source model is `data/building_model.json`; `scripts/validate_architectural_previews.py` checks its arithmetic and basic SVG consistency.
+A preliminary A-01 to A-07 preview package is committed to the repository. The shared source model is `data/building_model.json`; the current SVG previews are useful for review, but they are still draft diagrams rather than finished drawing sheets.
 
-These are drafts only, not final drawing deliverables. Phase 2 remains unfinished: the applicable local zoning/setbacks, legal road/ROW lines, final buildable envelope, parking, open-space and occupant-load calculations have not been confirmed. A-01 shows a **uniform 2.00 m screening offset only**, not the final approved setback. Floor levels, opening locations and sizes, roof pitch and story heights also remain provisional.
+Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, 152.43 m² setback envelope, and preliminary area/occupancy/parking calculations. The next Phase 5 revision must label the road/ROW dimensions on A-01 and keep the house/carport within the selected envelope. The ground- and second-floor area assumptions must be checked against the final A-02/A-03 outlines.
 
-The SVG previews are committed for inspection, but model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until the Phase 2 inputs and later coordination checks are resolved.
+Model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review, final schedules and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until these drawing and export checks are completed. All drawings remain academic drafts, not permit or construction documents.
 
 ### Phase 6: Preliminary specifications
 

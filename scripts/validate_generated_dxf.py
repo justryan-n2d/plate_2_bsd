@@ -87,16 +87,18 @@ def validate_dxf(dxf_path: Path, source_plot: dict) -> list[str]:
         raise ValueError(f"DXF missing required layers: {', '.join(sorted(missing_layers))}")
 
     msp = doc.modelspace()
-    boundary_entities = [
-        entity
-        for entity in msp
-        if entity.dxftype() == "LWPOLYLINE"
-        and entity.dxf.get("layer", "0") == "PROPERTY_BOUNDARY"
+    property_layer_entities = [
+        entity for entity in msp
+        if entity.dxf.get("layer", "0") == "PROPERTY_BOUNDARY"
     ]
-    if len(boundary_entities) != 1:
+    boundary_entities = [
+        entity for entity in property_layer_entities
+        if entity.dxftype() == "LWPOLYLINE"
+    ]
+    if len(property_layer_entities) != 1 or len(boundary_entities) != 1:
         raise ValueError(
-            "Expected exactly one LWPOLYLINE on PROPERTY_BOUNDARY; "
-            f"found {len(boundary_entities)}."
+            "PROPERTY_BOUNDARY must contain exactly one LWPOLYLINE and no diagnostic "
+            f"segments; found {len(property_layer_entities)} total entity/entities."
         )
     boundary = boundary_entities[0]
     if not (int(boundary.dxf.get("flags", 0)) & 1):

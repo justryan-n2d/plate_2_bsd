@@ -29,6 +29,8 @@
 <text x="845" y="598" font-size="12" fill="#334155">Ground FFL ±0.000</text>
 <text x="845" y="480" font-size="12" fill="#334155">Second FFL +3.000</text>
 <g id="front-balcony-section">
+  <rect x="1227" y="406" width="8" height="84" fill="#dbeafe" stroke="#334155" stroke-width="1.2"/>
+  <line x1="1231" y1="406" x2="1231" y2="490" stroke="#334155" stroke-width="1"/>
   <rect x="1235" y="486" width="65" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
   <line x1="1237" y1="454" x2="1300" y2="454" stroke="#0f766e" stroke-width="3"/>
   <line x1="1237" y1="454" x2="1237" y2="486" stroke="#0f766e" stroke-width="2"/>

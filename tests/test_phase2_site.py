@@ -65,7 +65,7 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             parking_slot_geometry("angled")
 
-    def test_repository_inputs_preserve_unresolved_road_geometry(self):
+    def test_repository_inputs_select_working_academic_envelope(self):
         traverse = load_traverse(DEFAULT_TRAVERSE)
         boundaries = load_boundary_inputs(DEFAULT_SETBACKS)
         envelope = resolve_buildable_envelope(
@@ -73,8 +73,10 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         )
         self.assertAlmostEqual(traverse["area_m2"], 265.2598, places=3)
         self.assertAlmostEqual(traverse["perimeter_m"], 64.145414, places=4)
-        self.assertIsNone(envelope["area_m2"])
-        self.assertEqual(envelope["missing_edge_indices"], [2, 3])
+        self.assertAlmostEqual(envelope["area_m2"], 152.430851, places=5)
+        self.assertEqual(envelope["missing_edge_indices"], [])
+        self.assertTrue(all(row["geometry_inset_m"] == 2.0 for row in boundaries))
+        self.assertTrue(all(row["status"] == "working academic baseline" for row in boundaries))
 
         road_rows = [row for row in boundaries if row["edge_type"] == "road frontage"]
         self.assertEqual(len(road_rows), 2)
@@ -99,7 +101,7 @@ class Phase2SiteCalculationTests(unittest.TestCase):
         expected = build_preliminary_envelope_scenarios_report(traverse["vertices"])
         report_path = DEFAULT_TRAVERSE.parent.parent / "calculations" / "phase2_envelope_scenarios.md"
         self.assertEqual(report_path.read_text(encoding="utf-8"), expected)
-        self.assertIn("No final buildable envelope has been selected", expected)
+        self.assertIn("Scenario A is selected as the working envelope for Phase 3", expected)
         self.assertIn("for purposes of Section 704", expected)
         self.assertIn("152.43 m²", expected)
 

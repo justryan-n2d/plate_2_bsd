@@ -12,7 +12,7 @@ Project workspace for the proposed two-storey residential building plate.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
-- Phase 2 site requirements and calculations have a code register, setback inputs, a standard-library calculation tool, and automated tests; the road cross-section allocation is specified by the instructor, while the final yard-reference treatment remains under code/local review.
+- Phase 2 site requirements and calculations have a code register, setback inputs, a standard-library calculation tool, and automated tests. Four geometry-only envelope comparisons are documented in [the preliminary envelope scenario report](calculations/phase2_envelope_scenarios.md); final front/street-side yards and local measurement treatment remain under code/local review.
 
 ## Phase 1 site-base preview
 
@@ -25,6 +25,7 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 - [Project plan](plate2%20plan.md): assignment scope, required submissions, work plan, and drawing roadmap.
 - [Calculation worksheet](calculations/plate2_calculations.md): calculation methods, values, and checks.
 - [Phase 2 site requirements and preliminary calculations](calculations/phase2_site_calculations.md): code-based occupancy scenarios, setback inputs, and remaining verification items.
+- [Preliminary building-envelope scenarios](calculations/phase2_envelope_scenarios.md): four reproducible inset-geometry comparisons, local coordinates, and the unresolved local setback decision.
 - [Phase 2 setback inputs](site/phase2_setback_inputs.csv): per-boundary code baseline and geometry-input status.
 - [Phase 2 code requirements register](site/phase2_code_requirements.csv): traceable provisions, assumptions, calculated values, and unresolved evidence.
 - [Traverse coordinate CSV](site/phase1_traverse_coordinates.csv): original and adjusted course records, coordinates, and closure diagnostics.

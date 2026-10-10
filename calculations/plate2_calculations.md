@@ -234,299 +234,247 @@ The adjusted perimeter is 64.1454 m and the closed-polygon area is 265.26 m². T
 
 # C-04. Required Setbacks
 
-**Final applicable setbacks: PENDING.** The project does not yet have verified road/ROW lines or confirmed Palo zoning / yard classification.
+**Adopted classroom assumption: 2.00 m inward from each of the five property boundaries.**
 
-References:
-- [PD 1096, Section 708(a), Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320): general 2 m property-line distance for Group A dwellings, subject to other provisions.
-- [2004 Revised IRR, Table VIII.2, reference copy](https://www.iibh.org/kijun/pdf/Philippines_02_IRR_of_NBC_of_the_Philippines.pdf): R-1 front 4.50 m and side/rear 2.00 m for newly-developed subdivisions, as described in its note. Its applicability to this parcel has not been confirmed.
+PD 1096 Section 708(a) gives a general minimum 2 m property-line distance for Group A dwellings. For this student activity, apply 2.00 m uniformly to P1-P2, P2-P3, P3-P4, P4-P5, and P5-P1 as the selected academic basis. Do not treat this as a real-site approval or as a substitute for a special requirement that the instructor may specifically assign.
 
-The assignment separately gives an existing 5.0 m road and an 8.00 m ROW. Confirm the actual ROW line and whether P2-P3, P3-P4 or both are front yards before choosing a scenario.
+| Boundary | Adopted academic setback |
+|---|---:|
+| P1-P2 | 2.00 m |
+| P2-P3 | 2.00 m |
+| P3-P4 | 2.00 m |
+| P4-P5 | 2.00 m |
+| P5-P1 | 2.00 m |
 
-| Screening scenario | P1-P2 | P2-P3 | P3-P4 | P4-P5 | P5-P1 | Offset area | Current house fits | Current carport fits |
-|---|---:|---:|---:|---:|---:|---:|---|---|
-| S-01: uniform 2.00 m | 2.00 | 2.00 | 2.00 | 2.00 | 2.00 | 152.4309 m² | Yes | Yes |
-| S-02: P2-P3 front at 4.50 m | 2.00 | 4.50 | 2.00 | 2.00 | 2.00 | 128.9837 m² | Yes | No |
-| S-03: P3-P4 front at 4.50 m | 2.00 | 2.00 | 4.50 | 2.00 | 2.00 | 128.8989 m² | No | No |
-| S-04: both road edges 4.50 m | 2.00 | 4.50 | 4.50 | 2.00 | 2.00 | 112.6268 m² | No | No |
+Road information to show on A-01: the **5.00 m carriageway is inside the 8.00 m total ROW**. The remaining 3.00 m is part of the total ROW outside the carriageway, but the assignment gives no exact allocation. Show both widths separately; do not subtract the carriageway again from the adopted 265.26 m² lot area.
 
-These are geometric screening polygons, **not approved legal setbacks**. The fit flags compare the house and carport at their current draft positions only. A failed flag means relocate/redesign the current rectangle; it does not mean no building can fit.
+Code reference: [PD 1096, Section 708, Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320).
 
-Details: [Phase 2 requirements](../site/phase2_site_requirements.md), [scenario CSV](../site/phase2_setback_scenarios.csv), [scenario preview](../previews/phase2_setback_scenarios.svg).
-
-**Result:** PENDING official survey, ROW, local zoning and yard-classification confirmation.
+**Result:** S-01 uniform 2.00 m offset selected for the academic design. S-02 to S-04 are retained as comparisons only.
 
 ---
 
 # C-05. Buildable Area
 
-Calculate the final envelope only after C-04 is confirmed: plot the verified lot, set off the applicable distances from the correct reference boundaries, construct the offset intersections and calculate the enclosed area. Then check the selected footprint and carport against the resulting polygon.
+Use the calculated area of the offset polygon for the selected S-01 scenario.
 
-| Item | Current value | Status |
-|---|---:|---|
-| Adjusted academic traverse area | 265.2598 m² | Calculated; not cadastral certification |
-| Uniform 2.00 m screening polygon | 152.4309 m² | Scenario only |
-| R-1 style single-road-front scenarios | 128.8989-128.9837 m² | Applicability pending |
-| Both road edges at 4.50 m | 112.6268 m² | Stress test only |
-| **Final buildable envelope** | **PENDING** | Legal setback / ROW selection required |
+| Item | Value |
+|---|---:|
+| Adopted academic lot area | 265.26 m² |
+| Setback | 2.00 m on each of five boundaries |
+| Area inside the setback envelope | 152.4309 m² |
+| Rounded academic buildable-envelope area | **152.43 m²** |
 
-**Result:** PENDING. Do not use a screening area as the final buildable area.
+**Result:** 152.43 m² inside the uniform 2.00 m offset. This is the area used as the design envelope for this student activity.
 
 ---
 
 # C-06. Building Footprint
 
-Current A-01 concept geometry:
+## Main house footprint
 
-| Item | Draft dimensions | Area | Status |
-|---|---:|---:|---|
-| Main house rectangle | 9.30 m × 7.90 m | 73.47 m² | Preliminary |
-| Carport placeholder | 2.80 m × 5.50 m | 15.40 m² | Preliminary one-car concept |
-| Combined covered ground budget | House + carport | 88.87 m² | Arithmetic only |
+```text
+Footprint = width × depth
+          = 9.30 m × 7.90 m
+          = 73.47 m²
+```
 
-Current-position check against the offset alternatives: both rectangles fit S-01; only the house fits S-02; neither rectangle fits S-03 or S-04 at its current position. The latter results require a placement/layout revision, not a conclusion that no building can fit.
+## Carport footprint
 
-**Result:** Final footprint and placement PENDING the official buildable envelope and revised A-01/A-02/A-03 drawings.
+```text
+Carport = 2.80 m × 5.50 m
+        = 15.40 m²
+```
+
+## Combined covered ground area
+
+```text
+Combined covered area = 73.47 + 15.40
+                      = 88.87 m²
+```
+
+The carport is treated as a separate open-sided covered area. The Phase 2 scenario geometry indicates that the current house and carport rectangles both fit within the selected S-01 offset envelope.
+
+**Result:** Main-house footprint = 73.47 m²; carport = 15.40 m²; combined covered ground area = 88.87 m².
 
 ---
 
 # C-07. Floor Areas
 
-Official areas must be measured from coordinated, dimensioned floor plans. The current SVG plans are preliminary, so these figures are programming estimates only.
+For the preliminary academic calculation, assume both storeys use the same 9.30 m × 7.90 m main-house outer envelope. The open-sided carport is excluded from enclosed house floor area.
 
-| Item | Calculation basis | Indicative value |
-|---|---|---:|
-| Ground-floor enclosed room target | Phase 3 room schedule | 52.32 m² |
-| Ground-floor circulation allowance | Planning allowance | 4.50 m² |
-| Ground-floor programme subtotal | 52.32 + 4.50 | 56.82 m² |
-| Rough gross ground-floor budget | 56.82 / 0.85, assuming 15% wall/structure overhead | 66.85 m² |
-| Second-floor indoor room target | Phase 3 room schedule | 44.23 m² |
-| Rough gross second-floor budget | 44.23 / 0.85, same assumed overhead | 52.04 m² |
-| **Final ground-floor area** | From dimensioned A-02 | **PENDING** |
-| **Final second-floor area** | From dimensioned A-03 | **PENDING** |
-| **Final total floor area** | Ground + second, using adopted area method | **PENDING** |
+## Ground-floor area
 
-The 15% factor is a planning allowance, not a code factor. Reconcile wall thickness, stairwell/opening treatment, landings and the accepted footprint before recording official areas.
+```text
+Ground-floor area = 9.30 m × 7.90 m
+                  = 73.47 m²
+```
 
-**Result:** Final floor areas PENDING.
+## Second-floor area
+
+```text
+Second-floor area = 9.30 m × 7.90 m
+                  = 73.47 m²
+```
+
+## Total house floor area
+
+```text
+Total floor area = ground-floor area + second-floor area
+                 = 73.47 + 73.47
+                 = 146.94 m²
+```
+
+| Item | Academic result |
+|---|---:|
+| Ground floor | 73.47 m² |
+| Second floor | 73.47 m² |
+| **Total house floor area** | **146.94 m²** |
+
+These are gross outer-envelope planning values consistent with the current rectangular house model. Recalculate if the final A-03 plan adopts a smaller second-floor outline or an open-to-below space.
 
 ---
 
 # C-08. Remaining Open Space
 
-The remaining arithmetic area is not the same as the final code-defined open-space result.
+For this calculation, count the main house and roofed carport as covered ground area.
 
-| Item | Calculation | Result |
-|---|---|---:|
-| Adjusted academic lot area | C-01 | 265.2598 m² |
-| Main house rectangle | 9.30 × 7.90 | 73.47 m² |
-| Lot area less main house only | 265.2598 − 73.47 | 191.7898 m² |
-| House + carport | 73.47 + 15.40 | 88.87 m² |
-| Lot area less both rectangles | 265.2598 − 88.87 | 176.3898 m² |
+```text
+Uncovered area = lot area − combined covered ground area
+               = 265.26 − 88.87
+               = 176.39 m²
+```
 
-These are simple arithmetic values only. Confirm lot category, final geometry, legal coverage/open-space definition and applicable local requirements.
+```text
+Uncovered percentage = (176.39 ÷ 265.26) × 100
+                     ≈ 66.5%
+```
 
-**Result:** Final open space / lot occupancy PENDING.
+| Item | Area |
+|---|---:|
+| Adopted lot area | 265.26 m² |
+| House + carport covered area | 88.87 m² |
+| **Remaining uncovered area** | **176.39 m²** |
+| **Uncovered percentage** | **66.5%** |
+
+This is the arithmetic area not covered by the house and carport. Driveways and walkways may occupy part of it, so it should not automatically be described as all landscaped or permeable open space.
 
 ---
 
 # C-09. Occupant Load
 
-Given data: the assignment lists Group A occupancy and a proposed household of **5-6 persons**. That household estimate is not automatically the code-calculated occupant load.
+The assignment states that the proposed dwelling will accommodate **5-6 persons**. For planning, select the upper end of the stated range.
 
-| Input / step | Value | Status |
-|---|---|---|
-| Proposed household size | 5-6 persons | Given |
-| Applicable occupant-load method/factor | PENDING | Confirm official requirement |
-| Area / space classification | PENDING | Determine which part of the building the method applies to |
-| Formula, substituted values and rounding | PENDING | Document with source |
-| **Code occupant load** | **PENDING persons** | Not yet calculated |
+```text
+Adopted academic design occupant count = 6 persons
+```
 
-Do not invent an occupant-load factor or simply copy the household size as the code result.
-
-**Result:** PENDING official method confirmation.
+**Result:** 6 persons for the preliminary residential layout. This uses the assignment's stated household size; it is not an assembly-occupancy factor calculation. If a floor-area method is specifically required by the instructor, use the assigned code table/factor and show its source rather than inventing a value.
 
 ---
 
 # C-10. Stair Design Calculations
 
-## Assignment requirements
+The Phase 4 stair study assumes a floor-to-floor height of 3.000 m. Carry these same values into Phase 2 and coordinate them with A-06.
 
-Determine stair width, number of risers, riser height, tread depth, landing dimensions and total stair height.
-
-## Design assumption requiring confirmation
-
-The assignment/repository does not yet provide final finished-floor elevations. The following preliminary computation therefore assumes a **3.000 m floor-to-floor rise**, from ground floor FFL ±0.000 m to second floor FFL +3.000 m. Change this input and recalculate if the instructor's building section specifies a different level difference.
-
-## Working
-
-### Total stair height
+## Total stair height
 
 ```text
-H = second-floor FFL - ground-floor FFL
-H = 3.000 m - 0.000 m = 3.000 m
+H = second-floor FFL − ground-floor FFL
+H = 3.000 m − 0.000 m = 3.000 m = 3000 mm
 ```
 
-### Number of risers and riser height
-
-Choose 18 equal risers so that the rise remains below a 175 mm design target.
+## Number of risers and riser height
 
 ```text
-N = 18 risers
-R = H / N = 3.000 m / 18
-R = 0.1666667 m = 166.7 mm
-
-Check: 18 x 166.6667 mm = 3000.0 mm
+Number of risers = 18 total (9 per flight)
+Riser height = 3000 mm ÷ 18
+             = 166.7 mm
+Check: 18 × 166.7 mm ≈ 3000 mm
 ```
 
-Arrange two flights with 9 risers in each:
+## Tread depth and run
 
 ```text
-Rise per flight = 9 x 166.6667 mm
-                = 1500 mm = 1.500 m
+Physical treads per flight = 9 risers − 1 = 8
+Tread depth = 280 mm = 0.280 m
+Run per flight = 8 × 0.280 m = 2.240 m
 ```
 
-### Tread depth and run
+| Item | Result |
+|---|---:|
+| Floor-to-floor rise | 3.000 m (assumed) |
+| Number of risers | 18, arranged 9 + 9 |
+| Riser height | 166.7 mm |
+| Tread depth | 280 mm |
+| Run per flight | 2.240 m |
+| Clear width per flight | 0.900 m |
+| Intermediate landing depth | 0.900 m |
+| Reserved stair-space envelope | 2.000 m × 3.200 m = 6.40 m² |
 
-Select a 280 mm tread depth for the preliminary design. Each flight has 9 risers, 8 physical treads, and 2.240 m horizontal run.
+PD 1096 Section 708(h) states a minimum Group A stair clear width of 750 mm, maximum rise of 200 mm, and minimum run of 200 mm. The selected 900 mm width, 166.7 mm rise, and 280 mm tread exceed those basic dimensions. Headroom, openings, handrails and final section coordination still need to be shown on the architectural drawings.
 
-```text
-Treads per flight = 9 - 1 = 8
-Run per flight = 8 x 0.280 m = 2.240 m
-Physical treads = 8 + 8 = 16
-Combined physical tread run = 16 x 0.280 m = 4.480 m
-```
+Reference: [PD 1096, Section 708, Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320).
 
-Comfort cross-check only:
-
-```text
-2R + T = 2(166.7 mm) + 280 mm
-       = 613.4 mm (approximately)
-```
-
-The comfort expression is not a substitute for the applicable code requirements.
-
-### Preliminary width and landing
-
-| Item | Result | Check / note |
-|---|---:|---|
-| Floor-to-floor rise | 3.000 m | Assumed, not given |
-| Number of risers | 18 | 9 per flight |
-| Calculated rise | 166.7 mm | Uniform in both flights |
-| Tread depth | 280 mm | Exceeds the cited general 250 mm minimum |
-| Physical treads | 16 total | 8 per flight |
-| Horizontal run per flight | 2.240 m | 8 x 280 mm |
-| Clear width per flight | 0.900 m | Preliminary private-dwelling stair target |
-| Intermediate landing depth | 0.900 m | At least one flight width |
-| Combined half-landing width | 2.000 m nominal | Two 0.900 m flights plus a 0.200 m central separation allowance |
-| Effective plan length | 3.140 m | 2.240 m run + 0.900 m landing |
-| Nominal space envelope | 2.000 x 3.200 m | 6.40 m²; an allowance for coordination, not finished dimensions |
-| Minimum headroom | 2.000 m | Must be checked in the coordinated section |
-| Target handrail height | 0.850 m | Verify against the adopted rule and the final open-side guards |
-
-## Code-basis notes
-
-PD 1096 Section 708(h) states Group A dwelling stair requirements. The general NBCP stairway provisions include a maximum riser of 200 mm, minimum tread/run of 250 mm, 2.00 m minimum headroom, and landing/handrail provisions. The selected 900 mm clear flight width, 166.7 mm rise and 280 mm tread are preliminary choices checked against the cited ordinary stair criteria. The local building official/instructor must confirm the exact applicable rule set.
-
-References:
-- [PD 1096 / National Building Code of the Philippines](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320)
-- [PD 1096, Senate Legislative Reference Bureau](https://ldr.senate.gov.ph/legislative%2Bissuances/Presidential%20Decree%20No.%201096%2C%20s.%201977)
-- [NCDA: 2024 Revised IRR of BP 344](https://ncda.gov.ph/revised-2024-rules-and-regulations-implementing-batas-pambansa-344/)
-
-**Accessibility hold point:** The design is not represented as an accessible staircase. Where the revised BP 344 accessible-stair provisions apply, the published values include a 150 mm maximum riser, 300 mm minimum tread, 1.50 m clear staircase width, landings at least 1.50 m deep, and complementary ramp/lift/escalator along accessible routes. This would require redesigning both stair geometry and reserved area; confirm applicability before finalizing.
-
-## Checks still required in the final drawings
-
-- Minimum 2.00 m clear headroom from a plane parallel to tread nosings to the soffit.
-- Landing and door-swing clearances.
-- Uniform tread/riser dimensions, finished surfaces and lighting.
-- Handrails and guards at open sides.
-- Slab, beam and finish depths at both levels.
-- Structural sizing and detailing, outside the current stair geometry calculation.
-
-**Result:** Preliminary calculation complete under the **assumed 3.000 m floor-to-floor rise**. These results must be revised if the accepted floor levels, code applicability or selected stair arrangement changes.
+**Result:** Preliminary stair calculation completed under the assumed 3.000 m floor-to-floor height.
 
 ---
 
 # C-11. Parking Requirement
 
-## Assignment requirement
+For the academic single-family house design, provide **one off-street car space** in the planned carport.
 
-Determine the applicable parking requirement.
+```text
+Number of proposed car spaces = 1
+Carport dimensions = 2.80 m × 5.50 m
+Carport area = 15.40 m²
+```
 
-## Design elements named in the assignment
+A commonly cited NBCP Rule XIX passenger-car stall size is 2.40 m × 5.00 m. The proposed 2.80 m × 5.50 m carport is larger than those nominal dimensions. Use one space to match this plate's single-car carport concept.
 
-- Garage / carport on the ground floor.
-- Driveway on the site development plan.
+**Result:** One proposed parking space, 2.80 m × 5.50 m. This is the selected classroom design assumption; use a different number/dimension if the instructor gave a specific parking table.
 
-## Calculation worksheet
-
-| Item | Result |
-|---|---|
-| Applicable parking requirement | PENDING |
-| Required number of parking spaces | PENDING |
-| Proposed garage / carport dimensions | PENDING |
-| Proposed driveway arrangement | PENDING |
-| Check against the site plan | PENDING |
-
-Determine the applicable requirement using the relevant code/regulation identified for the activity. Do not assume a required number or dimension where the assignment does not provide it.
-
-**Result:** **PENDING**.
+Reference: [PD 1096, Supreme Court E-Library](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320).
 
 ---
 
 # C-12. Other Applicable Requirements
 
-The assignment also requires calculations for other applicable code-based dimensions and requirements.
+For the preliminary Group A dwelling, carry these code-related checks into the architectural plan set:
 
-For each additional calculation, use this labeled format:
+| Requirement | Phase 2 design treatment |
+|---|---|
+| Lot occupancy | Combined covered area ÷ lot area = 88.87 ÷ 265.26 = **33.5%** |
+| Conservative occupancy comparison | 80% × 265.26 = **212.21 m²**; the 88.87 m² covered area is lower. The Section 708(a) inside/corner lot classification is not needed to make this classroom coverage comparison pass. |
+| Entrance and exit | Show a main entrance and a separate exit path/opening in the coordinated plan, consistent with PD 1096 Section 708(i) |
+| Light and ventilation | Locate room windows/openings on A-02/A-03 and review them against the room arrangement, consistent with Section 708(b) and the code's light/ventilation provisions |
+| Sanitation | Include at least one toilet and bath, consistent with Section 708(c); detailed plumbing and sanitary-system design is excluded from this plate |
+| Road / ROW labels | Label 5.00 m carriageway within 8.00 m total ROW; leave the remaining 3.00 m unallocated unless the assignment specifies its division |
+| Other building services | Detailed plumbing, sanitary, electrical, mechanical, and fire-protection systems remain excluded by the assignment |
 
-### C-12.__ [Name of requirement]
-
-**1. Requirement from assignment:**  
-[Write the applicable item.]
-
-**2. Given data:**  
-- [Input and unit]
-- [Input and unit]
-
-**3. Formula / method:**  
-```text
-[Write the formula or method]
-```
-
-**4. Substitution and working:**  
-```text
-[Show the input values substituted into the formula]
-```
-
-**5. Result:**  
-[Value and unit]
-
-**6. Source / basis:**  
-[Applicable code/regulation or instructor-provided direction]
-
-**7. Status:**  
-[Given / Calculated / Pending / Check]
+No detailed utility design is added in this plate because the instructor's project description explicitly reserves it for succeeding plates.
 
 ---
 
 ## Final Calculation Review Checklist
 
-- [ ] Lot area determined and checked.
-- [ ] Lot dimensions/boundary lengths recorded.
-- [ ] Traverse closure shown, including latitude and departure sums and linear misclosure.
-- [x] P5-1 adjustment to close the traverse is documented, and its original value is retained for reference.
-- [x] Compare the calculated 265.26 m² polygon area against the approximate 300.00 m² area stated in the assignment; the 34.74 m² difference is recorded.
-- [ ] Required setbacks determined and their basis recorded.
-- [ ] Buildable area calculated from the plotted setback envelope.
-- [ ] Building footprint calculated from the proposed ground-floor plan.
-- [ ] Ground-floor, second-floor, and total floor areas calculated.
-- [ ] Remaining open space calculated.
-- [ ] Occupant load determined using the applicable method.
-- [ ] Stair width, risers, riser height, tread depth, landings, and total stair height determined.
-- [ ] Parking requirement determined.
-- [ ] Other applicable requirements calculated if identified.
-- [ ] All calculations use clear labels, consistent units, shown formulas, substituted values, and final results.
-- [ ] Calculation values agree with the final drawings.
+- [x] Lot area adopted as 265.26 m² for this academic exercise.
+- [x] Lot boundary lengths and the adjusted traverse are recorded in the Phase 1 files.
+- [x] Traverse closure and original misclosure are documented, including the adjusted P5-1 course.
+- [x] Selected 2.00 m uniform academic setbacks recorded.
+- [x] Buildable-envelope area calculated as 152.43 m².
+- [x] Main-house footprint calculated as 73.47 m².
+- [x] Carport footprint calculated as 15.40 m².
+- [x] Ground-floor area calculated as 73.47 m² under the same-envelope assumption.
+- [x] Second-floor area calculated as 73.47 m² under the same-envelope assumption.
+- [x] Total house floor area calculated as 146.94 m².
+- [x] Remaining uncovered area calculated as 176.39 m² (approximately 66.5%).
+- [x] Academic design occupant count adopted as 6 persons.
+- [x] Stair width, risers, riser height, tread depth, landing dimensions and total rise recorded.
+- [x] One-car parking space adopted, with a 2.80 m × 5.50 m carport.
+- [x] Other preliminary Group A requirements identified for drawing coordination.
+- [ ] Confirm that A-01 shows the 5.00 m road inside the 8.00 m total ROW and the selected setbacks.
+- [ ] Confirm that A-02 and A-03 dimensions match the adopted footprint and area assumptions.
+- [ ] Confirm that all values match the coordinated final drawings before printing.
 
-**Current status:** C-02 perimeter and C-03 traverse-closure arithmetic have preliminary results. The lot-area verification and remaining calculations are pending the information and design work required by the assignment.
+**Phase 2 calculations are complete for the academic assumptions agreed by the student.** The remaining checks above are drawing-coordination tasks, not a requirement to obtain real-project approvals.

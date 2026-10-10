@@ -8,14 +8,14 @@ on:
       - "site/phase2_setback_inputs.csv"
       - "calculations/phase2_site_calculations.md"
       - "tests/**"
-      - "site/phase2_setback_inputs.csv"
-      - "calculations/phase2_site_calculations.md"
-      - "tests/**"
       - "scripts/**"
       - ".github/workflows/validate-drawings.yml"
   pull_request:
     paths:
       - "site/phase1_traverse_coordinates.csv"
+      - "site/phase2_setback_inputs.csv"
+      - "calculations/phase2_site_calculations.md"
+      - "tests/**"
       - "scripts/**"
       - ".github/workflows/validate-drawings.yml"
   workflow_dispatch:

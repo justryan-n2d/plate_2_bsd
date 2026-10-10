@@ -100,7 +100,7 @@ The required-submission list also includes column, footing and beam details/sche
 - [ ] Toilet and bath
 - [ ] Family area
 - [ ] Stair landing / circulation
-- [ ] Balcony, if appropriate
+- [ ] Required balcony: 3.00 m × 1.50 m, accessed from the master bedroom
 
 Additional spaces may be included when justified by the design.
 
@@ -156,8 +156,8 @@ These are document and arithmetic consistency checks for the academic activity, 
 - [x] **T-11** Calculate the selected setback-envelope area: 152.43 m².
 - [x] **T-12** Record the main-house footprint (9.30 m × 7.90 m = 73.47 m²) and carport (2.80 m × 5.50 m = 15.40 m²).
 - [x] **T-13** Calculate ground-floor gross area as 73.47 m².
-- [x] **T-14** Calculate second-floor gross area as 73.47 m², assuming the same outer envelope.
-- [x] **T-15** Calculate total house floor area: 146.94 m².
+- [x] **T-14** Calculate second-floor enclosed gross area as 73.47 m², assuming the same outer envelope.
+- [x] **T-15** Calculate total enclosed house floor area as 146.94 m²; include the required 4.50 m² balcony separately for 151.44 m² total including balcony.
 - [x] **T-16** Calculate remaining uncovered lot area: 176.39 m² (approximately 66.5%, counting the roofed carport as covered ground area).
 - [x] **T-17** Adopt 6 persons as the academic design occupant count from the assignment's stated 5–6 person range.
 - [x] **T-18** Adopt one off-street car space in the 2.80 m × 5.50 m carport.
@@ -167,7 +167,7 @@ These are document and arithmetic consistency checks for the academic activity, 
 
 **Status: Academic Phase 2 calculation baseline completed using the agreed assumptions.** The working lot area is 265.26 m² from the adjusted closed traverse. The 5.00 m carriageway is inside the 8.00 m total ROW; the remaining 3.00 m is not split into assumed shoulder or drainage widths. The selected S-01 setback is 2.00 m on every boundary, producing a 152.43 m² setback envelope.
 
-The preliminary calculations use a 9.30 m × 7.90 m house (73.47 m²), a 2.80 m × 5.50 m carport (15.40 m²), combined covered ground area of 88.87 m² (about 33.5% of the lot), gross ground- and second-floor areas of 73.47 m² each, total gross house floor area of 146.94 m², and 176.39 m² of uncovered lot area (about 66.5%). Six design occupants and one car space are adopted for this activity. The stair values are carried forward from the Phase 4 calculation using the assumed 3.000 m floor-to-floor rise.
+The preliminary calculations use a 9.30 m × 7.90 m house (73.47 m²), a 2.80 m × 5.50 m carport (15.40 m²), combined covered ground area of 88.87 m² (about 33.5% of the lot), enclosed ground- and second-floor areas of 73.47 m² each, a required 3.00 m × 1.50 m balcony (4.50 m²), total enclosed house floor area of 146.94 m², total including balcony of 151.44 m², and 176.39 m² of uncovered lot area (about 66.5%). Six design occupants and one car space are adopted for this activity. The stair values are carried forward from the Phase 4 calculation using the assumed 3.000 m floor-to-floor rise.
 
 S-02 to S-04 remain comparison-only alternatives, not blockers. These assumptions support the class assignment and do not represent a real-site survey, permit or construction approval. The detailed working and references are in `site/phase2_site_requirements.md` and `calculations/plate2_calculations.md`.
 
@@ -186,7 +186,7 @@ S-02 to S-04 remain comparison-only alternatives, not blockers. These assumption
 
 **Status: Preliminary space-planning package prepared.** Room targets and diagrams are recorded in `space_planning/`, with a validator at `scripts/validate_space_planning.py`. All target dimensions are planning assumptions rather than code minimums. The diagrams are not to scale and do not define the final building orientation, driveway, doors, windows, setbacks, or stairs.
 
-Phase 2 now has an academic calculation baseline using 265.26 m² lot area, a 5.00 m carriageway within the 8.00 m total ROW, and uniform 2.00 m setbacks. The preliminary footprint, floor areas, open area, six-person design occupant count and one-space parking assumption must now be coordinated with the final dimensioned floor plans. Phase 4 stair values also need to agree with A-06. Balcony inclusion remains conditional.
+Phase 2 now has an academic calculation baseline using 265.26 m² lot area, a 5.00 m carriageway within the 8.00 m total ROW, and uniform 2.00 m setbacks. The required 3.00 m × 1.50 m balcony is attached to the master bedroom in A-03 and shown on the assumed front elevation in A-05. Its 4.50 m² area is reported separately from the 146.94 m² enclosed house floor area; total including balcony is 151.44 m². Coordinate these dimensions with the final floor plans and A-06 stair section.
 
 ### Phase 4: Stair planning and calculations
 
@@ -210,9 +210,9 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 - [ ] **T-40 / A-01** Revise and finalize the Site Development Plan using the selected 2.00 m academic setbacks. Show the 5.00 m carriageway inside the 8.00 m total ROW; the exact division of the remaining 3.00 m is not specified.
 - [ ] **T-41 / A-02** Finalize the Ground Floor Plan. A preliminary draft is available at `previews/phase5_A02_ground_floor.svg`.
-- [ ] **T-42 / A-03** Finalize the Second Floor Plan. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
+- [ ] **T-42 / A-03** Finalize the Second Floor Plan including the required 3.00 m × 1.50 m balcony accessed from the master bedroom. A preliminary draft is available at `previews/phase5_A03_second_floor.svg`.
 - [ ] **T-43 / A-04** Finalize the Roof Plan. A preliminary draft is available at `previews/phase5_A04_roof_plan.svg`.
-- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Schematic drafts are available at `previews/phase5_A05_elevations.svg`.
+- [ ] **T-44 / A-05** Finalize four elevations: front, rear, left-side, and right-side. Show the required balcony on the matching façade; the current draft shows it on the assumed front elevation.
 - [ ] **T-45 / A-06** Finalize at least two building sections, with at least one through the actual coordinated stairway. Current draft diagrams are at `previews/phase5_A06_sections.svg`.
 - [ ] **T-46 / A-07** Finalize architectural details and schedules. Draft details and schedules are at `previews/phase5_A07_details_schedules.svg`.
 - [ ] **T-47** Coordinate room names, dimensions, openings, stairs, floor levels, roof features, and other information across all sheets.
@@ -223,7 +223,7 @@ The calculation assumes a 3.000 m floor-to-floor rise: 18 equal risers at 166.7 
 
 A preliminary A-01 to A-07 preview package is committed to the repository. The shared source model is `data/building_model.json`; the current SVG previews are useful for review, but they are still draft diagrams rather than finished drawing sheets.
 
-Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, 152.43 m² setback envelope, and preliminary area/occupancy/parking calculations. The next Phase 5 revision must label the road/ROW dimensions on A-01 and keep the house/carport within the selected envelope. The ground- and second-floor area assumptions must be checked against the final A-02/A-03 outlines.
+Phase 2 now has a selected academic basis: 265.26 m² working lot area, 5.00 m carriageway within the 8.00 m total ROW, uniform 2.00 m boundary setbacks, and a 152.43 m² setback envelope. The required 3.00 m × 1.50 m balcony is drawn in A-03 from the master bedroom and shown on the assumed front elevation in A-05. A-01 must show the road/ROW dimensions, and A-02/A-03/A-05 must be coordinated with the 73.47 m² enclosed area per floor, 4.50 m² balcony, 146.94 m² enclosed total and 151.44 m² total including balcony.
 
 Model-driven regeneration, editable architectural DXF/DWG export, detailed CAD review, final schedules and coordinated print sheets remain open. Keep the final architectural drawing tasks unchecked until these drawing and export checks are completed. All drawings remain academic drafts, not permit or construction documents.
 

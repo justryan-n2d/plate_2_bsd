@@ -20,7 +20,7 @@
 | C-04 | Required setbacks | **PENDING** |
 | C-05 | Buildable area | **PENDING** |
 | C-06 | Building footprint | **PENDING** |
-| C-07 | Floor areas | **PENDING** |
+| C-07 | Floor areas | **73.47 m² per enclosed floor; 4.50 m² balcony additional; 151.44 m² total including balcony** |
 | C-08 | Remaining open space | **PENDING** |
 | C-09 | Occupant load | **PENDING** |
 | C-10 | Stair design | **PENDING** |
@@ -301,39 +301,58 @@ The carport is treated as a separate open-sided covered area. The Phase 2 scenar
 
 # C-07. Floor Areas
 
-For the preliminary academic calculation, assume both storeys use the same 9.30 m × 7.90 m main-house outer envelope. The open-sided carport is excluded from enclosed house floor area.
+For this academic calculation, assume the enclosed part of both storeys uses the same 9.30 m × 7.90 m outer house envelope. The required second-floor balcony is an external area and must be listed separately from enclosed floor area.
 
-## Ground-floor area
+## Ground-floor enclosed area
 
 ```text
 Ground-floor area = 9.30 m × 7.90 m
                   = 73.47 m²
 ```
 
-## Second-floor area
+## Second-floor enclosed area
 
 ```text
-Second-floor area = 9.30 m × 7.90 m
-                  = 73.47 m²
+Second-floor enclosed area = 9.30 m × 7.90 m
+                           = 73.47 m²
 ```
 
-## Total house floor area
+## Required second-floor balcony
+
+Adopt a 3.00 m width and 1.50 m projection from the master-bedroom wall.
 
 ```text
-Total floor area = ground-floor area + second-floor area
-                 = 73.47 + 73.47
-                 = 146.94 m²
+Balcony area = width × projection
+             = 3.00 m × 1.50 m
+             = 4.50 m²
+```
+
+The balcony is open to the exterior, attached to the master bedroom, and accessed through a nominal 0.90 m balcony door. Include a perimeter guardrail in the architectural concept. The balcony is within the plan's selected S-01 2.00 m academic setback envelope and is shown separately in A-03.
+
+## Total floor area
+
+```text
+Total enclosed house floor area = ground-floor area + second-floor enclosed area
+                                = 73.47 + 73.47
+                                = 146.94 m²
+
+Second-floor area including balcony = 73.47 + 4.50
+                                    = 77.97 m²
+
+Total floor area including balcony = 146.94 + 4.50
+                                  = 151.44 m²
 ```
 
 | Item | Academic result |
 |---|---:|
-| Ground floor | 73.47 m² |
-| Second floor | 73.47 m² |
-| **Total house floor area** | **146.94 m²** |
+| Ground-floor enclosed area | 73.47 m² |
+| Second-floor enclosed area | 73.47 m² |
+| Required balcony area | 4.50 m² |
+| Second-floor total including balcony | 77.97 m² |
+| **Total enclosed house floor area** | **146.94 m²** |
+| **Total floor area including balcony** | **151.44 m²** |
 
-These are gross outer-envelope planning values consistent with the current rectangular house model. Recalculate if the final A-03 plan adopts a smaller second-floor outline or an open-to-below space.
-
----
+The two totals are reported separately to avoid counting the open balcony as enclosed space. Recalculate if the final A-03 uses a different balcony size or second-floor outer outline.
 
 # C-08. Remaining Open Space
 
@@ -466,8 +485,9 @@ No detailed utility design is added in this plate because the instructor's proje
 - [x] Main-house footprint calculated as 73.47 m².
 - [x] Carport footprint calculated as 15.40 m².
 - [x] Ground-floor area calculated as 73.47 m² under the same-envelope assumption.
-- [x] Second-floor area calculated as 73.47 m² under the same-envelope assumption.
-- [x] Total house floor area calculated as 146.94 m².
+- [x] Second-floor enclosed area calculated as 73.47 m² under the same-envelope assumption.
+- [x] Required second-floor balcony calculated as 3.00 m × 1.50 m = 4.50 m².
+- [x] Total enclosed house floor area calculated as 146.94 m²; total including balcony = 151.44 m².
 - [x] Remaining uncovered area calculated as 176.39 m² (approximately 66.5%).
 - [x] Academic design occupant count adopted as 6 persons.
 - [x] Stair width, risers, riser height, tread depth, landing dimensions and total rise recorded.
@@ -477,4 +497,4 @@ No detailed utility design is added in this plate because the instructor's proje
 - [ ] Confirm that A-02 and A-03 dimensions match the adopted footprint and area assumptions.
 - [ ] Confirm that all values match the coordinated final drawings before printing.
 
-**Phase 2 calculations are complete for the academic assumptions agreed by the student.** The remaining checks above are drawing-coordination tasks, not a requirement to obtain real-project approvals.
+**Phase 2 calculations are complete for the academic assumptions agreed by the student.** The required 4.50 m² second-floor balcony is reported separately from enclosed area. The remaining checks above are drawing-coordination tasks, not a requirement to obtain real-project approvals.

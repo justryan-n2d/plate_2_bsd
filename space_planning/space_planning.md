@@ -39,7 +39,7 @@ The schedule records the spaces named in the assignment and adds a separate circ
 | Ground | Kitchen | 2.50 x 2.80 m | 7.00 m² | Adjacent to dining and storage/service |
 | Ground | Toilet and bath | 1.50 x 2.10 m | 3.15 m² | Near guest room |
 | Ground | Bedroom / guest room | 3.00 x 3.00 m | 9.00 m² | Private ground-floor sleeping space |
-| Ground | Stairway | 2.00 x 2.80 m | 5.60 m² | Preliminary footprint only |
+| Ground | Stairway | 2.00 x 3.20 m | 6.40 m² | Preliminary U-shaped return stair envelope; see Phase 4 study |
 | Ground | Storage / service area | 1.50 x 2.00 m | 3.00 m² | Near kitchen |
 | Ground | Garage / carport | 2.80 x 5.50 m | 15.40 m² | Covered-open single-car placeholder |
 | Ground | General circulation allowance | Area allowance only | 4.50 m² | Reserve for routes and clearances |
@@ -59,12 +59,12 @@ These are only programme-budget calculations for comparing the requested rooms w
 
 | Budget check | Calculation | Preliminary value |
 |---|---|---:|
-| Ground-floor enclosed room targets | Sum of dimensioned enclosed ground-floor rows, excluding circulation allowance | 51.52 m² |
+| Ground-floor enclosed room targets | Sum of dimensioned enclosed ground-floor rows, excluding circulation allowance | 52.32 m² |
 | Ground-floor circulation allowance | Separate planning allowance | 4.50 m² |
-| Ground-floor programme target before wall/structure allowance | 51.52 + 4.50 | 56.02 m² |
-| Approximate enclosed ground-floor budget | 56.02 / 0.85 using a provisional 15% gross-area allowance for walls/structure | 65.91 m² |
+| Ground-floor programme target before wall/structure allowance | 52.32 + 4.50 | 56.82 m² |
+| Approximate enclosed ground-floor budget | 56.82 / 0.85 using a provisional 15% gross-area allowance for walls/structure | 66.85 m² |
 | Covered-open carport placeholder | 2.80 x 5.50 | 15.40 m² |
-| Approximate ground-level covered budget including carport | 65.91 + 15.40 | 81.31 m² |
+| Approximate ground-level covered budget including carport | 66.85 + 15.40 | 82.25 m² |
 | Second-floor indoor programme target | Sum of dimensioned enclosed second-floor rows | 44.23 m² |
 | Approximate enclosed second-floor budget | 44.23 / 0.85 using the same provisional 15% allowance | 52.04 m² |
 | Optional balcony target | 1.20 x 3.00 | 3.60 m² |

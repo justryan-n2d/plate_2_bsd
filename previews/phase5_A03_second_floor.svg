@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" data-front-facade="east" data-balcony-access="family-area" data-balcony-width-m="3.00" data-balcony-projection-m="1.50" data-balcony-offset-m="4.90" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
 <title id="title">A-03 - Second Floor plan with required balcony</title>
 <desc id="desc">Preliminary second floor plan concept with required room labels, target clear dimensions, and a required 3.00 x 1.50 m balcony (4.50 m2) on the east/front (right) facade, accessed from the family area. Not to scale for construction and not approved for code compliance. Master bedroom: 3.20 x 3.40 m | Stair opening / flight: 2.00 x 3.20 m; stairwell zone | Bedroom 3: 2.80 x 3.00 m | Toilet and bath: 1.50 x 2.10 m, rotated | Stair landing / circulation: 2.00 x 2.50 m | Bedroom 2: 2.80 x 3.00 m | Shared hall / circulation: additional schematic hall; verify in final layout | Family area: 2.80 x 3.00 m | Balcony: 3.00 x 1.50 m, 4.50 m2</desc>
 <style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.note{font-size:13px;fill:#475569}.small{font-size:11px;fill:#475569}</style>
@@ -32,9 +32,11 @@
 <text x="571.9" y="414.1" text-anchor="middle" font-size="11" font-weight="700" fill="#065f46" transform="rotate(90 571.9 414.1)">BALCONY</text>
 <text x="571.9" y="446.1" text-anchor="middle" font-size="10" fill="#065f46" transform="rotate(90 571.9 446.1)">3.00 x 1.50 m</text>
 <!-- Nominal 0.90 m D-04 access door on the east wall of the family area -->
+<g id="family-area-balcony-door" data-access-space="family-area" data-width-m="0.90">
 <line x1="539.9" y1="449" x2="539.9" y2="487.7" stroke="#ffffff" stroke-width="7"/>
 <line x1="539.9" y1="449" x2="501.2" y2="449" stroke="#334155" stroke-width="1.5"/>
 <path d="M501.2,449 A38.7,38.7 0 0 0 539.9,487.7" fill="none" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 3"/>
+</g>
 <line x1="140" y1="600" x2="539.9000000000001" y2="600" stroke="#475569" stroke-width="1.2"/><line x1="140" y1="593" x2="140" y2="607" stroke="#475569"/><line x1="539.9000000000001" y1="593" x2="539.9000000000001" y2="607" stroke="#475569"/><text x="339.95000000000005" y="592" text-anchor="middle" font-size="12" fill="#334155">9.30 m overall (house)</text>
  <line x1="629.9000000000001" y1="155" x2="629.9000000000001" y2="494.7" stroke="#475569" stroke-width="1.2"/><line x1="622.9000000000001" y1="155" x2="636.9000000000001" y2="155" stroke="#475569"/><line x1="622.9000000000001" y1="494.7" x2="636.9000000000001" y2="494.7" stroke="#475569"/><text x="644.9000000000001" y="324.85" font-size="12" fill="#334155" transform="rotate(90 644.9000000000001 324.85)">7.90 m overall</text>
 <g stroke="#0284c7" stroke-width="5">

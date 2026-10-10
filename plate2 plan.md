@@ -151,16 +151,24 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 ### Phase 2: Site requirements and preliminary calculations
 
-- [ ] **T-10** Determine required setbacks using applicable codes and regulations.
-- [ ] **T-11** Determine the buildable area / allowable building envelope.
-- [ ] **T-12** Determine the proposed building footprint.
-- [ ] **T-13** Calculate the ground-floor area.
-- [ ] **T-14** Calculate the second-floor area.
-- [ ] **T-15** Calculate the total floor area.
-- [ ] **T-16** Determine the remaining open space.
-- [ ] **T-17** Determine the applicable occupant load.
-- [ ] **T-18** Determine the applicable parking requirement.
+- [ ] **T-10** Confirm required setbacks with applicable national rules, Palo zoning / local ordinance, verified road ROW and official yard classification. Preliminary scenarios are documented in `site/phase2_site_requirements.md`; final selection remains pending.
+- [ ] **T-11** Determine the final buildable area / allowable building envelope after T-10 is confirmed. Four offset polygons are calculated for comparison, but none is the legally confirmed envelope.
+- [ ] **T-12** Confirm/revise the proposed building footprint and carport placement after the envelope is accepted. The current 9.30 m × 7.90 m house and carport are concept geometry only.
+- [ ] **T-13** Calculate the final ground-floor area from a revised, dimensioned A-02.
+- [ ] **T-14** Calculate the final second-floor area from a revised, dimensioned A-03.
+- [ ] **T-15** Calculate total floor area from the final coordinated floor plans.
+- [ ] **T-16** Determine the final code-defined open space / lot occupancy using the adopted method and confirmed lot classification.
+- [ ] **T-17** Determine the applicable occupant load using the identified official method/factor, not just the stated household size.
+- [ ] **T-18** Confirm the parking requirement and stall/access dimensions using the applicable official rule and local ordinance.
 - [ ] **T-19** Identify and calculate other applicable code-based dimensions and requirements.
+
+#### Phase 2 screening checkpoint (2026-10-10)
+
+Four offset scenarios, an area / current-footprint-fit table, a comparison SVG and an automated geometry validator are now included. They show how different road-facing yard assumptions affect the existing draft house/carport placement.
+
+**No official setback scenario has been selected.** PD 1096 Section 708(a) supports a general 2.00 m property-line distance for Group A dwellings. The published 2004 Revised IRR Table VIII.2 shows an R-1 4.50 m front yard and 2.00 m side/rear yards in the table for newly-developed subdivisions. Applicability to this parcel, the local Palo zoning classification, the legal road ROW and which road-side boundary counts as the front yard are unconfirmed. Keep T-10 and dependent T-11 through T-19 open until these sources are resolved.
+
+See `site/phase2_site_requirements.md`, `site/phase2_setback_scenarios.csv` and `previews/phase2_setback_scenarios.svg`. The uniform 2.00 m inset must not be described as the final legal setback.
 
 ### Phase 3: Space planning
 

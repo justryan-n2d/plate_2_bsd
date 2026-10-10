@@ -28,7 +28,7 @@
 </g>
 <g id="setback-dim-P2-P3">
   <line x1="678.25" y1="193.2" x2="621.5" y2="252.3" stroke="#b45309" stroke-width="1.8" marker-start="url(#setback-dim-arrow)" marker-end="url(#setback-dim-arrow)"/>
-  <text x="640" y="218" font-size="11" font-weight="700" fill="#92400e" transform="rotate(-46 640 218)">2.00 m</text>
+  <text x="638" y="273" font-size="11" font-weight="700" fill="#92400e">2.00 m</text>
 </g>
 <g id="setback-dim-P3-P4">
   <line x1="590.8" y1="645.3" x2="548.1" y2="592.3" stroke="#b45309" stroke-width="1.8" marker-start="url(#setback-dim-arrow)" marker-end="url(#setback-dim-arrow)"/>

@@ -17,7 +17,7 @@ The adjusted closed plot has a perimeter of 64.1454 m and calculated area of 265
 
 ## Road width and right-of-way
 
-Use 5.0 m as the existing road width and 8.00 m as the total right-of-way, because the assignment provides both as separate values. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the actual plan. The assignment does not specify the allocation, and these files do not assume exact road-edge or ROW offsets.
+Use the instructor-provided cross-section: 8.00 m total right-of-way = 5.00 m barangay road + 1.50 m roadside strip on each side. Show the road and roadside strips separately in the academic drawing. This width allocation is given, while the lot plot remains a local-coordinate academic sketch rather than a georeferenced survey.
 
 ## Site analysis status
 

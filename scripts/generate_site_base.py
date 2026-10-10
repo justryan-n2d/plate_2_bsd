@@ -76,7 +76,7 @@ def make_dxf(csv_path: Path, output_path: Path) -> dict:
         f"Closed perimeter: {plot['perimeter_m']:.4f} m.",
         f"Calculated closed-polygon area: {plot['area_m2']:.2f} m2.",
         "Assignment approximate area: 300.00 m2; not an equality target.",
-        "Road width 5.0 m; total ROW 8.00 m; 3.0 m allocation unspecified.",
+        "Road cross-section per instructor: 8.00 m RROW = 5.00 m road + 1.50 m strip each side.",
     ]
     for i, note in enumerate(notes):
         add_text(msp, note, (max_e + 2.0, max_n + 1.0 - i * 0.45), 0.22, "REFERENCE_NOTES")
@@ -147,8 +147,8 @@ def make_svg(csv_path: Path, output_path: Path) -> dict:
         "The approximate area is not forced onto the plot.",
         "Original P5-1: N 08°10′ W, 16.35 m (reference only)",
         "Adjusted P5-1: N 06°02′11″ E, 15.795414 m",
-        "Road width: 5.0 m | total ROW: 8.00 m",
-        "No allocation of the remaining 3.0 m is assumed.",
+        "RROW total: 8.00 m = road 5.00 m + side strips 1.50 m each.",
+        "Instructor-provided allocation; side strips are not assigned a specific use.",
         "Local coordinates, with P1 at (0,0); not georeferenced.",
         "Preliminary academic plot; not survey certification.",
     ]

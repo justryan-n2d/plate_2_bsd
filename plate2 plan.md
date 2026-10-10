@@ -47,7 +47,7 @@ The property is bounded by Lot 245-A on the north, Lot 246 on the east, a stated
 | 4–5 | S 83° 40' W | 12.60 m |
 | 5–1 | N 08° 10' W | 16.35 m |
 
-Use the stated 5.0 m as the existing road width and 8.00 m as the total road right-of-way. These values serve different purposes. The remaining 3.0 m could be allocated for shoulders, drainage, or other road-related spaces depending on the road plan. The assignment does not specify the exact allocation, so do not assume a particular split.
+Use the instructor's clarified road cross-section: 8.00 m total RROW = 5.00 m existing barangay road + 1.50 m remaining RROW strip on each side. Show the 5.00 m carriageway and both 1.50 m strips separately on the preliminary site plan. The 3.00 m balance is therefore allocated symmetrically for this plate, not left unspecified.
 
 ---
 
@@ -129,11 +129,11 @@ The original five listed courses produce a latitude sum of +0.4764 m, departure 
 
 The adjusted closed traverse gives a perimeter of 64.1454 m and a polygon area of 265.26 m². The assignment's approximate 300.00 m² value is 34.74 m² higher than the calculated area, so both values are recorded. The 300.00 m² value is explicitly approximate. The 265.26 m² value is the calculated area of the adjusted closed polygon; the 34.74 m² difference is documented and accepted as a difference from the approximate figure, not a reason to force the traverse to match 300.00 m². The difference is therefore not a blocker by itself. If the original approved survey document or a later instructor direction becomes available, use it to confirm the source information rather than silently changing the remaining courses.
 
-The 5.0 m road width and 8.00 m road right-of-way are treated as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan; the brief does not give a specific allocation. No exact road-edge or ROW offset is assumed.
+The 5.00 m carriageway and 8.00 m total RROW remain separately dimensioned. Per the instructor's clarification, the total includes a 1.50 m strip on each side of the 5.00 m carriageway. Use this known allocation in the academic road graphic; do not relabel the roadside strips as a specific sidewalk or drainage feature unless the assignment specifies that use.
 
 The site analysis now records the eight requested topics: lot orientation, north direction, road access, solar orientation, vehicular access, pedestrian access, service access, and existing site conditions. It also includes a nearby regional climate reference from PAGASA's Tacloban City 1991-2020 normals and a link to HazardHunterPH for later location-based checking. These are contextual references only; they are not parcel-specific measurements or a completed hazard assessment.
 
-**Still on hold before a final Site Development Plan:** verify physical road/ROW limits and actual site conditions, obtain a reliable parcel location for location-specific checks, and establish applicable setbacks. The area difference is documented but is not treated as an error solely because the 300.00 m² figure is approximate. The adjusted traverse is an academic plotting basis under the instructor's direction, not a cadastral certification. Exact driveway, pedestrian entrance, and service-access positions remain deferred until the site development and house layout stages. No house layout has been started in this phase.
+The instructor-provided road cross-section (8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side) is recorded for the site graphic. Phase 2 adopts a 2.00 m inset from each of the five plotted property boundaries as the working setback for this classroom activity, giving a **152.43 m² working envelope**. The approximate-area difference (300.00 m² stated versus 265.26 m² calculated) remains documented without changing the given courses beyond the instructor-directed closing-course adjustment. Exact driveway, pedestrian entrance, and service-access positions are deferred until Phase 3 layout planning.
 
 #### Repository status and verification record (2026-10-10)
 
@@ -144,32 +144,51 @@ The following checks were confirmed against the repository files now on `main`:
 - Original P5-1, adjusted P5-1, and original closure gap remain separately recorded.
 - Adjusted closing-course components return to P1; the closed traverse is reported with approximately 0.000000 m latitude and departure misclosure, based on the recorded component precision.
 - Adjusted perimeter (64.1454 m), adjusted polygon area (265.26 m²), assignment approximate area (300.00 m²), and 34.74 m² difference are stated consistently in the site-base records.
-- Road width (5.0 m) and total ROW (8.00 m) are identified as separate values; no specific allocation of the remaining 3.0 m is invented.
+- The road graphic uses the instructor's clarified allocation: 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side.
 - CSV structure and field formatting, required site-analysis topics, cross-file references, and the explicit no-house-layout boundary were checked.
 
-These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. The incomplete survey-plan reference, physical road/ROW limits, actual site conditions, and applicable setbacks may still require confirmation for a final site-development plan. House-layout work remains deferred until Phase 2 site requirements are worked through.
+These are document and arithmetic consistency checks, not a professional survey certification. The difference between 265.26 m² and the approximate 300.00 m² figure is understood and documented; it is not a target to reconcile by changing the adjusted traverse. For this academic plate, the site layout will use the instructor-provided road cross-section and the 2.00 m working setback baseline adopted in Phase 2. House-layout work can now begin using the 152.43 m² working envelope; the adjusted plot remains an academic drawing based on the assignment's technical description.
 
 ### Phase 2: Site requirements and preliminary calculations
 
-- [ ] **T-10** Determine required setbacks using applicable codes and regulations.
-- [ ] **T-11** Determine the buildable area / allowable building envelope.
+- [x] **T-10** Determine required setbacks using the instructor-activity baseline from PD 1096 Section 708(a): 2.00 m inward from each of the five plotted property boundaries.
+- [x] **T-11** Determine the buildable area / allowable building envelope: Scenario A, a 2.00 m inset on all five edges, calculates to 152.43 m² and is selected as the working envelope for Phase 3.
 - [ ] **T-12** Determine the proposed building footprint.
 - [ ] **T-13** Calculate the ground-floor area.
 - [ ] **T-14** Calculate the second-floor area.
 - [ ] **T-15** Calculate the total floor area.
 - [ ] **T-16** Determine the remaining open space.
 - [ ] **T-17** Determine the applicable occupant load.
-- [ ] **T-18** Determine the applicable parking requirement.
-- [ ] **T-19** Identify and calculate other applicable code-based dimensions and requirements.
+- [x] **T-18** Determine the preliminary parking requirement: use one on-site off-street slot as the activity basis for a single-family dwelling, with a 2.50 m × 5.00 m perpendicular/diagonal slot rectangle.
+- [ ] **T-19** Identify and calculate remaining applicable code-based dimensions and requirements alongside the floor plan and stair design.
+
+#### Phase 2 implementation checkpoint (2026-10-10)
+
+See the consolidated [repository implementation status](docs/implementation-status.md) for completed work, validation records, current branch/PR status, and the remaining steps.
+
+**Status: Phase 2's site-envelope gate is complete for this instructor-led academic activity, and Phase 3 can proceed.** The Phase 2 site calculation report and the preliminary building-envelope scenario report record the adopted assumptions, numerical results, and coordinates. The calculation script validates the Phase 1 traverse, applies the 2.00 m working offset on all five edges, calculates the working inset area, and includes tested geometry functions.
+
+The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited code provisions, assignment facts, working assumptions, and calculated values.
+
+- **T-10:** The working setback is adopted as 2.00 m inward from each plotted property boundary for this academic activity.
+- **T-11:** Scenario A in [phase2_envelope_scenarios.md](calculations/phase2_envelope_scenarios.md) gives a working envelope of **152.43 m²**. Scenarios B-D are retained for comparison only.
+- **T-18:** Use one on-site off-street parking slot as the preliminary activity basis. The slot rectangle is 2.50 m × 5.00 m for perpendicular/diagonal parking, or 2.15 m × 6.00 m for parallel parking.
+- **Occupancy check:** Because the assignment describes road frontage on both southeast and southwest sides, use the 90% corner-lot scenario (238.73 m² maximum occupied area, 26.53 m² corresponding open area) for the working comparison. The 80% inside-lot values remain in the calculation report for reference.
+
+The site-envelope basis is complete enough to proceed to Phase 3. The first-draft space program and adjacency diagrams are in [design/phase3_space_program.md](design/phase3_space_program.md). The actual building footprint, floor areas, remaining open space, occupant-load calculation, stair geometry, and parking placement depend on the room layout and will be completed as the plans develop.
 
 ### Phase 3: Space planning
 
-- [ ] **T-20** Make the space-requirement table for the proposed rooms and spaces.
-- [ ] **T-21** Prepare an adjacency / relationship diagram showing functional relationships between the spaces.
-- [ ] **T-22** Consider functional relationships, privacy, accessibility, convenience, service relationships, circulation, and safety.
-- [ ] **T-23** Arrange the required ground-floor spaces.
-- [ ] **T-24** Arrange the required second-floor spaces.
-- [ ] **T-25** Review the building layout for functional space relationships and circulation.
+- [x] **T-20** Prepare a first-draft space-requirement table with proposed room dimensions and target areas in [phase3_space_program.md](design/phase3_space_program.md). The room sizes are design targets, not values given by the instructor.
+- [x] **T-21** Prepare first-draft ground-floor and second-floor adjacency diagrams in [phase3_space_program.md](design/phase3_space_program.md).
+- [x] **T-22** Record preliminary priorities for privacy, accessibility, service relationships, convenience, circulation, and safety in the space program.
+- [ ] **T-23** Arrange the required ground-floor spaces inside the working 152.43 m² site envelope.
+- [ ] **T-24** Arrange the required second-floor spaces and coordinate the stair/bathroom positions with the ground floor.
+- [ ] **T-25** Review the dimensioned building layout for functional relationships and circulation.
+
+#### Phase 3 implementation checkpoint (2026-10-10)
+
+The first-draft [space program and adjacency diagrams](design/phase3_space_program.md) are now recorded. The program preserves all required rooms from the instructor's assignment and proposes adjustable clear dimensions for early planning. The next task is to arrange the room blocks within the selected working envelope, then refine the dimensions and recalculate floor areas from the resulting plan.
 
 ### Phase 4: Stair planning and calculations
 
@@ -645,7 +664,7 @@ This section turns the agreed digital workflow into an ordered implementation pl
 - [x] **R-23a** Generate the SVG preview from the same source coordinates and validate its XML, polygon coordinates, vertex count, and required notes. The generated preview is included in the workflow artifact.
 - [x] **R-23b** Visually inspect the rendered SVG preview. The parcel outline, vertex labels, course list, notes, north arrow, and graphic scale are visible and legible at preview size.
 - [ ] **R-23c** Open the DXF in compatible CAD software and visually verify model-space units, layers, linework, text placement, extents, and plot behavior. SVG preview review does not replace this CAD-app check.
-- [x] **R-24** Include notes in the generator for original and adjusted P5-1, approximate and calculated area, and the 5.0 m road / 8.00 m ROW distinction. Do not invent a split of the remaining 3.0 m.
+- [x] **R-24** Include notes for original and adjusted P5-1, approximate and calculated area, and the instructor-specified road cross-section: 5.00 m carriageway plus 1.50 m RROW strip on each side, 8.00 m total.
 - [ ] **R-25** Keep the generated CAD output marked preliminary until the DXF has been opened and visually checked in compatible CAD software. The SVG preview has been visually reviewed, but that does not certify the DXF or drawing scale.
 
 ### Stage R-4: Validate the DXF/SVG generation pipeline

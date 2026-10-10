@@ -24,10 +24,10 @@
   <g><rect x="465" y="375" width="245" height="130" rx="12" fill="#eeeafa" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="587.5" y="430" text-anchor="middle"><tspan x="587.5" dy="0">Stair landing /</tspan><tspan x="587.5" dy="20">circulation</tspan></text></g>
   <g><rect x="725" y="375" width="290" height="130" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.6"/><text class="node-label" x="870" y="430" text-anchor="middle"><tspan x="870" dy="0">Shared circulation</tspan><tspan x="870" dy="20">5.00 m² target</tspan></text></g>
   <g><rect x="725" y="545" width="290" height="80" rx="12" fill="#fffaf0" stroke="#b77935" stroke-width="1.6" stroke-dasharray="7 5"/><text class="node-label" x="870" y="575" text-anchor="middle"><tspan x="870" dy="0">Balcony (if appropriate)</tspan><tspan x="870" dy="20">Optional 1.20 x 3.00 m</tspan></text></g>
-  <line x1="587" y1="505" x2="587" y2="535" stroke="#b77935" stroke-width="3" stroke-dasharray="6 6"/>
-  <text class="note" x="180" y="700">- Bedrooms should have independent access from shared circulation; no bedroom should be a passage to another room.</text>
-  <text class="note" x="180" y="726">- Keep the upstairs bath near bedrooms and preferably near the ground-floor bath if the actual plan permits.</text>
-  <text class="note" x="180" y="752">- The balcony remains optional until setbacks, privacy, orientation, guardrails and structural planning are checked.</text>
-  <rect x="160" y="785" width="880" height="55" rx="12" fill="#ffffff" stroke="#d7dee8"/>
-  <text class="note" x="180" y="818">Phase 4 must confirm that the stair flight, landing, headroom and circulation fit the later dimensioned layout.</text>
+  <line x1="870" y1="505" x2="870" y2="670" stroke="#b77935" stroke-width="3" stroke-dasharray="6 6"/>
+  <text class="note" x="180" y="787">- Bedrooms should have independent access from shared circulation; no bedroom should be a passage to another room.</text>
+  <text class="note" x="180" y="812">- Keep the upstairs bath near bedrooms and preferably near the ground-floor bath if the actual plan permits.</text>
+  <text class="note" x="180" y="837">- The balcony is outside the dashed building zone and remains optional pending site and code checks.</text>
+  <rect x="160" y="850" width="880" height="38" rx="12" fill="#ffffff" stroke="#d7dee8"/>
+  <text class="note" x="180" y="874">Phase 4 must confirm that the stair flight, landing, headroom and circulation fit the later dimensioned layout.</text>
 </svg>

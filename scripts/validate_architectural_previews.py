@@ -215,22 +215,38 @@ def validate_svg_files() -> None:
         if drawing_no not in visible_text:
             fail(f"{filename} visible sheet title does not contain {drawing_no}")
         geometry_ids = {
-            "A-01": ("front-balcony-projection", 51.0, 102.0),
-            "A-03": ("front-balcony-plan", 64.5, 129.0),
-            "A-04": ("front-balcony-projection", 78.0, 156.0),
+            "A-01": ("front-balcony-projection", "main-house-footprint"),
+            "A-03": ("front-balcony-plan", "main-house-outline"),
+            "A-04": ("front-balcony-projection", "main-roof-footprint"),
         }
         if drawing_no in geometry_ids:
-            element_id, expected_w, expected_h = geometry_ids[drawing_no]
-            element = root.find(f".//*[@id='{element_id}']")
-            if element is None:
-                fail(f"{filename} is missing balcony projection geometry {element_id}")
-            for dim, expected in (("width", expected_w), ("height", expected_h)):
-                try:
-                    actual = float(element.attrib[dim])
-                except (KeyError, ValueError):
-                    fail(f"{filename} balcony projection is missing numeric {dim}")
-                if not math.isclose(actual, expected, rel_tol=0.0, abs_tol=0.02):
-                    fail(f"{filename} balcony projection {dim} mismatch: {actual} != {expected}")
+            balcony_id, envelope_id = geometry_ids[drawing_no]
+            balcony_shape = root.find(f".//*[@id='{balcony_id}']")
+            envelope_shape = root.find(f".//*[@id='{envelope_id}']")
+            if balcony_shape is None or envelope_shape is None:
+                fail(f"{filename} must include both the house/roof outline and balcony geometry")
+            try:
+                bx = float(balcony_shape.attrib["x"])
+                by = float(balcony_shape.attrib["y"])
+                bw = float(balcony_shape.attrib["width"])
+                bh = float(balcony_shape.attrib["height"])
+                ex = float(envelope_shape.attrib["x"])
+                ey = float(envelope_shape.attrib["y"])
+                ew = float(envelope_shape.attrib["width"])
+                eh = float(envelope_shape.attrib["height"])
+            except (KeyError, ValueError):
+                fail(f"{filename} balcony or envelope geometry has missing numeric coordinates")
+            scale_x, scale_y = ew / 9.30, eh / 7.90
+            expected = (
+                ex + ew,
+                ey + 0.20 * scale_y,
+                1.50 * scale_x,
+                3.00 * scale_y,
+            )
+            actual = (bx, by, bw, bh)
+            for name, a, e in zip(("east-edge x", "front-offset y", "projection width", "facade span"), actual, expected):
+                if not math.isclose(a, e, rel_tol=0.0, abs_tol=0.03):
+                    fail(f"{filename} balcony {name} mismatch: {a} != {e}")
         if drawing_no == "A-03":
             if "balcony" not in desc or "balcony" not in visible_text.lower():
                 fail("A-03 must describe and visibly show the required balcony")

@@ -336,6 +336,13 @@ def load_code_requirements(requirements_path: Path) -> list[dict[str, str]]:
             raise ValueError(f"Code requirements CSV line {line_no} must include topic and status.")
         if not row["source_url"].strip() and row["status"].strip().lower() != "pending":
             raise ValueError(f"Requirement {requirement_id} needs a source URL or a pending status.")
+    expected_ids = {f"P2-{index:02d}" for index in range(1, 13)}
+    missing_ids = sorted(expected_ids - seen)
+    unexpected_ids = sorted(seen - expected_ids)
+    if missing_ids:
+        raise ValueError(f"Code requirements CSV is missing requirement ID(s): {', '.join(missing_ids)}")
+    if unexpected_ids:
+        raise ValueError(f"Code requirements CSV has unexpected requirement ID(s): {', '.join(unexpected_ids)}")
     return rows
 
 

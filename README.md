@@ -26,6 +26,7 @@ See the [site folder README](site/README.md) for source files, assumptions, and 
 - [Calculation worksheet](calculations/plate2_calculations.md): calculation methods, values, and checks.
 - [Phase 2 site requirements and preliminary calculations](calculations/phase2_site_calculations.md): code-based occupancy scenarios, setback inputs, and remaining verification items.
 - [Phase 2 setback inputs](site/phase2_setback_inputs.csv): per-boundary code baseline and geometry-input status.
+- [Phase 2 code requirements register](site/phase2_code_requirements.csv): traceable provisions, assumptions, calculated values, and unresolved evidence.
 - [Traverse coordinate CSV](site/phase1_traverse_coordinates.csv): original and adjusted course records, coordinates, and closure diagnostics.
 - [Site analysis](site/phase1_site_analysis.md): supported site findings and items requiring further verification.
 - [Site analysis matrix](site/phase1_site_analysis_matrix.csv): site topics, evidence, status, and follow-up actions.

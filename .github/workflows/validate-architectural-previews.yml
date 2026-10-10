@@ -1,0 +1,36 @@
+name: Validate Phase 5 Architectural Previews
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/building_model.json"
+      - "previews/phase5_*.svg"
+      - "scripts/validate_architectural_previews.py"
+      - ".github/workflows/validate-architectural-previews.yml"
+  pull_request:
+    paths:
+      - "data/building_model.json"
+      - "previews/phase5_*.svg"
+      - "scripts/validate_architectural_previews.py"
+      - ".github/workflows/validate-architectural-previews.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-architectural-previews:
+    name: Validate A-01 to A-07 draft package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile-check validator
+        run: python -m py_compile scripts/validate_architectural_previews.py
+      - name: Validate shared data and SVG previews
+        run: python scripts/validate_architectural_previews.py

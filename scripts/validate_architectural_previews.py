@@ -250,7 +250,7 @@ def validate_svg_files() -> None:
             scale_x, scale_y = ew / 9.30, eh / 7.90
             expected = (
                 ex + ew,
-                ey + balcony_y * scale_y,
+                ey + float(root.attrib["data-balcony-offset-m"]) * scale_y,
                 1.50 * scale_x,
                 3.00 * scale_y,
             )

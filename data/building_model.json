@@ -212,7 +212,7 @@
       "Second Floor": [
         {
           "name": "Master bedroom",
-          "x_m": 6.1,
+          "x_m": 0,
           "y_m": 0,
           "width_m": 3.2,
           "depth_m": 3.4,
@@ -222,7 +222,7 @@
         },
         {
           "name": "Stair opening / flight",
-          "x_m": 4.1,
+          "x_m": 4.5,
           "y_m": 0,
           "width_m": 2,
           "depth_m": 3.2,
@@ -232,7 +232,7 @@
         },
         {
           "name": "Bedroom 3",
-          "x_m": 0,
+          "x_m": 6.5,
           "y_m": 0,
           "width_m": 2.8,
           "depth_m": 3,
@@ -243,7 +243,7 @@
         {
           "name": "Toilet and bath",
           "x_m": 7.2,
-          "y_m": 3.4,
+          "y_m": 3,
           "width_m": 2.1,
           "depth_m": 1.5,
           "target_area_m2": 3.15,
@@ -252,7 +252,7 @@
         },
         {
           "name": "Stair landing / circulation",
-          "x_m": 4.1,
+          "x_m": 4.5,
           "y_m": 3.2,
           "width_m": 2,
           "depth_m": 2.5,
@@ -374,7 +374,7 @@
   "drawing_status": {
     "A-01": "Preliminary site plan; elevated east/front balcony projection beside family area is shown separately from ground coverage. Main-house placement shifted north to retain academic envelope containment; coordinate balcony overhang and carport canopy in final design.",
     "A-02": "Preliminary ground-floor plan with right/east entry side; openings and final dimensions pending. The upper-floor balcony is not enclosed ground-floor area.",
-    "A-03": "Preliminary second-floor plan with required 3.00 m x 1.50 m balcony beside and accessed from the family area on the east/front facade.",
+    "A-03": "Preliminary second-floor plan with room boxes coordinated to the current A-03 layout and the stair opening/landing aligned with the A-02 stair zone. Door/window locations and final dimensions remain pending.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
     "A-05": "Four schematic elevations with required balcony on the east/front facade at the family-area end; door D-04, balcony and dimensions remain provisional.",
     "A-06": "Schematic section through east/front balcony beside family area, showing the 1.50 m projection and D-04 access.",

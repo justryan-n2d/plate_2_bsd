@@ -164,12 +164,12 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 #### Phase 2 implementation checkpoint (2026-10-10)
 
-Phase 2 implementation has started in [the Phase 2 site calculation report](calculations/phase2_site_calculations.md). The calculation script reads the Phase 1 closed-traverse coordinates, calculates the Section 708(a) lot-occupancy scenarios, validates the setback-input rows, and includes a tested polygon-inset function.
+Phase 2 implementation has started in [the Phase 2 site calculation report](calculations/phase2_site_calculations.md) and the new [preliminary building-envelope scenario report](calculations/phase2_envelope_scenarios.md). The calculation script reads the Phase 1 closed-traverse coordinates, calculates the Section 708(a) lot-occupancy scenarios and explicit inset-envelope comparisons, validates the setback-input rows, and includes tested polygon-inset functions.
 
 The [Phase 2 code requirements register](site/phase2_code_requirements.csv) separates cited national-code provisions, assignment facts, provisional calculations, and local/site-specific items requiring verification.
 
-- **T-10:** The instructor's road cross-section is recorded as 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side. The remaining setback/envelope work concerns the applicable final yard rule and measurement reference, not the allocation of the remaining 3.00 m.
-- **T-11:** The envelope calculation logic and unit tests are implemented. The project-specific buildable-envelope area is intentionally not reported until the missing road-facing reference geometry is available.
+- **T-10:** The instructor's road cross-section is settled: 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip per side. Research confirms PD 1096 Section 708(a)'s 2.00 m property-line minimum for Group A dwellings; however, Section 704(a)'s centerline clause is limited by its wording to Section 704, and Table VIII.2's residential yard values are noted for newly developed subdivisions. The publicly available sources reviewed did not establish the parcel's Palo zone or its front versus street-side yard requirements.
+- **T-11:** Four reproducible geometry scenarios are calculated in [phase2_envelope_scenarios.md](calculations/phase2_envelope_scenarios.md): 152.43 m² for the 2.00 m minimum-only baseline; 128.90 m² or 125.02 m² if a 4.50 m candidate yard applies to one of the two road edges; and 112.29 m² if it applies to both. These are comparison areas, not a final adopted envelope. Confirm the local yard rule and formal road/lot-line alignment before selecting offsets.
 - **T-18:** A preliminary one-slot requirement is supported for a single-family dwelling lot above 120 m² under the cited 2004 IRR table; the standard car-slot rectangle is documented as 2.50 m × 5.00 m for perpendicular/diagonal parking or 2.15 m × 6.00 m for parallel parking. Confirm occupancy division and local Building Official interpretation before finalizing.
 - **T-19:** The conditional corner-lot (90%) and inside-lot (80%) occupancy ceilings have been calculated. These are not substitutes for setbacks or the final footprint.
 

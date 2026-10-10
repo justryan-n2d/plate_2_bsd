@@ -1,0 +1,36 @@
+name: Validate Phase 4 Stair Design
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/stair_design.json"
+      - "space_planning/stair_*.svg"
+      - "scripts/validate_stair_design.py"
+      - ".github/workflows/validate-stair-design.yml"
+  pull_request:
+    paths:
+      - "data/stair_design.json"
+      - "space_planning/stair_*.svg"
+      - "scripts/validate_stair_design.py"
+      - ".github/workflows/validate-stair-design.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-stair:
+    name: Validate Phase 4 stair calculations and previews
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile-check stair validator
+        run: python -m py_compile scripts/validate_stair_design.py
+      - name: Validate stair data and diagrams
+        run: python scripts/validate_stair_design.py

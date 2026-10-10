@@ -185,7 +185,7 @@ def inset_convex_polygon(vertices: Sequence[Point], offsets_m: Sequence[float]) 
 def resolve_buildable_envelope(
     vertices: Sequence[Point], offsets_m: Sequence[float | None]
 ) -> dict:
-    """Return no final envelope when any required geometry offset is unknown."""
+    """Calculate the working inset when all instructor-activity offsets are supplied."""
     if len(vertices) != len(offsets_m):
         raise ValueError("Provide one geometry offset for every boundary course.")
     missing = [
@@ -210,7 +210,7 @@ def resolve_buildable_envelope(
     return {
         "vertices": envelope_vertices,
         "area_m2": polygon_area(envelope_vertices),
-        "status": "Calculated from all supplied boundary offsets; still subject to code/local review",
+        "status": "Working academic envelope calculated from all five supplied property-boundary offsets",
         "missing_edge_indices": [],
     }
 
@@ -489,7 +489,7 @@ def build_phase2_report(
         "",
         "## 2. Setback review by boundary",
         "",
-        "PD 1096 Section 708(a) states that Group A dwellings shall be at least 2.00 m from the property line, subject to the Civil Code provisions on easements of light and view, and shall occupy not more than 90% of a corner lot or 80% of an inside lot. Section 704(a) also states that the center line of an adjoining street or alley is considered an adjacent property line. The instructor has clarified the road cross-section: 8.00 m total RROW = 5.00 m carriageway + 1.50 m RROW strip on each side. This resolves the allocation of the remaining 3.00 m. The final road-side building-yard offset remains subject to the applicable local zoning and correct code measurement reference.",
+        "For this instructor-led academic activity, use the PD 1096 Section 708(a) Group A dwelling baseline of 2.00 m inward from each plotted property boundary. The instructor's road cross-section is 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side. The same 2.00 m property-boundary offset is used on road-facing courses 3-4 and 4-5 as the working drafting assumption for this plate.",
         "",
         "| Boundary | Adjoining feature | Code baseline | Geometry offset used? | Status / reason |",
         "|---|---|---:|---:|---|",
@@ -504,29 +504,29 @@ def build_phase2_report(
         )
     lines += [
         "",
-        "**Important distinction:** the 2.00 m statutory baseline is not confirmation that every final yard is exactly 2.00 m. The instructor-provided RROW allocation is settled for this plate. The local zoning ordinance, zoning classification, applicable yard rule, and correct measurement reference must still be checked with the Municipality of Palo's competent offices. NBCP Table VIII.2's R-1 residential-yard values (front 4.50 m, side and rear 2.00 m) are specifically noted as applying to newly developed subdivisions in the table note, so they are not silently applied as the final rule here.",
+        "**Working assumption for this activity:** use the 2.00 m property-boundary offset on all five courses for the preliminary envelope and Phase 3 layout. The 4.50 m variants remain comparison scenarios only and are not used in the working layout.",
         "",
         "## 3. Lot occupancy and minimum open-space scenarios",
         "",
-        "For a transparent preliminary comparison, Section 708(a)'s caps are calculated using the **265.26 m² adjusted-polygon area**, not the approximate area from the brief. The site has two stated adjoining road-frontage edges, so the corner-lot scenario is shown first, but final lot classification and local restrictions must be confirmed.",
+        "For this activity, use the **265.26 m² adjusted-polygon area** for the occupancy comparison. The lot description gives road frontage along both the southeast and southwest edges, so use the corner-lot 90% occupancy scenario for the working comparison and retain the 80% inside-lot scenario for reference.",
         "",
         "| Classification scenario | Maximum occupancy factor | Maximum occupied area | Corresponding minimum open area |",
         "|---|---:|---:|---:|",
         f"| Corner lot (provisional) | {corner_occupancy['factor']:.0%} | {corner_occupancy['maximum_occupancy_m2']:.2f} m² | {corner_occupancy['minimum_open_space_m2']:.2f} m² |",
         f"| Inside lot (comparison only) | {inside_occupancy['factor']:.0%} | {inside_occupancy['maximum_occupancy_m2']:.2f} m² | {inside_occupancy['minimum_open_space_m2']:.2f} m² |",
         "",
-        "These are code-ceiling scenarios, not the calculated buildable envelope and not the proposed footprint. Actual setbacks, local zoning, light-and-ventilation requirements, and other applicable limitations can require a smaller building and more open space.",
+        "These are occupancy ceilings, not the proposed building footprint. For the working site layout, the 152.43 m² inset envelope is the tighter geometric limit than the 238.73 m² corner-lot occupancy ceiling. Building footprint and remaining open space will be calculated after the room layout is arranged.",
         "",
         "## 4. Buildable-envelope calculation",
         "",
     ]
     if envelope["area_m2"] is None:
         lines += [
-            "**NOT CALCULATED AS A FINAL BUILDABLE ENVELOPE.** The instructor-provided cross-section (8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side) is known and used in the site drawing. The final inset is held pending confirmation of the applicable building-yard requirement and the correct line from which the road-side setback must be measured.",
+            "**WORKING ACADEMIC ENVELOPE NOT YET COMPUTED.** The instructor-provided cross-section (8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side) is known and used in the site drawing. The project input table should contain the adopted 2.00 m working offset for all five property-boundary edges.",
             "",
             f"Envelope status: {envelope['status']}.",
             "",
-            "The geometry engine and tests are in place. Once the applicable local yard requirement and setback measurement reference are confirmed, fill the final road-side setback offsets and regenerate this report. The 1.50 m / 5.00 m / 1.50 m RROW allocation is not a pending input.",
+            "Once all five working offsets are entered, this report reports the inset area for the Phase 3 layout. The instructor-provided 1.50 m / 5.00 m / 1.50 m RROW allocation is settled and is not a pending input.",
         ]
     elif envelope["area_m2"] == 0:
         lines += ["**NOT FEASIBLE at the supplied offsets.** The setback lines leave no polygonal buildable envelope."]
@@ -542,7 +542,7 @@ def build_phase2_report(
         "",
         "| Item | Current finding | Status |",
         "|---|---|---|",
-        f"| Parking demand | {f'{parking_slots} off-street, on-site slot indicated for a lot above 120 m², assuming a single-family dwelling under Group A / Division A-1' if parking_slots is not None else 'Pending lot/use classification and current parking-table verification'} | PRELIMINARY; confirm occupancy division locally |",
+        f"| Parking demand | {f'{parking_slots} off-street, on-site slot used as the working assumption for a single-family dwelling under Group A / Division A-1' if parking_slots is not None else 'Pending lot/use classification and current parking-table verification'} | PRELIMINARY ACTIVITY BASIS |",
         "| Standard car-slot size | 2.50 m × 5.00 m = 12.50 m² for perpendicular/diagonal parking; parallel option 2.15 m × 6.00 m = 12.90 m² | 2004 Revised IRR Rule VII, parking dimensions; slot must be outside RROW |",
         "| Driveway, maneuvering and garage clearances | Not included in the rectangle-area calculation | PENDING layout and applicable access checks |",
         "| Occupant load | Assignment gives 5–6 proposed occupants; code occupant load still requires the applicable floor area / method and occupancy classification | PENDING |",
@@ -563,11 +563,10 @@ def build_phase2_report(
         "",
         "## 7. Inputs still required before finalizing Phase 2",
         "",
-        "- Municipal zoning classification and applicable Palo zoning ordinance requirements for this parcel.",
-        "- Confirmation of the applicable yard/setback requirement and the correct road-side measurement reference for both frontages. The cross-section is given by the instructor as 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side.",
-        "- Confirmation whether the Municipality applies a specific corner-lot classification and any additional yard / site-occupancy rules.",
-        "- Applicable parking table and exact parking-space dimensions confirmed for the adopted use classification.",
-        "- Later, a coordinated preliminary floor plan and floor-to-floor height to calculate footprint, floor areas, occupant load, stair geometry, and residual open space.",
+        "- Proposed footprint, room dimensions, total floor areas, and remaining open space after the floor layout is developed.",
+        "- Occupant-load and stair calculations using the coordinated floor plan and floor-to-floor height.",
+        "- Parking-space placement, driveway, and garage/carport layout coordinated with the working envelope.",
+        "- Final consistency check of site plan, floor plans, and the instructor's submission checklist.",
         "",
         "**Limit:** This academic worksheet is not a site survey, legal zoning determination, permit-ready design, or certification of code compliance. Do not use the provisional numbers to build.",
         "",

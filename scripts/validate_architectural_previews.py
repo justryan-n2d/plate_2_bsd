@@ -258,6 +258,45 @@ def validate_svg_files() -> None:
             for name, a, e in zip(("east-edge x", "family-area alignment y", "projection width", "facade span"), actual, expected):
                 if not math.isclose(a, e, rel_tol=0.0, abs_tol=0.03):
                     fail(f"{filename} balcony {name} mismatch: {a} != {e}")
+        if drawing_no == "A-01":
+            expected_site_dimensions = {
+                "data-road-carriageway-m": 5.0,
+                "data-road-row-m": 8.0,
+                "data-setback-m": 2.0,
+            }
+            for attr, expected_value in expected_site_dimensions.items():
+                try:
+                    actual_value = float(root.attrib[attr])
+                except (KeyError, ValueError):
+                    fail(f"A-01 is missing valid source metadata: {attr}")
+                if not math.isclose(actual_value, expected_value, rel_tol=0.0, abs_tol=0.001):
+                    fail(f"A-01 source dimension {attr} mismatch: {actual_value} != {expected_value}")
+
+            for boundary in ("P1-P2", "P2-P3", "P3-P4", "P4-P5", "P5-P1"):
+                setback_dimension = root.find(f".//*[@id='setback-dim-{boundary}']")
+                if setback_dimension is None:
+                    fail(f"A-01 must show a 2.00 m setback dimension for boundary {boundary}")
+                label_text = " ".join("".join(el.itertext()) for el in setback_dimension.iter() if local_name(el.tag) == "text")
+                if "2.00 m" not in label_text:
+                    fail(f"A-01 setback dimension {boundary} is missing its 2.00 m label")
+
+            row_dimension = root.find(".//*[@id='row-dimension-line']")
+            carriageway_dimension = root.find(".//*[@id='carriageway-dimension-line']")
+            if row_dimension is None or carriageway_dimension is None:
+                fail("A-01 must have separate dimension lines for the 8.00 m total ROW and 5.00 m carriageway")
+            try:
+                row_length = abs(float(row_dimension.attrib["x2"]) - float(row_dimension.attrib["x1"]))
+                carriageway_length = abs(float(carriageway_dimension.attrib["x2"]) - float(carriageway_dimension.attrib["x1"]))
+            except (KeyError, ValueError):
+                fail("A-01 road/ROW dimension lines are missing numeric endpoints")
+            if row_length <= carriageway_length or not math.isclose(row_length / carriageway_length, 8.0 / 5.0, rel_tol=0.0, abs_tol=0.01):
+                fail("A-01 road/ROW dimension-line lengths must distinguish 8.00 m ROW from the 5.00 m carriageway")
+            for required_text in ("8.00 m TOTAL ROW", "5.00 m CARRIAGEWAY", "Remaining ROW outside carriageway: 3.00 m in total"):
+                if required_text not in visible_text:
+                    fail(f"A-01 is missing the required road/ROW note: {required_text}")
+            if "no specific placement of the carriageway within the ROW is assumed" not in visible_text.lower():
+                fail("A-01 must state that no specific lateral placement of the carriageway within the ROW is assumed")
+
         if drawing_no == "A-03":
             if "balcony" not in desc or "balcony" not in visible_text.lower():
                 fail("A-03 must describe and visibly show the required balcony")

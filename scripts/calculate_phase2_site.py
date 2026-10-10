@@ -196,7 +196,7 @@ def resolve_buildable_envelope(
         return {
             "vertices": None,
             "area_m2": None,
-            "status": f"Incomplete: missing geometry offsets for boundary edge(s) {', '.join(str(i + 1) for i in missing)}",
+            "status": f"Incomplete: missing final setback offsets for boundary edge(s) {', '.join(str(i + 1) for i in missing)}",
             "missing_edge_indices": missing,
         }
     envelope_vertices = inset_convex_polygon(vertices, [float(value) for value in offsets_m])
@@ -372,7 +372,7 @@ def build_phase2_report(
         "",
         "## 2. Setback review by boundary",
         "",
-        "PD 1096 Section 708(a) states that Group A dwellings shall be at least 2.00 m from the property line, subject to the Civil Code provisions on easements of light and view, and shall occupy not more than 90% of a corner lot or 80% of an inside lot. Section 704(a) also states that the center line of an adjoining street or alley is considered an adjacent property line. The project therefore cannot place road-frontage setback lines accurately until the street-centerline / right-of-way relationship is confirmed.",
+        "PD 1096 Section 708(a) states that Group A dwellings shall be at least 2.00 m from the property line, subject to the Civil Code provisions on easements of light and view, and shall occupy not more than 90% of a corner lot or 80% of an inside lot. Section 704(a) also states that the center line of an adjoining street or alley is considered an adjacent property line. The instructor has clarified the road cross-section: 8.00 m total RROW = 5.00 m carriageway + 1.50 m RROW strip on each side. This resolves the allocation of the remaining 3.00 m. The final road-side building-yard offset remains subject to the applicable local zoning and correct code measurement reference.",
         "",
         "| Boundary | Adjoining feature | Code baseline | Geometry offset used? | Status / reason |",
         "|---|---|---:|---:|---|",
@@ -387,7 +387,7 @@ def build_phase2_report(
         )
     lines += [
         "",
-        "**Important distinction:** the 2.00 m statutory baseline is not confirmation that every final yard is exactly 2.00 m. The local zoning ordinance, zoning classification, actual road centerline / RROW, and any more restrictive applicable rules must be checked with the Municipality of Palo's competent offices. NBCP Table VIII.2's R-1 residential-yard values (front 4.50 m, side and rear 2.00 m) are specifically noted as applying to newly developed subdivisions in the table note, so they are not silently applied as the final rule here.",
+        "**Important distinction:** the 2.00 m statutory baseline is not confirmation that every final yard is exactly 2.00 m. The instructor-provided RROW allocation is settled for this plate. The local zoning ordinance, zoning classification, applicable yard rule, and correct measurement reference must still be checked with the Municipality of Palo's competent offices. NBCP Table VIII.2's R-1 residential-yard values (front 4.50 m, side and rear 2.00 m) are specifically noted as applying to newly developed subdivisions in the table note, so they are not silently applied as the final rule here.",
         "",
         "## 3. Lot occupancy and minimum open-space scenarios",
         "",
@@ -405,11 +405,11 @@ def build_phase2_report(
     ]
     if envelope["area_m2"] is None:
         lines += [
-            "**NOT CALCULATED.** A final inset polygon is intentionally not generated because one or more roadway geometry offsets are missing. This avoids treating the boundary line as the road centerline or inventing an allocation of the stated 5.00 m road width and 8.00 m RROW.",
+            "**NOT CALCULATED AS A FINAL BUILDABLE ENVELOPE.** The instructor-provided cross-section (8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side) is known and used in the site drawing. The final inset is held pending confirmation of the applicable building-yard requirement and the correct line from which the road-side setback must be measured.",
             "",
             f"Envelope status: {envelope['status']}.",
             "",
-            "The geometry engine and tests are in place. Once the survey / site reference identifies the applicable road-centerline or RROW lines and the Municipality's setbacks are verified, populate the geometry-offset inputs and regenerate this report.",
+            "The geometry engine and tests are in place. Once the applicable local yard requirement and setback measurement reference are confirmed, fill the final road-side setback offsets and regenerate this report. The 1.50 m / 5.00 m / 1.50 m RROW allocation is not a pending input.",
         ]
     elif envelope["area_m2"] == 0:
         lines += ["**NOT FEASIBLE at the supplied offsets.** The setback lines leave no polygonal buildable envelope."]
@@ -447,7 +447,7 @@ def build_phase2_report(
         "## 7. Inputs still required before finalizing Phase 2",
         "",
         "- Municipal zoning classification and applicable Palo zoning ordinance requirements for this parcel.",
-        "- A reliable road-centerline / RROW line for both road-frontage boundaries and confirmation of the measured road/ROW relationship.",
+        "- Confirmation of the applicable yard/setback requirement and the correct road-side measurement reference for both frontages. The cross-section is given by the instructor as 8.00 m total RROW = 5.00 m carriageway + 1.50 m strip on each side.",
         "- Confirmation whether the Municipality applies a specific corner-lot classification and any additional yard / site-occupancy rules.",
         "- Applicable parking table and exact parking-space dimensions confirmed for the adopted use classification.",
         "- Later, a coordinated preliminary floor plan and floor-to-floor height to calculate footprint, floor areas, occupant load, stair geometry, and residual open space.",
@@ -499,7 +499,7 @@ def main() -> int:
         print(f"INFO: validated {len(requirement_rows)} traceable Phase 2 code/assignment requirements.")
         print(f"INFO: adjusted polygon area = {traverse['area_m2']:.4f} m²; perimeter = {traverse['perimeter_m']:.4f} m.")
         print(f"INFO: corner occupancy scenario = {corner['maximum_occupancy_m2']:.2f} m²; inside-lot scenario = {inside['maximum_occupancy_m2']:.2f} m².")
-        envelope_text = "NOT CALCULATED (road reference lines unresolved)" if envelope["area_m2"] is None else f"{envelope['area_m2']:.2f} m²"
+        envelope_text = "NOT CALCULATED (final road-side setbacks unresolved)" if envelope["area_m2"] is None else f"{envelope['area_m2']:.2f} m²"
         print(f"INFO: buildable envelope = {envelope_text}.")
         return 0
     except (FileNotFoundError, ValueError, OSError) as exc:

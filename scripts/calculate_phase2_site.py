@@ -256,13 +256,13 @@ def calculate_preliminary_envelope_scenarios(vertices: Sequence[Point]) -> list[
 
 
 def build_preliminary_envelope_scenarios_report(vertices: Sequence[Point]) -> str:
-    """Build an auditable report for geometry scenarios, not a final setback ruling."""
+    """Build the selected working-envelope report and sensitivity comparisons."""
     scenarios = calculate_preliminary_envelope_scenarios(vertices)
     lines = [
         "# Preliminary Building Envelope Scenarios",
         "",
         "**Project:** CE 393 Plate No. 2, Lot 245-B, Barangay San Isidro, Palo, Leyte  ",
-        "**Status:** Geometry comparison only. No scenario below is adopted as the final legal setback rule.",
+        "**Status:** Preliminary academic calculation. Scenario A is the working envelope selected for Phase 3 layout.",
         "",
         "## 1. Confirmed project geometry",
         "",

@@ -15,7 +15,7 @@
     "Adopt one off-street parking space in the 2.80 m x 5.50 m carport for the student plate; this is an academic design assumption.",
     "Doors, windows, finishes, ceiling/eaves/roof levels and roof pitch are draft design targets, not confirmed code minima.",
     "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included.",
-    "Include a required second-floor balcony 3.00 m wide x 1.50 m projection (4.50 m2), attached to the master bedroom on the east/front (entry and carport) facade. Count it separately from enclosed house floor area."
+    "Include a required second-floor balcony 3.00 m wide x 1.50 m projection (4.50 m2), attached to the family area on the east/front (entry and carport) facade. Count it separately from enclosed house floor area."
   ],
   "site": {
     "lot_number": "245-B",
@@ -82,7 +82,7 @@
     "setback_reference": "Selected academic assumption for the student activity: uniform 2.00 m from the five boundaries using PD 1096 Section 708(a) as the general Group A dwelling baseline.",
     "building_placement": {
       "southwest_easting_m": 1.6893311,
-      "south_edge_northing_m": -11.4457888,
+      "south_edge_northing_m": -9.8457888,
       "width_m": 9.3,
       "depth_m": 7.9
     },
@@ -306,17 +306,17 @@
     "balcony": {
       "floor": "Second Floor",
       "status": "required",
-      "attached_to": "Master bedroom",
-      "plan_location": "East/right edge of A-03 on the entry and carport side; aligned with the master bedroom, with a 1.50 m projection outside the enclosed east wall",
-      "access": "0.90 m nominal balcony door from master bedroom",
+      "attached_to": "Family area",
+      "plan_location": "East/right edge of A-03, directly beside the family area on the entry/carport-facing front facade; 3.00 m span along the facade and 1.50 m outward projection",
+      "access": "0.90 m nominal D-04 balcony door from family area",
       "width_m": 3,
       "projection_m": 1.5,
       "area_m2": 4.5,
       "open_external_area": true,
       "railing": "Perimeter guardrail shown schematically; final height/detail to be specified for the academic plate",
-      "note": "Open external area on the east/front facade; report separately from enclosed gross floor area.",
+      "note": "Open external area on the east/front facade beside the family area; accessed from the family area and reported separately from enclosed gross floor area.",
       "x_m": 9.3,
-      "y_m": 0.2,
+      "y_m": 4.9,
       "front_facade": "east"
     }
   },
@@ -365,19 +365,19 @@
     },
     {
       "id": "D-04",
-      "type": "Balcony door from master bedroom",
+      "type": "Balcony door from family area",
       "width_m": 0.9,
       "height_m": 2.1,
       "status": "provisional"
     }
   ],
   "drawing_status": {
-    "A-01": "Preliminary site development layout using the selected academic 2.00 m setback; coordinate labels for the 5.00 m carriageway within the 8.00 m total ROW.",
+    "A-01": "Preliminary site plan; elevated east/front balcony projection beside family area is shown separately from ground coverage. Main-house placement shifted north to retain academic envelope containment; coordinate balcony overhang and carport canopy in final design.",
     "A-02": "Preliminary ground-floor plan with right/east entry side; openings and final dimensions pending. The upper-floor balcony is not enclosed ground-floor area.",
-    "A-03": "Preliminary second-floor plan with required 3.00 m x 1.50 m balcony projecting from the east/front facade at the master bedroom, plus stairwell/landing coordination.",
+    "A-03": "Preliminary second-floor plan with required 3.00 m x 1.50 m balcony beside and accessed from the family area on the east/front facade.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
-    "A-05": "Four schematic elevations; identify the east/carport-entry facade as the front and show the required balcony at the matching position; heights/openings remain provisional.",
-    "A-06": "Two schematic sections, one through stair; final sections must coordinate final levels/structure.",
-    "A-07": "Draft architectural details/schedules; not structural or specification approval."
+    "A-05": "Four schematic elevations with required balcony on the east/front facade at the family-area end; door D-04, balcony and dimensions remain provisional.",
+    "A-06": "Schematic section through east/front balcony beside family area, showing the 1.50 m projection and D-04 access.",
+    "A-07": "Provisional architectural details and schedules with D-04 balcony door from family area and schematic balcony guardrail."
   }
 }

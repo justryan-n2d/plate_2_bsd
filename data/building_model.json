@@ -361,6 +361,13 @@
       "width_m": 0.6,
       "height_m": 0.6,
       "status": "provisional"
+    },
+    {
+      "id": "D-04",
+      "type": "Balcony door from master bedroom",
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "status": "provisional"
     }
   ],
   "drawing_status": {

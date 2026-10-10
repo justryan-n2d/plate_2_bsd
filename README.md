@@ -59,7 +59,7 @@ See [stair calculations and code hold points](space_planning/stair_design.md).
 
 ## Phase 5 architectural draft previews
 
-These A-01 to A-07 sheets are preliminary visual drafts. For this student activity, Phase 2 now adopts a uniform 2.00 m setback on all five boundaries and uses 265.26 m² as the working lot area. A-01 still needs to label the 5.00 m carriageway inside the 8.00 m total ROW and coordinate the adopted setback.
+These A-01 to A-07 sheets are preliminary visual drafts for the student activity. Phase 2 uses 265.26 m² as the working lot area, a uniform 2.00 m setback on all five boundaries, and the 5.00 m carriageway inside the 8.00 m total ROW. The second-floor design now includes a required 3.00 m × 1.50 m balcony accessed from the master bedroom; its 4.50 m² is counted separately from enclosed floor area.
 
 ### A-01 - Site Development Plan
 
@@ -70,6 +70,8 @@ These A-01 to A-07 sheets are preliminary visual drafts. For this student activi
 ![A-02 preliminary ground floor](previews/phase5_A02_ground_floor.svg)
 
 ### A-03 - Second Floor Plan
+
+The second floor includes a required 3.00 m × 1.50 m balcony accessed from the master bedroom. The balcony area is 4.50 m² and is listed separately from enclosed floor area.
 
 ![A-03 preliminary second floor](previews/phase5_A03_second_floor.svg)
 

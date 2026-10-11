@@ -1,43 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="780" viewBox="0 0 1250 780" role="img" aria-labelledby="title desc">
-<title id="title">A-02 - Ground Floor plan</title>
-<desc id="desc">Preliminary ground floor plan concept with required room labels and target clear dimensions, not to scale for construction and not approved for code compliance. Bedroom / guest room: 3.00 x 3.00 m | Toilet and bath: 1.50 x 2.10 m | Stairway: 2.00 x 3.20 m envelope | Storage / service area: 1.50 x 2.00 m | Entrance / foyer: 1.50 x 1.50 m | Living room: 3.60 x 3.80 m | Dining area: 2.80 x 2.80 m | Kitchen: 2.50 x 2.80 m</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:26px;font-weight:700;fill:#172033}.sub{font-size:14px;fill:#64748b}.note{font-size:13px;fill:#475569}.small{font-size:11px;fill:#475569}</style>
-<rect width="1250" height="780" fill="#f8fafc"/>
-<text class="title" x="35" y="40">A-02 | GROUND FLOOR PLAN</text>
-<text class="sub" x="35" y="67">Conceptual arrangement based on the Phase 3 room schedule and provisional Phase 4 stair; not a final dimensioned plan.</text>
-<rect x="128" y="143" width="423.90000000000003" height="363.7" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="7 5"/>
-<rect x="140" y="155" width="399.90000000000003" height="339.7" fill="#ffffff" stroke="#111827" stroke-width="4"/>
-<g><rect x="140" y="155" width="129" height="129" fill="#fff0d6" stroke="#334155" stroke-width="1.5"/><text x="204.5" y="213.5" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Bedroom / guest room</text><text x="204.5" y="229.5" text-anchor="middle" font-size="10" fill="#475569">3.00 x 3.00 m</text></g>
-<g><rect x="269" y="155" width="64.5" height="90.3" fill="#e0f2e8" stroke="#334155" stroke-width="1.5"/><text x="301.25" y="194.15" text-anchor="middle" font-size="10" font-weight="600" fill="#172033">Toilet and bath</text><text x="301.25" y="210.15" text-anchor="middle" font-size="9" fill="#475569">1.50 x 2.10 m</text></g>
-<g><rect x="333.5" y="155" width="86" height="137.6" fill="#eee8fa" stroke="#334155" stroke-width="1.5"/><text x="376.5" y="217.8" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Stairway</text><text x="376.5" y="233.8" text-anchor="middle" font-size="10" fill="#475569">2.00 x 3.20 m envelope</text></g>
-<g><rect x="419.5" y="155" width="64.5" height="86" fill="#e0f2e8" stroke="#334155" stroke-width="1.5"/><text x="451.75" y="192" text-anchor="middle" font-size="10" font-weight="600" fill="#172033">Storage / service area</text><text x="451.75" y="208" text-anchor="middle" font-size="9" fill="#475569">1.50 x 2.00 m</text></g>
-<g><rect x="475.4" y="266.8" width="64.5" height="64.5" fill="#e8f1fa" stroke="#334155" stroke-width="1.5"/><text x="507.65" y="293.05" text-anchor="middle" font-size="10" font-weight="600" fill="#172033">Entrance / foyer</text><text x="507.65" y="309.05" text-anchor="middle" font-size="9" fill="#475569">1.50 x 1.50 m</text></g>
-<g><rect x="140" y="331.29999999999995" width="154.8" height="163.4" fill="#dfeefa" stroke="#334155" stroke-width="1.5"/><text x="217.4" y="406.99999999999994" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Living room</text><text x="217.4" y="422.99999999999994" text-anchor="middle" font-size="10" fill="#475569">3.60 x 3.80 m</text></g>
-<g><rect x="294.8" y="331.29999999999995" width="120.39999999999999" height="120.39999999999999" fill="#dfeefa" stroke="#334155" stroke-width="1.5"/><text x="355" y="385.49999999999994" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Dining area</text><text x="355" y="401.49999999999994" text-anchor="middle" font-size="10" fill="#475569">2.80 x 2.80 m</text></g>
-<g><rect x="415.2" y="331.29999999999995" width="107.5" height="120.39999999999999" fill="#e0f2e8" stroke="#334155" stroke-width="1.5"/><text x="468.95" y="385.49999999999994" text-anchor="middle" font-size="12" font-weight="600" fill="#172033">Kitchen</text><text x="468.95" y="401.49999999999994" text-anchor="middle" font-size="10" fill="#475569">2.50 x 2.80 m</text></g>
-<rect x="140" y="292.6" width="335.4" height="38.7" fill="#f8fafc" stroke="#64748b" stroke-dasharray="5 4"/><text x="307.7" y="311.95000000000005" text-anchor="middle" font-size="11" fill="#475569">Clear hall / circulation band (0.90 m target; verify final widths)</text>
-   <rect x="159.35" y="172.2" width="73.1" height="40.85" rx="3" fill="#ffffff" stroke="#94a3b8"/><rect x="159.35" y="221.65" width="73.1" height="43" rx="3" fill="#ffffff" stroke="#94a3b8"/>
-   <rect x="155.05" y="354.95000000000005" width="103.2" height="27.95" rx="4" fill="#cbd5e1" stroke="#94a3b8"/><rect x="183" y="389.35" width="51.6" height="23.650000000000002" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
-   <rect x="327.04999999999995" y="359.25" width="55.9" height="34.4" rx="3" fill="#ffffff" stroke="#94a3b8"/><rect x="335.65" y="367.85" width="38.7" height="17.2" fill="#e2e8f0" stroke="#94a3b8"/>
-   <rect x="425.95" y="337.75" width="86" height="19.35" fill="#fef3c7" stroke="#b77935"/><rect x="494.75" y="337.75" width="19.35" height="86" fill="#fef3c7" stroke="#b77935"/>
-<line x1="140" y1="539.7" x2="539.9000000000001" y2="539.7" stroke="#475569" stroke-width="1.2"/><line x1="140" y1="532.7" x2="140" y2="546.7" stroke="#475569"/><line x1="539.9000000000001" y1="532.7" x2="539.9000000000001" y2="546.7" stroke="#475569"/><text x="339.95000000000005" y="531.7" text-anchor="middle" font-size="12" fill="#334155">9.30 m overall</text>
- <line x1="569.9000000000001" y1="155" x2="569.9000000000001" y2="494.7" stroke="#475569" stroke-width="1.2"/><line x1="562.9000000000001" y1="155" x2="576.9000000000001" y2="155" stroke="#475569"/><line x1="562.9000000000001" y1="494.7" x2="576.9000000000001" y2="494.7" stroke="#475569"/><text x="584.9000000000001" y="324.85" font-size="12" fill="#334155" transform="rotate(90 584.9000000000001 324.85)">7.90 m overall</text>
-<g stroke="#0284c7" stroke-width="5">
-<line x1="163.65" y1="155" x2="206.65" y2="155"/>
-<line x1="163.65" y1="494.7" x2="219.55" y2="494.7"/>
-<line x1="539.9000000000001" y1="348.5" x2="539.9000000000001" y2="400.1"/>
-<line x1="303.4" y1="494.7" x2="346.4" y2="494.7"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="980" viewBox="0 0 1480 980" role="img" aria-labelledby="title desc">
+<title id="title">A-02 - Reference Layout Ground Floor Plan</title>
+<desc id="desc">Preliminary furnished ground-floor layout revised from the user's reference image. It includes a guest room, toilet and bath, garage, dining area, kitchen, storage, stairway, living room and entrance foyer. The TV console is placed inside the living-room area away from the entrance path. Diagrammatic layout only, not dimensioned for construction and not approved for code compliance.</desc>
+<defs>
+  <pattern id="tile" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#e7e4dc" stroke-width="0.8"/></pattern>
+  <pattern id="garageTile" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#aab0b4" stroke-width="0.8"/></pattern>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#313b43"/></marker>
+  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#64748b" flood-opacity=".14"/></filter>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#1e293b}
+    .sheetTitle{font-size:28px;font-weight:800;letter-spacing:1.4px}
+    .sheetSub{font-size:14px;fill:#64748b;letter-spacing:.4px}
+    .roomLabel{font-size:15px;font-weight:700;letter-spacing:.8px;text-anchor:middle}
+    .roomSmall{font-size:11px;fill:#64748b;text-anchor:middle}
+    .wall{fill:none;stroke:#252b30;stroke-width:11;stroke-linejoin:miter;stroke-linecap:square}
+    .innerWall{fill:none;stroke:#30363a;stroke-width:7;stroke-linecap:square}
+    .thinWall{fill:none;stroke:#475569;stroke-width:2}
+    .window{fill:none;stroke:#83dff2;stroke-width:7;stroke-linecap:round}
+    .windowFrame{fill:none;stroke:#3d91a6;stroke-width:1.4}
+    .doorLeaf{fill:none;stroke:#35414a;stroke-width:3}
+    .doorArc{fill:none;stroke:#687680;stroke-width:1.5}
+    .furn{fill:#d8b38a;stroke:#98734d;stroke-width:1.4}
+    .furnLight{fill:#fdfcf8;stroke:#b8b7b1;stroke-width:1.2}
+    .smallNote{font-size:13px;fill:#475569}
+    .panelHeading{font-size:17px;font-weight:800;letter-spacing:.8px}
+    .panelText{font-size:13px;fill:#475569}
+    .tag{font-size:11px;font-weight:700;letter-spacing:.8px}
+    .lightText{fill:#ffffff}
+  </style>
+</defs>
+<rect width="1480" height="980" fill="#f5f6f7"/>
+<text x="55" y="55" class="sheetTitle">A-02  |  FIRST FLOOR PLAN</text>
+<text x="55" y="82" class="sheetSub">REFERENCE LAYOUT REVISION 01  •  FURNISHED SCHEMATIC  •  NOT TO SCALE</text>
+<g transform="translate(882 42)"><path d="M0 0H70" stroke="#303b43" stroke-width="2.5" marker-end="url(#arrow)"/><text x="82" y="5" font-size="14" font-weight="700">NORTH</text></g>
+<!-- Floor finishes -->
+<rect x="405" y="135" width="525" height="670" fill="#f7f3e9"/><rect x="405" y="135" width="525" height="670" fill="url(#tile)" opacity=".7"/>
+<rect x="155" y="135" width="250" height="185" fill="#f3e8d8"/><rect x="155" y="135" width="250" height="185" fill="url(#tile)" opacity=".45"/>
+<rect x="235" y="320" width="170" height="125" fill="#d9e0e3"/><rect x="235" y="320" width="170" height="125" fill="url(#tile)" opacity=".5"/>
+<rect x="105" y="445" width="300" height="330" fill="#c7cbcd"/><rect x="105" y="445" width="300" height="330" fill="url(#garageTile)" opacity=".8"/>
+<rect x="410" y="690" width="150" height="115" fill="#e5e7e9"/><rect x="410" y="690" width="150" height="115" fill="url(#tile)" opacity=".8"/>
+<rect x="555" y="580" width="375" height="225" fill="#f7f0e6"/><rect x="555" y="580" width="375" height="225" fill="url(#tile)" opacity=".7"/>
+<rect x="710" y="445" width="220" height="62" fill="#e7dfd1"/><rect x="710" y="445" width="220" height="62" fill="url(#tile)" opacity=".5"/>
+<rect x="710" y="507" width="220" height="78" fill="#e1e0dc"/><rect x="710" y="507" width="220" height="78" fill="url(#tile)" opacity=".5"/>
+<!-- Exterior boundary and internal walls -->
+<path class="wall" d="M405 135 H930 V805 H540 M435 805 H405 V775 H105 V445 H235 V320 H155 V135 H405"/>
+<path class="innerWall" d="M405 135 V235 M405 285 V350 M405 400 V465 M405 520 V775"/>
+<path class="innerWall" d="M235 320 H405 M235 445 H405"/>
+<path class="innerWall" d="M710 445 H930 M710 445 V452 M710 492 V507 H930 M710 507 V516 M710 555 V585 H930"/>
+<!-- Guest-room furniture -->
+<g filter="url(#softShadow)">
+  <rect x="183" y="168" width="116" height="107" rx="3" fill="#ddd9d4" stroke="#b8b0a6" stroke-width="2"/>
+  <rect x="192" y="177" width="98" height="88" fill="#a9b4c2" stroke="#8b98a8" stroke-width="1.5"/>
+  <rect x="192" y="177" width="30" height="88" fill="#faf9f6" stroke="#d1cec7"/>
+  <rect x="194" y="184" width="25" height="31" rx="3" class="furnLight"/><rect x="194" y="220" width="25" height="31" rx="3" class="furnLight"/>
+  <rect x="313" y="188" width="43" height="72" rx="2" fill="#bd976f" stroke="#8e6b49" stroke-width="1.5"/>
+  <circle cx="350" cy="166" r="12" fill="#8a9b70"/><circle cx="345" cy="163" r="8" fill="#6c8658"/><circle cx="355" cy="161" r="7" fill="#9aac7c"/>
 </g>
-<rect x="710" y="130" width="500" height="420" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
-<text x="735" y="165" font-size="17" font-weight="700" fill="#172033">SPACE AND COORDINATION NOTES</text>
-<text class="small" x="735" y="195">• Bedroom / guest room: 3.00 x 3.00 m</text><text class="small" x="735" y="219">• Toilet and bath: 1.50 x 2.10 m</text><text class="small" x="735" y="243">• Stairway: 2.00 x 3.20 m envelope</text><text class="small" x="735" y="267">• Storage / service area: 1.50 x 2.00 m</text><text class="small" x="735" y="291">• Entrance / foyer: 1.50 x 1.50 m</text><text class="small" x="735" y="315">• Living room: 3.60 x 3.80 m</text><text class="small" x="735" y="339">• Dining area: 2.80 x 2.80 m</text><text class="small" x="735" y="363">• Kitchen: 2.50 x 2.80 m</text>
-<line x1="735" y1="402" x2="1185" y2="402" stroke="#e2e8f0"/>
-<text class="note" x="735" y="434">• Single-car carport is shown on A-01 only; final doorway/driveway location is not fixed.</text><text class="note" x="735" y="459">• Door and window positions are diagrammatic placeholders.</text><text class="note" x="735" y="484">• Target clear room dimensions are not finished wall-to-wall dimensions.</text>
-<rect x="710" y="590" width="500" height="130" rx="10" fill="#fff7ed" stroke="#fdba74"/>
-<text x="730" y="620" font-size="15" font-weight="700" fill="#9a3412">PRELIMINARY ONLY</text>
-<text class="note" x="730" y="647">2.00 m setback screening and local zoning are not finalized.</text>
-<text class="note" x="730" y="671">Floor levels, door swings, window sizes, ventilation, wall thickness,</text>
-<text class="note" x="730" y="695">structural grid and code checks must be confirmed before final issue.</text>
-<text class="sub" x="35" y="752">Local units: metres. Room boxes use target clear dimensions; wall thicknesses and construction offsets are not dimensioned here.</text>
+<text x="278" y="300" class="roomLabel">GUEST ROOM</text>
+<!-- Toilet and bath fixtures -->
+<rect x="251" y="333" width="71" height="31" rx="3" fill="#f9fbfb" stroke="#8c9aa1" stroke-width="2"/><rect x="257" y="338" width="59" height="20" rx="2" fill="#d8e8ec" stroke="#a7bac0"/>
+<rect x="335" y="330" width="42" height="38" rx="4" fill="#f9fbfb" stroke="#8c9aa1" stroke-width="1.6"/><ellipse cx="356" cy="350" rx="12" ry="9" fill="#d4e6ea" stroke="#9bb1b8"/>
+<rect x="344" y="385" width="29" height="26" rx="5" fill="#fafafa" stroke="#87949b" stroke-width="1.5"/><ellipse cx="358.5" cy="397" rx="8" ry="7" fill="#d8eaee" stroke="#9bb1b8"/>
+<text x="320" y="428" class="roomLabel" font-size="12">TOILET AND BATH</text>
+<!-- Garage car -->
+<g transform="translate(211 500)" filter="url(#softShadow)">
+  <path d="M31 0 Q8 10 4 45 L0 70 L0 190 Q3 210 25 216 H75 Q96 210 99 190 V70 L94 45 Q90 10 68 0 Z" fill="#f1f3f4" stroke="#6b747a" stroke-width="3"/>
+  <path d="M27 23 Q18 34 15 58 H84 Q81 34 72 23 Z" fill="#aebcc6" stroke="#707d87" stroke-width="2"/>
+  <path d="M13 72 H86 V115 H13 Z" fill="#c6d0d8" stroke="#707d87" stroke-width="1.8"/><path d="M11 125 H88 V172 H11 Z" fill="#b9c5ce" stroke="#707d87" stroke-width="1.8"/>
+  <path d="M21 183 H78 L70 201 H29 Z" fill="#dce2e5" stroke="#7f8a90" stroke-width="1.4"/>
+  <rect x="-5" y="49" width="10" height="31" rx="3" fill="#39434a"/><rect x="94" y="49" width="10" height="31" rx="3" fill="#39434a"/><rect x="-5" y="157" width="10" height="29" rx="3" fill="#39434a"/><rect x="94" y="157" width="10" height="29" rx="3" fill="#39434a"/>
+</g>
+<text x="253" y="748" class="roomLabel">GARAGE</text>
+<!-- Dining table and chairs -->
+<g filter="url(#softShadow)">
+  <rect x="633" y="173" width="151" height="95" rx="3" class="furn"/><rect x="642" y="182" width="133" height="77" rx="2" fill="#c69a67" stroke="#98734d"/>
+  <rect x="616" y="184" width="15" height="28" rx="3" class="furn"/><rect x="616" y="224" width="15" height="28" rx="3" class="furn"/><rect x="786" y="184" width="15" height="28" rx="3" class="furn"/><rect x="786" y="224" width="15" height="28" rx="3" class="furn"/>
+  <rect x="652" y="154" width="28" height="15" rx="3" class="furn"/><rect x="709" y="154" width="28" height="15" rx="3" class="furn"/><rect x="652" y="272" width="28" height="15" rx="3" class="furn"/><rect x="709" y="272" width="28" height="15" rx="3" class="furn"/>
+  <circle cx="708" cy="221" r="11" fill="#91a17a" stroke="#667c51"/><circle cx="705" cy="218" r="6" fill="#6e8858"/><circle cx="713" cy="224" r="5" fill="#a5b78c"/>
+</g>
+<text x="708" y="309" class="roomLabel">DINING AREA</text>
+<!-- Kitchen -->
+<g filter="url(#softShadow)">
+  <rect x="875" y="302" width="38" height="128" rx="2" fill="#d1d0c9" stroke="#8b918f" stroke-width="2"/>
+  <rect x="584" y="349" width="195" height="41" rx="4" fill="#d2d2cc" stroke="#868c89" stroke-width="2"/>
+  <rect x="592" y="356" width="46" height="27" rx="3" fill="#efeee8" stroke="#a6aaa7"/><rect x="645" y="356" width="39" height="27" rx="3" fill="#efeee8" stroke="#a6aaa7"/>
+  <circle cx="656" cy="369" r="6" fill="#bbc7ca" stroke="#6e858d"/><circle cx="674" cy="369" r="6" fill="#bbc7ca" stroke="#6e858d"/>
+  <rect x="842" y="315" width="29" height="105" fill="#e3e3de" stroke="#a2a6a5" stroke-width="1.5"/><line x1="848" y1="323" x2="865" y2="323" stroke="#9ca3a5" stroke-width="2"/>
+</g>
+<text x="756" y="414" class="roomLabel">KITCHEN</text>
+<!-- Storage and stairs -->
+<rect x="737" y="455" width="171" height="31" rx="2" fill="#bc9a78" stroke="#8d7158" stroke-width="1.6"/><path d="M794 455V486 M851 455V486" stroke="#8d7158" stroke-width="1.3"/>
+<text x="824" y="439" class="roomLabel" font-size="13">STORAGE</text>
+<g><rect x="722" y="519" width="194" height="61" fill="#dadbd9" stroke="#858d90" stroke-width="1.5"/><path d="M722 527H916 M722 535H916 M722 543H916 M722 551H916 M722 559H916 M722 567H916 M722 575H916" stroke="#8c9497" stroke-width="1.4"/><path d="M749 548H892" stroke="#38434a" stroke-width="2.1" marker-end="url(#arrow)"/><text x="817" y="540" font-size="12" font-weight="700" text-anchor="middle">UP</text></g>
+<text x="820" y="600" class="roomLabel" font-size="13">STAIRWAY</text>
+<!-- Living room rug and TV -->
+<rect x="622" y="617" width="275" height="155" rx="5" fill="#e5ddd3" stroke="#c7bbaa" stroke-width="1.5"/>
+<g id="tv-console" data-room="living-room" aria-label="TV console located inside the living room away from the entrance">
+  <rect x="568" y="610" width="26" height="105" rx="2" fill="#ab8a68" stroke="#775b42" stroke-width="1.8"/><rect x="574" y="618" width="14" height="88" rx="1.5" fill="#303b43" stroke="#1f282e" stroke-width="1.2"/><circle cx="581" cy="663" r="3" fill="#80c7d7"/>
+</g>
+<g filter="url(#softShadow)">
+  <rect x="803" y="624" width="83" height="128" rx="7" fill="#e7e3dc" stroke="#a5a29c" stroke-width="2"/><rect x="813" y="632" width="63" height="111" rx="5" fill="#f8f6f1" stroke="#c8c4bc" stroke-width="1.5"/><path d="M813 669H876 M813 706H876" stroke="#c0bbb3" stroke-width="1.5"/>
+  <rect x="683" y="659" width="65" height="97" rx="3" fill="#b88c60" stroke="#8b6847" stroke-width="1.7"/><rect x="691" y="667" width="49" height="81" rx="2" fill="#c99f73" stroke="#98734d"/><circle cx="714" cy="704" r="10" fill="#85956a" stroke="#64774c"/><circle cx="710" cy="701" r="5" fill="#637c4e"/>
+  <circle cx="908" cy="773" r="12" fill="#8b9e74"/><circle cx="901" cy="769" r="7" fill="#72885b"/><circle cx="913" cy="765" r="7" fill="#9fb58a"/>
+</g>
+<text x="735" y="790" class="roomLabel">LIVING ROOM</text>
+<!-- Foyer and porch -->
+<rect x="437" y="813" width="100" height="45" fill="#d8dadb" stroke="#9ba2a5" stroke-width="1.5"/><rect x="447" y="820" width="80" height="31" fill="#c4c9cb" stroke="#a4abad"/>
+<text x="484" y="754" class="roomLabel" font-size="13">ENTRANCE / FOYER</text><text x="484" y="771" class="roomSmall">clear route inside</text>
+<!-- Doors -->
+<g id="guest-room-door" data-room-door="guest-room"><path d="M405 285 L355 285" class="doorLeaf"/><path d="M355 285 A50 50 0 0 1 405 235" class="doorArc"/></g>
+<g id="bath-door" data-room-door="toilet-and-bath"><path d="M405 400 L362 400" class="doorLeaf"/><path d="M362 400 A43 43 0 0 1 405 357" class="doorArc"/></g>
+<g id="garage-access-door" data-room-door="garage"><path d="M405 520 L359 520" class="doorLeaf"/><path d="M359 520 A46 46 0 0 1 405 474" class="doorArc"/></g>
+<g id="main-entry-door" data-room-door="entrance-foyer"><path d="M540 805 L540 755" class="doorLeaf"/><path d="M540 755 A50 50 0 0 0 490 805" class="doorArc"/></g>
+<!-- Windows -->
+<g class="window"><path d="M215 135H280 M600 135H700 M930 335V380 M930 620V665 M710 805H850"/></g>
+<g class="windowFrame"><path d="M215 128H280 M215 142H280 M600 128H700 M600 142H700 M923 335H937 M923 380H937 M923 620H937 M923 665H937 M710 798H850 M710 812H850"/></g>
+<path d="M135 775H375" stroke="#f5f6f7" stroke-width="14"/><path d="M135 775H375" stroke="#6f777c" stroke-width="2"/>
+<path d="M140 768V782 M155 768V782 M170 768V782 M185 768V782 M200 768V782 M215 768V782 M230 768V782 M245 768V782 M260 768V782 M275 768V782 M290 768V782 M305 768V782 M320 768V782 M335 768V782 M350 768V782 M365 768V782" stroke="#8e979c" stroke-width="1"/>
+<!-- Right-side notes -->
+<g filter="url(#softShadow)"><rect x="1015" y="125" width="405" height="400" rx="14" fill="#ffffff" stroke="#d8dee3" stroke-width="1.5"/><rect x="1015" y="125" width="405" height="54" rx="14" fill="#263640"/><rect x="1015" y="160" width="405" height="19" fill="#263640"/></g>
+<text x="1040" y="159" class="lightText" font-size="16" font-weight="800">LAYOUT PRIORITIES</text>
+<circle cx="1045" cy="215" r="4" fill="#58a78e"/><text x="1060" y="219" class="panelText">TV console is fully inside the living room.</text>
+<circle cx="1045" cy="250" r="4" fill="#58a78e"/><text x="1060" y="254" class="panelText">Entrance and foyer route remain clear.</text>
+<circle cx="1045" cy="285" r="4" fill="#58a78e"/><text x="1060" y="289" class="panelText">Guest room, bath and garage stay on the left.</text>
+<circle cx="1045" cy="320" r="4" fill="#58a78e"/><text x="1060" y="324" class="panelText">Dining and kitchen share an open-plan zone.</text>
+<circle cx="1045" cy="355" r="4" fill="#58a78e"/><text x="1060" y="359" class="panelText">Storage and stairway sit beside the living room.</text>
+<path d="M1040 383H1395" stroke="#e2e8f0" stroke-width="1.3"/><text x="1040" y="414" class="tag" fill="#334155">DESIGN STATUS</text>
+<text x="1040" y="439" class="panelText">Based on your reference image. Room positions</text><text x="1040" y="459" class="panelText">and furniture are schematic, not measured.</text><text x="1040" y="479" class="panelText">Dimension coordination is still required.</text>
+<g><rect x="1015" y="555" width="405" height="210" rx="14" fill="#fffaf1" stroke="#ead6b6" stroke-width="1.5"/><text x="1040" y="590" class="panelHeading" fill="#8a5b23">REVIEW ITEMS</text>
+  <text x="1040" y="624" class="panelText">• Confirm room dimensions and wall thickness.</text><text x="1040" y="653" class="panelText">• Check clearances around furniture and doors.</text><text x="1040" y="682" class="panelText">• Coordinate stair opening with the second floor.</text><text x="1040" y="711" class="panelText">• Verify setbacks, windows and local code items.</text><text x="1040" y="740" class="panelText">This is not a permit or construction drawing.</text>
+</g>
+<text x="55" y="935" font-size="12" fill="#64748b">PLATE 2  •  FIRST FLOOR PLAN  •  Diagrammatic preview only; no construction scale or final dimensions.</text><text x="1400" y="935" text-anchor="end" font-size="12" fill="#64748b">REVISION 01</text>
 </svg>

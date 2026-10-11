@@ -60,7 +60,7 @@ See [stair calculations and code hold points](space_planning/stair_design.md).
 
 ## Phase 5 architectural draft previews
 
-These A-01 to A-07 sheets are on the `phase5-architectural-plans` branch. They are preliminary visual drafts. The 2.00 m inset on A-01 is only a screening assumption, and Phase 2 local zoning/setback confirmation remains pending.
+These A-01 to A-07 sheets are preliminary visual drafts on `main`. A-02 and A-03 now follow the furnished layout references supplied on 2026-10-12. The 2.00 m inset on A-01 is only a screening assumption, and Phase 2 local zoning/setback confirmation remains pending.
 
 ### A-01 - Site Development Plan
 
@@ -73,6 +73,8 @@ These A-01 to A-07 sheets are on the `phase5-architectural-plans` branch. They a
 ### A-03 - Second Floor Plan
 
 ![A-03 preliminary second floor](previews/phase5_A03_second_floor.svg)
+
+**Layout revision 01:** A-02 keeps the TV console inside the living room, clear of the foyer/entry path. A-03 now includes the gym and balcony and shows exactly one karaoke-room door. These previews use diagram units, not a verified scale; room dimensions and wall layout still need coordination. [Read the layout revision notes](space_planning/reference_layout_revision.md).
 
 ### A-04 - Roof Plan
 
@@ -118,7 +120,7 @@ DXF is the editable CAD master in this workflow. DWG is a converted delivery cop
 
 - **calculations/**: calculation work and results.
 - **site/**: current Phase 1 source data, drawing, and analysis.
-- **data/**: future shared building model and schedules. The building model file will be added after the layout is actually defined.
+- **data/**: shared preliminary building model, source assumptions and reference-layout diagram coordinates.
 - **scripts/**: drawing generation and validation tools.
 - **previews/**: generated project-wide SVG previews. The existing Phase 1 SVG remains in site/ to preserve current links.
 - **drawings/**: generated editable DXF masters.

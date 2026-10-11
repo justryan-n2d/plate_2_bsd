@@ -1,6 +1,6 @@
 {
   "project": "CE 393 Plate No. 2 - Proposed Two-Storey Residential Building",
-  "revision": "Phase 5 preliminary architectural layout",
+  "revision": "User-reference layout revision 01; visual arrangement updated, final dimensions pending",
   "status": "PRELIMINARY_NOT_FOR_CONSTRUCTION",
   "units": {
     "dimensions": "m",
@@ -8,6 +8,8 @@
     "coordinates": "local eastings/northings in m"
   },
   "assumptions": [
+    "The furnished A-02 and A-03 reference-layout previews supersede the earlier simple room-box diagrams for visual arrangement. The reference images do not supply reliable room dimensions, so these layouts use diagram units only and must not be treated as scaled or dimensioned construction plans.",
+    "The older building.rooms target boxes are retained as provisional planning data until room areas and dimensions are reconciled with the revised visual layout. Do not assume the legacy room boxes describe the new drawing geometry.",
     "The adjusted Phase 1 traverse is an academic plotting basis, not cadastral certification.",
     "The 2.00 m uniform inward offset is a screening illustration based on the general Group A dwelling text in PD 1096 Section 708(a); applicable local zoning, R-1 table conditions, road ROW limits, firewalls and greater setbacks have not been confirmed.",
     "Ground finished-floor elevation is ±0.000 m and second finished-floor elevation is +3.000 m, matching the Phase 4 assumed rise; both require instructor confirmation.",
@@ -332,11 +334,160 @@
   ],
   "drawing_status": {
     "A-01": "Preliminary site development layout using screening setback geometry; exact access and legal envelope pending.",
-    "A-02": "Preliminary ground-floor plan with room-size targets; openings and final dimensions pending.",
-    "A-03": "Preliminary second-floor plan with stairwell/landing coordination; verify final fit.",
+    "A-02": "User-reference furnished first-floor layout: guest room, toilet and bath, garage, dining/kitchen, storage, stairway, living room and entrance. TV is within the living area and outside the foyer/entry-clearance box. Diagram units only; dimensions pending.",
+    "A-03": "User-reference furnished second-floor layout: Bedroom 2, master bedroom/robe, Bedroom 3, bathroom/toilet/toilet-and-bath, gym, one-door karaoke room, stairway, family area and balcony. Diagram units only; dimensions and stair coordination pending.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
     "A-05": "Four schematic elevations; heights and openings are assumptions.",
     "A-06": "Two schematic sections, one through stair; final sections must coordinate final levels/structure.",
     "A-07": "Draft architectural details/schedules; not structural or specification approval."
+  },
+  "reference_layout": {
+    "revision": "User-provided furnished plan reference - revision 01",
+    "status": "CONCEPTUAL_DIAGRAM_NOT_DIMENSIONED",
+    "source": "Two reference plan images supplied in the conversation on 2026-10-12",
+    "coordinate_system": {
+      "units": "SVG diagram units, not metres",
+      "note": "Coordinates define furniture-plan placement checks only. They are not a scale, room measurements, construction dimensions or approved architecture."
+    },
+    "ground_floor": {
+      "room_bounds": {
+        "guest-room": {
+          "x": 155,
+          "y": 135,
+          "width": 250,
+          "height": 185
+        },
+        "toilet-and-bath": {
+          "x": 235,
+          "y": 320,
+          "width": 170,
+          "height": 125
+        },
+        "garage": {
+          "x": 105,
+          "y": 445,
+          "width": 300,
+          "height": 330
+        },
+        "dining-area": {
+          "x": 405,
+          "y": 135,
+          "width": 525,
+          "height": 185
+        },
+        "kitchen": {
+          "x": 560,
+          "y": 300,
+          "width": 370,
+          "height": 145
+        },
+        "storage": {
+          "x": 710,
+          "y": 445,
+          "width": 220,
+          "height": 62
+        },
+        "stairway": {
+          "x": 710,
+          "y": 507,
+          "width": 220,
+          "height": 78
+        },
+        "living-room": {
+          "x": 555,
+          "y": 580,
+          "width": 375,
+          "height": 225
+        },
+        "foyer": {
+          "x": 410,
+          "y": 690,
+          "width": 150,
+          "height": 115
+        }
+      },
+      "fixtures": [
+        {
+          "id": "tv-console",
+          "type": "TV console",
+          "room_id": "living-room",
+          "x": 568,
+          "y": 610,
+          "width": 26,
+          "height": 105,
+          "intent": "Inside the living-room area and away from the entrance/foyer route."
+        }
+      ],
+      "entry_clearance": {
+        "x": 435,
+        "y": 710,
+        "width": 120,
+        "height": 90
+      }
+    },
+    "second_floor": {
+      "room_bounds": {
+        "bedroom-2": {
+          "x": 320,
+          "y": 130,
+          "width": 200,
+          "height": 170
+        },
+        "master-bedroom": {
+          "x": 600,
+          "y": 130,
+          "width": 330,
+          "height": 170
+        },
+        "bedroom-3": {
+          "x": 660,
+          "y": 300,
+          "width": 270,
+          "height": 90
+        },
+        "gym": {
+          "x": 120,
+          "y": 525,
+          "width": 200,
+          "height": 280
+        },
+        "karaoke-room": {
+          "x": 660,
+          "y": 390,
+          "width": 270,
+          "height": 120
+        },
+        "family-area": {
+          "x": 500,
+          "y": 580,
+          "width": 430,
+          "height": 225
+        },
+        "balcony": {
+          "x": 435,
+          "y": 805,
+          "width": 175,
+          "height": 70
+        }
+      },
+      "doorways": [
+        {
+          "id": "karaoke-door-01",
+          "room_id": "karaoke-room",
+          "side": "west",
+          "x": 660,
+          "y": 415,
+          "width": 50,
+          "height": 50,
+          "opens_into": "karaoke-room"
+        }
+      ],
+      "constraints": {
+        "karaoke-room": {
+          "door_count": 1,
+          "note": "Only one door should be drawn into the karaoke room."
+        }
+      }
+    }
   }
 }

@@ -120,6 +120,55 @@ def validate_model(data: dict) -> None:
                 fail(f"Missing dimension note for {floor} / {name}")
 
 
+
+def rectangles_overlap(a: dict[str, float], b: dict[str, float]) -> bool:
+    return (
+        float(a["x"]) < float(b["x"]) + float(b["width"])
+        and float(a["x"]) + float(a["width"]) > float(b["x"])
+        and float(a["y"]) < float(b["y"]) + float(b["height"])
+        and float(a["y"]) + float(a["height"]) > float(b["y"])
+    )
+
+
+def rectangle_contains(outer: dict[str, float], inner: dict[str, float]) -> bool:
+    return (
+        float(inner["x"]) >= float(outer["x"])
+        and float(inner["y"]) >= float(outer["y"])
+        and float(inner["x"]) + float(inner["width"]) <= float(outer["x"]) + float(outer["width"])
+        and float(inner["y"]) + float(inner["height"]) <= float(outer["y"]) + float(outer["height"])
+    )
+
+
+def validate_reference_layout(data: dict) -> None:
+    layout = data.get("reference_layout")
+    if not isinstance(layout, dict):
+        fail("Missing reference_layout data for the furnished A-02/A-03 concept.")
+
+    ground = layout.get("ground_floor", {})
+    bounds = ground.get("room_bounds", {})
+    tv_items = [item for item in ground.get("fixtures", []) if item.get("id") == "tv-console"]
+    if len(tv_items) != 1:
+        fail(f"Expected exactly one TV console in the first-floor reference layout, got {len(tv_items)}.")
+    tv = tv_items[0]
+    living = bounds.get("living-room")
+    foyer = bounds.get("foyer")
+    entry = ground.get("entry_clearance")
+    if not living or not foyer or not entry:
+        fail("Reference layout must define the living room, foyer and entrance-clearance bounds.")
+    if tv.get("room_id") != "living-room" or not rectangle_contains(living, tv):
+        fail("TV console must be inside the first-floor living room.")
+    if rectangles_overlap(tv, foyer) or rectangles_overlap(tv, entry):
+        fail("TV console overlaps the foyer or entrance-clearance route.")
+
+    second = layout.get("second_floor", {})
+    karaoke_doors = [door for door in second.get("doorways", []) if door.get("room_id") == "karaoke-room"]
+    expected_doors = int(second.get("constraints", {}).get("karaoke-room", {}).get("door_count", 1))
+    if len(karaoke_doors) != expected_doors or expected_doors != 1:
+        fail(f"Karaoke room must have exactly one door in the second-floor model; found {len(karaoke_doors)}.")
+    if "karaoke-room" not in second.get("room_bounds", {}):
+        fail("The second-floor reference layout is missing the karaoke room bounds.")
+
+
 def validate_svg_files() -> None:
     for filename, drawing_no in DRAWINGS.items():
         path = PREVIEW_DIR / filename
@@ -153,17 +202,32 @@ def validate_svg_files() -> None:
         if drawing_no not in visible_text:
             fail(f"{filename} visible sheet title does not contain {drawing_no}")
 
+        if filename == "phase5_A02_ground_floor.svg":
+            tv_nodes = [el for el in root.iter() if el.attrib.get("id") == "tv-console"]
+            if len(tv_nodes) != 1 or tv_nodes[0].attrib.get("data-room") != "living-room":
+                fail("A-02 must show one TV console assigned to the living room.")
+        if filename == "phase5_A03_second_floor.svg":
+            karaoke_door_nodes = [
+                el for el in root.iter()
+                if el.attrib.get("data-room-door") == "karaoke-room"
+            ]
+            if len(karaoke_door_nodes) != 1:
+                fail(f"A-03 must show exactly one karaoke-room door; found {len(karaoke_door_nodes)}.")
+
 
 def main() -> int:
     if not MODEL_PATH.is_file():
         fail(f"Missing shared building model: {MODEL_PATH}")
     data = json.loads(MODEL_PATH.read_text(encoding="utf-8"))
     validate_model(data)
+    validate_reference_layout(data)
     validate_svg_files()
     print("PASS: site area and 2 m screening geometry agree with the shared building model.")
     print("PASS: house/carport rectangles are contained by the screening polygon.")
     print("PASS: each room target area equals width x depth and fits the nominal footprint.")
     print("PASS: all seven A-01 to A-07 SVG sheets parse and are labelled preliminary.")
+    print("PASS: A-02 TV console is inside the living room and clear of the foyer/entry route.")
+    print("PASS: A-03 reference model and SVG each contain exactly one karaoke-room door.")
     print("NOTE: this verifies file/data consistency only, not setbacks, code compliance, design adequacy, or permit/construction readiness.")
     return 0
 

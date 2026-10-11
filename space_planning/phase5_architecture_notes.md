@@ -7,12 +7,25 @@
 | Sheet | Preview | Current content |
 |---|---|---|
 | A-01 | [Site Development Plan](../previews/phase5_A01_site_development.svg) | Adjusted local lot polygon, 2.00 m inward screening line, concept house/carport placement, preliminary area budget and unresolved site constraints. |
-| A-02 | [Ground Floor Plan](../previews/phase5_A02_ground_floor.svg) | Required ground-floor room targets, circulation band, schematic furniture and placeholder opening marks. |
-| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Three bedrooms, shared bath, family area, stair opening and landing/circulation. |
+| A-02 | [Ground Floor Plan](../previews/phase5_A02_ground_floor.svg) | Furnished user-reference layout with guest room, bathroom, garage, dining/kitchen, storage, stairway, living room and foyer; TV kept inside the living area and away from the entry route. |
+| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Furnished user-reference layout with three bedrooms, robe, bathroom/toilets, gym, single-door karaoke room, stairway, family area and balcony. |
 | A-04 | [Roof Plan](../previews/phase5_A04_roof_plan.svg) | Gable roof, ridge, assumed pitch, eaves and conceptual slope arrows. |
 | A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels. |
 | A-06 | [Building Sections](../previews/phase5_A06_sections.svg) | Stair vertical-development section study and general building section diagram. |
 | A-07 | [Details and Schedules](../previews/phase5_A07_details_schedules.svg) | Typical wall/floor section concept, stair data, provisional door/window schedule and finish schedule. |
+
+
+## User reference layout revision 01
+
+The committed A-02 and A-03 previews have been redrawn to follow the two furnished floor-plan images supplied by the student on 2026-10-12. The visual reference is now the layout direction for further work, replacing the earlier simple room-box diagrams for presentation and space arrangement.
+
+- **A-02:** Guest room, toilet and bath, garage, dining area, kitchen, storage, stairway, living room and entrance/foyer are shown in the reference arrangement. The TV console is on the living-room side and kept outside both the foyer box and the entrance-clearance route.
+- **A-03:** Bedroom 2, master bedroom/robe, Bedroom 3, bathroom, toilet, toilet-and-bath, gym, karaoke room, stairway, family area and balcony are shown. The karaoke room has one doorway on its west wall, from the circulation hall.
+- The drawings are editable SVG previews. They include simple furniture and fixtures to make the arrangement easier to review, rather than reproducing only empty room boxes.
+
+**Dimension hold point:** the reference images are not dimensioned. A-02/A-03 therefore use diagram units only, not metres or a scale. The earlier numeric room targets in the shared building model are retained as provisional planning input and have not been reconciled with these new room shapes. Do not measure construction dimensions from the SVGs. Confirm final room sizes, wall thickness, door widths/swings, furniture clearance, actual stair/landing opening and overall footprint before a dimensioned plan is issued.
+
+**Coordination hold point:** A-01, A-04, A-05, A-06 and A-07 remain preliminary and have not yet been regenerated to match all geometry shown on revised A-02/A-03. The balcony, gym extension, room alignment, stair opening, roof, elevations and sections need a coordinated revision after the layout and site/setback inputs are agreed.
 
 ## Basis carried forward from Phases 1-4
 
@@ -43,9 +56,7 @@ Reference: [Supreme Court E-Library - PD 1096](https://elibrary.judiciary.gov.ph
 
 ## Floor plans and room coordination
 
-The ground and second-floor room boxes are based on Phase 3 target sizes and are arranged inside the nominal 9.30 m x 7.90 m outline. In the drawings, boxes and opening markers are conceptual. Wall thickness, wall-centreline geometry, door swings, exact window positions, clear passage dimensions after finishes, furniture clearances, stairwell openings and structural grids require a proper coordinated design pass.
-
-The second-floor plan places the stair opening/flight zone over the ground-floor stair zone and adds the Phase 4 landing allowance. This relationship is a starting arrangement only. Confirm exact landing geometry, stair direction, floor opening and headroom against the accepted vertical section.
+The A-02/A-03 room arrangement now follows the new visual reference instead of the earlier dimensioned room-box diagram. The nominal 9.30 m x 7.90 m footprint and old room-size targets have not yet been proven to fit this arrangement. Coordinate the revised outline, all room areas, the ground/second-floor stair position, door swings, window positions, wall thickness, furniture clearances, stairwell opening and structural grid in a later dimensioning pass. Confirm exact landing geometry, stair direction, floor opening and headroom against the accepted vertical section.
 
 ## Levels, roof and elevations
 
@@ -55,7 +66,7 @@ The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 
 
 ## Shared model and validation limits
 
-`data/building_model.json` now records site coordinates, the screening polygon, footprint placement, room boxes, level/roof assumptions, opening schedule and drawing status. `scripts/validate_architectural_previews.py` checks numerical consistency, containment within the screening polygon, area arithmetic, and basic SVG structure.
+`data/building_model.json` records the existing site/level assumptions plus a `reference_layout` section, a separate diagram-unit description of the revised A-02/A-03 arrangements. `scripts/validate_architectural_previews.py` checks the existing numeric consistency checks and enforces that the first-floor TV belongs to the living room without overlapping the foyer/entry route, and that the second-floor model and SVG each contain exactly one karaoke-room door.
 
 **Still incomplete:** the SVG geometry is not yet regenerated by a single committed drawing generator and the architecture has not yet been exported as an editable DXF/DWG set. The validator is a consistency check, not a full CAD geometry or design-code checker. After Phase 2 is resolved, update the shared model and regenerate/revise the drawings together.
 

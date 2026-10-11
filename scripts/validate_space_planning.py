@@ -109,7 +109,7 @@ def validate_schedule() -> tuple[dict[str, set[str]], set[str], int]:
         basis = row["area_basis"].strip()
 
         if dimension_status == "legacy-target-unverified":
-            if space_type in {"allowance", "support-zone", "circulation"}:
+            if space_type in {"allowance", "support-zone"}:
                 fail(f"{space!r} cannot be dimensioned as a legacy enclosed target with type {space_type!r}")
             if not length_text or not width_text or not area_text:
                 fail(f"Legacy target {space!r} requires length, width and area values")

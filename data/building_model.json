@@ -1,6 +1,6 @@
 {
   "project": "CE 393 Plate No. 2 - Proposed Two-Storey Residential Building",
-  "revision": "User-reference layout revision 01; visual arrangement updated, final dimensions pending",
+  "revision": "Reference layout revision 01 + area-budget coordination revision 02; dimensioned footprint pending",
   "status": "PRELIMINARY_NOT_FOR_CONSTRUCTION",
   "units": {
     "dimensions": "m",
@@ -8,6 +8,10 @@
     "coordinates": "local eastings/northings in m"
   },
   "assumptions": [
+    "Phase 3 area-budget revision 02 budgets the ground floor at 73.32 m2 programmed clear area including a proposed 3.00 x 5.50 m enclosed garage, and the second floor at 70.96 m2 programmed clear area including the robe, separate Bathroom, separate Toilet, Toilet and bath, karaoke room, gym and an 8.00 m2 shared-circulation allowance. The areas are proposed planning targets, not dimensions measured from the reference images.",
+    "The 15% gross-up (net area / 0.85) is a rough planning allowance only, not a code factor. Provisional gross-area proxies are 86.26 m2 ground floor, 83.48 m2 second floor and 169.74 m2 total; final floor areas require dimensioned drawings and a consistent treatment of garage, stair opening, walls and balcony.",
+    "The current 9.30 x 7.90 m main rectangle and separate carport placement are legacy geometry from the earlier simple layout. They have not been regenerated to the revised room arrangement or the new area budget and must not be treated as an accepted footprint.",
+    "Local Palo zoning classification and parcel-specific front-yard/ROW setbacks have not been confirmed. The uniform 2.00 m inward-offset polygon and 90% corner-lot occupancy calculation are screening scenarios only, not a building permit or verified local zoning result.",
     "The furnished A-02 and A-03 reference-layout previews supersede the earlier simple room-box diagrams for visual arrangement. The reference images do not supply reliable room dimensions, so these layouts use diagram units only and must not be treated as scaled or dimensioned construction plans.",
     "The older building.rooms target boxes are retained as provisional planning data until room areas and dimensions are reconciled with the revised visual layout. Do not assume the legacy room boxes describe the new drawing geometry.",
     "The adjusted Phase 1 traverse is an academic plotting basis, not cadastral certification.",
@@ -85,24 +89,31 @@
       "southwest_easting_m": 1.6893311,
       "south_edge_northing_m": -11.4457888,
       "width_m": 9.3,
-      "depth_m": 7.9
+      "depth_m": 7.9,
+      "status": "LEGACY_PRELIMINARY_PLACEMENT_NOT_COORDINATED_TO_REFERENCE_LAYOUT"
     },
     "carport_placement": {
       "southwest_easting_m": 10.99,
       "south_edge_northing_m": -8.6,
       "width_m": 2.8,
-      "depth_m": 5.5
+      "depth_m": 5.5,
+      "status": "LEGACY_CARPORT_PLACEMENT_NOT_COORDINATED_TO_REFERENCE_LAYOUT; reference currently shows an enclosed garage"
     },
     "main_footprint_area_m2": 73.47,
     "carport_area_m2": 15.4,
     "combined_covered_ground_area_m2": 88.87,
     "indicative_combined_cover_percent_of_adjusted_area": 33.5,
-    "remaining_unbuilt_area_if_carport_included_m2": 176.3898
+    "remaining_unbuilt_area_if_carport_included_m2": 176.3898,
+    "screening_envelope_area_m2": 152.4308513,
+    "screening_envelope_area_basis": "Shoelace area of stored 2.00 m uniform inward-offset polygon; geometric screening only, pending local zoning and official ROW/property-line confirmation."
   },
   "building": {
     "footprint": {
       "width_m": 9.3,
-      "depth_m": 7.9
+      "depth_m": 7.9,
+      "status": "LEGACY_PRELIMINARY_GEOMETRY_NOT_COORDINATED_TO_PHASE3_REVISION_02",
+      "area_m2": 73.47,
+      "area_basis": "Legacy 9.30 x 7.90 m rectangle, not the revised proposed footprint; retain only for comparison until dimensioned layout is coordinated."
     },
     "floor_levels": {
       "ground_ffl_m": 0,
@@ -528,5 +539,63 @@
       "vehicle_space": "Reference depicts a garage; final enclosed-garage vs covered-open-carport decision remains open."
     },
     "superseded_outputs": "Previous Phase 3 area-budget totals are not valid for the revised room arrangement and must be recalculated after dimensioning."
+  },
+  "area_budget_revision_02": {
+    "revision": "2026-10-12",
+    "status": "PROPOSED_PLANNING_BUDGET_NOT_FINAL_DIMENSIONED_AREA",
+    "units": {
+      "area": "m2",
+      "linear_dimension": "m"
+    },
+    "method": "Clear-space programme totals from the revised Phase 3 schedule; gross-area proxies use the inherited rough 15% wall/structure allowance (net / 0.85).",
+    "assumed_enclosed_vehicle_space": {
+      "type": "garage",
+      "clear_dimensions_m": {
+        "length": 3,
+        "width": 5.5
+      },
+      "clear_area_m2": 16.5,
+      "basis": "Provisional target to test vehicle and door clearances; reference depicts garage."
+    },
+    "ground_floor": {
+      "clear_program_excluding_vehicle_bay_m2": 56.82,
+      "vehicle_bay_clear_area_m2": 16.5,
+      "programmed_clear_area_m2": 73.32,
+      "gross_area_proxy_m2": 86.25882352941176,
+      "existing_legacy_rectangle_m2": 73.47,
+      "existing_legacy_house_plus_carport_m2": 88.87,
+      "proposed_coverage_percent_of_adjusted_lot": 32.5186
+    },
+    "second_floor": {
+      "programmed_clear_area_m2": 70.96,
+      "gross_area_proxy_m2": 83.48235294117649,
+      "optional_balcony_area_m2": 3.6,
+      "balcony_included_in_enclosed_floor_area_proxy": false,
+      "wet_room_note": "Separate Bathroom, Toilet and Toilet and bath labels are each retained until their intended uses and fixture contents are confirmed."
+    },
+    "total_floor_area_proxy_m2": 169.74117647058824,
+    "site_screening": {
+      "adjusted_lot_area_m2": 265.2598,
+      "uniform_2m_offset_polygon_area_m2": 152.4308513,
+      "theoretical_90_percent_corner_lot_occupancy_cap_m2": 238.73382,
+      "occupancy_cap_basis": "Conditional PD 1096 Section 708(a) scenario if corner-lot classification and applicability are confirmed.",
+      "remaining_lot_area_by_subtraction_m2": 179.00097647058823,
+      "screening_polygon_area_remaining_by_subtraction_m2": 66.17202777058824
+    },
+    "alternatives": {
+      "covered_open_carport": {
+        "ground_enclosed_program_clear_m2": 56.82,
+        "ground_enclosed_gross_proxy_m2": 66.84705882352941,
+        "covered_open_bay_m2": 16.5,
+        "total_ground_level_covered_proxy_m2": 83.34705882352941
+      }
+    },
+    "limitations": [
+      "These numbers are a design budget, not final C-06/C-07/C-08 calculation results.",
+      "Use area totals to guide room sizes; do not infer dimensions or scale from reference-image/SVG geometry.",
+      "All footprints must be geometrically inside the final approved envelope, not merely below an area cap.",
+      "Check actual road/ROW lines, local zoning class, frontages, setbacks, driveway and building orientation.",
+      "Recalculate areas from the dimensioned final plans; confirm how the stairwell void, enclosed garage and balcony are measured."
+    ]
   }
 }

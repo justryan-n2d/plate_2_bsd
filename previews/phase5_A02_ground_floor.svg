@@ -126,7 +126,7 @@
 <circle cx="1045" cy="320" r="4" fill="#58a78e"/><text x="1060" y="324" class="panelText">Dining and kitchen share an open-plan zone.</text>
 <circle cx="1045" cy="355" r="4" fill="#58a78e"/><text x="1060" y="359" class="panelText">Storage and stairway sit beside the living room.</text>
 <path d="M1040 383H1395" stroke="#e2e8f0" stroke-width="1.3"/><text x="1040" y="414" class="tag" fill="#334155">DESIGN STATUS</text>
-<text x="1040" y="439" class="panelText">Based on your reference image. Room positions</text><text x="1040" y="459" class="panelText">and furniture are schematic, not measured.</text><text x="1040" y="479" class="panelText">Dimension coordination is still required.</text>
+<text x="1040" y="439" class="panelText">Based on your reference image. Room positions</text><text x="1040" y="459" class="panelText">and furniture are schematic, not measured.</text><text x="1040" y="479" class="panelText">Budget proxy: about 86.26 m² gross; dimensions pending.</text>
 <g><rect x="1015" y="555" width="405" height="210" rx="14" fill="#fffaf1" stroke="#ead6b6" stroke-width="1.5"/><text x="1040" y="590" class="panelHeading" fill="#8a5b23">REVIEW ITEMS</text>
   <text x="1040" y="624" class="panelText">• Confirm room dimensions and wall thickness.</text><text x="1040" y="653" class="panelText">• Check clearances around furniture and doors.</text><text x="1040" y="682" class="panelText">• Coordinate stair opening with the second floor.</text><text x="1040" y="711" class="panelText">• Verify setbacks, windows and local code items.</text><text x="1040" y="740" class="panelText">This is not a permit or construction drawing.</text>
 </g>

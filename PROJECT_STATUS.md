@@ -3,11 +3,11 @@
 **Last updated:** 2026-10-12  
 **Repository:** [`justryan-n2d/plate_2_bsd`](https://github.com/justryan-n2d/plate_2_bsd)  
 **Current base:** `main`  
-**Current focus:** Phase 3 Revision 02, reopened to align space planning with user-reference layout revision 01.
+**Current focus:** Phase 3 Revision 03, tying the room programme and floor-plan concepts to the preliminary area budget and code-screening calculations.
 
 ## Current position
 
-**Phase 3 has been reopened and revised.** The room schedule, adjacency matrix and three conceptual diagrams now follow the intended room arrangement in the user-provided references. A-02/A-03 on `main` provide the visual direction. Inherited target sizes are marked unverified, additional rooms from the reference are recorded without invented dimensions, and the prior area-budget totals are superseded. A-01/A-04-A-07 and final dimensions remain pending coordination.
+**Phase 3 has been revised to Revision 03.** The room schedule now includes provisional area-budget targets for the additional robe, separate upstairs bathroom, separate toilet, gym and karaoke room. The preferred enclosed-garage scenario budgets 73.32 m² of ground-floor clear space (86.26 m² gross proxy) and 70.96 m² of upper-floor clear space (83.48 m² gross proxy). The 15% gross-up is only a rough assumption. Exact local zoning/ROW setbacks and final measured floor areas remain pending.
 
 Phase 3 was merged by [PR #3](https://github.com/justryan-n2d/plate_2_bsd/pull/3). Phase 4 was merged by [PR #4](https://github.com/justryan-n2d/plate_2_bsd/pull/4). For the current Phase 5 revision, the A-01 to A-07 validator passed; the Phase 3 validation and the existing Phase 1 CAD validation also passed on that revision.
 
@@ -16,10 +16,10 @@ Phase 3 was merged by [PR #3](https://github.com/justryan-n2d/plate_2_bsd/pull/3
 | Phase | Current status | Main records / result | Remaining limitation |
 |---|---|---|---|
 | **1. Lot and site base** | Preliminary work completed and merged | `site/phase1_traverse_coordinates.csv`, `site/phase1_site_base.svg`, `site/phase1_site_analysis.md` | Adjusted area is 265.26 m² versus the assignment's approximate 300.00 m²; original survey, road/ROW geometry and parcel conditions still need confirmation. |
-| **2. Site requirements and preliminary calculations** | **Pending; an important dependency** | `calculations/plate2_calculations.md`, C-04 through C-09 | Official site zoning, setbacks, buildable envelope, final footprint/floor areas/open space, occupant load, parking and other code requirements have not been fully determined. |
-| **3. Space planning** | **Reopened; Revision 02 updated to reference layout** | Revised `space_requirement_table.csv`, `adjacency_matrix.csv`, `space_planning.md`, and three SVG diagrams; validator at `scripts/validate_space_planning.py` | Inherited sizes are unverified and old area-budget sums are superseded. Added wet rooms, garage/carport type, exact dimensions, balcony, gym and stair coordination still need review. |
+| **2. Site requirements and preliminary calculations** | **Preliminary screening calculations updated** | `calculations/plate2_calculations.md`; `calculations/phase3_area_budget.csv` | The 2.00 m offset polygon area is 152.43 m², and 90% corner-lot cap is only a conditional scenario. Local Palo zoning classification, legal ROW/setback lines, final footprint/floor areas and qualifying open space remain pending. |
+| **3. Space planning** | **Revision 03; provisional area budget added** | Revised room schedule, adjacency matrix, three zoning SVGs and `calculations/phase3_area_budget.csv` | New room sizes are target assumptions, not image measurements or code minima. The 15% gross-up is only a rough planning factor. Actual footprint, floor area and formal open space remain pending. |
 | **4. Stair planning** | Preliminary calculations and studies merged | `data/stair_design.json`, `space_planning/stair_design.md`, `space_planning/stair_plan.svg`, `space_planning/stair_section.svg` | Uses an assumed 3.000 m floor-to-floor rise; confirm actual levels and BP 344 applicability. Structural design and final building-section clearances remain open. |
-| **5. Architectural plan set** | **Preliminary; layout revision 01 added** | A-01 to A-07 SVG previews; `data/building_model.json`; `space_planning/reference_layout_revision.md` | A-02/A-03 now follow the visual references. Room dimensions are not derived from the images. A-01/A-04-A-07, the shared model's legacy room targets, and the stair/roof/elevation/section geometry still need coordination. Model-driven SVG generation / architectural DXF export are not yet implemented. |
+| **5. Architectural plan set** | **Preliminary; reference layout and area-budget targets added** | A-01 to A-07 SVG previews; `data/building_model.json`; `calculations/phase3_area_budget.csv` | A-02/A-03 follow the visual reference and now carry proposed target-size/budget notes, but drawing geometry is still not dimensioned to those targets. The legacy 9.30 m x 7.90 m footprint/carport position is not coordinated to the new layout. A-01/A-04-A-07 and actual stair/roof/elevation/section geometry need the next design pass. Model-driven SVG regeneration / architectural DXF export are not yet implemented. |
 | **6. Preliminary building specifications** | Not started | Planned specification sections in `plate2 plan.md` | Materials, workmanship requirements and specification schedule need to be written and coordinated. |
 | **7. Required documentation** | Partially supported by earlier notes; not complete | Site analysis, calculations, Phase 3 records | Code compliance checklist, final space table, specification schedule and design rationale need final coordinated versions. |
 | **8. Final review and presentation** | Not started | Checklist in `plate2 plan.md` | A3 sheets, long-bond calculations, final export, CAD inspection and print QA remain. |
@@ -80,3 +80,12 @@ Phase 3 was reopened after the student selected the furnished first- and second-
 - Room sizes shown from the earlier programme are retained only as unverified targets; undimensioned reference spaces have blank target fields. Previous room-area budget totals are superseded.
 
 See [Phase 3 Revision 02](space_planning/space_planning.md) and [reference-layout revision record](space_planning/reference_layout_revision.md).
+
+
+## Phase 3 area-budget coordination revision 03 (2026-10-12)
+
+- The ground-floor space schedule now uses a proposed 3.00 x 5.50 m enclosed garage budget; clear programme total is 73.32 m² and gross-area proxy is 86.26 m².
+- The second-floor room schedule now budgets the robe, separate Bathroom, separate Toilet, Toilet and bath, karaoke room, gym and 8.00 m² shared circulation; clear programme total is 70.96 m² and gross-area proxy is 83.48 m².
+- Total gross-area planning proxy is 169.74 m², using a rough 15% wall/structure allowance. It is not the final measured GFA.
+- The stored 2.00 m inward-offset polygon is 152.43 m². This is a screening assumption only. Parcel-specific zoning and road ROW/setback rules have not been verified.
+- See `calculations/phase3_area_budget.csv` and `space_planning/space_planning.md` for formulas, assumptions and open checks.

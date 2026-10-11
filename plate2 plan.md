@@ -171,15 +171,15 @@ These are document and arithmetic consistency checks, not a professional survey 
 - [x] **T-24** Update the second-floor conceptual zoning to include the robe, separate wet-room labels, gym, karaoke room and balcony.
 - [ ] **T-25** Re-review dimensions, floor areas, circulation and cross-floor coordination after Phase 2, Phase 4 and the measured layout are confirmed.
 
-#### Phase 3 implementation checkpoint - revision 02 (2026-10-12)
+#### Phase 3 implementation checkpoint - revision 03 (2026-10-12)
 
-**Status: Phase 3 reopened and revised to coordinate with the new furnished reference layout.** The room programme, adjacency matrix, relationship diagram and both floor zoning diagrams now reflect the intended room arrangement rather than the earlier simple zoning.
+**Status: Phase 3 Revision 03 is area-budget coordinated to the furnished reference layout.** The target programme now accounts for the robe, separately labelled Bathroom, separately labelled Toilet, Toilet and bath, karaoke room, gym, balcony and an expanded shared circulation allowance. The preferred scenario retains the enclosed garage shown in the reference.
 
-The reference images are not dimensioned. Existing numerical values are preserved only as inherited provisional targets and are explicitly marked unverified. Additional rooms shown only in the reference are recorded without invented sizes. The old Phase 3 area-budget totals are superseded for this layout and must not be reported as current floor areas.
+The area-budget CSV calculates 73.32 m² clear programme for the ground floor including garage and 70.96 m² for the second floor excluding balcony. The inherited rough 15% walls/structure factor gives gross-area proxies of 86.26 m² and 83.48 m² respectively, or 169.74 m² total. These are budgeting proxies only, not final measured GFA or code minimums.
 
-Two layout guardrails are recorded and automatically checked: the first-floor TV is in the living room and does not obstruct the foyer/entry route; the second-floor karaoke room has exactly one door from shared circulation. The three upstairs labels BATHROOM, TOILET, and TOILET AND BATH are kept distinct because that is what the reference shows, pending confirmation of their intended uses. The vehicle space still needs a decision on enclosed garage versus covered-open carport.
+The first-floor TV must remain in the living zone and outside the foyer/entry route. The second-floor karaoke room has exactly one door from shared circulation, and the gym must have independent hall access rather than access through a bedroom. The existing 9.30 x 7.90 m house rectangle and carport placement are legacy geometry and must be reshaped/repositioned to match the budgeted layout.
 
-Before Phase 3 can be accepted as dimensioned, confirm the space programme, measure all rooms, recalculate area totals, confirm the garage/carport type, and coordinate the upper stair opening/landing, balcony, gym and wet-room cluster with Phase 2 site constraints and Phase 4 stair calculations.
+C-04 remains pending parcel-specific Palo zoning/ROW confirmation. The 2.00 m inward-offset polygon area is a geometric screen only. Before finalizing Phase 3, dimension the rooms and outer walls, test footprint containment in the legally confirmed envelope, recalculate actual floor areas/open space, and coordinate the stair, balcony and gym with Phase 4 and Phase 5.
 
 ### Phase 4: Stair planning and calculations
 

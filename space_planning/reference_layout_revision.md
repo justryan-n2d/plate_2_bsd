@@ -55,3 +55,8 @@ The previous numerical room-size targets remain in the model as provisional data
 ## Phase 3 Revision 02 coordination
 
 Phase 3 has been reopened to reflect reference layout revision 01. See [revised space-planning notes](space_planning.md), [room schedule](space_requirement_table.csv), [adjacency matrix](adjacency_matrix.csv), [adjacency diagram](adjacency_diagram.svg), and the revised [ground](ground_floor_zoning.svg) and [second-floor](second_floor_zoning.svg) zoning diagrams. Dimensioned design and new area totals remain pending.
+
+
+## Area-budget coordination revision 02 (2026-10-12)
+
+Phase 3 now budgets the reference spaces before drafting dimensioned plans. See [phase3_area_budget.csv](../calculations/phase3_area_budget.csv) and [Phase 3 Revision 03 notes](space_planning.md). The preferred scenario assumes an enclosed garage and budgets 73.32 m² programmed clear space on the ground floor (86.26 m² gross proxy) and 70.96 m² upstairs (83.48 m² gross proxy). These proxies use a rough 15% wall/structure allowance, not a code factor. Local setbacks and final C-06/C-07/C-08 calculations remain pending.

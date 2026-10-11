@@ -15,6 +15,7 @@ SPACE_DIR = ROOT / "space_planning"
 SCHEDULE_PATH = SPACE_DIR / "space_requirement_table.csv"
 MATRIX_PATH = SPACE_DIR / "adjacency_matrix.csv"
 MODEL_PATH = ROOT / "data" / "building_model.json"
+AREA_BUDGET_PATH = ROOT / "calculations" / "phase3_area_budget.csv"
 
 REQUIRED_BY_FLOOR = {
     "Ground Floor": {
@@ -38,7 +39,7 @@ REFERENCE_SPACES_BY_FLOOR = {
 VALID_STATUSES = {"required", "additional", "optional", "conditional", "allowance"}
 VALID_TYPES = {"enclosed", "vehicle-area", "allowance", "optional-external", "support-zone", "circulation"}
 VALID_RELATIONSHIPS = {"direct", "near", "buffered", "conditional"}
-VALID_DIMENSION_STATUS = {"legacy-target-unverified", "legacy-allowance-unverified", "not-dimensioned"}
+VALID_DIMENSION_STATUS = {"legacy-target-unverified", "legacy-allowance-unverified", "proposed-target-unverified", "proposed-allowance-unverified", "not-dimensioned"}
 
 
 def fail(message: str) -> None:
@@ -69,7 +70,7 @@ def numeric(value: str, field: str, space: str) -> float:
     return result
 
 
-def validate_schedule() -> tuple[dict[str, set[str]], set[str], int]:
+def validate_schedule() -> tuple[dict[str, set[str]], set[str], int, list[dict[str, str]]]:
     rows = read_csv(SCHEDULE_PATH, {
         "floor", "space", "requirement_status", "space_type",
         "target_length_m", "target_width_m", "target_area_m2",
@@ -79,6 +80,8 @@ def validate_schedule() -> tuple[dict[str, set[str]], set[str], int]:
     all_names: set[str] = set()
     seen: set[tuple[str, str]] = set()
     legacy_target_count = 0
+    proposed_target_count = 0
+    allowance_count = 0
     undimensioned_count = 0
 
     for row in rows:
@@ -108,31 +111,45 @@ def validate_schedule() -> tuple[dict[str, set[str]], set[str], int]:
         )
         basis = row["area_basis"].strip()
 
-        if dimension_status == "legacy-target-unverified":
-            if space_type in {"allowance", "support-zone"}:
+        if dimension_status in {"legacy-target-unverified", "proposed-target-unverified"}:
+            if dimension_status == "legacy-target-unverified" and space_type in {"allowance", "support-zone"}:
                 fail(f"{space!r} cannot be dimensioned as a legacy enclosed target with type {space_type!r}")
             if not length_text or not width_text or not area_text:
-                fail(f"Legacy target {space!r} requires length, width and area values")
+                fail(f"Dimensioned target {space!r} requires length, width and area values")
             length = numeric(length_text, "target_length_m", space)
             width = numeric(width_text, "target_width_m", space)
             area = numeric(area_text, "target_area_m2", space)
             if min(length, width, area) <= 0:
-                fail(f"Legacy target values must be positive for {space!r}")
+                fail(f"Target values must be positive for {space!r}")
             if not math.isclose(length * width, area, rel_tol=0.0, abs_tol=0.011):
-                fail(f"Legacy area mismatch for {space!r}: {length} x {width} != {area}")
-            if basis != "legacy target; unverified":
-                fail(f"{space!r} must clearly mark its values as a legacy, unverified target")
-            legacy_target_count += 1
+                fail(f"Area mismatch for {space!r}: {length} x {width} != {area}")
+            expected_basis = (
+                "legacy target; unverified"
+                if dimension_status == "legacy-target-unverified"
+                else "proposed area-budget target; verify in measured plan"
+            )
+            if basis != expected_basis:
+                fail(f"{space!r} must use area basis {expected_basis!r}")
+            if dimension_status == "legacy-target-unverified":
+                legacy_target_count += 1
+            else:
+                proposed_target_count += 1
 
-        elif dimension_status == "legacy-allowance-unverified":
-            if space_type != "allowance":
+        elif dimension_status in {"legacy-allowance-unverified", "proposed-allowance-unverified"}:
+            if dimension_status == "legacy-allowance-unverified" and space_type != "allowance":
                 fail(f"{space!r} is marked as a legacy area allowance but is not type 'allowance'")
             if length_text or width_text or not area_text:
                 fail(f"Area allowance {space!r} must have blank dimensions and a positive area only")
             if numeric(area_text, "target_area_m2", space) <= 0:
                 fail(f"Area allowance must be positive for {space!r}")
-            if basis != "legacy planning allowance; unverified":
-                fail(f"{space!r} must identify its legacy area allowance as unverified")
+            expected_basis = (
+                "legacy planning allowance; unverified"
+                if dimension_status == "legacy-allowance-unverified"
+                else "proposed area-budget allowance; verify in measured plan"
+            )
+            if basis != expected_basis:
+                fail(f"{space!r} must identify its area allowance as {expected_basis!r}")
+            allowance_count += 1
 
         else:
             if length_text or width_text or area_text:
@@ -153,7 +170,7 @@ def validate_schedule() -> tuple[dict[str, set[str]], set[str], int]:
         if missing:
             fail(f"{floor} is missing spaces shown in the selected reference: {', '.join(sorted(missing))}")
 
-    return names_by_floor, all_names, legacy_target_count
+    return names_by_floor, all_names, legacy_target_count, rows
 
 
 def validate_adjacency(names_by_floor: dict[str, set[str]], all_names: set[str]) -> int:
@@ -228,6 +245,109 @@ def rectangle_contains(outer: dict, inner: dict) -> bool:
     )
 
 
+
+
+def shoelace_area(points: list[dict]) -> float:
+    if len(points) < 3:
+        fail("A polygon used for area calculation needs at least three points")
+    total = 0.0
+    for index, point in enumerate(points):
+        nxt = points[(index + 1) % len(points)]
+        total += (
+            float(point["easting_m"]) * float(nxt["northing_m"])
+            - float(nxt["easting_m"]) * float(point["northing_m"])
+        )
+    return abs(total) / 2.0
+
+
+def validate_area_budget(schedule_rows: list[dict[str, str]], model: dict) -> None:
+    budget_rows = read_csv(AREA_BUDGET_PATH, {
+        "metric_id", "metric", "scenario", "formula", "inputs",
+        "value", "unit", "status", "notes",
+    })
+    budget = {row["metric_id"]: row for row in budget_rows}
+    if len(budget) != len(budget_rows):
+        fail("Area-budget CSV contains duplicate metric_id values")
+
+    def metric(metric_id: str) -> float:
+        if metric_id not in budget:
+            fail(f"Area budget is missing metric {metric_id!r}")
+        return numeric(budget[metric_id]["value"], "area budget value", metric_id)
+
+    lot_area = float(model.get("site", {}).get("adjusted_closed_traverse_area_m2", 0))
+    screening_points = model.get("site", {}).get("setback_screening_polygon", [])
+    screening_area = shoelace_area(screening_points)
+    ground_rows = [r for r in schedule_rows if r["floor"].strip() == "Ground Floor"]
+    second_rows = [r for r in schedule_rows if r["floor"].strip() == "Second Floor"]
+
+    def schedule_area(rows: list[dict[str, str]]) -> float:
+        return sum(numeric(row["target_area_m2"], "target_area_m2", row["space"])
+                   for row in rows if row["target_area_m2"].strip())
+
+    ground_total = schedule_area(ground_rows)
+    ground_without_vehicle = sum(
+        numeric(row["target_area_m2"], "target_area_m2", row["space"])
+        for row in ground_rows
+        if row["space"] != "Garage / carport" and row["target_area_m2"].strip()
+    )
+    garage_row = next((row for row in ground_rows if row["space"] == "Garage / carport"), None)
+    if garage_row is None:
+        fail("Ground-floor schedule is missing Garage / carport")
+    garage_area = numeric(garage_row["target_area_m2"], "target_area_m2", garage_row["space"])
+    upper_total = schedule_area([row for row in second_rows if row["space"] != "Balcony (if appropriate)"])
+    balcony = schedule_area([row for row in second_rows if row["space"] == "Balcony (if appropriate)"])
+    gross_factor = metric("grossing_factor")
+    if not (0 < gross_factor <= 1):
+        fail("Grossing factor must be above zero and no more than one")
+    ground_gross = ground_total / gross_factor
+    upper_gross = upper_total / gross_factor
+    total_gross = ground_gross + upper_gross
+    coverage_percent = ground_gross / lot_area * 100 if lot_area > 0 else 0
+    unbuilt_area = lot_area - ground_gross
+    screen_residual = screening_area - ground_gross
+    cap90 = lot_area * .90
+    main = model.get("building", {}).get("footprint", {})
+    old_carport = model.get("site", {}).get("carport_placement", {})
+    legacy_house_area = float(main.get("width_m", 0)) * float(main.get("depth_m", 0))
+    legacy_carport_area = float(old_carport.get("width_m", 0)) * float(old_carport.get("depth_m", 0))
+    legacy_combined = legacy_house_area + legacy_carport_area
+    legacy_pct = legacy_combined / lot_area * 100 if lot_area > 0 else 0
+    open_carport_alt = ground_without_vehicle / gross_factor + garage_area
+
+    computed = {
+        "lot_area_adjusted_traverse": lot_area,
+        "setback_screening_envelope": screening_area,
+        "corner_lot_occupancy_cap": cap90,
+        "ground_program_without_vehicle_bay": ground_without_vehicle,
+        "garage_clear_area_target": garage_area,
+        "ground_clear_program_total": ground_total,
+        "ground_floor_gross_proxy": ground_gross,
+        "second_clear_program_total": upper_total,
+        "second_floor_gross_proxy": upper_gross,
+        "total_floor_area_proxy": total_gross,
+        "balcony_target_area": balcony,
+        "ground_coverage_proxy_percent": coverage_percent,
+        "unbuilt_lot_area_proxy": unbuilt_area,
+        "screening_envelope_residual": screen_residual,
+        "legacy_model_combined_cover": legacy_combined,
+        "legacy_model_cover_percent": legacy_pct,
+        "open_carport_alternative_gross_cover": open_carport_alt,
+    }
+    for metric_id, actual in computed.items():
+        recorded = metric(metric_id)
+        if not math.isclose(actual, recorded, rel_tol=0.0, abs_tol=0.03):
+            fail(f"Area budget mismatch for {metric_id}: CSV says {recorded:.4f}, recalculated {actual:.4f}")
+    if not math.isclose(gross_factor, 0.85, rel_tol=0.0, abs_tol=1e-8):
+        fail("This budget revision expects the documented provisional 0.85 grossing factor")
+    if budget["setback_screening_envelope"]["status"] != "SCREENING_ONLY":
+        fail("The uniform 2.00 m offset must remain labelled SCREENING_ONLY")
+    if budget["corner_lot_occupancy_cap"]["status"] != "CONDITIONAL_CODE_SCREEN":
+        fail("The 90% occupancy cap must remain conditional on confirmed corner-lot/code applicability")
+    print(f"PASS: area budget reconciles with schedule (ground clear {ground_total:.2f} m2; second clear {upper_total:.2f} m2).")
+    print(f"PASS: gross-area proxies recompute to {ground_gross:.2f} m2 ground, {upper_gross:.2f} m2 upper and {total_gross:.2f} m2 total.")
+    print(f"PASS: {screening_area:.2f} m2 setback polygon remains a screening area, not a confirmed legal buildable envelope.")
+
+
 def validate_layout_guardrails(model: dict) -> None:
     layout = model.get("reference_layout")
     if not isinstance(layout, dict):
@@ -271,6 +391,9 @@ def validate_layout_guardrails(model: dict) -> None:
             door_markers = [el for el in root.iter() if el.attrib.get("data-room-door") == "karaoke-room"]
             if len(door_markers) != 1:
                 fail(f"A-03 must mark exactly one karaoke-room door, found {len(door_markers)}")
+            gym_doors = [el for el in root.iter() if el.attrib.get("data-room-door") == "gym"]
+            if len(gym_doors) != 1:
+                fail(f"A-03 must provide one gym door marker to shared circulation, found {len(gym_doors)}")
 
     zoning_ground = ET.parse(SPACE_DIR / "ground_floor_zoning.svg").getroot()
     tv_zone_markers = [el for el in zoning_ground.iter() if el.attrib.get("id") == "tv-console"]
@@ -280,10 +403,13 @@ def validate_layout_guardrails(model: dict) -> None:
     karaoke_zone_doors = [el for el in zoning_second.iter() if el.attrib.get("data-room-door") == "karaoke-room"]
     if len(karaoke_zone_doors) != 1:
         fail(f"Second-floor Phase 3 zoning must show exactly one karaoke-room door marker, found {len(karaoke_zone_doors)}")
+    gym_zone_doors = [el for el in zoning_second.iter() if el.attrib.get("data-room-door") == "gym"]
+    if len(gym_zone_doors) != 1:
+        fail(f"Second-floor Phase 3 zoning must mark one gym door from shared circulation, found {len(gym_zone_doors)}")
 
 
 def main() -> int:
-    names_by_floor, all_names, legacy_count = validate_schedule()
+    names_by_floor, all_names, legacy_count, schedule_rows = validate_schedule()
     adjacency_count = validate_adjacency(names_by_floor, all_names)
     validate_svg(SPACE_DIR / "adjacency_diagram.svg", all_names)
     validate_svg(SPACE_DIR / "ground_floor_zoning.svg", names_by_floor["Ground Floor"])
@@ -293,12 +419,15 @@ def main() -> int:
     except (OSError, json.JSONDecodeError) as exc:
         raise ValueError(f"Cannot read shared building model {MODEL_PATH}: {exc}") from exc
     validate_layout_guardrails(model)
+    validate_area_budget(schedule_rows, model)
+    proposed_count = sum(1 for row in schedule_rows if row["dimension_status"].strip() == "proposed-target-unverified")
     print("PASS: assignment-required rooms and selected-reference spaces are in the revised schedule.")
-    print(f"PASS: {legacy_count} inherited numerical targets are marked unverified; undimensioned reference spaces have blank dimensions.")
+    print(f"PASS: {legacy_count} inherited targets and {proposed_count} proposed room targets are explicitly marked unverified; additional dimensionless spaces are not assigned invented dimensions.")
     print(f"PASS: {adjacency_count} adjacency relationships use valid space names, floors and relationship labels.")
     print("PASS: all three Phase 3 SVG diagrams parse and describe the required spaces.")
     print("PASS: A-02 and Phase 3 zoning place one TV in the living room, clear of the foyer/entry path.")
     print("PASS: A-03 and Phase 3 zoning each mark exactly one karaoke-room door.")
+    print("PASS: gym access is marked from shared circulation in A-03 and Phase 3 zoning.")
     print("NOTE: checks establish data/document consistency only, not final dimensions, code compliance, structural adequacy or construction readiness.")
     return 0
 

@@ -17,13 +17,13 @@
 | C-01 | Lot area | **265.26 m² from adjusted closed traverse; compare with approximate 300.00 m² stated area** |
 | C-02 | Lot dimensions / boundary lengths | **Original courses recorded; adjusted perimeter = 64.1454 m** |
 | C-03 | Traverse closure | **Closed by adjusting P5-1 only; original misclosure = 4.0120 m** |
-| C-04 | Required setbacks | **PENDING** |
-| C-05 | Buildable area | **PENDING** |
-| C-06 | Building footprint | **PENDING** |
-| C-07 | Floor areas | **PENDING** |
-| C-08 | Remaining open space | **PENDING** |
+| C-04 | Required setbacks | **2.00 m inward-offset screening only; local zoning / road ROW confirmation pending** |
+| C-05 | Buildable area | **152.43 m² screening polygon calculated; final legal envelope pending** |
+| C-06 | Building footprint | **86.26 m² preliminary area-budget proxy; final outline pending** |
+| C-07 | Floor areas | **86.26 m² ground / 83.48 m² second / 169.74 m² total planning proxies; final measured areas pending** |
+| C-08 | Remaining open space | **179.00 m² lot-area subtraction proxy; formal open-space check pending** |
 | C-09 | Occupant load | **PENDING** |
-| C-10 | Stair design | **PENDING** |
+| C-10 | Stair design | **Preliminary calculation under assumed 3.000 m rise; level/code applicability pending** |
 | C-11 | Parking requirement | **PENDING** |
 | C-12 | Other applicable requirements | **PENDING as identified during design** |
 
@@ -232,159 +232,195 @@ These outputs use a local coordinate frame with P1 = (0, 0). They are not georef
 
 The adjusted perimeter is 64.1454 m and the closed-polygon area is 265.26 m². The assignment's approximate 300.00 m² area is 34.74 m² higher than this calculated result. Both values are documented without modifying courses 1-2 through 4-5 or forcing the calculated area to match the approximate area.
 
+## Revised Phase 3 area-budget scenario (2026-10-12)
+
+The room programme has been revised to retain the spaces in the selected reference images before preparing a dimensioned plan. The structured calculations are in [phase3_area_budget.csv](phase3_area_budget.csv).
+
+| Planning check | Preliminary value | Status |
+|---|---:|---|
+| Lot area | 265.26 m² | Adjusted academic traverse |
+| 2.00 m inward-offset screening polygon | 152.43 m² | Screening only, not a confirmed legal envelope |
+| Ground-floor programmed clear area, including enclosed garage | 73.32 m² | Provisional target |
+| Ground-floor gross-area proxy | 86.26 m² | 73.32 / 0.85 |
+| Second-floor programmed clear area, excluding balcony | 70.96 m² | Retains 3 bedrooms and 3 labelled wet rooms; adds robe, karaoke, gym and shared circulation |
+| Second-floor gross-area proxy | 83.48 m² | 70.96 / 0.85 |
+| Total gross-area planning proxy | 169.74 m² | Not final C-07 floor area |
+| Ground-footprint proxy / adjusted lot area | 32.52% | Planning comparison only |
+| Lot area less footprint proxy | 179.00 m² | Not a formal open-space result |
+
+The area budget assumes an **enclosed garage** because that is how the reference is shown. A 3.00 x 5.50 m clear bay is used to budget the space, but actual vehicle width, door swing, wall thickness and maneuvering should be checked. If changed to a covered-open carport, use the alternate row in the area-budget CSV and calculate enclosed floor area separately.
+
+**Code and zoning hold point:** PD 1096 Section 708(a) gives general Group A dwelling criteria (including a 2 m property-line distance and a 90% maximum lot occupancy for corner lots). The lot description suggests two road-frontage sides, but exact local zone, official ROW/property lines, local frontage setbacks and other applicable conditions remain unverified. Official source: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320. Do not treat the 90% calculation or the 2 m screen as approval of the proposed footprint.
+
 # C-04. Required Setbacks
 
 ## Assignment requirement
 
-Determine applicable setbacks based on the relevant codes and regulations.
+Determine applicable setbacks from the codes, regulations and local zoning information that actually apply to the site.
 
-## Given data available
+## Given data
 
-- Approximate lot area: 300.00 m².
-- Road right-of-way in the project-information table: 8.00 m.
-- The lot description states an existing 5.0 m barangay road width; the project information separately gives an 8.00 m right-of-way. The remaining 3.0 m could accommodate shoulders, drainage, or other road-related spaces depending on the plan.
+- Calculated area from the adjusted closed traverse: 265.2598 m².
+- The project information states an 8.00 m road right-of-way (ROW).
+- The lot description states an existing 5.0 m barangay road along boundary courses P2-P3 and P3-P4. The existing paved road width and the full ROW are different measurements.
+- The site description therefore suggests a lot with two road-frontage sides, but official parcel/ROW geometry and local zoning classification have not been supplied.
 
-## Calculation worksheet
+## National-code screening reference
 
-| Boundary / side | Applicable setback | Source / basis | Status |
-|---|---:|---|---|
-| North | PENDING | PENDING | Not determined |
-| East | PENDING | PENDING | Not determined |
-| Southeast road side | PENDING | Road boundary and applicable requirement need to be determined | Not determined |
-| Southwest road side | PENDING | Road boundary and applicable requirement need to be determined | Not determined |
-| West | PENDING | PENDING | Not determined |
+PD 1096, National Building Code of the Philippines, Section 708(a), states that a Group A dwelling occupies not more than 90% of a corner lot or 80% of an inside lot and is at least 2 m from the property line, subject to the Civil Code provisions noted there. Official source: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/26/53320
 
-Treat the 5.0 m road width and 8.00 m total right-of-way as separate measurements. The remaining 3.0 m may accommodate shoulders, drainage, or other road-related spaces depending on the road plan. Do not assume a particular split or allocation because the assignment does not specify one. Do not fill in setback distances until the applicable requirement and the boundary used for measurement have been identified.
+The two described road-frontage edges support evaluating a corner-lot scenario, but this worksheet does **not** assert the parcel's final zoning/lot classification. The 2.00 m uniform offset stored in the building model is used only as a preliminary geometric screen. Applicable Palo zoning provisions, actual road ROW lines, easements, special frontage rules and instructor/building-official interpretation may impose different or additional requirements.
 
-**Result:** **PENDING**. Complete this section after the lot is plotted and the applicable requirements are determined.
+## Preliminary screening values
+
+Corner-lot occupancy cap scenario, only if that classification and the cited provision are confirmed:
+
+Theoretical coverage cap = 265.2598 m² x 0.90 = **238.7338 m²**
+
+This is a theoretical percentage cap only. It is not the footprint target, does not override the setbacks, and does not prove that a footprint fits the irregular lot.
+
+The current local-coordinate screening polygon uses an inward offset of 2.00 m at every lot edge. Its area is checked in C-05. This is **not a final approved setback plan**.
+
+| Boundary / side | Screening offset | Final legal setback status |
+|---|---:|---|
+| North / P1-P2 | 2.00 m, screening only | PENDING |
+| Road frontage / P2-P3 | 2.00 m, screening only | PENDING ROW and local frontage rule |
+| Road frontage / P3-P4 | 2.00 m, screening only | PENDING ROW and local frontage rule |
+| P4-P5 | 2.00 m, screening only | PENDING |
+| P5-P1 | 2.00 m, screening only | PENDING |
+
+**Result/status:** The 2.00 m screening offset is available for a preliminary fit study only. Confirm the approved land-use zone for Lot 245-B, the legal property/ROW line, and applicable local setback provisions before calling any value a required setback.
 
 ---
 
 # C-05. Buildable Area
 
-## Assignment requirement
-
-Determine the allowable building envelope.
-
 ## Required inputs
 
-- Verified lot geometry from C-01 to C-03.
-- Applicable setbacks from C-04.
-- Setback lines plotted from the correct property/road boundaries.
+- Adjusted academic lot polygon from C-01 to C-03.
+- A provisional 2.00 m inward-offset polygon generated from the five lot boundary lines.
+- Final local setbacks and ROW lines are still pending under C-04.
 
-## Working procedure
+## Working: screening polygon area
 
-1. Plot the verified property boundary.
-2. Draw the applicable setback lines.
-3. Identify the area inside the lot and outside the required setback areas.
-4. Measure or calculate the resulting buildable envelope.
+The repository stores the provisional inward-offset vertices under site.setback_screening_polygon in data/building_model.json. Use the shoelace formula:
 
-| Item | Result |
-|---|---:|
-| Verified lot area | PENDING |
-| Setbacks confirmed | PENDING |
-| Buildable envelope area | **PENDING** |
+A = 1/2 x absolute value of sum(EᵢNᵢ₊₁ - Eᵢ₊₁Nᵢ)
 
-**Result:** **PENDING** until the lot geometry and setbacks are confirmed.
+The area of the stored 2.00 m uniform-offset polygon is:
+
+**Screening-envelope area = 152.4309 m²**
+
+Comparison to the lot and conditional occupancy scenario:
+
+| Item | Area | Meaning |
+|---|---:|---|
+| Adjusted closed lot | 265.2598 m² | Academic traverse result |
+| 90% corner-lot occupancy cap scenario | 238.7338 m² | Conditional PD 1096 Section 708(a) calculation, not a setback calculation |
+| Uniform 2.00 m offset polygon | 152.4309 m² | Preliminary geometric screening envelope |
+| Proposed ground-footprint planning proxy | 86.2588 m² | Early area-budget target, not dimensioned geometry |
+
+For this study, the offset polygon is more restrictive by area than the 90% cap scenario. The footprint still must fit **geometrically** inside the polygon; subtracting areas alone is not sufficient to show compliance. The footprint may not use setbacks, frontage access or ROW space just because the total area arithmetic works.
+
+**Result/status:** The 152.4309 m² screening polygon area is calculated. Final buildable area remains **PENDING** until the local zoning class, official ROW/property limits and applicable setbacks are verified and the actual footprint is drawn and checked.
 
 ---
 
 # C-06. Building Footprint
 
-## Assignment requirement
+## Basis
 
-Determine the proposed ground-floor building footprint.
+The furnished reference shows an attached/enclosed garage at the left side of the ground-floor arrangement. The previous model instead contained a 9.30 m x 7.90 m rectangular main-house target (73.47 m²) plus a 2.80 m x 5.50 m covered-open carport (15.40 m²). That older geometry is not coordinated to the reference and is kept only for comparison.
 
-## Required inputs
+For the revised area budget, use the garage as enclosed unless a later design decision changes it to a covered-open carport. The space table now budgets a 3.00 m x 5.50 m clear garage area and preserves the inherited target areas for the other required ground-floor spaces.
 
-- Buildable envelope from C-05.
-- Proposed ground-floor layout.
-- Dimensions of the outside building walls.
+## Ground-floor clear area budget
 
-## Working
+Previously scheduled ground-floor clear-space programme, including the 4.50 m² general circulation allowance: **56.82 m²**
 
-After the ground-floor plan is prepared, calculate its footprint from the dimensions of the proposed building outline. If the outline has multiple parts, show the separate area calculations and their sum.
+Proposed garage clear target: 3.00 m x 5.50 m = **16.50 m²**
 
-```text
-Building footprint = area enclosed by the proposed ground-floor
-                     building outline
-```
+Total clear programmed area including garage: 56.82 + 16.50 = **73.32 m²**
 
-| Item | Result |
-|---|---:|
-| Proposed exterior building dimensions | PENDING |
-| Proposed building footprint | **PENDING** |
-| Check against buildable envelope | PENDING |
+Use the inherited rough 15% walls/structure allowance only for an early sizing check:
 
-**Result:** **PENDING** until the building footprint is designed and dimensioned.
+Gross footprint planning proxy = 73.32 / 0.85 = **86.2588 m² ≈ 86.26 m²**
+
+This 15% allowance is an estimate carried forward from the prior planning worksheet, not a legal/code multiplier and not an actual outside-wall measurement. The existing model's house-plus-carport total is 88.87 m², which is close enough to retain as a candidate fit study, but the main footprint, garage geometry and openings must be redesigned to reflect the selected reference layout.
+
+## Footprint checks still required
+
+| Item | Result | Status |
+|---|---:|---|
+| Area-budget ground footprint proxy | 86.26 m² | Preliminary target |
+| Existing main rectangle, 9.30 x 7.90 m | 73.47 m² | Legacy geometry only |
+| Existing main rectangle + carport | 88.87 m² | Legacy geometry only; differs from reference garage |
+| Legal setback / zoning fit | PENDING | Must use approved setback and ROW geometry |
+| Reference layout outer-wall area | PENDING | Requires dimensioned plan |
+| Garage enclosure, clearances and site access | PENDING | Final decision and driveway needed |
+
+**Result/status:** The area budget now sets an initial target of about 86-90 m² for the combined ground-level footprint including an enclosed garage. Use this as a planning range, not a fixed approved footprint. Final C-06 is pending actual exterior dimensions and geometric site fit.
 
 ---
 
 # C-07. Floor Areas
 
-## Assignment requirement
+## Area-budget basis
 
-Calculate the ground-floor area, second-floor area, and total floor area.
+The current reference adds a robe, a separate bathroom, a separate toilet, a karaoke room and a gym to the upstairs programme. These were not included in the earlier 44.23 m² second-floor room budget. The revised schedule has a provisional target for each, plus an 8.00 m² shared stair landing/circulation allowance. These target sizes are selected for area-budget planning only; they are not extracted from the image or code minimums.
 
-## Required inputs
+| Second-floor space | Proposed clear-size target | Area target |
+|---|---:|---:|
+| Master bedroom | 3.20 x 3.40 m (inherited target) | 10.88 m² |
+| Bedroom 2 | 2.80 x 3.00 m (inherited target) | 8.40 m² |
+| Bedroom 3 | 2.80 x 3.00 m (inherited target) | 8.40 m² |
+| Toilet and bath | 1.50 x 2.10 m (inherited target) | 3.15 m² |
+| Family area | 2.80 x 3.00 m (inherited target) | 8.40 m² |
+| Robe / wardrobe | 1.20 x 2.40 m (provisional) | 2.88 m² |
+| Separate bathroom | 1.50 x 2.10 m (provisional) | 3.15 m² |
+| Separate toilet | 1.20 x 1.50 m (provisional) | 1.80 m² |
+| Karaoke room | 2.50 x 3.00 m (provisional) | 7.50 m² |
+| Gym | 2.80 x 3.00 m (provisional) | 8.40 m² |
+| Shared stair landing / hall circulation allowance | Area allowance, not a fixed rectangle | 8.00 m² |
+| **Programmed second-floor clear-space budget** | | **70.96 m²** |
+| Optional balcony | 1.20 x 3.00 m (provisional external space) | 3.60 m², excluded from enclosed proxy |
 
-- Dimensioned ground-floor plan.
-- Dimensioned second-floor plan.
-- Consistent area-measurement method for both floors.
+Second-floor gross-area planning proxy = 70.96 / 0.85 = **83.4824 m² ≈ 83.48 m²**
 
-## Working
+The total clear-space budget for the ground floor including the enclosed garage is 73.32 m², giving an 86.26 m² gross-area proxy with the same provisional factor.
 
-Record the area of the proposed ground floor and second floor from the completed drawings. If the plan is divided into simpler shapes, label each part, show its formula, and add the partial areas.
+Total floor-area planning proxy = 86.2588 + 83.4824 = **169.7412 m² ≈ 169.74 m²**
 
-```text
-Ground-floor area = sum of the measured areas on the ground floor
+These are **area-budget proxies only**. The 15% allowance is a rough planning assumption, not a code factor. Actual gross floor areas must be measured from the dimensioned plan using the area-measurement convention required by the instructor and applicable rules. Stairwell voids, landings, walls, any garage classification, balcony and projections must be treated consistently.
 
-Second-floor area = sum of the measured areas on the second floor
-
-Total floor area   = Ground-floor area + Second-floor area
-```
-
-| Floor area | Result |
-|---|---:|
-| Ground floor | PENDING m² |
-| Second floor | PENDING m² |
-| **Total floor area** | **PENDING m²** |
-
-**Result:** **PENDING** until both floor plans are dimensioned.
+**Result/status:** C-07 remains **PENDING for final floor areas**. The room programme now has a consistent provisional area budget to guide the next dimensioned design pass.
 
 ---
 
 # C-08. Remaining Open Space
 
-## Assignment requirement
+## Planning scenario
 
-Determine the remaining open space.
+Use the adjusted closed traverse area and the ground-floor footprint proxy. This is a subtraction from the lot, not yet the formal zoning calculation of qualifying open or permeable space.
 
-## Required inputs
+Remaining unbuilt lot area proxy = lot area - ground footprint proxy = 265.2598 - 86.2588 = **179.0010 m² ≈ 179.00 m²**
 
-- Lot area calculated from the verified lot geometry.
-- Proposed building footprint.
+For comparison only, the 2.00 m setback-screening polygon has 152.4309 m². Subtracting the same footprint proxy gives:
 
-## Working worksheet
+Screening-polygon area remaining by subtraction = 152.4309 - 86.2588 = **66.1720 m² ≈ 66.17 m²**
 
-```text
-Remaining open space = lot area - area occupied by the building footprint
-```
+The second value is an area comparison, **not proof that the footprint shape fits**. Both results exclude any later revisions to the main building outline, driveway, paving and detached structures. An area outside the footprint is not automatically qualifying open space under every applicable zoning/open-space rule.
 
-Substitution:
+| Item | Result | Status |
+|---|---:|---|
+| Adjusted closed lot area | 265.26 m² | Preliminary traverse calculation |
+| Ground-floor footprint planning proxy | 86.26 m² | Provisional area budget |
+| Unbuilt lot-area subtraction proxy | 179.00 m² | Preliminary |
+| Uniform 2.00 m screen area | 152.43 m² | Geometric screening only |
+| Screen area remaining by subtraction | 66.17 m² | Area-only comparison |
+| Required / qualifying open space under local zoning | PENDING | Need exact zoning and measurement method |
 
-```text
-Remaining open space = [verified lot area] - [building footprint]
-                      = PENDING m²
-```
-
-| Item | Result |
-|---|---:|
-| Verified lot area | PENDING m² |
-| Building footprint | PENDING m² |
-| Remaining open space | **PENDING m²** |
-
-**Result:** **PENDING**. Use the area values from C-01 and C-06 when they are completed.
+**Result/status:** The planning subtraction has been calculated. C-08 remains **PENDING** until the final outline, confirmed zoning/setbacks, any required yard/open-space rules, and the drive/walk/paved areas are measured.
 
 ---
 
@@ -584,11 +620,11 @@ For each additional calculation, use this labeled format:
 - [ ] Traverse closure shown, including latitude and departure sums and linear misclosure.
 - [x] P5-1 adjustment to close the traverse is documented, and its original value is retained for reference.
 - [x] Compare the calculated 265.26 m² polygon area against the approximate 300.00 m² area stated in the assignment; the 34.74 m² difference is recorded.
-- [ ] Required setbacks determined and their basis recorded.
-- [ ] Buildable area calculated from the plotted setback envelope.
-- [ ] Building footprint calculated from the proposed ground-floor plan.
-- [ ] Ground-floor, second-floor, and total floor areas calculated.
-- [ ] Remaining open space calculated.
+- [ ] Final required setbacks determined from the applicable local zoning classification and official property/ROW lines (2.00 m screen is only provisional).
+- [x] Provisional 2.00 m offset screening polygon area calculated as 152.43 m²; final legal buildable area remains pending.
+- [x] Revised ground-floor area-budget proxy calculated; actual exterior-wall footprint remains pending.
+- [x] Provisional ground/second/total area-budget proxies calculated; final measured floor areas remain pending.
+- [x] Provisional lot-area subtraction calculated; formal qualifying open space remains pending.
 - [ ] Occupant load determined using the applicable method.
 - [ ] Stair width, risers, riser height, tread depth, landings, and total stair height determined.
 - [ ] Parking requirement determined.

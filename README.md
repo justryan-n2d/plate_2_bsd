@@ -9,7 +9,7 @@ Project workspace for the proposed two-storey residential building plate.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
 - GitHub Actions generates and validates the Phase 1 DXF/SVG output from the traverse data.
-- Phase 3 has been reopened as Revision 02 to coordinate the room schedule, adjacency matrix and zoning diagrams with the furnished reference layout selected for A-02/A-03. Room dimensions and new area totals remain unverified; Phase 4 stair coordination and Phase 2 site constraints are still dependencies.
+- Phase 3 Revision 03 now makes the area budget drive the room programme. Ground-floor clear-space budget including enclosed garage is 73.32 m² (about 86.26 m² gross proxy); second-floor clear-space budget is 70.96 m² (about 83.48 m² gross proxy). These are provisional and not measured floor areas. Legal zoning/setbacks and final floor area remain pending.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
@@ -35,7 +35,7 @@ These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 
 
 ![Preliminary second-floor zoning](space_planning/second_floor_zoning.svg)
 
-See the [Phase 3 Revision 02 notes](space_planning/space_planning.md), [revised room schedule](space_planning/space_requirement_table.csv), [adjacency matrix](space_planning/adjacency_matrix.csv), and [reference-layout revision record](space_planning/reference_layout_revision.md). The previous room-area budget has been superseded and must be recalculated after room dimensions are confirmed.
+See the [Phase 3 Revision 03 notes](space_planning/space_planning.md), [revised room schedule](space_planning/space_requirement_table.csv), [area-budget calculation CSV](calculations/phase3_area_budget.csv), [adjacency matrix](space_planning/adjacency_matrix.csv), and [reference-layout revision record](space_planning/reference_layout_revision.md). Proposed target sizes drive the concept, while final measured floor areas and local zoning/setbacks remain pending.
 
 ## Phase 4 stair study
 

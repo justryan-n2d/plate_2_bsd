@@ -489,5 +489,44 @@
         }
       }
     }
+  },
+  "space_program_revision": {
+    "revision": "Phase 3 Revision 02 - 2026-10-12",
+    "status": "CONCEPTUAL_PROGRAM_UPDATED_DIMENSIONS_PENDING",
+    "basis": "The furnished user-reference layout supersedes the earlier simple room-box zoning for A-02/A-03; all current reference-layout coordinates remain SVG diagram units, not metres.",
+    "ground_floor_spaces": [
+      "Entrance / foyer",
+      "Living room",
+      "Dining area",
+      "Kitchen",
+      "Toilet and bath (ground floor)",
+      "Bedroom / guest room",
+      "Stairway",
+      "Storage / service area",
+      "Garage / carport",
+      "General circulation allowance"
+    ],
+    "second_floor_spaces": [
+      "Master bedroom",
+      "Robe / wardrobe (master bedroom)",
+      "Bedroom 2",
+      "Bedroom 3",
+      "Bathroom (second floor)",
+      "Toilet (second floor)",
+      "Toilet and bath (second floor)",
+      "Family area",
+      "Stair landing / circulation",
+      "Karaoke room",
+      "Gym",
+      "Balcony (if appropriate)"
+    ],
+    "dimension_policy": "Existing numeric room targets in space_requirement_table.csv are inherited preliminary targets, explicitly marked unverified against revision 01. Spaces not dimensioned by the reference have blank size and area fields.",
+    "explicit_guardrails": {
+      "first_floor_tv": "Exactly one TV console marker assigned to the living room; it must not overlap the foyer or entry-clearance bounds.",
+      "second_floor_karaoke": "Exactly one karaoke-room doorway, entered from shared circulation.",
+      "upstairs_wet_rooms": "The separate Bathroom, Toilet and Toilet and bath labels are retained from the reference and need confirmation before dimensioned design.",
+      "vehicle_space": "Reference depicts a garage; final enclosed-garage vs covered-open-carport decision remains open."
+    },
+    "superseded_outputs": "Previous Phase 3 area-budget totals are not valid for the revised room arrangement and must be recalculated after dimensioning."
   }
 }

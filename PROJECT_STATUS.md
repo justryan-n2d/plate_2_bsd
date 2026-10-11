@@ -3,11 +3,11 @@
 **Last updated:** 2026-10-12  
 **Repository:** [`justryan-n2d/plate_2_bsd`](https://github.com/justryan-n2d/plate_2_bsd)  
 **Current base:** `main`  
-**Latest design change:** user-reference layout revision 01 for A-02/A-03.
+**Current focus:** Phase 3 Revision 02, reopened to align space planning with user-reference layout revision 01.
 
 ## Current position
 
-**Phase 5 is in progress.** A-01 through A-07 preliminary SVG previews and a shared `data/building_model.json` are committed on `main`. A-02/A-03 now use the user-provided furnished layout references. Their visible arrangement is updated, but room dimensions and coordination with A-01/A-04-A-07 remain pending.
+**Phase 3 has been reopened and revised.** The room schedule, adjacency matrix and three conceptual diagrams now follow the intended room arrangement in the user-provided references. A-02/A-03 on `main` provide the visual direction. Inherited target sizes are marked unverified, additional rooms from the reference are recorded without invented dimensions, and the prior area-budget totals are superseded. A-01/A-04-A-07 and final dimensions remain pending coordination.
 
 Phase 3 was merged by [PR #3](https://github.com/justryan-n2d/plate_2_bsd/pull/3). Phase 4 was merged by [PR #4](https://github.com/justryan-n2d/plate_2_bsd/pull/4). For the current Phase 5 revision, the A-01 to A-07 validator passed; the Phase 3 validation and the existing Phase 1 CAD validation also passed on that revision.
 
@@ -17,7 +17,7 @@ Phase 3 was merged by [PR #3](https://github.com/justryan-n2d/plate_2_bsd/pull/3
 |---|---|---|---|
 | **1. Lot and site base** | Preliminary work completed and merged | `site/phase1_traverse_coordinates.csv`, `site/phase1_site_base.svg`, `site/phase1_site_analysis.md` | Adjusted area is 265.26 m² versus the assignment's approximate 300.00 m²; original survey, road/ROW geometry and parcel conditions still need confirmation. |
 | **2. Site requirements and preliminary calculations** | **Pending; an important dependency** | `calculations/plate2_calculations.md`, C-04 through C-09 | Official site zoning, setbacks, buildable envelope, final footprint/floor areas/open space, occupant load, parking and other code requirements have not been fully determined. |
-| **3. Space planning** | Preliminary programme and zoning package merged | `space_planning/space_requirement_table.csv`, `space_planning/adjacency_matrix.csv`, `space_planning/space_planning.md` and three SVG previews | Target dimensions and zoning are not final architectural dimensions. |
+| **3. Space planning** | **Reopened; Revision 02 updated to reference layout** | Revised `space_requirement_table.csv`, `adjacency_matrix.csv`, `space_planning.md`, and three SVG diagrams; validator at `scripts/validate_space_planning.py` | Inherited sizes are unverified and old area-budget sums are superseded. Added wet rooms, garage/carport type, exact dimensions, balcony, gym and stair coordination still need review. |
 | **4. Stair planning** | Preliminary calculations and studies merged | `data/stair_design.json`, `space_planning/stair_design.md`, `space_planning/stair_plan.svg`, `space_planning/stair_section.svg` | Uses an assumed 3.000 m floor-to-floor rise; confirm actual levels and BP 344 applicability. Structural design and final building-section clearances remain open. |
 | **5. Architectural plan set** | **Preliminary; layout revision 01 added** | A-01 to A-07 SVG previews; `data/building_model.json`; `space_planning/reference_layout_revision.md` | A-02/A-03 now follow the visual references. Room dimensions are not derived from the images. A-01/A-04-A-07, the shared model's legacy room targets, and the stair/roof/elevation/section geometry still need coordination. Model-driven SVG generation / architectural DXF export are not yet implemented. |
 | **6. Preliminary building specifications** | Not started | Planned specification sections in `plate2 plan.md` | Materials, workmanship requirements and specification schedule need to be written and coordinated. |
@@ -48,12 +48,12 @@ The shared source data is [`data/building_model.json`](data/building_model.json)
 
 ## Next work, in order
 
-1. Run the Phase 5 SVG/data validation workflow and visually review the revised A-02/A-03 previews.
-2. Resolve Phase 2 using official information: confirm survey/road ROW and local zoning/setbacks, then calculate the final buildable envelope and recompute floor areas, open space, occupant load, parking and code checks.
-3. Dimension the reference layout, reconcile the legacy room targets with the actual room arrangement, and coordinate the ground/second-floor stair and balcony.
-4. Update A-01 and coordinate A-04 through A-07 (roof, elevations, sections, details and schedules) to match the accepted layout.
+1. Confirm the revised Phase 3 space programme, especially the three separate upstairs wet-room labels and garage-versus-carport type.
+2. Dimension the layout and calculate room/floor areas only after the reference geometry is converted to a measured plan; do not use SVG coordinates as metres.
+3. Resolve Phase 2 using official information: survey/road ROW, zoning/setbacks and buildable envelope; then recalculate floor areas, open space, parking and code checks.
+4. Coordinate the stair opening and landing, gym, balcony and updated room arrangement across A-02/A-03/A-04-A-07.
 5. Implement or finalize model-driven drawing generation and editable CAD export; inspect the outputs in compatible CAD software.
-6. Proceed to Phase 6 specifications, Phase 7 documents, and Phase 8 presentation/print checks.
+6. Proceed to specifications, required documentation and presentation/print checks.
 
 **Do not treat the project as ready for submission or construction yet.** The main current hold is Phase 2 verification and the resulting architectural coordination.
 
@@ -68,3 +68,15 @@ The student supplied furnished first- and second-floor images and selected them 
 - `space_planning/reference_layout_revision.md` records what changed and what remains open.
 
 The visual layout is not a dimensioned plan. Existing room-size targets remain provisional and must be reconciled with the new arrangement. Site/setback confirmation and coordination of A-01/A-04-A-07 remain open.
+
+
+## Phase 3 Revision 02 (2026-10-12)
+
+Phase 3 was reopened after the student selected the furnished first- and second-floor reference images as the design direction. The revised room schedule, adjacency matrix, relationship diagram and both floor zoning diagrams now capture the same room arrangement and additional spaces.
+
+- The first-floor TV is represented in the living-room zone, outside foyer/entry clearance.
+- The second-floor karaoke room is assigned exactly one door from shared circulation.
+- The separate Bathroom, Toilet and Toilet and bath labels remain separate pending confirmation.
+- Room sizes shown from the earlier programme are retained only as unverified targets; undimensioned reference spaces have blank target fields. Previous room-area budget totals are superseded.
+
+See [Phase 3 Revision 02](space_planning/space_planning.md) and [reference-layout revision record](space_planning/reference_layout_revision.md).

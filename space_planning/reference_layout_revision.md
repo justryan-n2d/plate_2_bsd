@@ -50,3 +50,8 @@ The previous numerical room-size targets remain in the model as provisional data
 - [ ] Export editable CAD and print-review PDFs after dimensions and code checks are complete.
 
 **Not for permit or construction use.** Site, structural, code and architectural coordination are still pending.
+
+
+## Phase 3 Revision 02 coordination
+
+Phase 3 has been reopened to reflect reference layout revision 01. See [revised space-planning notes](space_planning.md), [room schedule](space_requirement_table.csv), [adjacency matrix](adjacency_matrix.csv), [adjacency diagram](adjacency_diagram.svg), and the revised [ground](ground_floor_zoning.svg) and [second-floor](second_floor_zoning.svg) zoning diagrams. Dimensioned design and new area totals remain pending.

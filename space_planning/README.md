@@ -1,39 +1,25 @@
-# Phase 3 Space Planning Files
+# Phase 3 Space Planning Files - Revision 02
 
-This folder contains the preliminary space programme and conceptual space-planning outputs for CE 393 Plate No. 2.
+This folder contains the revised concept-stage space programme for CE 393 Plate No. 2. Revision 02 aligns the room schedule, adjacency relationships and zoning diagrams with the furnished first- and second-floor reference selected for A-02/A-03.
 
 ## Files
 
-- [`space_requirement_table.csv`](space_requirement_table.csv): room-by-room target clear dimensions, area targets, zone and planning notes.
-- [`adjacency_matrix.csv`](adjacency_matrix.csv): relationship labels and rationale for ground-floor, second-floor and cross-floor pairs.
-- [`adjacency_diagram.svg`](adjacency_diagram.svg): overview of the main space relationships.
-- [`ground_floor_zoning.svg`](ground_floor_zoning.svg): conceptual ground-floor groupings.
-- [`second_floor_zoning.svg`](second_floor_zoning.svg): conceptual second-floor groupings.
-- [`space_planning.md`](space_planning.md): assumptions, planning rationale, area-budget cross-check and pending checks.
+- [`space_requirement_table.csv`](space_requirement_table.csv): assignment-required spaces plus additional spaces visible in the reference. Prior target sizes are kept as unverified inherited values; rooms without dimensions from the reference have blank size/area fields.
+- [`adjacency_matrix.csv`](adjacency_matrix.csv): revised relationship labels and reasons for each floor and cross-floor coordination.
+- [`adjacency_diagram.svg`](adjacency_diagram.svg): revised two-floor relationship view.
+- [`ground_floor_zoning.svg`](ground_floor_zoning.svg): revised first-floor zoning; TV belongs in the living area and the foyer route stays clear.
+- [`second_floor_zoning.svg`](second_floor_zoning.svg): revised second-floor zoning; includes robe, separate upstairs wet-room labels, gym, karaoke room, stairway and balcony, with exactly one karaoke-room door marker.
+- [`space_planning.md`](space_planning.md): rationale, dimension-status policy, relationship decisions and open checks.
+- [`reference_layout_revision.md`](reference_layout_revision.md): initial reference layout corrections and record.
+- [`../scripts/validate_space_planning.py`](../scripts/validate_space_planning.py): programme, adjacency, diagram and layout guardrail checks.
 
 ## Important limits
 
-These are preliminary planning targets and diagrams, not dimensioned architectural plans. Phase 2 setbacks and buildable area are not yet resolved. No final building orientation, driveway, doors, windows, stair dimensions, code compliance or utility design is established by these files. Check the project plan and calculation worksheet before using any target as a final dimension.
+The supplied images are a visual reference, not dimensioned drawings. Do not infer metres or room areas from SVG coordinates. The inherited dimension targets are not yet verified against this arrangement, the old area-budget totals are superseded, and no revised room/floor-area totals are claimed. Phase 2 site/setbacks and Phase 4 stair calculations remain dependencies. These files are not construction drawings or evidence of code compliance.
 
-
-## Phase 4 stair study
+## Related Phase 4 stair study
 
 - [Stair design calculations and code hold points](stair_design.md)
 - [Stair plan preview](stair_plan.svg)
 - [Stair section/development preview](stair_section.svg)
 - [Structured stair values](../data/stair_design.json)
-
-The current study assumes a 3.000 m floor-to-floor rise. It is preliminary and not structural or construction documentation.
-
-
-## Phase 5 architectural drafts
-
-- [Phase 5 architecture notes](phase5_architecture_notes.md)
-- [Ground floor plan A-02](../previews/phase5_A02_ground_floor.svg)
-- [Second floor plan A-03](../previews/phase5_A03_second_floor.svg)
-- [Roof plan A-04](../previews/phase5_A04_roof_plan.svg)
-- [Elevations A-05](../previews/phase5_A05_elevations.svg)
-- [Sections A-06](../previews/phase5_A06_sections.svg)
-- [Details and schedules A-07](../previews/phase5_A07_details_schedules.svg)
-
-These are preliminary drafts; Phase 2 setbacks and local zoning remain unresolved.

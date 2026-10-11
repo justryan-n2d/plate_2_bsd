@@ -9,7 +9,7 @@ Project workspace for the proposed two-storey residential building plate.
 - The assignment's 300.00 m² area is approximate. The adjusted closed polygon calculates to 265.26 m². Both values are documented; the plot is not forced to match the approximate figure.
 - Drawing-generation and validation scripts, dependency documentation, folder notes, and a read-only GitHub Actions workflow are committed.
 - GitHub Actions generates and validates the Phase 1 DXF/SVG output from the traverse data.
-- Phase 3 now has a preliminary room requirement table, adjacency matrix, relationship diagram, and conceptual zoning diagrams for both floors. Phase 4 now adds a stair calculation/source-data package and plan/section previews. These are preliminary, not structural or construction drawings.
+- Phase 3 has been reopened as Revision 02 to coordinate the room schedule, adjacency matrix and zoning diagrams with the furnished reference layout selected for A-02/A-03. Room dimensions and new area totals remain unverified; Phase 4 stair coordination and Phase 2 site constraints are still dependencies.
 - The latest enhanced run passed: [view run and download artifact](https://github.com/justryan-n2d/plate_2_bsd/actions/runs/38008699847).
 - Generated outputs are currently time-limited workflow artifacts, not automatically committed to the branch. Manual visual inspection in compatible CAD software remains required before accepting the drawing.
 
@@ -35,7 +35,7 @@ These SVGs are conceptual zoning diagrams, not dimensioned floor plans. Phase 2 
 
 ![Preliminary second-floor zoning](space_planning/second_floor_zoning.svg)
 
-See the [Phase 3 space-planning notes](space_planning/space_planning.md), [room schedule](space_planning/space_requirement_table.csv), and [adjacency matrix](space_planning/adjacency_matrix.csv).
+See the [Phase 3 Revision 02 notes](space_planning/space_planning.md), [revised room schedule](space_planning/space_requirement_table.csv), [adjacency matrix](space_planning/adjacency_matrix.csv), and [reference-layout revision record](space_planning/reference_layout_revision.md). The previous room-area budget has been superseded and must be recalculated after room dimensions are confirmed.
 
 ## Phase 4 stair study
 

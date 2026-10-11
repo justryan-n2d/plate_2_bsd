@@ -164,18 +164,22 @@ These are document and arithmetic consistency checks, not a professional survey 
 
 ### Phase 3: Space planning
 
-- [x] **T-20** Prepare the preliminary space-requirement table in `space_planning/space_requirement_table.csv`.
-- [x] **T-21** Prepare the adjacency matrix and SVG relationship diagram in `space_planning/`.
-- [x] **T-22** Review functional relationships, privacy, accessibility considerations, convenience, service relationships, circulation, and safety at concept level.
-- [x] **T-23** Arrange the required ground-floor spaces in a conceptual zoning diagram.
-- [x] **T-24** Arrange the required second-floor spaces in a conceptual zoning diagram.
-- [x] **T-25** Review the preliminary zoning for relationships and circulation; final review remains required after Phase 2 and Phase 4.
+- [x] **T-20** Prepare the preliminary space-requirement table in `space_planning/space_requirement_table.csv`; revision 02 now records the user-reference rooms and marks inherited dimensions as unverified.
+- [x] **T-21** Prepare the revised adjacency matrix and SVG relationship diagram in `space_planning/`.
+- [x] **T-22** Review functional relationships, privacy, accessibility considerations, convenience, service relationships, circulation, and safety at concept level for the reference layout.
+- [x] **T-23** Update the ground-floor conceptual zoning to keep the TV in the living area and the foyer route clear.
+- [x] **T-24** Update the second-floor conceptual zoning to include the robe, separate wet-room labels, gym, karaoke room and balcony.
+- [ ] **T-25** Re-review dimensions, floor areas, circulation and cross-floor coordination after Phase 2, Phase 4 and the measured layout are confirmed.
 
-#### Phase 3 implementation checkpoint (2026-10-10)
+#### Phase 3 implementation checkpoint - revision 02 (2026-10-12)
 
-**Status: Preliminary space-planning package prepared.** Room targets and diagrams are recorded in `space_planning/`, with a validator at `scripts/validate_space_planning.py`. All target dimensions are planning assumptions rather than code minimums. The diagrams are not to scale and do not define the final building orientation, driveway, doors, windows, setbacks, or stairs.
+**Status: Phase 3 reopened and revised to coordinate with the new furnished reference layout.** The room programme, adjacency matrix, relationship diagram and both floor zoning diagrams now reflect the intended room arrangement rather than the earlier simple zoning.
 
-Phase 2 is still pending. The proposed buildable envelope, setbacks, footprint, calculated floor areas, open space, parking requirement, occupant load, and other code-based dimensions must be checked before any dimensioned floor plan is accepted. Phase 4 must separately verify stair geometry. Balcony inclusion remains conditional. The zoning must be revised if those checks require it.
+The reference images are not dimensioned. Existing numerical values are preserved only as inherited provisional targets and are explicitly marked unverified. Additional rooms shown only in the reference are recorded without invented sizes. The old Phase 3 area-budget totals are superseded for this layout and must not be reported as current floor areas.
+
+Two layout guardrails are recorded and automatically checked: the first-floor TV is in the living room and does not obstruct the foyer/entry route; the second-floor karaoke room has exactly one door from shared circulation. The three upstairs labels BATHROOM, TOILET, and TOILET AND BATH are kept distinct because that is what the reference shows, pending confirmation of their intended uses. The vehicle space still needs a decision on enclosed garage versus covered-open carport.
+
+Before Phase 3 can be accepted as dimensioned, confirm the space programme, measure all rooms, recalculate area totals, confirm the garage/carport type, and coordinate the upper stair opening/landing, balcony, gym and wet-room cluster with Phase 2 site constraints and Phase 4 stair calculations.
 
 ### Phase 4: Stair planning and calculations
 
@@ -229,8 +233,8 @@ The SVG previews are committed for inspection, but model-driven regeneration, ed
 
 ### Phase 7: Required documentation
 
-- [x] **T-60** Prepare a preliminary Space Requirement Table in `space_planning/`; reconfirm after the dimensioned layout is developed.
-- [x] **T-61** Prepare a preliminary Adjacency Diagram in `space_planning/`; recheck against the final layout.
+- [x] **T-60** Prepare the preliminary Space Requirement Table; Phase 3 revision 02 aligns the programme with the visual reference, but dimensions remain unverified.
+- [x] **T-61** Prepare the preliminary Adjacency Diagram; Phase 3 revision 02 updates it to the selected reference, with final review still pending.
 - [ ] **T-62** Complete the Site Analysis.
 - [ ] **T-63** Complete the Preliminary Building Specifications.
 - [ ] **T-64** Complete the Specification Schedule.

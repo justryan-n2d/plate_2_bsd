@@ -1,8 +1,8 @@
-# Phase 3: Space Planning - Revision 03 (Area-Budget Coordinated)
+# Phase 3: Space Planning - Revision 04 (Wet-Room Simplification)
 
 **Project:** CE 393 Plate No. 2, Proposed Two-Storey Residential Building  
 **Repository:** justryan-n2d/plate_2_bsd  
-**Status:** Revised room programme and preliminary budget; dimensions, legal site envelope and final floor areas remain pending.
+**Status:** User-confirmed upstairs wet-room simplification and revised preliminary budget; released area allocation, dimensions, legal site envelope and final floor areas remain pending.
 
 ## 1. Design basis
 
@@ -28,9 +28,9 @@ The area budget uses inherited clear-space targets where available and proposed 
 | 2.00 m inward-offset screening polygon | 152.43 m² | Preliminary fit screen only |
 | Ground-floor programmed clear area, including enclosed garage | 73.32 m² | 56.82 m² previous programme + 16.50 m² garage target |
 | Ground-floor gross-area proxy | 86.26 m² | 73.32 / 0.85 |
-| Second-floor programmed clear area, excluding balcony | 70.96 m² | Retains 3 bedrooms and 3 labelled wet rooms; adds robe, karaoke, gym and shared circulation |
-| Second-floor gross-area proxy | 83.48 m² | 70.96 / 0.85 |
-| Total gross-area planning proxy | 169.74 m² | 86.26 + 83.48; not final C-07 floor area |
+| Second-floor programmed clear area, excluding balcony | 66.01 m² | Retains 3 bedrooms and one combined Toilet and bath; adds robe, karaoke, gym and shared circulation |
+| Second-floor gross-area proxy | 77.66 m² | 66.01 / 0.85 |
+| Total gross-area planning proxy | 163.92 m² | 86.26 + 77.66; not final C-07 floor area |
 | Ground-footprint proxy / adjusted lot area | 32.52% | Planning comparison only |
 | Lot area less footprint proxy | 179.00 m² | Not proof of formal qualifying open space |
 
@@ -48,19 +48,17 @@ Retain the intended arrangement: guest room at the upper-left, ground-floor toil
 
 ## 5. Second-floor planning
 
-Keep the master bedroom, Bedroom 2, Bedroom 3, family area and stair/common circulation. Also retain the reference's robe, separately labelled Bathroom, separately labelled Toilet, the further Toilet and bath, karaoke room, gym and optional balcony until the student confirms the intended wet-room arrangement.
+Keep the master bedroom, Bedroom 2, Bedroom 3, family area and stair/common circulation. Retain the robe, one combined Toilet and bath, karaoke room, gym and optional balcony. The user confirmed removal of the separate upstairs Bathroom and Toilet.
 
 | Additional / adjusted space | Proposed clear-size target | Budget area |
 |---|---:|---:|
 | Robe / wardrobe | 1.20 x 2.40 m | 2.88 m² |
-| Separate bathroom | 1.50 x 2.10 m | 3.15 m² |
-| Separate toilet | 1.20 x 1.50 m | 1.80 m² |
 | Karaoke room | 2.50 x 3.00 m | 7.50 m² |
 | Gym | 2.80 x 3.00 m | 8.40 m² |
 | Shared stair landing / hall circulation allowance | 8.00 m², area allowance only | 8.00 m² |
 | Balcony, optional external area | 1.20 x 3.00 m | 3.60 m², outside this enclosed floor-area proxy |
 
-The 8.00 m² upstairs circulation allowance replaces the older 5.00 m² target so the shared hall can independently serve bedrooms, wet rooms, gym and karaoke room. Do not add the old 5.10 m² schematic hall as a separate area on top; it is legacy layout data. Stair opening and upper landing still need to be dimensioned against the Phase 4 stair study.
+The 8.00 m² upstairs circulation allowance replaces the older 5.00 m² target so the shared hall can independently serve the bedrooms, the single combined toilet and bath, gym and karaoke room. Do not add the old 5.10 m² schematic hall as a separate area on top; it is legacy layout data. Stair opening and upper landing still need to be dimensioned against the Phase 4 stair study.
 
 ### Access and privacy rules
 
@@ -68,7 +66,7 @@ The 8.00 m² upstairs circulation allowance replaces the older 5.00 m² target s
 - The gym must be reached from shared circulation, not through Bedroom 2 or Bedroom 3.
 - The karaoke room must have **exactly one door** from shared circulation. Do not add an entry toward the stairway/family area.
 - Keep the master bedroom private from the family/karaoke area.
-- Retain the three wet-room labels distinctly until their uses and fixtures are confirmed; do not count one room twice or silently merge them.
+- Keep only the combined upstairs Toilet and bath. The separate Bathroom and Toilet have been removed; retain the ground-floor Toilet and bath.
 - The balcony remains conditional on legal projection/setback, guardrails, privacy, waterproofing and structural coordination.
 
 ## 6. Stair, site and cross-sheet coordination
@@ -93,3 +91,15 @@ Before finalizing the layout, coordinate:
 - [ ] Update A-01 and A-04 through A-07 after the measured layout and official site envelope are agreed.
 
 **Status:** The preliminary budget now leads the concept. The reference layout remains viable as a direction, but neither its precise dimensions nor its local zoning/code compliance has been established.
+
+## Phase 3 Revision 04 - user-confirmed wet-room arrangement (2026-10-12)
+
+The user confirmed this arrangement:
+
+- Keep the combined upstairs Toilet and bath.
+- Remove the separate upstairs Bathroom and separate Toilet.
+- Keep the ground-floor Toilet and bath.
+
+The former upstairs Bathroom target (3.15 m²) and Toilet target (1.80 m²) release 4.95 m² from the prior clear-space programme. This 4.95 m² is currently unallocated and is not counted as a new bedroom, hall, or gym expansion until the layout is dimensioned. The revised second-floor clear-space programme is 66.01 m²; its gross-area planning proxy is 77.66 m² using the same rough 0.85 factor. The combined gross-area proxy is 163.92 m², not final measured GFA.
+
+The separate-room labels and their doors must be removed from A-03 and the Phase 3 zoning/relationship records. The single combined bathroom still needs a checked fixture layout, door swing and ventilation. Phase 3 remains open for T-25: dimensioning, area measurement and cross-floor coordination.

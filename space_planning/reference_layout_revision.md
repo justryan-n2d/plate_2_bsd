@@ -70,3 +70,16 @@ The user confirmed the final room programme decision for the upstairs wet rooms:
 - Keep the ground-floor Toilet and bath.
 
 The two removed room targets were 3.15 m² and 1.80 m², releasing 4.95 m² from the previous clear-space budget. Do not automatically add that amount to another room or to the existing 8.00 m² circulation allowance. Keep it unallocated until the room geometry is dimensioned and reviewed. The current revised second-floor clear-space budget is 66.01 m²; gross-area proxy is 77.66 m².
+
+
+## User reference layout revision 02: lower upper-floor zone (2026-10-12)
+
+The user supplied a cropped upper-floor reference for the lower portion of the second-floor plan. The current layout already follows the intended general positions, so the update records and validates the arrangement rather than moving rooms without need.
+
+- **Gym:** at the left side.
+- **Family area:** to the right of the gym.
+- **Stairway:** along the upper edge of the family area, toward the right side.
+- **Balcony:** projects from the bottom exterior edge near the center of the overall upper-floor footprint.
+- **Balcony access:** one direct door from the family area into the balcony.
+
+The shared model now stores these relationships and the direct balcony doorway. The A-03 preview and Phase 3 second-floor zoning diagram label the direct connection. Validators check the relative room placement and door marker. This reference does not provide reliable dimensions, scale, structure or evidence of code compliance; all dimensioning and stair/balcony structural coordination remain open.

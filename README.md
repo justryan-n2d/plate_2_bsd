@@ -74,7 +74,7 @@ These A-01 to A-07 sheets are preliminary visual drafts on `main`. A-02 and A-03
 
 ![A-03 preliminary second floor](previews/phase5_A03_second_floor.svg)
 
-**Layout revision 01:** A-02 keeps the TV console inside the living room, clear of the foyer/entry path. A-03 now includes the gym and balcony and shows exactly one karaoke-room door. These previews use diagram units, not a verified scale; room dimensions and wall layout still need coordination. [Read the layout revision notes](space_planning/reference_layout_revision.md).
+**Layout reference revision 02:** A-03 records the requested lower upper-floor zone: gym left, family area right, stairway along the upper-right edge, and a bottom-edge balcony reached directly from the family area. The one-door karaoke rule and wet-room simplification remain. Previews use diagram units, not a verified scale; room dimensions and wall layout still need coordination. [Read the layout revision notes](space_planning/reference_layout_revision.md).
 
 ### A-04 - Roof Plan
 

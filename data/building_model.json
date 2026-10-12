@@ -8,8 +8,8 @@
     "coordinates": "local eastings/northings in m"
   },
   "assumptions": [
-    "Phase 3 area-budget revision 02 budgets the ground floor at 73.32 m2 programmed clear area including a proposed 3.00 x 5.50 m enclosed garage, and the second floor at 70.96 m2 programmed clear area including the robe, separate Bathroom, separate Toilet, Toilet and bath, karaoke room, gym and an 8.00 m2 shared-circulation allowance. The areas are proposed planning targets, not dimensions measured from the reference images.",
-    "The 15% gross-up (net area / 0.85) is a rough planning allowance only, not a code factor. Provisional gross-area proxies are 86.26 m2 ground floor, 83.48 m2 second floor and 169.74 m2 total; final floor areas require dimensioned drawings and a consistent treatment of garage, stair opening, walls and balcony.",
+    "Phase 3 Revision 04 budgets the ground floor at 73.32 m2 programmed clear area including a proposed 3.00 x 5.50 m enclosed garage, and the second floor at 66.01 m2 programmed clear area with only one combined Toilet and bath upstairs. The separate Bathroom and Toilet previously shown upstairs are removed by the user's decision. Clear-space area released by those removals is not allocated to another room yet.",
+    "The 15% gross-up (net area / 0.85) is a rough planning allowance only, not a code factor. Current gross-area proxies are 86.26 m2 ground floor, 77.66 m2 second floor and 163.92 m2 total; final floor areas require dimensioned drawings and consistent treatment of garage, stair opening, walls and balcony.",
     "The current 9.30 x 7.90 m main rectangle and separate carport placement are legacy geometry from the earlier simple layout. They have not been regenerated to the revised room arrangement or the new area budget and must not be treated as an accepted footprint.",
     "Local Palo zoning classification and parcel-specific front-yard/ROW setbacks have not been confirmed. The uniform 2.00 m inward-offset polygon and 90% corner-lot occupancy calculation are screening scenarios only, not a building permit or verified local zoning result.",
     "The furnished A-02 and A-03 reference-layout previews supersede the earlier simple room-box diagrams for visual arrangement. The reference images do not supply reliable room dimensions, so these layouts use diagram units only and must not be treated as scaled or dimensioned construction plans.",
@@ -20,7 +20,8 @@
     "The 9.30 m x 7.90 m rectangular house is a concept footprint, not a verified compliant building footprint.",
     "The single-car 2.80 m x 5.50 m covered carport and its position are schematic; final access, turning, gate and road-opening position are unresolved.",
     "Doors, windows, finishes, ceiling/eaves/roof levels and roof pitch are draft design targets, not confirmed code minima.",
-    "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included."
+    "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included.",
+    "Phase 3 Revision 04 (2026-10-12): retain the combined upstairs Toilet and bath, remove the separate upstairs Bathroom and Toilet, and retain the ground-floor Toilet and bath. The released 4.95 m2 is an unallocated design reserve until the measured layout is coordinated."
   ],
   "site": {
     "lot_number": "245-B",
@@ -346,7 +347,7 @@
   "drawing_status": {
     "A-01": "Preliminary site development layout using screening setback geometry; exact access and legal envelope pending.",
     "A-02": "User-reference furnished first-floor layout: guest room, toilet and bath, garage, dining/kitchen, storage, stairway, living room and entrance. TV is within the living area and outside the foyer/entry-clearance box. Diagram units only; dimensions pending.",
-    "A-03": "User-reference furnished second-floor layout: Bedroom 2, master bedroom/robe, Bedroom 3, bathroom/toilet/toilet-and-bath, gym, one-door karaoke room, stairway, family area and balcony. Diagram units only; dimensions and stair coordination pending.",
+    "A-03": "Preliminary furnished second-floor layout with Bedroom 2, master bedroom/robe, Bedroom 3, one combined upstairs Toilet and bath, gym, one-door karaoke room, stairway, family area and balcony. Separate upstairs Bathroom and Toilet removed by user decision. Diagram units only; released area allocation, dimensions and stair coordination pending.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
     "A-05": "Four schematic elevations; heights and openings are assumptions.",
     "A-06": "Two schematic sections, one through stair; final sections must coordinate final levels/structure.",
@@ -502,8 +503,8 @@
     }
   },
   "space_program_revision": {
-    "revision": "Phase 3 Revision 02 - 2026-10-12",
-    "status": "CONCEPTUAL_PROGRAM_UPDATED_DIMENSIONS_PENDING",
+    "revision": "Phase 3 Revision 04 - 2026-10-12",
+    "status": "USER_CONFIRMED_WET_ROOM_SIMPLIFICATION_DIMENSIONS_PENDING",
     "basis": "The furnished user-reference layout supersedes the earlier simple room-box zoning for A-02/A-03; all current reference-layout coordinates remain SVG diagram units, not metres.",
     "ground_floor_spaces": [
       "Entrance / foyer",
@@ -522,8 +523,6 @@
       "Robe / wardrobe (master bedroom)",
       "Bedroom 2",
       "Bedroom 3",
-      "Bathroom (second floor)",
-      "Toilet (second floor)",
       "Toilet and bath (second floor)",
       "Family area",
       "Stair landing / circulation",
@@ -531,23 +530,23 @@
       "Gym",
       "Balcony (if appropriate)"
     ],
-    "dimension_policy": "Existing numeric room targets in space_requirement_table.csv are inherited preliminary targets, explicitly marked unverified against revision 01. Spaces not dimensioned by the reference have blank size and area fields.",
+    "dimension_policy": "Existing numeric room targets in space_requirement_table.csv remain provisional and unverified against the furnished reference. The two separate upstairs wet-room targets have been removed by user decision; their released area is not reallocated until the dimensioned layout is agreed.",
     "explicit_guardrails": {
       "first_floor_tv": "Exactly one TV console marker assigned to the living room; it must not overlap the foyer or entry-clearance bounds.",
       "second_floor_karaoke": "Exactly one karaoke-room doorway, entered from shared circulation.",
-      "upstairs_wet_rooms": "The separate Bathroom, Toilet and Toilet and bath labels are retained from the reference and need confirmation before dimensioned design.",
+      "upstairs_wet_rooms": "Keep only the combined Toilet and bath upstairs. Remove the separate Bathroom and separate Toilet; keep the ground-floor Toilet and bath.",
       "vehicle_space": "Reference depicts a garage; final enclosed-garage vs covered-open-carport decision remains open."
     },
-    "superseded_outputs": "Previous Phase 3 area-budget totals are not valid for the revised room arrangement and must be recalculated after dimensioning."
+    "superseded_outputs": "Revision 03 upstairs wet-room budget is superseded. The current 66.01 m2 upstairs programmed clear-area budget excludes the two removed rooms and does not allocate the 4.95 m2 released area."
   },
-  "area_budget_revision_02": {
-    "revision": "2026-10-12",
+  "area_budget_revision_04": {
+    "revision": "2026-10-12 - user-confirmed upstairs wet-room simplification",
     "status": "PROPOSED_PLANNING_BUDGET_NOT_FINAL_DIMENSIONED_AREA",
     "units": {
       "area": "m2",
       "linear_dimension": "m"
     },
-    "method": "Clear-space programme totals from the revised Phase 3 schedule; gross-area proxies use the inherited rough 15% wall/structure allowance (net / 0.85).",
+    "method": "Phase 3 Revision 04 clear-space totals from the revised room schedule; gross-area proxies use the rough 15% wall/structure allowance (net / 0.85). The 4.95 m2 area released by removing two separate upstairs wet rooms remains unallocated.",
     "assumed_enclosed_vehicle_space": {
       "type": "garage",
       "clear_dimensions_m": {
@@ -567,13 +566,13 @@
       "proposed_coverage_percent_of_adjusted_lot": 32.5186
     },
     "second_floor": {
-      "programmed_clear_area_m2": 70.96,
-      "gross_area_proxy_m2": 83.48235294117649,
+      "programmed_clear_area_m2": 66.01,
+      "gross_area_proxy_m2": 77.65882352941178,
       "optional_balcony_area_m2": 3.6,
       "balcony_included_in_enclosed_floor_area_proxy": false,
-      "wet_room_note": "Separate Bathroom, Toilet and Toilet and bath labels are each retained until their intended uses and fixture contents are confirmed."
+      "wet_room_note": "Only one combined Toilet and bath remains upstairs; the separate Bathroom and Toilet are removed. The ground-floor Toilet and bath remains."
     },
-    "total_floor_area_proxy_m2": 169.74117647058824,
+    "total_floor_area_proxy_m2": 163.91764705882355,
     "site_screening": {
       "adjusted_lot_area_m2": 265.2598,
       "uniform_2m_offset_polygon_area_m2": 152.4308513,
@@ -595,7 +594,8 @@
       "Use area totals to guide room sizes; do not infer dimensions or scale from reference-image/SVG geometry.",
       "All footprints must be geometrically inside the final approved envelope, not merely below an area cap.",
       "Check actual road/ROW lines, local zoning class, frontages, setbacks, driveway and building orientation.",
-      "Recalculate areas from the dimensioned final plans; confirm how the stairwell void, enclosed garage and balcony are measured."
+      "Recalculate areas from the dimensioned final plans; confirm how the stairwell void, enclosed garage and balcony are measured.",
+      "Revision 04 removes the separate upstairs Bathroom and Toilet. The 4.95 m2 released from their provisional targets is not reassigned to another space before the dimensioned layout is coordinated."
     ]
   }
 }

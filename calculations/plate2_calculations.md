@@ -20,7 +20,7 @@
 | C-04 | Required setbacks | **2.00 m inward-offset screening only; local zoning / road ROW confirmation pending** |
 | C-05 | Buildable area | **152.43 m² screening polygon calculated; final legal envelope pending** |
 | C-06 | Building footprint | **86.26 m² preliminary area-budget proxy; final outline pending** |
-| C-07 | Floor areas | **86.26 m² ground / 83.48 m² second / 169.74 m² total planning proxies; final measured areas pending** |
+| C-07 | Floor areas | **86.26 m² ground / 77.66 m² second / 163.92 m² total planning proxies; final measured areas pending** |
 | C-08 | Remaining open space | **179.00 m² lot-area subtraction proxy; formal open-space check pending** |
 | C-09 | Occupant load | **PENDING** |
 | C-10 | Stair design | **Preliminary calculation under assumed 3.000 m rise; level/code applicability pending** |
@@ -232,7 +232,7 @@ These outputs use a local coordinate frame with P1 = (0, 0). They are not georef
 
 The adjusted perimeter is 64.1454 m and the closed-polygon area is 265.26 m². The assignment's approximate 300.00 m² area is 34.74 m² higher than this calculated result. Both values are documented without modifying courses 1-2 through 4-5 or forcing the calculated area to match the approximate area.
 
-## Revised Phase 3 area-budget scenario (2026-10-12)
+## Phase 3 Revision 04 area-budget scenario (2026-10-12)
 
 The room programme has been revised to retain the spaces in the selected reference images before preparing a dimensioned plan. The structured calculations are in [phase3_area_budget.csv](phase3_area_budget.csv).
 
@@ -242,9 +242,9 @@ The room programme has been revised to retain the spaces in the selected referen
 | 2.00 m inward-offset screening polygon | 152.43 m² | Screening only, not a confirmed legal envelope |
 | Ground-floor programmed clear area, including enclosed garage | 73.32 m² | Provisional target |
 | Ground-floor gross-area proxy | 86.26 m² | 73.32 / 0.85 |
-| Second-floor programmed clear area, excluding balcony | 70.96 m² | Retains 3 bedrooms and 3 labelled wet rooms; adds robe, karaoke, gym and shared circulation |
-| Second-floor gross-area proxy | 83.48 m² | 70.96 / 0.85 |
-| Total gross-area planning proxy | 169.74 m² | Not final C-07 floor area |
+| Second-floor programmed clear area, excluding balcony | 66.01 m² | Retains 3 bedrooms and one combined Toilet and bath; adds robe, karaoke, gym and shared circulation |
+| Second-floor gross-area proxy | 77.66 m² | 66.01 / 0.85 |
+| Total gross-area planning proxy | 163.92 m² | Not final C-07 floor area |
 | Ground-footprint proxy / adjusted lot area | 32.52% | Planning comparison only |
 | Lot area less footprint proxy | 179.00 m² | Not a formal open-space result |
 
@@ -367,7 +367,7 @@ This 15% allowance is an estimate carried forward from the prior planning worksh
 
 ## Area-budget basis
 
-The current reference adds a robe, a separate bathroom, a separate toilet, a karaoke room and a gym to the upstairs programme. These were not included in the earlier 44.23 m² second-floor room budget. The revised schedule has a provisional target for each, plus an 8.00 m² shared stair landing/circulation allowance. These target sizes are selected for area-budget planning only; they are not extracted from the image or code minimums.
+The current upstairs programme retains three bedrooms, a robe, one combined Toilet and bath, a karaoke room, a gym, a family area and an 8.00 m² shared stair landing/circulation allowance. The user removed the separate Bathroom and Toilet previously included in Revision 03. The remaining target sizes are for area-budget planning only; they are not extracted from the image or code minimums.
 
 | Second-floor space | Proposed clear-size target | Area target |
 |---|---:|---:|
@@ -377,19 +377,20 @@ The current reference adds a robe, a separate bathroom, a separate toilet, a kar
 | Toilet and bath | 1.50 x 2.10 m (inherited target) | 3.15 m² |
 | Family area | 2.80 x 3.00 m (inherited target) | 8.40 m² |
 | Robe / wardrobe | 1.20 x 2.40 m (provisional) | 2.88 m² |
-| Separate bathroom | 1.50 x 2.10 m (provisional) | 3.15 m² |
-| Separate toilet | 1.20 x 1.50 m (provisional) | 1.80 m² |
 | Karaoke room | 2.50 x 3.00 m (provisional) | 7.50 m² |
 | Gym | 2.80 x 3.00 m (provisional) | 8.40 m² |
 | Shared stair landing / hall circulation allowance | Area allowance, not a fixed rectangle | 8.00 m² |
-| **Programmed second-floor clear-space budget** | | **70.96 m²** |
+| **Programmed second-floor clear-space budget** | | **66.01 m²** |
+| Budget area released by removing the separate Bathroom and Toilet | 3.15 + 1.80 m² | 4.95 m², not reallocated yet |
 | Optional balcony | 1.20 x 3.00 m (provisional external space) | 3.60 m², excluded from enclosed proxy |
 
-Second-floor gross-area planning proxy = 70.96 / 0.85 = **83.4824 m² ≈ 83.48 m²**
+Second-floor gross-area planning proxy = 66.01 / 0.85 = **77.6588 m² ≈ 77.66 m²**
 
 The total clear-space budget for the ground floor including the enclosed garage is 73.32 m², giving an 86.26 m² gross-area proxy with the same provisional factor.
 
-Total floor-area planning proxy = 86.2588 + 83.4824 = **169.7412 m² ≈ 169.74 m²**
+Total floor-area planning proxy = 86.2588 + 77.6588 = **163.9176 m² ≈ 163.92 m²**
+
+The upstairs arrangement now has only one combined Toilet and bath. The separate Bathroom and Toilet are excluded from the 66.01 m² clear-space total, and their 4.95 m² former target-area budget remains unallocated pending the dimensioned plan.
 
 These are **area-budget proxies only**. The 15% allowance is a rough planning assumption, not a code factor. Actual gross floor areas must be measured from the dimensioned plan using the area-measurement convention required by the instructor and applicable rules. Stairwell voids, landings, walls, any garage classification, balcony and projections must be treated consistently.
 

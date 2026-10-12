@@ -8,7 +8,7 @@
 |---|---|---|
 | A-01 | [Site Development Plan](../previews/phase5_A01_site_development.svg) | Adjusted local lot polygon, 2.00 m inward screening line, concept house/carport placement, preliminary area budget and unresolved site constraints. |
 | A-02 | [Ground Floor Plan](../previews/phase5_A02_ground_floor.svg) | Furnished user-reference layout with guest room, bathroom, garage, dining/kitchen, storage, stairway, living room and foyer; TV kept inside the living area and away from the entry route. |
-| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Furnished user-reference layout with three bedrooms, robe, bathroom/toilets, gym, single-door karaoke room, stairway, family area and balcony. |
+| A-03 | [Second Floor Plan](../previews/phase5_A03_second_floor.svg) | Furnished layout with three bedrooms, robe, one combined upstairs Toilet and bath, gym, single-door karaoke room, stairway, family area and balcony; separate upstairs Bathroom and Toilet removed. |
 | A-04 | [Roof Plan](../previews/phase5_A04_roof_plan.svg) | Gable roof, ridge, assumed pitch, eaves and conceptual slope arrows. |
 | A-05 | [Four Elevations](../previews/phase5_A05_elevations.svg) | Front/rear/left/right schematic elevations with assumed storey and roof levels. |
 | A-06 | [Building Sections](../previews/phase5_A06_sections.svg) | Stair vertical-development section study and general building section diagram. |
@@ -20,7 +20,7 @@
 The committed A-02 and A-03 previews have been redrawn to follow the two furnished floor-plan images supplied by the student on 2026-10-12. The visual reference is now the layout direction for further work, replacing the earlier simple room-box diagrams for presentation and space arrangement.
 
 - **A-02:** Guest room, toilet and bath, garage, dining area, kitchen, storage, stairway, living room and entrance/foyer are shown in the reference arrangement. The TV console is on the living-room side and kept outside both the foyer box and the entrance-clearance route.
-- **A-03:** Bedroom 2, master bedroom/robe, Bedroom 3, bathroom, toilet, toilet-and-bath, gym, karaoke room, stairway, family area and balcony are shown. The karaoke room has one doorway on its west wall, from the circulation hall.
+- **A-03 (Revision 02):** Bedroom 2, master bedroom/robe, Bedroom 3, one combined Toilet and bath, gym, karaoke room, stairway, family area and balcony are shown. The separate upstairs Bathroom and Toilet have been removed; their 4.95 m² former target-area budget remains unallocated. The karaoke room has one doorway on its west wall from the circulation hall.
 - The drawings are editable SVG previews. They include simple furniture and fixtures to make the arrangement easier to review, rather than reproducing only empty room boxes.
 
 **Dimension hold point:** the reference images are not dimensioned. A-02/A-03 therefore use diagram units only, not metres or a scale. The earlier numeric room targets in the shared building model are retained as provisional planning input and have not been reconciled with these new room shapes. Do not measure construction dimensions from the SVGs. Confirm final room sizes, wall thickness, door widths/swings, furniture clearance, actual stair/landing opening and overall footprint before a dimensioned plan is issued.
@@ -80,3 +80,8 @@ The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 
 - Coordinate doors/windows, ventilation, natural lighting, privacy, furniture clearances, structural reference lines and the roof drainage approach.
 - Complete structural design only as required and directed by the assignment; the current typical wall section has no structural member sizing or reinforcement.
 - Review all sheets visually, then export editable CAD and final A3/PDF sheets after dimensions are frozen.
+
+
+## Phase 3 Revision 04 coordination note
+
+A-03 and the Phase 3 second-floor zoning preview were updated after the user confirmed one combined upstairs Toilet and bath, with the separate upstairs Bathroom and Toilet removed. The ground-floor Toilet and bath remains. Re-measure and coordinate the released 4.95 m² with bedrooms, shared circulation and Phase 4 stair opening before creating final CAD exports.

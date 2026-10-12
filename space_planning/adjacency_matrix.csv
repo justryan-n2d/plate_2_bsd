@@ -15,17 +15,13 @@ Second Floor,Stair landing / circulation,Bedroom 3,near,Bedroom 3 needs independ
 Second Floor,Stair landing / circulation,Master bedroom,near,The master bedroom should be accessible without passing through another room.
 Second Floor,Master bedroom,Robe / wardrobe (master bedroom),direct,The robe is shown immediately beside the master bedroom.
 Second Floor,Family area,Master bedroom,buffered,Keep the master bedroom private from the shared gathering zone.
-Second Floor,Bedroom 2,Bathroom (second floor),near,The bathroom shown near Bedroom 2 should be convenient without opening directly into another room.
-Second Floor,Bedroom 3,Bathroom (second floor),near,Keep the wet-room cluster reachable from the bedroom hall.
-Second Floor,Bedroom 2,Toilet (second floor),near,The separate toilet is shown in the upper-floor service cluster.
-Second Floor,Bedroom 3,Toilet (second floor),near,The separate toilet is shown in the upper-floor service cluster.
 Second Floor,Bedroom 2,Toilet and bath (second floor),near,Keep the combined toilet/bath reachable from common circulation.
 Second Floor,Master bedroom,Toilet and bath (second floor),near,The shared bath should be reachable without crossing another bedroom.
-Second Floor,Bathroom (second floor),Toilet (second floor),near,"The three wet-room spaces appear together in the reference; final walls, doors and fixture layout need review."
-Second Floor,Toilet (second floor),Toilet and bath (second floor),near,The separate toilet and combined toilet/bath are distinct spaces in the reference and should not be merged silently.
 Second Floor,Stair landing / circulation,Karaoke room,near,The karaoke room has one door from shared circulation and no second entry.
 Second Floor,Family area,Karaoke room,near,Both are shared recreation spaces; access should remain possible without passing through a bedroom.
 Second Floor,Stair landing / circulation,Gym,near,"The gym needs an independent entry from the circulation zone, not through Bedroom 2."
 Second Floor,Family area,Balcony (if appropriate),conditional,"Retain the balcony concept only if setback, privacy, access and safety checks permit it."
 Cross-floor,Toilet and bath (ground floor),Toilet and bath (second floor),near,"Vertical proximity is a planning preference for later coordination, not a utility design."
 Cross-floor,Stairway,Stair landing / circulation,direct,"Align the ground-floor stair with the second-floor flight, opening and landing when the dimensioned plan is produced."
+Second Floor,Bedroom 3,Toilet and bath (second floor),near,Provide convenient access from shared circulation without passing through another room.
+Second Floor,Stair landing / circulation,Toilet and bath (second floor),near,Keep the single combined upstairs toilet and bath accessible from the shared hall.

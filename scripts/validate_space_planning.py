@@ -32,10 +32,11 @@ REQUIRED_BY_FLOOR = {
 REFERENCE_SPACES_BY_FLOOR = {
     "Ground Floor": {"General circulation allowance"},
     "Second Floor": {
-        "Robe / wardrobe (master bedroom)", "Bathroom (second floor)",
-        "Toilet (second floor)", "Karaoke room", "Gym", "Balcony (if appropriate)",
+        "Robe / wardrobe (master bedroom)", "Karaoke room", "Gym",
+        "Balcony (if appropriate)",
     },
 }
+REMOVED_UPPER_WET_ROOMS = {"Bathroom (second floor)", "Toilet (second floor)"}
 VALID_STATUSES = {"required", "additional", "optional", "conditional", "allowance"}
 VALID_TYPES = {"enclosed", "vehicle-area", "allowance", "optional-external", "support-zone", "circulation"}
 VALID_RELATIONSHIPS = {"direct", "near", "buffered", "conditional"}
@@ -169,6 +170,9 @@ def validate_schedule() -> tuple[dict[str, set[str]], set[str], int, list[dict[s
         missing = required - names_by_floor.get(floor, set())
         if missing:
             fail(f"{floor} is missing spaces shown in the selected reference: {', '.join(sorted(missing))}")
+    removed_present = REMOVED_UPPER_WET_ROOMS & names_by_floor.get("Second Floor", set())
+    if removed_present:
+        fail(f"User removed these separate upstairs wet rooms; do not keep them in the schedule: {', '.join(sorted(removed_present))}")
 
     return names_by_floor, all_names, legacy_target_count, rows
 
@@ -394,6 +398,17 @@ def validate_layout_guardrails(model: dict) -> None:
             gym_doors = [el for el in root.iter() if el.attrib.get("data-room-door") == "gym"]
             if len(gym_doors) != 1:
                 fail(f"A-03 must provide one gym door marker to shared circulation, found {len(gym_doors)}")
+            standalone_labels = {
+                " ".join((el.text or "").lower().split())
+                for el in root.iter() if local_name(el.tag) == "text"
+            } & {"bathroom", "toilet"}
+            if standalone_labels:
+                fail(f"A-03 must not show the removed separate upstairs wet-room labels: {', '.join(sorted(standalone_labels))}")
+            if any(el.attrib.get("data-room-door") in {"bathroom", "toilet"} for el in root.iter()):
+                fail("A-03 must not retain door markers for the removed upstairs Bathroom or Toilet")
+            combined_bath_doors = [el for el in root.iter() if el.attrib.get("data-room-door") == "toilet-and-bath"]
+            if len(combined_bath_doors) != 1:
+                fail(f"A-03 must retain one combined upstairs Toilet and bath door marker, found {len(combined_bath_doors)}")
 
     zoning_ground = ET.parse(SPACE_DIR / "ground_floor_zoning.svg").getroot()
     tv_zone_markers = [el for el in zoning_ground.iter() if el.attrib.get("id") == "tv-console"]
@@ -428,6 +443,7 @@ def main() -> int:
     print("PASS: A-02 and Phase 3 zoning place one TV in the living room, clear of the foyer/entry path.")
     print("PASS: A-03 and Phase 3 zoning each mark exactly one karaoke-room door.")
     print("PASS: gym access is marked from shared circulation in A-03 and Phase 3 zoning.")
+    print("PASS: only the combined upstairs Toilet and bath remains; the separate upstairs Bathroom and Toilet are removed.")
     print("NOTE: checks establish data/document consistency only, not final dimensions, code compliance, structural adequacy or construction readiness.")
     return 0
 

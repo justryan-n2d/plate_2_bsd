@@ -168,6 +168,31 @@ def validate_reference_layout(data: dict) -> None:
     if "karaoke-room" not in second.get("room_bounds", {}):
         fail("The second-floor reference layout is missing the karaoke room bounds.")
 
+    # Check the user's accepted lower upper-floor zone arrangement in model coordinates.
+    bounds2 = second.get("room_bounds", {})
+    gym = bounds2.get("gym")
+    family = bounds2.get("family-area")
+    stair = bounds2.get("stairway")
+    balcony = bounds2.get("balcony")
+    if not all((gym, family, stair, balcony)):
+        fail("Second-floor model must define gym, family area, stairway and balcony bounds.")
+    if float(gym["x"]) + float(gym["width"]) > float(family["x"]):
+        fail("User reference requires the gym to be left of the family area.")
+    if float(stair["y"]) + float(stair["height"]) > float(family["y"]):
+        fail("User reference requires the stairway along the upper edge of the family-area zone.")
+    if not math.isclose(float(balcony["y"]), float(family["y"]) + float(family["height"]), abs_tol=1e-6):
+        fail("Balcony must project from the bottom edge of the family-area zone.")
+    non_balcony = [v for k, v in bounds2.items() if k != "balcony"]
+    min_x = min(float(v["x"]) for v in non_balcony)
+    max_x = max(float(v["x"]) + float(v["width"]) for v in non_balcony)
+    balcony_center = float(balcony["x"]) + float(balcony["width"]) / 2
+    footprint_center = (min_x + max_x) / 2
+    if abs(balcony_center - footprint_center) > 5:
+        fail("Balcony should be near the center of the overall upper-floor footprint in the accepted reference.")
+    balcony_doors = [door for door in second.get("doorways", []) if door.get("room_id") == "balcony"]
+    if len(balcony_doors) != 1 or balcony_doors[0].get("opens_from") != "family-area" or balcony_doors[0].get("opens_into") != "balcony":
+        fail("The balcony must have one direct doorway from the family area.")
+
 
 def validate_svg_files() -> None:
     for filename, drawing_no in DRAWINGS.items():
@@ -213,6 +238,15 @@ def validate_svg_files() -> None:
             ]
             if len(karaoke_door_nodes) != 1:
                 fail(f"A-03 must show exactly one karaoke-room door; found {len(karaoke_door_nodes)}.")
+            balcony_door_nodes = [
+                el for el in root.iter()
+                if el.attrib.get("data-room-door") == "balcony"
+            ]
+            if len(balcony_door_nodes) != 1:
+                fail(f"A-03 must show one direct family-area-to-balcony door; found {len(balcony_door_nodes)}.")
+            balcony_label = (balcony_door_nodes[0].attrib.get("aria-label") or "").lower()
+            if "family area" not in balcony_label or "balcony" not in balcony_label:
+                fail("A-03 balcony door marker must identify a direct connection from the family area to the balcony.")
 
 
 def main() -> int:
@@ -228,6 +262,7 @@ def main() -> int:
     print("PASS: all seven A-01 to A-07 SVG sheets parse and are labelled preliminary.")
     print("PASS: A-02 TV console is inside the living room and clear of the foyer/entry route.")
     print("PASS: A-03 reference model and SVG each contain exactly one karaoke-room door.")
+    print("PASS: lower-zone reference places the gym left, stairway above/right of the family area, and balcony at the bottom center with direct family-area access.")
     print("NOTE: this verifies file/data consistency only, not setbacks, code compliance, design adequacy, or permit/construction readiness.")
     return 0
 

@@ -21,7 +21,8 @@
     "The single-car 2.80 m x 5.50 m covered carport and its position are schematic; final access, turning, gate and road-opening position are unresolved.",
     "Doors, windows, finishes, ceiling/eaves/roof levels and roof pitch are draft design targets, not confirmed code minima.",
     "No structural member sizing, reinforcement, foundation design, detailed utilities, permit compliance or construction instruction is included.",
-    "Phase 3 Revision 04 (2026-10-12): retain the combined upstairs Toilet and bath, remove the separate upstairs Bathroom and Toilet, and retain the ground-floor Toilet and bath. The released 4.95 m2 is an unallocated design reserve until the measured layout is coordinated."
+    "Phase 3 Revision 04 (2026-10-12): retain the combined upstairs Toilet and bath, remove the separate upstairs Bathroom and Toilet, and retain the ground-floor Toilet and bath. The released 4.95 m2 is an unallocated design reserve until the measured layout is coordinated.",
+    "User reference layout revision 02 (2026-10-12): the lower upper-floor zone is gym on the left, family area on the right, stairway along the upper-right edge, and a balcony projecting from the bottom edge near the center of the overall footprint, reached directly from the family area. This is an arrangement reference only, not dimension data."
   ],
   "site": {
     "lot_number": "245-B",
@@ -347,7 +348,7 @@
   "drawing_status": {
     "A-01": "Preliminary site development layout using screening setback geometry; exact access and legal envelope pending.",
     "A-02": "User-reference furnished first-floor layout: guest room, toilet and bath, garage, dining/kitchen, storage, stairway, living room and entrance. TV is within the living area and outside the foyer/entry-clearance box. Diagram units only; dimensions pending.",
-    "A-03": "Preliminary furnished second-floor layout with Bedroom 2, master bedroom/robe, Bedroom 3, one combined upstairs Toilet and bath, gym, one-door karaoke room, stairway, family area and balcony. Separate upstairs Bathroom and Toilet removed by user decision. Diagram units only; released area allocation, dimensions and stair coordination pending.",
+    "A-03": "Preliminary furnished second-floor layout updated to record the user's lower-zone reference: gym left, family area right, stairway along the upper-right side, and balcony projecting from the lower edge with direct access from the family area. Only one combined upstairs Toilet and bath remains. Diagram units only; dimensions, stair coordination and code/site checks pending.",
     "A-04": "Preliminary gable roof plan; roof framing and drainage design pending.",
     "A-05": "Four schematic elevations; heights and openings are assumptions.",
     "A-06": "Two schematic sections, one through stair; final sections must coordinate final levels/structure.",
@@ -480,6 +481,13 @@
           "y": 805,
           "width": 175,
           "height": 70
+        },
+        "stairway": {
+          "x": 700,
+          "y": 520,
+          "width": 218,
+          "height": 54,
+          "intent": "Runs along the upper edge of the family-area zone toward the right side; diagram units only."
         }
       },
       "doorways": [
@@ -492,6 +500,14 @@
           "width": 50,
           "height": 50,
           "opens_into": "karaoke-room"
+        },
+        {
+          "id": "balcony-door-01",
+          "room_id": "balcony",
+          "opens_from": "family-area",
+          "opens_into": "balcony",
+          "side": "south",
+          "position_note": "Door in the bottom wall of the family area opens directly to the balcony projecting from the lower building edge; match the user's reference image."
         }
       ],
       "constraints": {
@@ -499,6 +515,26 @@
           "door_count": 1,
           "note": "Only one door should be drawn into the karaoke room."
         }
+      },
+      "bottom_zone": {
+        "revision": "User reference layout revision 02 - 2026-10-12",
+        "source": "User-uploaded cropped image of the lower portion of the second floor on 2026-10-12",
+        "status": "REFERENCE_LAYOUT_ACCEPTED_DIMENSIONS_PENDING",
+        "arrangement": [
+          "Gym on the left side.",
+          "Family area on the right side of the gym.",
+          "Stairway along the upper edge of the family area, toward the right side.",
+          "Balcony projects from the bottom exterior edge near the center of the overall upper-floor footprint.",
+          "One door connects the family area directly to the balcony."
+        ],
+        "spatial_rules": {
+          "gym_left_of_family_area": true,
+          "stairway_above_family_area": true,
+          "balcony_projects_from_bottom_edge": true,
+          "balcony_centered_on_overall_footprint": true,
+          "family_area_to_balcony_door_count": 1
+        },
+        "dimension_policy": "The image sets spatial arrangement only. It does not provide reliable lengths, widths, scale, structural support or code-compliance evidence."
       }
     }
   },

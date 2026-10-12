@@ -189,6 +189,18 @@ The Revision 03 upstairs programme was 70.96 m² clear space. Removing the separ
 
 The released **4.95 m² remains unallocated**. Do not count it again as circulation or assign it to a bedroom/gym until the measured layout is dimensioned. The updated schedule, adjacency matrix, second-floor zoning SVG and A-03 preview remove the two separate wet rooms. T-25 remains open for dimensions, floor-area checking and coordination with Phase 2 and Phase 4.
 
+#### User reference layout revision 02: lower upper-floor zone (2026-10-12)
+
+The user provided a cropped image to confirm the lower section of the second floor. The intended arrangement is:
+
+- Gym on the left.
+- Family area to the right of the gym.
+- Stairway along the upper-right edge of the family area.
+- Balcony projecting from the bottom edge near the center of the overall floor footprint.
+- One direct door from the family area to the balcony.
+
+The current conceptual plan already has this general arrangement. The A-03 and Phase 3 zoning previews now annotate the balcony connection and the shared model and validators record/check the intended positions. Treat the image as a layout reference only; do not take dimensions from it. Actual room dimensions, balcony projection and structure, door details, stair opening/landing/headroom and code/setback checks remain open under T-25 and Phase 5 coordination.
+
 ### Phase 4: Stair planning and calculations
 
 - [x] **T-30** Set a provisional 3.000 m floor-to-floor stair rise, explicitly marked as an assumption because the final levels are not yet specified.

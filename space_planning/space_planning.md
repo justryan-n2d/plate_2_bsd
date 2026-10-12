@@ -103,3 +103,9 @@ The user confirmed this arrangement:
 The former upstairs Bathroom target (3.15 m²) and Toilet target (1.80 m²) release 4.95 m² from the prior clear-space programme. This 4.95 m² is currently unallocated and is not counted as a new bedroom, hall, or gym expansion until the layout is dimensioned. The revised second-floor clear-space programme is 66.01 m²; its gross-area planning proxy is 77.66 m² using the same rough 0.85 factor. The combined gross-area proxy is 163.92 m², not final measured GFA.
 
 The separate-room labels and their doors must be removed from A-03 and the Phase 3 zoning/relationship records. The single combined bathroom still needs a checked fixture layout, door swing and ventilation. Phase 3 remains open for T-25: dimensioning, area measurement and cross-floor coordination.
+
+## User reference layout revision 02: lower upper-floor zone (2026-10-12)
+
+The supplied cropped image confirms the intended lower-zone arrangement. Keep the gym on the left and the family area on the right. The stairway runs along the upper-right edge of the family area. The balcony projects outward from the bottom edge near the center of the overall upper-floor footprint, with a direct doorway from the family area. The A-03 preview and Phase 3 second-floor zoning diagram now identify this arrangement.
+
+No real-world room dimensions are inferred from the image. Continue to keep dimensions, the balcony opening, the stair opening/landing, structural support, wall thickness and code/setback compliance subject to the measured coordination pass.

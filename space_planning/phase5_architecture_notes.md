@@ -85,3 +85,10 @@ The draft opening schedule uses nominal placeholders: main entrance 0.90 x 2.10 
 ## Phase 3 Revision 04 coordination note
 
 A-03 and the Phase 3 second-floor zoning preview were updated after the user confirmed one combined upstairs Toilet and bath, with the separate upstairs Bathroom and Toilet removed. The ground-floor Toilet and bath remains. Re-measure and coordinate the released 4.95 m² with bedrooms, shared circulation and Phase 4 stair opening before creating final CAD exports.
+
+
+## User reference layout revision 02: lower upper-floor zone (2026-10-12)
+
+The latest cropped reference confirms the lower-zone arrangement for A-03: gym at the left, family area to its right, stairway along the upper-right edge of the family area, and a balcony projecting from the bottom exterior edge near the center of the overall footprint. One direct balcony door connects from the family area. A-03 and the Phase 3 zoning preview now annotate this link; the shared model and validators store/check the relation.
+
+Room placement is a concept reference only. It does not define measured dimensions or balcony structural details. Final door width/swing, bottom-wall opening, stair/landing/headroom, balcony projection/guardrail/waterproofing, structural support and legal setback fit remain pending.

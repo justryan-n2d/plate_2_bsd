@@ -380,6 +380,33 @@ def validate_layout_guardrails(model: dict) -> None:
     if int(second.get("constraints", {}).get("karaoke-room", {}).get("door_count", 0)) != 1:
         fail("Karaoke-room reference constraint must require door_count=1")
 
+    bottom_zone = second.get("bottom_zone", {})
+    if not bottom_zone or bottom_zone.get("status") != "REFERENCE_LAYOUT_ACCEPTED_DIMENSIONS_PENDING":
+        fail("Second-floor bottom-zone reference arrangement must be documented.")
+    bounds2 = second.get("room_bounds", {})
+    gym = bounds2.get("gym")
+    family = bounds2.get("family-area")
+    stair = bounds2.get("stairway")
+    balcony = bounds2.get("balcony")
+    if not all((gym, family, stair, balcony)):
+        fail("Second-floor model must define gym, family area, stairway and balcony bounds.")
+    if float(gym["x"]) + float(gym["width"]) > float(family["x"]):
+        fail("Gym must be left of the family area according to the user reference.")
+    if float(stair["y"]) + float(stair["height"]) > float(family["y"]):
+        fail("Stairway must be along the upper edge of the family-area zone.")
+    if not math.isclose(float(balcony["y"]), float(family["y"]) + float(family["height"]), abs_tol=1e-6):
+        fail("Balcony must project from the bottom edge of the family-area zone.")
+    non_balcony = [v for k, v in bounds2.items() if k != "balcony"]
+    min_x = min(float(v["x"]) for v in non_balcony)
+    max_x = max(float(v["x"]) + float(v["width"]) for v in non_balcony)
+    balcony_center = float(balcony["x"]) + float(balcony["width"]) / 2
+    footprint_center = (min_x + max_x) / 2
+    if abs(balcony_center - footprint_center) > 5:
+        fail("Balcony must be near the center of the overall footprint.")
+    balcony_doors = [door for door in second.get("doorways", []) if door.get("room_id") == "balcony"]
+    if len(balcony_doors) != 1 or balcony_doors[0].get("opens_from") != "family-area" or balcony_doors[0].get("opens_into") != "balcony":
+        fail("Reference model must define one direct doorway from the family area to the balcony.")
+
     floor_plan_ground = ROOT / "previews" / "phase5_A02_ground_floor.svg"
     floor_plan_second = ROOT / "previews" / "phase5_A03_second_floor.svg"
     for path in (floor_plan_ground, floor_plan_second):
@@ -409,6 +436,12 @@ def validate_layout_guardrails(model: dict) -> None:
             combined_bath_doors = [el for el in root.iter() if el.attrib.get("data-room-door") == "toilet-and-bath"]
             if len(combined_bath_doors) != 1:
                 fail(f"A-03 must retain one combined upstairs Toilet and bath door marker, found {len(combined_bath_doors)}")
+            balcony_doors = [el for el in root.iter() if el.attrib.get("data-room-door") == "balcony"]
+            if len(balcony_doors) != 1:
+                fail(f"A-03 must mark one family-area-to-balcony door, found {len(balcony_doors)}")
+            balcony_label = (balcony_doors[0].attrib.get("aria-label") or "").lower()
+            if "family area" not in balcony_label or "balcony" not in balcony_label:
+                fail("A-03 balcony doorway must identify family-area access to the balcony")
 
     zoning_ground = ET.parse(SPACE_DIR / "ground_floor_zoning.svg").getroot()
     tv_zone_markers = [el for el in zoning_ground.iter() if el.attrib.get("id") == "tv-console"]
@@ -421,6 +454,9 @@ def validate_layout_guardrails(model: dict) -> None:
     gym_zone_doors = [el for el in zoning_second.iter() if el.attrib.get("data-room-door") == "gym"]
     if len(gym_zone_doors) != 1:
         fail(f"Second-floor Phase 3 zoning must mark one gym door from shared circulation, found {len(gym_zone_doors)}")
+    balcony_zone_doors = [el for el in zoning_second.iter() if el.attrib.get("data-room-door") == "balcony"]
+    if len(balcony_zone_doors) != 1:
+        fail(f"Second-floor Phase 3 zoning must mark one family-area-to-balcony door, found {len(balcony_zone_doors)}")
 
 
 def main() -> int:
@@ -444,6 +480,7 @@ def main() -> int:
     print("PASS: A-03 and Phase 3 zoning each mark exactly one karaoke-room door.")
     print("PASS: gym access is marked from shared circulation in A-03 and Phase 3 zoning.")
     print("PASS: only the combined upstairs Toilet and bath remains; the separate upstairs Bathroom and Toilet are removed.")
+    print("PASS: lower-zone arrangement has the gym left, family area right, stairway above/right, and balcony centered along the bottom edge with direct family-area access.")
     print("NOTE: checks establish data/document consistency only, not final dimensions, code compliance, structural adequacy or construction readiness.")
     return 0
 

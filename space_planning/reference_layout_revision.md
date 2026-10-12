@@ -60,3 +60,13 @@ Phase 3 has been reopened to reflect reference layout revision 01. See [revised 
 ## Area-budget coordination revision 02 (2026-10-12)
 
 Phase 3 now budgets the reference spaces before drafting dimensioned plans. See [phase3_area_budget.csv](../calculations/phase3_area_budget.csv) and [Phase 3 Revision 03 notes](space_planning.md). The preferred scenario assumes an enclosed garage and budgets 73.32 m² programmed clear space on the ground floor (86.26 m² gross proxy) and 70.96 m² upstairs (83.48 m² gross proxy). These proxies use a rough 15% wall/structure allowance, not a code factor. Local setbacks and final C-06/C-07/C-08 calculations remain pending.
+
+## Wet-room simplification - Phase 3 Revision 04 (2026-10-12)
+
+The user confirmed the final room programme decision for the upstairs wet rooms:
+
+- Retain one combined upstairs Toilet and bath.
+- Remove the separate upstairs Bathroom and separate Toilet.
+- Keep the ground-floor Toilet and bath.
+
+The two removed room targets were 3.15 m² and 1.80 m², releasing 4.95 m² from the previous clear-space budget. Do not automatically add that amount to another room or to the existing 8.00 m² circulation allowance. Keep it unallocated until the room geometry is dimensioned and reviewed. The current revised second-floor clear-space budget is 66.01 m²; gross-area proxy is 77.66 m².

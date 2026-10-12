@@ -168,7 +168,7 @@ These are document and arithmetic consistency checks, not a professional survey 
 - [x] **T-21** Prepare the revised adjacency matrix and SVG relationship diagram in `space_planning/`.
 - [x] **T-22** Review functional relationships, privacy, accessibility considerations, convenience, service relationships, circulation, and safety at concept level for the reference layout.
 - [x] **T-23** Update the ground-floor conceptual zoning to keep the TV in the living area and the foyer route clear.
-- [x] **T-24** Update the second-floor conceptual zoning to include the robe, separate wet-room labels, gym, karaoke room and balcony.
+- [x] **T-24** Update the second-floor conceptual zoning to include the robe, one combined upstairs Toilet and bath, gym, karaoke room and balcony; the separate upstairs Bathroom and Toilet are removed by the user's Revision 04 decision.
 - [ ] **T-25** Re-review dimensions, floor areas, circulation and cross-floor coordination after Phase 2, Phase 4 and the measured layout are confirmed.
 
 #### Phase 3 implementation checkpoint - revision 03 (2026-10-12)
@@ -180,6 +180,14 @@ The area-budget CSV calculates 73.32 m² clear programme for the ground floor in
 The first-floor TV must remain in the living zone and outside the foyer/entry route. The second-floor karaoke room has exactly one door from shared circulation, and the gym must have independent hall access rather than access through a bedroom. The existing 9.30 x 7.90 m house rectangle and carport placement are legacy geometry and must be reshaped/repositioned to match the budgeted layout.
 
 C-04 remains pending parcel-specific Palo zoning/ROW confirmation. The 2.00 m inward-offset polygon area is a geometric screen only. Before finalizing Phase 3, dimension the rooms and outer walls, test footprint containment in the legally confirmed envelope, recalculate actual floor areas/open space, and coordinate the stair, balcony and gym with Phase 4 and Phase 5.
+
+#### Phase 3 implementation checkpoint - revision 04 (2026-10-12)
+
+**Status: The upstairs wet-room decision is confirmed.** Keep the combined upstairs Toilet and bath, remove the separate Bathroom and separate Toilet, and retain the ground-floor Toilet and bath.
+
+The Revision 03 upstairs programme was 70.96 m² clear space. Removing the separate Bathroom target (3.15 m²) and Toilet target (1.80 m²) reduces the upstairs programme to **66.01 m²**. Using the same rough 0.85 grossing factor gives **77.66 m²** upstairs and **163.92 m²** total gross-area planning proxy. These remain budget proxies, not measured floor areas.
+
+The released **4.95 m² remains unallocated**. Do not count it again as circulation or assign it to a bedroom/gym until the measured layout is dimensioned. The updated schedule, adjacency matrix, second-floor zoning SVG and A-03 preview remove the two separate wet rooms. T-25 remains open for dimensions, floor-area checking and coordination with Phase 2 and Phase 4.
 
 ### Phase 4: Stair planning and calculations
 
